@@ -91,6 +91,28 @@
 
     input[type="range"]{accent-color: var(--bolt);}
 
+    textarea{
+      width:100%;
+      min-height:64px;
+      resize:vertical;
+      color:var(--ink);
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.12);
+      padding:10px 10px;
+      border-radius:10px;
+      font:13px/1.35 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      outline:none;
+    }
+    textarea:focus{border-color:rgba(255,255,255,.28)}
+
+    .board{margin-top:12px; padding:12px; border-radius:12px; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.06)}
+    .board h2{font-size:13px; margin:0 0 10px 0; color:var(--ink)}
+    .cols{display:grid; grid-template-columns:1fr; gap:10px;}
+    @media (min-width: 820px){ .cols{grid-template-columns:1fr 1fr 1fr;} }
+    .col{border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:10px; background:rgba(0,0,0,.18)}
+    .col .t{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px}
+    .tag{font-size:11px; color:var(--muted); padding:3px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background:rgba(0,0,0,.18)}
+
     .hint{color:var(--muted); margin-top:10px; font-size:12px}
   </style>
 </head>
@@ -186,18 +208,37 @@
         </div>
       </div>
 
+      <div class="board" aria-label="Mission Board">
+        <h2>Mission Board</h2>
+        <div class="cols">
+          <div class="col">
+            <div class="t"><div class="v">Today</div><div class="tag">finish</div></div>
+            <textarea id="boardToday" placeholder="• 1 pipeline move\n• 1 ops fix\n• 1 health win"></textarea>
+          </div>
+          <div class="col">
+            <div class="t"><div class="v">Next</div><div class="tag">queue</div></div>
+            <textarea id="boardNext" placeholder="• follow-ups\n• deck edits\n• automations"></textarea>
+          </div>
+          <div class="col">
+            <div class="t"><div class="v">Waiting</div><div class="tag">blocked</div></div>
+            <textarea id="boardWaiting" placeholder="• client approvals\n• invoices\n• access"></textarea>
+          </div>
+        </div>
+      </div>
+
       <div class="btns">
         <button id="btnLog">Log: “Johnny 5 is alive”</button>
         <button id="btnStatus">Pulse status</button>
         <button id="btnCopy">Copy status</button>
         <button id="btnMode">Toggle focus mode</button>
+        <button id="btnCopyBoard">Copy board</button>
         <button id="btnClear">Clear log</button>
       </div>
 
       <div class="log" id="log" aria-label="Console log"></div>
       <div class="hint">
         Local HTML (no server). Saves Identity/Mission/Energy in your browser via <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">localStorage</span>.
-        Shortcuts: <b>C</b> copy status · <b>F</b> focus mode · <b>L</b> log alive · <b>Esc</b> clear.
+        Shortcuts: <b>C</b> copy status · <b>B</b> copy board · <b>F</b> focus mode · <b>L</b> log alive · <b>Esc</b> clear.
       </div>
     </div>
   </div>
@@ -210,6 +251,9 @@
   const energyValEl = document.getElementById('energyVal');
   const modeDotEl = document.getElementById('modeDot');
   const modeTextEl = document.getElementById('modeText');
+  const boardTodayEl = document.getElementById('boardToday');
+  const boardNextEl = document.getElementById('boardNext');
+  const boardWaitingEl = document.getElementById('boardWaiting');
 
   const STORE_KEY = 'johnny5.avatarConsole.v1';
 
@@ -263,12 +307,19 @@
     saveState({ energy: n });
   }
 
+  function boardText(){
+    const today = boardTodayEl.value.trim();
+    const next = boardNextEl.value.trim();
+    const waiting = boardWaitingEl.value.trim();
+    return `Mission Board\n\nTODAY\n${today || '—'}\n\nNEXT\n${next || '—'}\n\nWAITING\n${waiting || '—'}`;
+  }
+
   function statusText(){
     const mode = getState().mode || 'online';
     const identity = identityEl.value.trim() || 'Johnny 5 ⚡';
     const mission = missionEl.value.trim() || '—';
     const energy = Number(energyEl.value);
-    return `Johnny 5 Status\nMode: ${mode.toUpperCase()}\nIdentity: ${identity}\nMission: ${mission}\nEnergy: ${energy}%\nTimestamp: ${new Date().toISOString()}`;
+    return `Johnny 5 Status\nMode: ${mode.toUpperCase()}\nIdentity: ${identity}\nMission: ${mission}\nEnergy: ${energy}%\nTimestamp: ${new Date().toISOString()}\n\n${boardText()}`;
   }
 
   async function copyStatus(){
@@ -286,6 +337,9 @@
   if(s.identity) identityEl.value = s.identity;
   if(s.mission) missionEl.value = s.mission;
   if(typeof s.energy === 'number') energyEl.value = String(s.energy);
+  if(typeof s.boardToday === 'string') boardTodayEl.value = s.boardToday;
+  if(typeof s.boardNext === 'string') boardNextEl.value = s.boardNext;
+  if(typeof s.boardWaiting === 'string') boardWaitingEl.value = s.boardWaiting;
 
   addLine('Boot complete. Awaiting mission parameters…');
 
@@ -293,6 +347,9 @@
   identityEl.addEventListener('input', () => saveState({ identity: identityEl.value }));
   missionEl.addEventListener('input', () => saveState({ mission: missionEl.value }));
   energyEl.addEventListener('input', (e) => setEnergy(e.target.value));
+  boardTodayEl.addEventListener('input', () => saveState({ boardToday: boardTodayEl.value }));
+  boardNextEl.addEventListener('input', () => saveState({ boardNext: boardNextEl.value }));
+  boardWaitingEl.addEventListener('input', () => saveState({ boardWaiting: boardWaitingEl.value }));
 
   // Init energy + mode
   setEnergy(energyEl.value);
@@ -303,6 +360,14 @@
   document.getElementById('btnStatus').onclick = () => addLine('Status pulse: ready to execute (tools online; waiting on next mission).');
   document.getElementById('btnCopy').onclick = () => copyStatus();
   document.getElementById('btnMode').onclick = () => setMode((getState().mode || 'online') === 'online' ? 'focus' : 'online');
+  document.getElementById('btnCopyBoard').onclick = async () => {
+    try{
+      await navigator.clipboard.writeText(boardText());
+      addLine('Copied mission board to clipboard.');
+    }catch{
+      addLine('Clipboard blocked by browser (try HTTPS or allow clipboard).');
+    }
+  };
   document.getElementById('btnClear').onclick = () => { logEl.innerHTML=''; addLine('Log cleared.'); };
 
   // Keyboard shortcuts
@@ -312,6 +377,10 @@
     if(k === 'l') addLine('Johnny 5 is alive. ⚡');
     if(k === 'f') setMode((getState().mode || 'online') === 'online' ? 'focus' : 'online');
     if(k === 'c') copyStatus();
+    if(k === 'b') (async () => {
+      try{ await navigator.clipboard.writeText(boardText()); addLine('Copied mission board to clipboard.'); }
+      catch{ addLine('Clipboard blocked by browser (try HTTPS or allow clipboard).'); }
+    })();
     if(k === 'escape') { logEl.innerHTML=''; addLine('Log cleared.'); }
   });
 </script>
