@@ -36,14 +36,15 @@
     .stage{display:grid; place-items:center; padding:16px; border-radius:12px; background:rgba(0,0,0,.25); border:1px dashed rgba(255,255,255,.09)}
     svg{width:280px; height:auto;}
 
-    .eye{transform-origin:center; animation:blink 5.2s infinite;}
+    :root{ --blink:5.2s; --scan:3.5s; }
+    .eye{transform-origin:center; animation:blink var(--blink) infinite;}
     .eye2{animation-delay: .12s;}
     @keyframes blink{
       0%, 7%, 100%{transform:scaleY(1)}
       3%{transform:scaleY(.05)}
     }
 
-    .pupil{transform-origin:center; animation:scan 3.5s ease-in-out infinite;}
+    .pupil{transform-origin:center; animation:scan var(--scan) ease-in-out infinite;}
     @keyframes scan{
       0%,100%{transform:translateX(-3px)}
       50%{transform:translateX(3px)}
@@ -75,6 +76,21 @@
     .btns{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
     button{cursor:pointer; color:var(--ink); background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.12); padding:10px 12px; border-radius:10px; font-weight:600}
     button:hover{border-color:rgba(255,255,255,.26)}
+
+    input[type="text"], input:not([type]){
+      width:100%;
+      color:var(--ink);
+      background:rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.12);
+      padding:8px 10px;
+      border-radius:10px;
+      font-weight:600;
+      outline:none;
+    }
+    input:focus{border-color:rgba(255,255,255,.28)}
+
+    input[type="range"]{accent-color: var(--bolt);}
+
     .hint{color:var(--muted); margin-top:10px; font-size:12px}
   </style>
 </head>
@@ -149,30 +165,54 @@
       <h1>System Status</h1>
       <div class="row">
         <div class="k">Mode</div>
-        <div class="v badge"><span class="dot"></span> Online</div>
+        <div class="v badge"><span class="dot" id="modeDot"></span> <span id="modeText">Online</span></div>
       </div>
+
       <div class="row" style="margin-top:10px;">
         <div class="k">Identity</div>
-        <div class="v">Johnny 5 ⚡</div>
+        <div class="v"><input id="identity" value="Johnny 5 ⚡" aria-label="Identity" /></div>
       </div>
+
       <div class="row" style="margin-top:10px;">
         <div class="k">Mission</div>
-        <div class="v">More margin, more family time, better health</div>
+        <div class="v"><input id="mission" value="More margin, more family time, better health" aria-label="Mission" /></div>
+      </div>
+
+      <div class="row" style="margin-top:10px;">
+        <div class="k">Energy</div>
+        <div class="v" style="display:flex; align-items:center; gap:10px; width:100%">
+          <input id="energy" type="range" min="0" max="100" value="70" style="flex:1" aria-label="Energy slider" />
+          <span id="energyVal" class="k" style="min-width:44px; text-align:right">70%</span>
+        </div>
       </div>
 
       <div class="btns">
         <button id="btnLog">Log: “Johnny 5 is alive”</button>
         <button id="btnStatus">Pulse status</button>
+        <button id="btnCopy">Copy status</button>
+        <button id="btnMode">Toggle focus mode</button>
         <button id="btnClear">Clear log</button>
       </div>
 
       <div class="log" id="log" aria-label="Console log"></div>
-      <div class="hint">This is just a local HTML file for now (no server). Later I can wire it into a little Next.js / dashboard panel.</div>
+      <div class="hint">
+        Local HTML (no server). Saves Identity/Mission/Energy in your browser via <span style="font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">localStorage</span>.
+        Shortcuts: <b>C</b> copy status · <b>F</b> focus mode · <b>L</b> log alive · <b>Esc</b> clear.
+      </div>
     </div>
   </div>
 
 <script>
   const logEl = document.getElementById('log');
+  const identityEl = document.getElementById('identity');
+  const missionEl = document.getElementById('mission');
+  const energyEl = document.getElementById('energy');
+  const energyValEl = document.getElementById('energyVal');
+  const modeDotEl = document.getElementById('modeDot');
+  const modeTextEl = document.getElementById('modeText');
+
+  const STORE_KEY = 'johnny5.avatarConsole.v1';
+
   const now = () => new Date().toLocaleString();
   function addLine(msg){
     const p = document.createElement('p');
@@ -180,11 +220,100 @@
     p.innerHTML = `<b>[${now()}]</b> ${msg}`;
     logEl.prepend(p);
   }
+
+  function getState(){
+    try{
+      return JSON.parse(localStorage.getItem(STORE_KEY) || '{}');
+    }catch{ return {}; }
+  }
+
+  function saveState(patch){
+    const s = { ...getState(), ...patch };
+    localStorage.setItem(STORE_KEY, JSON.stringify(s));
+  }
+
+  function setMode(mode){
+    // mode: online | focus
+    if(mode === 'focus'){
+      modeTextEl.textContent = 'Focus';
+      modeDotEl.style.background = 'var(--warn)';
+      modeDotEl.style.boxShadow = '0 0 14px rgba(255,176,32,.45)';
+      document.documentElement.style.setProperty('--blink', '7.4s');
+      document.documentElement.style.setProperty('--scan', '5.2s');
+      addLine('Mode set: Focus (less chatter, more execution).');
+    }else{
+      modeTextEl.textContent = 'Online';
+      modeDotEl.style.background = 'var(--good)';
+      modeDotEl.style.boxShadow = '0 0 14px rgba(56,224,123,.5)';
+      document.documentElement.style.setProperty('--blink', '5.2s');
+      document.documentElement.style.setProperty('--scan', '3.5s');
+      addLine('Mode set: Online.');
+    }
+    saveState({ mode });
+  }
+
+  function setEnergy(val){
+    const n = Number(val);
+    energyValEl.textContent = `${n}%`;
+    // Energy impacts animation intensity & speed.
+    const blink = 9 - (n/100)*5; // 9s -> 4s
+    const scan = 6.5 - (n/100)*4; // 6.5s -> 2.5s
+    document.documentElement.style.setProperty('--blink', `${blink.toFixed(2)}s`);
+    document.documentElement.style.setProperty('--scan', `${scan.toFixed(2)}s`);
+    saveState({ energy: n });
+  }
+
+  function statusText(){
+    const mode = getState().mode || 'online';
+    const identity = identityEl.value.trim() || 'Johnny 5 ⚡';
+    const mission = missionEl.value.trim() || '—';
+    const energy = Number(energyEl.value);
+    return `Johnny 5 Status\nMode: ${mode.toUpperCase()}\nIdentity: ${identity}\nMission: ${mission}\nEnergy: ${energy}%\nTimestamp: ${new Date().toISOString()}`;
+  }
+
+  async function copyStatus(){
+    const text = statusText();
+    try{
+      await navigator.clipboard.writeText(text);
+      addLine('Copied status to clipboard.');
+    }catch{
+      addLine('Clipboard blocked by browser (try HTTPS or allow clipboard).');
+    }
+  }
+
+  // Load persisted state
+  const s = getState();
+  if(s.identity) identityEl.value = s.identity;
+  if(s.mission) missionEl.value = s.mission;
+  if(typeof s.energy === 'number') energyEl.value = String(s.energy);
+
   addLine('Boot complete. Awaiting mission parameters…');
 
+  // Wire inputs
+  identityEl.addEventListener('input', () => saveState({ identity: identityEl.value }));
+  missionEl.addEventListener('input', () => saveState({ mission: missionEl.value }));
+  energyEl.addEventListener('input', (e) => setEnergy(e.target.value));
+
+  // Init energy + mode
+  setEnergy(energyEl.value);
+  setMode(s.mode || 'online');
+
+  // Buttons
   document.getElementById('btnLog').onclick = () => addLine('Johnny 5 is alive. ⚡');
-  document.getElementById('btnStatus').onclick = () => addLine('Status pulse: memory flush enabled; session memory search enabled; ready to execute.');
+  document.getElementById('btnStatus').onclick = () => addLine('Status pulse: ready to execute (tools online; waiting on next mission).');
+  document.getElementById('btnCopy').onclick = () => copyStatus();
+  document.getElementById('btnMode').onclick = () => setMode((getState().mode || 'online') === 'online' ? 'focus' : 'online');
   document.getElementById('btnClear').onclick = () => { logEl.innerHTML=''; addLine('Log cleared.'); };
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if(e.target && ['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
+    const k = e.key.toLowerCase();
+    if(k === 'l') addLine('Johnny 5 is alive. ⚡');
+    if(k === 'f') setMode((getState().mode || 'online') === 'online' ? 'focus' : 'online');
+    if(k === 'c') copyStatus();
+    if(k === 'escape') { logEl.innerHTML=''; addLine('Log cleared.'); }
+  });
 </script>
 </body>
 </html>
