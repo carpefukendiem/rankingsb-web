@@ -19,9 +19,11 @@ More local calls in 30 days — with a follow-up system that stops leads from sl
 - Missed-call text back + pipeline + follow-up automations (GHL)
 - Review request system
 
-## Proof
-We manage many local clients already and have strong local results we can share.
-(Insert 2–3 short proof bullets once selected.)
+## Proof (local)
+- First-page rankings + top-of-map-pack visibility for:
+  - Freds Upholstery
+  - Enzo MMA
+  - Paragon Goleta
 
 ## Call to action
 Book a quick call:
