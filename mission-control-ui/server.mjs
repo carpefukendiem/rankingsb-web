@@ -1,5 +1,6 @@
 import http from 'node:http';
-import { readFile, readdir } from 'node:fs/promises';
+import fs from 'node:fs';
+import { readFile, readdir, open } from 'node:fs/promises';
 import path from 'node:path';
 import url from 'node:url';
 
@@ -9,6 +10,74 @@ const cfgPath = path.join(__dirname, 'config.json');
 const cfg = JSON.parse(await readFile(cfgPath, 'utf8'));
 
 const MC_DIR = path.resolve(__dirname, cfg.missionControlDir || '../mission-control');
+const ACTIVITY_PATH = path.join(MC_DIR, 'logs', 'activity.log');
+
+const activityClients = new Set();
+let activityWatchStarted = false;
+let activityLastSize = 0;
+
+async function tailLines(filePath, maxLines = 50) {
+  try {
+    const txt = await readFile(filePath, 'utf8');
+    const lines = txt.split(/\r?\n/).filter(Boolean);
+    return lines.slice(-maxLines);
+  } catch {
+    return [];
+  }
+}
+
+async function readAppended(filePath) {
+  try {
+    const st = await fs.promises.stat(filePath);
+    // truncated/rotated
+    if (st.size < activityLastSize) activityLastSize = 0;
+    if (st.size === activityLastSize) return '';
+
+    const fh = await open(filePath, 'r');
+    try {
+      const len = st.size - activityLastSize;
+      const buf = Buffer.alloc(len);
+      await fh.read(buf, 0, len, activityLastSize);
+      activityLastSize = st.size;
+      return buf.toString('utf8');
+    } finally {
+      await fh.close();
+    }
+  } catch {
+    return '';
+  }
+}
+
+async function ensureActivityWatch() {
+  if (activityWatchStarted) return;
+  activityWatchStarted = true;
+
+  // initialize lastSize
+  try {
+    const st = await fs.promises.stat(ACTIVITY_PATH);
+    activityLastSize = st.size;
+  } catch {
+    activityLastSize = 0;
+  }
+
+  // Watch file changes (best-effort)
+  try {
+    fs.watch(path.dirname(ACTIVITY_PATH), async (_event, filename) => {
+      if (filename !== path.basename(ACTIVITY_PATH)) return;
+      const appended = await readAppended(ACTIVITY_PATH);
+      if (!appended) return;
+      const lines = appended.split(/\r?\n/).filter(Boolean);
+      for (const line of lines) {
+        const msg = `data: ${JSON.stringify({ type: 'activity', line })}\n\n`;
+        for (const res of activityClients) {
+          try { res.write(msg); } catch { activityClients.delete(res); }
+        }
+      }
+    });
+  } catch {
+    // ignore
+  }
+}
 
 function send(res, status, body, headers = {}) {
   res.writeHead(status, {
@@ -82,6 +151,29 @@ const server = http.createServer(async (req, res) => {
     if (u.pathname === '/api/tasks') {
       const tasks = await listTasks();
       return sendJson(res, 200, { tasks });
+    }
+
+    if (u.pathname === '/api/activity/recent') {
+      const limit = Math.max(1, Math.min(200, parseInt(u.searchParams.get('limit') || '40', 10)));
+      const lines = await tailLines(ACTIVITY_PATH, limit);
+      return sendJson(res, 200, { lines });
+    }
+
+    if (u.pathname === '/api/activity/stream') {
+      await ensureActivityWatch();
+      res.writeHead(200, {
+        'content-type': 'text/event-stream; charset=utf-8',
+        'cache-control': 'no-cache, no-store, must-revalidate',
+        'connection': 'keep-alive',
+      });
+      // initial burst
+      const lines = await tailLines(ACTIVITY_PATH, 40);
+      for (const line of lines) {
+        res.write(`data: ${JSON.stringify({ type: 'activity', line })}\n\n`);
+      }
+      activityClients.add(res);
+      req.on('close', () => activityClients.delete(res));
+      return;
     }
 
     if (u.pathname.startsWith('/mc/')) {
