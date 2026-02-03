@@ -20,6 +20,7 @@ Marketing agency owner; wants +30–50 clients in 12 months. Uses GoHighLevel.
 
 ## Updates (append-only)
 - 2026-02-03T07:30:00-08:00 — PM: Taking ownership. Next: pick top 3 niches + define offer angles.
+- 2026-02-03T07:36:00-08:00 — PM: Posted standup to #mission-control; waiting on niche selection (or permission to pick).
 
 ## Deliverables
 - mission-control/docs/leadgen-system.md

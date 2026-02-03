@@ -16,6 +16,7 @@ A clean, reusable set of GoHighLevel snapshots, automations, and SOPs for onboar
 
 ## Updates (append-only)
 - 2026-02-03T07:30:00-08:00 — PM: Taking ownership. Next: outline the standard pipeline + automation map for a new client.
+- 2026-02-03T07:36:00-08:00 — PM: Posted standup to #mission-control; waiting on default offer + intake flow details.
 
 ## Deliverables
 - mission-control/docs/ghl-framework.md
