@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Johnny 5 ⚡ — Command Center (v2)</title>
+  <style>
+    :root{
+      --bg0:#04060c;
+      --bg1:#070c17;
+      --panel: rgba(12, 18, 34, .72);
+      --panel2: rgba(0,0,0,.28);
+      --line: rgba(155, 185, 255, .16);
+      --ink: #e8f0ff;
+      --muted:#9fb2d8;
+      --bolt:#ffe14d;
+      --good:#38e07b;
+      --warn:#ffb020;
+      --bad:#ff4d6d;
+      --shadow: 0 18px 80px rgba(0,0,0,.55);
+
+      --blink: 5.2s;
+      --scan: 3.6s;
+      --mood: "calm";
+    }
+
+    *{box-sizing:border-box;}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 900px at 15% 20%, #0d1b36 0%, var(--bg0) 55%),
+        radial-gradient(900px 500px at 85% 40%, rgba(255,225,77,.10) 0%, rgba(255,225,77,0) 60%),
+        radial-gradient(800px 600px at 40% 90%, rgba(138,211,255,.08) 0%, rgba(138,211,255,0) 60%);
+      color:var(--ink);
+      font:14px/1.35 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      letter-spacing:.2px;
+      overflow:hidden;
+    }
+
+    .topbar{
+      height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 14px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      background:linear-gradient(180deg, rgba(0,0,0,.32), rgba(0,0,0,.10));
+      backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800;}
+    .bolt{width:18px; height:18px; display:inline-block; filter: drop-shadow(0 0 10px rgba(255,225,77,.45));}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background:rgba(0,0,0,.22)}
+    .dot{width:9px; height:9px; border-radius:50%; background:var(--good); box-shadow:0 0 12px rgba(56,224,123,.5)}
+    .top-right{display:flex; align-items:center; gap:10px;}
+
+    .wrap{height:calc(100% - 54px); padding:14px; display:grid; grid-template-columns: 420px 1fr; gap:14px;}
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .left{display:grid; grid-template-rows: 300px auto;}
+    .stage{position:relative; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.18)); border-bottom:1px solid rgba(255,255,255,.06)}
+    canvas{display:block; width:100%; height:100%;}
+
+    .hud{padding:12px; display:grid; gap:10px;}
+
+    .row{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 12px; border-radius:12px; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.06);}
+    .k{color:var(--muted)}
+    .v{font-weight:700}
+
+    input[type="text"], select{
+      width:100%;
+      color:var(--ink);
+      background:rgba(0,0,0,.20);
+      border:1px solid rgba(255,255,255,.14);
+      padding:8px 10px;
+      border-radius:10px;
+      font-weight:700;
+      outline:none;
+    }
+    input:focus, select:focus{border-color:rgba(255,255,255,.28)}
+
+    input[type="range"]{width:100%; accent-color: var(--bolt);}
+
+    .btns{display:flex; flex-wrap:wrap; gap:10px;}
+    button{
+      cursor:pointer;
+      color:var(--ink);
+      background:rgba(0,0,0,.22);
+      border:1px solid rgba(255,255,255,.14);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:800;
+    }
+    button:hover{border-color:rgba(255,255,255,.28)}
+
+    /* Right side: Kanban + Console */
+    .right{display:grid; grid-template-rows: 1fr 220px; gap:14px;}
+
+    .kanban{padding:12px;}
+    .kanban-head{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px;}
+    .kanban-head h2{margin:0; font-size:14px; letter-spacing:.3px}
+    .kanban-cols{height:calc(100% - 34px); display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;}
+
+    .col{
+      background: rgba(0,0,0,.20);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:14px;
+      padding:10px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      min-width:0;
+    }
+    .col-title{display:flex; align-items:center; justify-content:space-between; gap:10px;}
+    .badge{font-size:11px; color:var(--muted); padding:3px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.10); background:rgba(0,0,0,.18)}
+    .stack{flex:1; overflow:auto; display:flex; flex-direction:column; gap:10px; padding-right:4px;}
+
+    .cardItem{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(155,185,255,.18);
+      border-radius:14px;
+      padding:10px;
+      cursor:grab;
+      user-select:none;
+    }
+    .cardItem:active{cursor:grabbing}
+    .cardItem .title{font-weight:900; margin-bottom:6px;}
+    .cardItem .meta{display:flex; gap:8px; flex-wrap:wrap; color:var(--muted); font-size:12px}
+    .chip{border:1px solid rgba(255,255,255,.12); padding:2px 8px; border-radius:999px; background:rgba(0,0,0,.18)}
+
+    .dropHint{outline:2px dashed rgba(255,225,77,.35); outline-offset: 6px;}
+
+    .console{padding:12px;}
+    .console h2{margin:0 0 10px 0; font-size:14px}
+    .log{height:140px; overflow:auto; padding:10px; border-radius:14px; background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.08)}
+    .line{margin:0 0 8px 0; color:var(--muted)}
+    .line b{color:var(--ink)}
+    .cmd{margin-top:10px; display:flex; gap:10px;}
+    .cmd input{flex:1;}
+
+    .hint{color:var(--muted); font-size:12px}
+
+    /* mood palettes */
+    [data-mood="hype"]{ --panel: rgba(12,18,34,.74); }
+    [data-mood="ruthless"]{ --warn:#ff4d6d; --bolt:#ff4d6d; }
+    [data-mood="dad-mode"]{ --bolt:#8ad3ff; --good:#8ad3ff; }
+
+    /* subtle scan line */
+    .scanline{
+      pointer-events:none;
+      position:absolute;
+      inset:0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,.04) 0px,
+        rgba(255,255,255,.04) 1px,
+        rgba(0,0,0,0) 3px,
+        rgba(0,0,0,0) 9px
+      );
+      opacity:.06;
+      mix-blend-mode: overlay;
+    }
+  </style>
+</head>
+<body data-mood="calm">
+  <div class="topbar">
+    <div class="brand">
+      <svg class="bolt" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--bolt)" d="M14 2 4 14h7l-1 8 10-12h-7z"/></svg>
+      <div>Johnny 5 — Command Center</div>
+      <div class="pill"><span class="dot" id="statusDot"></span><span id="statusText">Online</span></div>
+    </div>
+    <div class="top-right">
+      <div class="pill"><span class="k">Energy</span> <span class="v" id="energyPill">70%</span></div>
+      <div class="pill"><span class="k">Mood</span> <span class="v" id="moodPill">calm</span></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card left">
+      <div class="stage">
+        <canvas id="bot"></canvas>
+        <div class="scanline"></div>
+      </div>
+
+      <div class="hud">
+        <div class="row">
+          <div class="k">Identity</div>
+          <div style="flex:1"><input id="identity" value="Johnny 5 ⚡" /></div>
+        </div>
+        <div class="row">
+          <div class="k">Mission</div>
+          <div style="flex:1"><input id="mission" value="More margin, more family time, better health" /></div>
+        </div>
+        <div class="row">
+          <div class="k">Mood</div>
+          <div style="flex:1">
+            <select id="mood">
+              <option value="calm">calm</option>
+              <option value="hype">hype</option>
+              <option value="ruthless">ruthless</option>
+              <option value="dad-mode">dad-mode</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="k">Energy</div>
+          <div style="flex:1; display:flex; align-items:center; gap:10px;">
+            <input id="energy" type="range" min="0" max="100" value="70" />
+            <div class="k" style="min-width:44px; text-align:right" id="energyVal">70%</div>
+          </div>
+        </div>
+
+        <div class="btns">
+          <button id="btnAdd">+ New task</button>
+          <button id="btnCopy">Copy status</button>
+          <button id="btnFocus">Toggle focus</button>
+        </div>
+        <div class="hint">Drag cards between columns. Type in “Talk to Johnny” below: <b>add</b>, <b>done</b>, <b>focus</b>, <b>mood hype</b> …</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="card kanban">
+        <div class="kanban-head">
+          <h2>Kanban</h2>
+          <div class="btns" style="margin:0">
+            <button id="btnClearDone">Clear Done</button>
+          </div>
+        </div>
+        <div class="kanban-cols" id="cols"></div>
+      </div>
+
+      <div class="card console">
+        <h2>Talk to Johnny 5</h2>
+        <div class="log" id="log" aria-label="Console log"></div>
+        <div class="cmd">
+          <input id="cmd" placeholder='Try: "add draft 10 Looms" or "done #3" or "mood dad-mode"' />
+          <button id="btnSend">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // ---- State ----
+  const STORE_KEY = 'johnny5.commandCenter.v2';
+  const state = loadState();
+
+  const identityEl = document.getElementById('identity');
+  const missionEl = document.getElementById('mission');
+  const moodEl = document.getElementById('mood');
+  const moodPill = document.getElementById('moodPill');
+  const energyEl = document.getElementById('energy');
+  const energyValEl = document.getElementById('energyVal');
+  const energyPill = document.getElementById('energyPill');
+
+  const logEl = document.getElementById('log');
+  const cmdEl = document.getElementById('cmd');
+
+  const columns = [
+    { id:'todo', name:'To Do', badge:'plan' },
+    { id:'doing', name:'Doing', badge:'now' },
+    { id:'done', name:'Done', badge:'ship' },
+  ];
+
+  function loadState(){
+    try{ return JSON.parse(localStorage.getItem(STORE_KEY) || '{}'); }
+    catch{ return {}; }
+  }
+  function save(patch){
+    const next = { ...loadState(), ...patch };
+    localStorage.setItem(STORE_KEY, JSON.stringify(next));
+  }
+
+  function now(){
+    return new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+  }
+  function log(msg){
+    const p = document.createElement('p');
+    p.className = 'line';
+    p.innerHTML = `<b>[${now()}]</b> ${msg}`;
+    logEl.prepend(p);
+  }
+
+  // Defaults
+  const tasks = state.tasks || [
+    { id: 1, title: 'Bill outstanding balances', tag: 'cash', col: 'todo' },
+    { id: 2, title: 'Build audit pitch deck outline', tag: 'sales', col: 'todo' },
+    { id: 3, title: 'Ship Command Center v2', tag: 'build', col: 'doing' },
+  ];
+
+  const nextId = () => Math.max(0, ...tasks.map(t=>t.id)) + 1;
+
+  // ---- UI wiring ----
+  identityEl.value = state.identity || identityEl.value;
+  missionEl.value = state.mission || missionEl.value;
+  moodEl.value = state.mood || 'calm';
+  energyEl.value = String(typeof state.energy === 'number' ? state.energy : 70);
+
+  function setMood(m){
+    document.body.dataset.mood = m;
+    moodPill.textContent = m;
+    save({ mood: m });
+  }
+  function setEnergy(v){
+    const n = Number(v);
+    energyValEl.textContent = `${n}%`;
+    energyPill.textContent = `${n}%`;
+    // speed/intensity
+    const blink = 9 - (n/100)*5;
+    const scan = 6.5 - (n/100)*4;
+    document.documentElement.style.setProperty('--blink', `${blink.toFixed(2)}s`);
+    document.documentElement.style.setProperty('--scan', `${scan.toFixed(2)}s`);
+    save({ energy: n });
+  }
+
+  identityEl.addEventListener('input', () => save({ identity: identityEl.value }));
+  missionEl.addEventListener('input', () => save({ mission: missionEl.value }));
+  moodEl.addEventListener('change', () => setMood(moodEl.value));
+  energyEl.addEventListener('input', (e) => setEnergy(e.target.value));
+
+  setMood(moodEl.value);
+  setEnergy(energyEl.value);
+
+  // ---- Kanban ----
+  const colsEl = document.getElementById('cols');
+
+  function render(){
+    colsEl.innerHTML = '';
+    for(const c of columns){
+      const col = document.createElement('div');
+      col.className = 'col';
+      col.dataset.col = c.id;
+      col.innerHTML = `
+        <div class="col-title">
+          <div class="v">${c.name}</div>
+          <div class="badge">${c.badge}</div>
+        </div>
+        <div class="stack" data-stack="${c.id}"></div>
+      `;
+
+      const stack = col.querySelector('.stack');
+      const cards = tasks.filter(t => t.col === c.id);
+      for(const t of cards){
+        const el = document.createElement('div');
+        el.className = 'cardItem';
+        el.draggable = true;
+        el.dataset.id = String(t.id);
+        el.innerHTML = `
+          <div class="title">#${t.id} ${escapeHtml(t.title)}</div>
+          <div class="meta">
+            <span class="chip">${escapeHtml(t.tag || 'task')}</span>
+          </div>
+        `;
+        el.addEventListener('dragstart', (e) => {
+          e.dataTransfer.setData('text/plain', String(t.id));
+          e.dataTransfer.effectAllowed = 'move';
+        });
+        el.addEventListener('dblclick', () => {
+          const title = prompt('Edit task title', t.title);
+          if(title != null){ t.title = title.trim() || t.title; persist(); render(); log(`Updated task #${t.id}.`); }
+        });
+        stack.appendChild(el);
+      }
+
+      col.addEventListener('dragover', (e) => { e.preventDefault(); col.classList.add('dropHint'); });
+      col.addEventListener('dragleave', () => col.classList.remove('dropHint'));
+      col.addEventListener('drop', (e) => {
+        e.preventDefault();
+        col.classList.remove('dropHint');
+        const id = Number(e.dataTransfer.getData('text/plain'));
+        const t = tasks.find(x => x.id === id);
+        if(!t) return;
+        t.col = c.id;
+        persist();
+        render();
+        log(`Moved #${t.id} → ${c.name}.`);
+      });
+
+      colsEl.appendChild(col);
+    }
+  }
+
+  function persist(){
+    save({ tasks });
+  }
+
+  function escapeHtml(s){
+    return String(s)
+      .replaceAll('&','&amp;')
+      .replaceAll('<','&lt;')
+      .replaceAll('>','&gt;')
+      .replaceAll('"','&quot;')
+      .replaceAll("'",'&#039;');
+  }
+
+  // ---- Commands (Talk to Johnny) ----
+  function addTask(title, tag='task', col='todo'){
+    const t = { id: nextId(), title, tag, col };
+    tasks.unshift(t);
+    persist();
+    render();
+    log(`Created task #${t.id}: ${escapeHtml(title)}.`);
+  }
+
+  function cmd(text){
+    const raw = text.trim();
+    if(!raw) return;
+
+    const parts = raw.split(/\s+/);
+    const head = parts[0].toLowerCase();
+
+    if(head === 'add'){
+      const rest = raw.slice(3).trim();
+      if(!rest){ log('Usage: add <task title>'); return; }
+      addTask(rest, 'task', 'todo');
+      return;
+    }
+
+    if(head === 'done'){
+      const id = Number(parts[1]?.replace('#',''));
+      const t = tasks.find(x => x.id === id);
+      if(!t){ log('Usage: done #<id>'); return; }
+      t.col = 'done';
+      persist();
+      render();
+      log(`Marked #${t.id} done.`);
+      return;
+    }
+
+    if(head === 'doing'){
+      const id = Number(parts[1]?.replace('#',''));
+      const t = tasks.find(x => x.id === id);
+      if(!t){ log('Usage: doing #<id>'); return; }
+      t.col = 'doing';
+      persist();
+      render();
+      log(`Pulled #${t.id} into Doing.`);
+      return;
+    }
+
+    if(head === 'mood'){
+      const m = parts[1];
+      if(!m){ log('Usage: mood <calm|hype|ruthless|dad-mode>'); return; }
+      moodEl.value = m;
+      setMood(m);
+      log(`Mood set → ${m}.`);
+      return;
+    }
+
+    if(head === 'focus'){
+      toggleFocus();
+      return;
+    }
+
+    log(`Unknown command: ${escapeHtml(raw)}. Try: add, doing, done, mood, focus`);
+  }
+
+  document.getElementById('btnSend').onclick = () => {
+    cmd(cmdEl.value);
+    cmdEl.value = '';
+    cmdEl.focus();
+  };
+
+  cmdEl.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      document.getElementById('btnSend').click();
+    }
+  });
+
+  document.getElementById('btnAdd').onclick = () => {
+    const title = prompt('New task title');
+    if(title) addTask(title);
+  };
+
+  document.getElementById('btnClearDone').onclick = () => {
+    const before = tasks.length;
+    for(let i=tasks.length-1;i>=0;i--) if(tasks[i].col==='done') tasks.splice(i,1);
+    persist();
+    render();
+    log(`Cleared done tasks (${before - tasks.length}).`);
+  };
+
+  document.getElementById('btnCopy').onclick = async () => {
+    const txt = `Johnny 5 Status\nIdentity: ${identityEl.value}\nMission: ${missionEl.value}\nMood: ${moodEl.value}\nEnergy: ${energyEl.value}%\n\nTASKS\n` +
+      columns.map(c => `\n${c.name.toUpperCase()}\n` + tasks.filter(t=>t.col===c.id).map(t=>`- #${t.id} ${t.title}`).join('\n')).join('\n');
+    try{ await navigator.clipboard.writeText(txt); log('Copied status to clipboard.'); }
+    catch{ log('Clipboard blocked by browser.'); }
+  };
+
+  let focusMode = state.focusMode || false;
+  function toggleFocus(){
+    focusMode = !focusMode;
+    save({ focusMode });
+    const dot = document.getElementById('statusDot');
+    const text = document.getElementById('statusText');
+    if(focusMode){
+      text.textContent = 'Focus';
+      dot.style.background = 'var(--warn)';
+      dot.style.boxShadow = '0 0 12px rgba(255,176,32,.5)';
+      log('Focus mode ON (less chatter, more execution).');
+    }else{
+      text.textContent = 'Online';
+      dot.style.background = 'var(--good)';
+      dot.style.boxShadow = '0 0 12px rgba(56,224,123,.5)';
+      log('Focus mode OFF.');
+    }
+  }
+
+  document.getElementById('btnFocus').onclick = () => toggleFocus();
+  if(focusMode) toggleFocus();
+
+  // ---- Animated bot (stylized homage; not an exact replica) ----
+  const canvas = document.getElementById('bot');
+  const ctx = canvas.getContext('2d');
+  let W=0,H=0;
+  function resize(){
+    const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = Math.floor(W*dpr);
+    canvas.height = Math.floor(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  let t0 = performance.now();
+  function draw(nowMs){
+    const dt = (nowMs - t0)/1000;
+    t0 = nowMs;
+
+    const energy = Number(energyEl.value)/100;
+    const time = nowMs/1000;
+
+    // background glow
+    ctx.clearRect(0,0,W,H);
+    const g = ctx.createRadialGradient(W*0.4,H*0.2, 10, W*0.4,H*0.2, Math.max(W,H));
+    g.addColorStop(0, 'rgba(138,211,255,.14)');
+    g.addColorStop(0.35, 'rgba(255,225,77,.08)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,W,H);
+
+    const cx = W*0.5;
+    const cy = H*0.56;
+
+    const bob = Math.sin(time* (1.2 + energy*1.4)) * (3 + energy*5);
+    const lean = Math.sin(time*(0.7+energy)) * (0.04 + energy*0.05);
+
+    ctx.save();
+    ctx.translate(cx, cy + bob);
+    ctx.rotate(lean);
+
+    // torso
+    const torsoW = 220;
+    const torsoH = 170;
+    roundRect(-torsoW/2, -torsoH/2, torsoW, torsoH, 26, '#0b1222', 'rgba(42,74,146,.9)', 3);
+
+    // chest screen
+    roundRect(-170/2, -52, 170, 88, 16, '#070b14', 'rgba(33,60,121,.9)', 2);
+
+    // eyes panel
+    const eyeY = -18;
+    const eyeX = 48;
+    eye(-eyeX, eyeY, time, energy);
+    eye( eyeX, eyeY, time+0.12, energy);
+
+    // mouth/speaker
+    roundRect(-90, 34, 180, 34, 12, '#070b14', 'rgba(33,60,121,.9)', 2);
+    ctx.globalAlpha = 0.75 + 0.25*Math.sin(time* (2.0+energy*2.5));
+    ctx.fillStyle = 'rgba(42,74,146,.9)';
+    roundRect(-76, 46, 152, 4, 2, 'rgba(42,74,146,.9)');
+    roundRect(-76, 56, 110, 4, 2, 'rgba(42,74,146,.65)');
+    ctx.globalAlpha = 1;
+
+    // status lights
+    lights(-96, 78);
+
+    // tracks/base
+    ctx.translate(0, 112);
+    roundRect(-120, 0, 240, 44, 18, '#05060b', 'rgba(27,44,85,.9)', 2);
+    ctx.fillStyle = 'rgba(27,44,85,.85)';
+    for(let i=-80;i<=80;i+=40){
+      ctx.beginPath();
+      ctx.arc(i, 22, 10, 0, Math.PI*2);
+      ctx.fill();
+    }
+
+    // bolt icon
+    ctx.save();
+    ctx.translate(94, -252);
+    ctx.rotate(-0.1);
+    ctx.globalAlpha = 0.65 + 0.35*Math.sin(time*1.6);
+    ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--bolt').trim() || '#ffe14d';
+    ctx.shadowColor = 'rgba(255,225,77,.45)';
+    ctx.shadowBlur = 18;
+    ctx.beginPath();
+    ctx.moveTo(18,0);
+    ctx.lineTo(0,32);
+    ctx.lineTo(14,32);
+    ctx.lineTo(8,54);
+    ctx.lineTo(36,18);
+    ctx.lineTo(22,18);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+
+    ctx.restore();
+
+    requestAnimationFrame(draw);
+  }
+
+  function roundRect(x,y,w,h,r, fill, stroke, sw=0){
+    ctx.beginPath();
+    ctx.moveTo(x+r, y);
+    ctx.arcTo(x+w, y, x+w, y+h, r);
+    ctx.arcTo(x+w, y+h, x, y+h, r);
+    ctx.arcTo(x, y+h, x, y, r);
+    ctx.arcTo(x, y, x+w, y, r);
+    ctx.closePath();
+    if(fill){ ctx.fillStyle = fill; ctx.fill(); }
+    if(stroke && sw>0){ ctx.strokeStyle = stroke; ctx.lineWidth = sw; ctx.stroke(); }
+  }
+
+  function eye(x,y,time,energy){
+    ctx.save();
+    ctx.translate(x,y);
+
+    // blink
+    const blinkPeriod = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--blink')) || 5.2;
+    const blinkPhase = (time % blinkPeriod) / blinkPeriod;
+    const blink = (blinkPhase < 0.05) ? (blinkPhase/0.05) : (blinkPhase > 0.92 ? (1-(blinkPhase-0.92)/0.08) : 1);
+    const eyelid = 0.12 + 0.88*blink;
+
+    // eye shell
+    ctx.beginPath();
+    ctx.ellipse(0,0, 34, 22, 0, 0, Math.PI*2);
+    ctx.fillStyle = '#0a1224';
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(42,74,146,.9)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // pupil scan
+    const scanPeriod = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--scan')) || 3.6;
+    const sx = Math.sin((time/scanPeriod) * Math.PI*2) * (4 + energy*6);
+
+    // pupil
+    ctx.save();
+    ctx.scale(1, eyelid);
+    ctx.beginPath();
+    ctx.arc(sx, 0, 9, 0, Math.PI*2);
+    ctx.fillStyle = '#8ad3ff';
+    ctx.shadowColor = 'rgba(138,211,255,.45)';
+    ctx.shadowBlur = 14;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.beginPath();
+    ctx.arc(sx-3, -4, 2.2, 0, Math.PI*2);
+    ctx.fillStyle = 'rgba(232,240,255,.8)';
+    ctx.fill();
+    ctx.restore();
+
+    ctx.restore();
+  }
+
+  function lights(x,y){
+    ctx.save();
+    ctx.translate(x,y);
+    dot(0,0,7,'#38e07b');
+    dot(26,0,7,'#ffb020');
+    dot(52,0,7,'#ff4d6d');
+    ctx.restore();
+  }
+  function dot(x,y,r,c){
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle = c;
+    ctx.shadowColor = c;
+    ctx.shadowBlur = 12;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  requestAnimationFrame(draw);
+
+  // Boot
+  render();
+  log('Boot complete. Command Center v2 online.');
+  log('Tip: drag cards, double-click to edit, type commands below.');
+
+  document.addEventListener('keydown', (e) => {
+    if(e.target && ['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+    const k = e.key.toLowerCase();
+    if(k === 'a') document.getElementById('btnAdd').click();
+    if(k === 'f') toggleFocus();
+    if(k === '/') { cmdEl.focus(); e.preventDefault(); }
+  });
+</script>
+</body>
+</html>
