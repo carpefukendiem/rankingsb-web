@@ -6,6 +6,7 @@
 
 ## Squad status
 - PM: (created) — owns Lead Gen + GHL tasks
+- Sales Support: (created) — enables outside rep (printables + audits + packets)
 - Upwork Scout: (created) — finds contract work + drafts proposals
 - Lead: (not yet spun up)
 - LocalSEO: (not yet spun up)
