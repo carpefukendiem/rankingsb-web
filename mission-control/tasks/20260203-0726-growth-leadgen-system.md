@@ -1,9 +1,9 @@
 # Task: Build Lead Gen / Prospecting system (Rankingsb)
 
 **ID:** 20260203-0726-growth-leadgen-system
-**Status:** inbox
+**Status:** in_progress
 **Priority:** urgent
-**Assignees:** @LeadGen
+**Assignees:** @PM
 **Created:** 2026-02-03T07:26:00-08:00
 
 ## Goal
@@ -19,6 +19,7 @@ Marketing agency owner; wants +30–50 clients in 12 months. Uses GoHighLevel.
 - [ ] Define tracking: stages + KPIs
 
 ## Updates (append-only)
+- 2026-02-03T07:30:00-08:00 — PM: Taking ownership. Next: pick top 3 niches + define offer angles.
 
 ## Deliverables
 - mission-control/docs/leadgen-system.md

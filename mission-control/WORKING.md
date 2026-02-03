@@ -1,13 +1,13 @@
 # WORKING — Mission Control
 
 ## Current priorities (human-set)
-- (unset) — tell Johnny 5 your #1 focus and I will re-order the board.
+1) Lead Gen (pipeline + outreach)
+2) GoHighLevel (automation + dev framework)
 
 ## Squad status
+- PM: (created) — owns Lead Gen + GHL tasks
 - Lead: (not yet spun up)
-- LeadGen: (not yet spun up)
 - LocalSEO: (not yet spun up)
-- GHL: (not yet spun up)
 - Copy: (not yet spun up)
 
 ## Your ongoing themes (captured)
@@ -23,6 +23,5 @@
 
 ## Next: Setup checklist
 - [ ] Fix Discord permissions for #mission-control (bot needs View + Send + Read History)
-- [ ] Spin up 4-agent squad (LeadGen, LocalSEO, GHL, Copy) with staggered heartbeats
+- [ ] Spin up squad sessions (PM + specialists) + staggered heartbeats
 - [ ] Start daily standups to Discord
-- [ ] Move backlog items into task files (this is in progress)
