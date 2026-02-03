@@ -1,0 +1,9 @@
+{
+  "port": 3200,
+  "bind": "127.0.0.1",
+  "missionControlDir": "../mission-control",
+  "clawdControl": {
+    "url": "http://localhost:3100",
+    "fallback": "https://clawdcontrol.com"
+  }
+}
