@@ -7,7 +7,7 @@ export async function GET() {
       headers: ghHeaders(),
       next: { revalidate: 30 },
     });
-    if (!r.ok) return NextResponse.json({ text: '' });
+    if (!r.ok) return NextResponse.json({ text: '', error: `github ${r.status}`, hasToken: !!process.env.GITHUB_TOKEN });
     const data: any = await r.json();
     const contentB64 = data?.content || '';
     const text = Buffer.from(String(contentB64), 'base64').toString('utf8');

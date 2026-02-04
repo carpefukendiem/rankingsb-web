@@ -40,6 +40,7 @@ export async function GET() {
 
     return NextResponse.json({ tasks });
   } catch (e: any) {
-    return NextResponse.json({ tasks: [], error: String(e?.message || e) }, { status: 200 });
+    const hasToken = !!process.env.GITHUB_TOKEN;
+    return NextResponse.json({ tasks: [], error: String(e?.message || e), hasToken }, { status: 200 });
   }
 }
