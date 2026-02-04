@@ -22,7 +22,8 @@ function parseTask(md: string, fallbackTitle: string) {
 }
 
 export async function GET() {
-  const list = await fetchJson(`https://api.github.com/repos/${OWNER}/${REPO}/contents/mission-control/tasks`);
+  try {
+    const list = await fetchJson(`https://api.github.com/repos/${OWNER}/${REPO}/contents/mission-control/tasks`);
   const files = (Array.isArray(list) ? list : []).filter((x: any) => x?.type === 'file' && x?.name?.endsWith('.md') && x?.name !== 'TEMPLATE.md');
 
   const tasks = await Promise.all(
@@ -37,5 +38,8 @@ export async function GET() {
     })
   );
 
-  return NextResponse.json({ tasks });
+    return NextResponse.json({ tasks });
+  } catch (e: any) {
+    return NextResponse.json({ tasks: [], error: String(e?.message || e) }, { status: 200 });
+  }
 }
