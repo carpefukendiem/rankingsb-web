@@ -25,10 +25,13 @@ Marketing agency owner; wants +30–50 clients in 12 months. Uses GoHighLevel.
 - Dentists
 - HVAC
 
-### Offer (starting point)
-- 30‑day setup: **$750 one-time**
-- Ongoing: **$1,500/mo**
-(Adjust after first 3–5 booked calls.)
+### Offer (locked)
+**Lead Flow Engine (GHL): $999 setup + $399/mo (3‑month minimum)**
+
+Upsell paths (productized):
+- Google Ads Lite Ops: $750 setup + $299/mo (+ ad spend)
+- Website + Local SEO Fix Pack: $999 setup + $199/mo
+(See `mission-control/docs/OFFERS.md`)
 
 ### Booking flow
 - Calendar: https://link.rankingsb.com/widget/booking/RqgaExQNQEtVAr22AxVz

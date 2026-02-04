@@ -15,10 +15,11 @@ Give the outside sales rep everything needed to book meetings and close:
 
 ## Checklist
 - [ ] Define rep territory + niches + ICP (Santa Barbara + Ventura)
-- [ ] Create “Leave-Behind” 1-pager (offer, proof, CTA)
+- [ ] Update leave-behind to Electrician + Pest Control + pricing
 - [ ] Create “Quick Audit” template (GBP, website, reviews, ads signals)
 - [ ] Create objection-handling sheet (price, trust, timing, DIY)
 - [ ] Create weekly rep packet template (10 prospects + notes + next steps)
+- [ ] Create 2 add-on one-liners: Ads Lite + Website/Local SEO Fix Pack
 
 ## Deliverables
 - mission-control/docs/sales-rep/leave-behind-1pager.md (DONE v1)
