@@ -21,10 +21,20 @@ Give the outside sales rep everything needed to book meetings and close:
 - [ ] Create weekly rep packet template (10 prospects + notes + next steps)
 
 ## Deliverables
-- mission-control/docs/sales-rep/leave-behind-1pager.md
-- mission-control/docs/sales-rep/quick-audit-template.md
-- mission-control/docs/sales-rep/objections.md
-- mission-control/docs/sales-rep/weekly-packet-template.md
+- mission-control/docs/sales-rep/leave-behind-1pager.md (DONE v1)
+- mission-control/docs/sales-rep/quick-audit-template.md (DONE v1)
+- mission-control/docs/sales-rep/objections.md (DONE v1)
+- mission-control/docs/sales-rep/weekly-packet-template.md (DONE v1)
+
+## Task details
+### Booking link
+https://link.rankingsb.com/widget/booking/RqgaExQNQEtVAr22AxVz
+
+### Proof points to use
+First-page rankings + top-of-map-pack visibility for:
+- Freds Upholstery
+- Enzo MMA
+- Paragon Goleta
 
 ## Updates (append-only)
 - 2026-02-03T08:35:00-08:00 — Johnny 5: Created Sales Support agent + kicked off enablement task.

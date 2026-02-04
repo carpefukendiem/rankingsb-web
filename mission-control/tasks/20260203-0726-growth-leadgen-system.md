@@ -13,10 +13,26 @@ A repeatable lead gen pipeline that reliably produces qualified local-business l
 Marketing agency owner; wants +30–50 clients in 12 months. Uses GoHighLevel.
 
 ## Checklist
-- [ ] Define 3 target niches + offer angle per niche
-- [ ] Draft outreach scripts (email/SMS/DM) + follow-up sequence
-- [ ] Define lead sources (Google Maps scraping, directories, referrals, ads)
-- [ ] Define tracking: stages + KPIs
+- [ ] Lock the initial 3 niches (SB + Ventura): Med Spa, Dentist, HVAC
+- [ ] Define offer + positioning (conversion-first, not crazy expensive)
+- [ ] Draft outreach scripts (door/field talk track + email/SMS follow-ups)
+- [ ] Define lead sources (Maps lists, referrals, partner list, warm reactivation)
+- [ ] Define tracking: stages + KPIs (booked → show → close)
+
+## Task details
+### Initial niches (chosen)
+- Med spas / aesthetics
+- Dentists
+- HVAC
+
+### Offer (starting point)
+- 30‑day setup: **$750 one-time**
+- Ongoing: **$1,500/mo**
+(Adjust after first 3–5 booked calls.)
+
+### Booking flow
+- Calendar: https://link.rankingsb.com/widget/booking/RqgaExQNQEtVAr22AxVz
+- Micro‑qualifier on booking page (3 fields): business type, city, budget range
 
 ## Updates (append-only)
 - 2026-02-03T07:30:00-08:00 — PM: Taking ownership. Next: pick top 3 niches + define offer angles.
