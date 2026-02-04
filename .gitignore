@@ -1,0 +1,8 @@
+node_modules
+.next
+.vercel
+.DS_Store
+
+# Keep local-only logs private by default
+mission-control/logs/*.log
+mission-control/logs/*.json
