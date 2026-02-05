@@ -1,0 +1,83 @@
+{
+  "exportedAt": "2026-02-04T00:00:00-08:00",
+  "timezone": "America/Los_Angeles",
+  "notes": [
+    "This is a backup of OpenClaw Gateway cron jobs as of export time.",
+    "Edit/restore via OpenClaw cron tool (cron add/update/remove).",
+    "Jobs that were disabled are included for historical context."
+  ],
+  "jobs": [
+    {
+      "id": "cbc92212-719c-4441-ab72-07c9bc1dbbb1",
+      "name": "Daily 8am Morning Brief (trigger)",
+      "enabled": false,
+      "schedule": { "kind": "cron", "expr": "0 8 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "5beb72df-154a-4cc7-86fa-a940ff12c36a",
+      "name": "Daily 11pm Nightly Build Session (trigger)",
+      "enabled": false,
+      "schedule": { "kind": "cron", "expr": "0 23 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "4e580d6a-ed62-4911-bfb0-29a26831e95c",
+      "name": "PM Standup NOW (one-shot)",
+      "enabled": false,
+      "schedule": { "kind": "at", "atMs": 1770137320000 },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "4b24f357-9edc-4f4c-b097-417fa21203ff",
+      "name": "Light Check-in — Mission Control Ticker + Queue (every 3h)",
+      "enabled": true,
+      "schedule": { "kind": "cron", "expr": "15 */3 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "99303314-89b8-4c6a-9fb3-de2e90b477d7",
+      "name": "Work Block — Sales Rep Enablement (afternoon)",
+      "enabled": true,
+      "schedule": { "kind": "cron", "expr": "30 14 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "e986db7d-1fc1-40d9-af72-07c9bc1dbbb1",
+      "name": "Work Block — Lead Gen + GHL (late morning)",
+      "enabled": true,
+      "schedule": { "kind": "cron", "expr": "30 10 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "3d891d8f-a680-48d2-91ec-d85023b7e7c1",
+      "name": "PM Daily Standup → #mission-control",
+      "enabled": true,
+      "schedule": { "kind": "cron", "expr": "10 8 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "main",
+      "payload": { "kind": "systemEvent" }
+    },
+    {
+      "id": "e27da51c-d62a-4b09-afa4-dd51e8e7fd71",
+      "name": "Morning Brief → Discord (isolated, reliable)",
+      "enabled": true,
+      "schedule": { "kind": "cron", "expr": "0 8 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "isolated",
+      "payload": { "kind": "agentTurn" }
+    },
+    {
+      "id": "3c393c80-cece-4c9c-895e-c3833f786094",
+      "name": "Nightly Brief → Discord (isolated, reliable)",
+      "enabled": true,
+      "schedule": { "kind": "cron", "expr": "5 23 * * *", "tz": "America/Los_Angeles" },
+      "sessionTarget": "isolated",
+      "payload": { "kind": "agentTurn" }
+    }
+  ]
+}
