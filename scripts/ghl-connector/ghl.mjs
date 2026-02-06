@@ -175,6 +175,8 @@ async function seedSbElectricians(locationId) {
       continue;
     }
 
+    // Note: Opportunity create endpoint rejects `tags` in some API versions.
+    // We store tags on the Contact (upsert) and rely on that for segmentation.
     await opportunitiesCreate(locationId, {
       name: item.name,
       contactId,
@@ -182,7 +184,6 @@ async function seedSbElectricians(locationId) {
       pipelineStageId: stage.id || stage._id,
       status: 'open',
       source: 'Walkthrough → Leave-behind → Audit → Text',
-      tags,
       ...(assignedTo ? { assignedTo } : {}),
     });
 
