@@ -88,8 +88,27 @@ async function pipelinesList(locationId) {
   return request(`/opportunities/pipelines?${q.toString()}`);
 }
 
+function inferPersonName(companyOrName) {
+  const s = String(companyOrName || '').trim();
+  if (!s) return { firstName: 'Prospect', lastName: 'Unknown' };
+  // Keep it simple and compliant: contact must have at least first+last if no email/phone.
+  return { firstName: s.slice(0, 40), lastName: 'Prospect' };
+}
+
 async function contactsUpsert(locationId, payload) {
-  return request(`/contacts/`, { method: 'POST', body: { locationId, ...payload } });
+  const hasEmail = !!payload?.email;
+  const hasPhone = !!payload?.phone;
+  const hasNames = !!payload?.firstName && !!payload?.lastName;
+
+  const base = { locationId, ...payload };
+
+  if (!hasEmail && !hasPhone && !hasNames) {
+    const n = inferPersonName(payload?.companyName || payload?.name);
+    base.firstName = n.firstName;
+    base.lastName = n.lastName;
+  }
+
+  return request(`/contacts/`, { method: 'POST', body: base });
 }
 
 async function opportunitiesCreate(locationId, payload) {
