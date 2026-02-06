@@ -25,7 +25,7 @@ Commands:
   pipelines:list <locationId>
   contacts:upsert <locationId> <json>
   opportunities:create <locationId> <json>
-  seed:sb-electricians <locationId>
+  seed:sb-electricians <locationId> [--pipeline "NAME"] [--stage "NAME"] [--assignedTo USER_ID]
 
 Notes:
   This is a scaffold. Once API endpoints are confirmed, we’ll add commands to sync pipelines/workflows.
@@ -105,20 +105,31 @@ function pickPipeline(pipelines, preferredName) {
   return prospects || arr[0];
 }
 
-function pickFirstStage(pipeline) {
+function pickStage(pipeline, preferredName) {
   const stages = pipeline?.stages || pipeline?.pipelineStages || [];
   if (!Array.isArray(stages) || !stages.length) return null;
-  // Prefer a stage that sounds like the beginning.
+  const byName = stages.find((s) => String(s?.name || '').toLowerCase() === String(preferredName || '').toLowerCase());
+  if (byName) return byName;
   const preferred = stages.find((s) => String(s?.name || '').toLowerCase().includes('target'));
   return preferred || stages[0];
 }
 
+function getFlag(name) {
+  const i = process.argv.indexOf(name);
+  if (i === -1) return null;
+  return process.argv[i + 1] || null;
+}
+
 async function seedSbElectricians(locationId) {
+  const pipelineName = getFlag('--pipeline') || 'OSR — Santa Barbara Electricians';
+  const stageName = getFlag('--stage') || 'Targeted (Not Contacted)';
+  const assignedTo = getFlag('--assignedTo');
+
   const pipelines = await pipelinesList(locationId);
-  const pipeline = pickPipeline(pipelines, 'Prospects — Santa Barbara (Electricians)');
+  const pipeline = pickPipeline(pipelines, pipelineName);
   if (!pipeline) die('No pipelines returned. Check Location ID and API key permissions.');
 
-  const stage = pickFirstStage(pipeline);
+  const stage = pickStage(pipeline, stageName);
   if (!stage) die(`Pipeline "${pipeline?.name}" has no stages. Create stages in GHL first.`);
 
   console.log(`Using pipeline: ${pipeline.name} (${pipeline.id})`);
@@ -153,6 +164,7 @@ async function seedSbElectricians(locationId) {
       status: 'open',
       source: 'Walkthrough → Leave-behind → Audit → Text',
       tags,
+      ...(assignedTo ? { assignedTo } : {}),
     });
 
     console.log(`Seeded: ${item.name}`);
