@@ -26,6 +26,7 @@ Commands:
   contacts:upsert <locationId> <json>
   opportunities:create <locationId> <json>
   seed:sb-electricians <locationId> [--pipeline "NAME"] [--stage "NAME"] [--assignedTo USER_ID]
+  seed:sb-pest <locationId> [--pipeline "NAME"] [--stage "NAME"] [--assignedTo USER_ID]
 
 Notes:
   This is a scaffold. Once API endpoints are confirmed, we’ll add commands to sync pipelines/workflows.
@@ -60,6 +61,22 @@ async function request(path, { method = 'GET', headers = {}, body } = {}) {
     return text;
   }
 }
+
+const SB_PEST_SEED = [
+  { name: 'Santa Barbara Pest Control', website: 'https://www.santabarbarapestcontrol.com/', zipHint: '93103' },
+  { name: "Jhonny’s Pest Control", website: 'https://www.jhonnyspestcontrol.com/', zipHint: '93110' },
+  { name: 'Escalera Pest Control', website: 'https://www.escalerapest.com/', zipHint: '93105' },
+  { name: 'So-Cal Pest Control', website: 'https://www.pestcontrolsantabarbara.com/', zipHint: '93101' },
+  { name: 'Lenz Pest Control', website: 'https://lenzpest.com/', zipHint: '93105' },
+  { name: 'Brooks Pest Control (Santa Barbara)', website: 'https://www.brookspest.com/locations/california/santa-barbara/', zipHint: '93103' },
+  { name: "O'Connor Pest Control (Goleta)", website: 'https://www.oconnorpest.com/pest-control/goleta/', zipHint: '93117' },
+  { name: 'Goleta Pest Control Xperts', website: 'https://goletapestcontrolxperts.com/', zipHint: '93117' },
+  { name: 'Carpinteria Valley Exterminating', website: 'https://carpinteriavalleyexterminating.com/', zipHint: '93013' },
+  { name: 'Paradise Pest Control (Carpinteria)', website: 'http://www.paradisepestco.com', zipHint: '93013' },
+  { name: "O'Connor Pest Control (Carpinteria)", website: 'https://www.oconnorpest.com/carpinteria-ca/', zipHint: '93013' },
+  { name: "O'Connor Pest Control (Montecito)", website: 'https://www.oconnorpest.com/montecito-ca-pest-control/', zipHint: '93108' },
+  { name: 'Escalera Pest Control (Montecito)', website: 'https://www.escalerapest.com/about-us/areas-we-serve/montecito-pest-control/', zipHint: '93108' },
+];
 
 const SB_ELECTRICIAN_SEED = [
   // Santa Barbara + nearby (Goleta etc.). You can prune later; the goal is to get 20+ auditable sites queued.
@@ -139,24 +156,24 @@ function getFlag(name) {
   return process.argv[i + 1] || null;
 }
 
-async function seedSbElectricians(locationId) {
-  const pipelineName = getFlag('--pipeline') || 'OSR — Santa Barbara Electricians';
-  const stageName = getFlag('--stage') || 'Targeted (Not Contacted)';
+async function seedList({ locationId, list, nicheTag, defaultPipelineName, defaultStageName }) {
+  const pipelineName = getFlag('--pipeline') || defaultPipelineName;
+  const stageName = getFlag('--stage') || defaultStageName;
   const assignedTo = getFlag('--assignedTo');
 
   const pipelines = await pipelinesList(locationId);
   const pipeline = pickPipeline(pipelines, pipelineName);
-  if (!pipeline) die('No pipelines returned. Check Location ID and API key permissions.');
+  if (!pipeline) die(`Pipeline not found: ${pipelineName}. Create it in GHL first.`);
 
   const stage = pickStage(pipeline, stageName);
-  if (!stage) die(`Pipeline "${pipeline?.name}" has no stages. Create stages in GHL first.`);
+  if (!stage) die(`Stage not found: ${stageName}. Add it to pipeline "${pipeline?.name}".`);
 
   console.log(`Using pipeline: ${pipeline.name} (${pipeline.id})`);
   console.log(`Using stage: ${stage.name} (${stage.id || stage._id})`);
 
-  const tagsBase = ['NICHE_ELECTRICIAN', 'GEO_SANTA_BARBARA'];
+  const tagsBase = [nicheTag, 'GEO_SANTA_BARBARA'];
 
-  for (const item of SB_ELECTRICIAN_SEED) {
+  for (const item of list) {
     const tags = [...tagsBase];
     if (item.zipHint) tags.push(`ZIP_${item.zipHint}`);
 
@@ -191,6 +208,26 @@ async function seedSbElectricians(locationId) {
   }
 
   console.log('Done.');
+}
+
+async function seedSbElectricians(locationId) {
+  return seedList({
+    locationId,
+    list: SB_ELECTRICIAN_SEED,
+    nicheTag: 'NICHE_ELECTRICIAN',
+    defaultPipelineName: 'OSR — Santa Barbara Electricians',
+    defaultStageName: 'Targeted (Not Contacted)',
+  });
+}
+
+async function seedSbPest(locationId) {
+  return seedList({
+    locationId,
+    list: SB_PEST_SEED,
+    nicheTag: 'NICHE_PEST_CONTROL',
+    defaultPipelineName: 'OSR — Santa Barbara Pest Control',
+    defaultStageName: 'Targeted (Not Contacted)',
+  });
 }
 
 async function main() {
@@ -237,6 +274,13 @@ async function main() {
     const locationId = process.argv[3];
     if (!locationId) die('Usage: seed:sb-electricians <locationId>');
     await seedSbElectricians(locationId);
+    return;
+  }
+
+  if (cmd === 'seed:sb-pest') {
+    const locationId = process.argv[3];
+    if (!locationId) die('Usage: seed:sb-pest <locationId>');
+    await seedSbPest(locationId);
     return;
   }
 
