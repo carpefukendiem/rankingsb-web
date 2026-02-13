@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "skills": {
+    "session-logs": {
+      "version": "1.0.0",
+      "installedAt": 1770532927491
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1770532944972
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1770532964945
+    },
+    "openai-whisper-api": {
+      "version": "1.0.0",
+      "installedAt": 1770532989338
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1770533006056
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1770533027373
+    },
+    "phone-voice": {
+      "version": "2.0.0",
+      "installedAt": 1770533990808
+    },
+    "gmail-oauth": {
+      "version": "1.0.0",
+      "installedAt": 1770534024862
+    },
+    "gmail-client": {
+      "version": "1.0.1",
+      "installedAt": 1770534034218
+    },
+    "marketing-mode": {
+      "version": "1.0.0",
+      "installedAt": 1770534199300
+    },
+    "gsc": {
+      "version": "1.0.0",
+      "installedAt": 1770534219473
+    },
+    "ga4-analytics": {
+      "version": "1.0.0",
+      "installedAt": 1770534254085
+    },
+    "dropbox-lite": {
+      "version": "1.0.0",
+      "installedAt": 1770534998196
+    }
+  }
+}
