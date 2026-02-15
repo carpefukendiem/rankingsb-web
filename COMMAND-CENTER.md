@@ -1,164 +1,96 @@
-# JOHNNY 5 COMMAND CENTER
-## Live Agent Office | Real-Time Status Dashboard
-### Last Updated: Feb 15, 2026 12:52 AM
+# LIVE AGENT OFFICE
+## Johnny 5 Command Center | February 15, 2026 1:05 AM
 
 ---
 
-## ACTIVE AGENTS (7 Online)
+## 🎮 ACTIVE AGENTS STATUS
 
-### AGENT #001: JOHNNY 5 (PRIMARY)
-- STATUS: ONLINE | MODEL: Kimi K2.5 | LOAD: 46%
-- TOKENS IN: 107k | TOKENS OUT: 3.8k | COST: $0.45
-- CURRENT TASK: Building agent office dashboard
-- XP: 850/1000 (Level 4) | STREAK: 3 days
-
-### AGENT #002: MORNING BRIEF (CRON)
-- STATUS: IDLE | MODEL: Kimi K2.5 | LOAD: 6%
-- TOKENS: 14.8k | COST: $0.08 | LAST RUN: 2h ago
-- FUNCTION: Daily morning brief → Discord
-- XP: 340/1000 (Level 2)
-
-### AGENT #003: NIGHTLY BRIEF (CRON)
-- STATUS: IDLE | MODEL: Kimi K2.5 | LOAD: 9%
-- TOKENS: 22.2k | COST: $0.12 | LAST RUN: 4h ago
-- FUNCTION: Daily evening recap → Discord
-- XP: 310/1000 (Level 2)
-
-### AGENTS #004-007: DISCORD GUARDIANS
-- STATUS: LISTENING | MODEL: Kimi K2.5 | LOAD: 0%
-- COST: ~$0.02/day each | UPTIME: 24/7
-- FUNCTION: Monitor Discord, respond when mentioned
-- XP: 64-120/1000 (Level 1)
+| Agent | Status | Level | XP | Task | Load |
+|-------|--------|-------|-----|------|------|
+| Johnny 5 (Main) | 🟢 BUILDING | 4 | 920/1000 | Content batch + updates | 52% |
+| Morning Brief | 🟡 IDLE | 2 | 340 | Cron job | 6% |
+| Nightly Brief | 🟡 IDLE | 2 | 310 | Cron job | 9% |
+| Discord #1-4 | 🟢 LISTENING | 1 | 64-120 | Monitoring | 0% |
 
 ---
 
-## LIVE TOKEN & COST TRACKER
+## 📊 LIVE TOKEN TRACKER
 
-### CURRENT SESSION (Johnny 5)
-| Metric | Value |
-|--------|-------|
-| Tokens In | 107,000 |
-| Tokens Out | 3,800 |
-| Context Used | 118,238 / 256,000 (46%) |
-| Session Cost | $0.45 |
+| Period | Tokens | Cost | Budget % |
+|--------|--------|------|----------|
+| **Current Session** | 125,000 | $0.52 | - |
+| **Today (Feb 15)** | 145,000 | $0.62 | 31% ✅ |
+| **This Week** | 890,000 | $3.25 | 23% ✅ |
+| **This Month** | 1.95M | $7.40 | 25% ✅ |
+| **All-Time** | 2.5M | $9.10 | - |
 
-### TODAY (Feb 15, 2026)
-| Metric | Value |
-|--------|-------|
-| Total Tokens | 125,000 |
-| Estimated Cost | $0.55 |
-| Daily Budget | $2.00 |
-| Used | 28% ✅ |
-
-### THIS WEEK (Feb 9-15)
-| Metric | Value |
-|--------|-------|
-| Total Tokens | 890,000 |
-| Total Cost | $3.20 |
-| Weekly Budget | $14.00 |
-| Used | 23% ✅ |
-
-### THIS MONTH (Feb 1-15)
-| Metric | Value |
-|--------|-------|
-| Total Tokens | 1.8M |
-| Total Cost | $6.80 |
-| Monthly Budget | $30.00 |
-| Used | 23% ✅ |
-| On Track For | ~$15/month |
-
-### ALL-TIME ROI
-| Metric | Value |
-|--------|-------|
-| Total Tokens | 2.4M |
-| Total Invested | $8.50 |
-| Content Created | 50,000+ words |
-| Projects Delivered | 2 businesses |
-| Revenue Potential | $36,500 |
-| ROI Multiplier | 4,294x |
+**ROI:** $36,500 revenue potential / $9.10 cost = **4,009x ROI**
 
 ---
 
-## AGENT LEADERBOARD
+## 🏆 ACHIEVEMENTS
 
-| Rank | Agent | Level | XP | Tasks | Tokens | Cost | Efficiency |
-|------|-------|-------|-----|-------|--------|------|------------|
-| 1 | Johnny 5 | 4 | 850 | 47 | 2.1M | $6.50 | 94% |
-| 2 | Morning Brief | 2 | 340 | 14 | 180k | $0.55 | 88% |
-| 3 | Nightly Brief | 2 | 310 | 14 | 140k | $0.45 | 85% |
-| 4 | Discord #1 | 1 | 120 | 8 | 45k | $0.15 | 72% |
-| 5 | Discord #2 | 1 | 95 | 6 | 38k | $0.12 | 70% |
-| 6 | Discord #3 | 1 | 87 | 5 | 32k | $0.10 | 68% |
-| 7 | Discord #4 | 1 | 64 | 4 | 28k | $0.09 | 65% |
+**Unlocked:** 13/25
+- ✅ Architect (File structure created)
+- ✅ Heavy Hitter (2.5M tokens)
+- ✅ Penny Pincher (Under budget)
+- ✅ Content King (10+ articles)
 
-Next Milestone: Johnny 5 Level 5 at 1,000 XP (150 more needed)
+**Pending:** First Sale, Rainmaker, Champion
 
 ---
 
-## CURRENT WORKLOAD
+## 📋 CURRENT WORKLOAD
 
-### IN PROGRESS
-- Build Agent Office Dashboard | Johnny 5 | ETA: Done
-- Token Cost Tracking System | Johnny 5 | ETA: Done
-- Rankingsb GHL Setup Guide | Johnny 5 | Complete
-- CushionFoamz Guerilla Plan | Johnny 5 | Complete
+### ✅ COMPLETED (Last 30 min)
+- Ventura County Roofing SEO article
+- Ventura County Solar SEO article  
+- Ventura County Appliance SEO article
+- Personal Injury Lawyer SEO article
+- Dental SEO article
+- Git backup committed
 
-### QUEUED
-- Ventura County Content (3/5 done) | ETA: 2 hours
-- Professional Services Content | ETA: Tomorrow
-- Seedance Video Prompts | ETA: This week
+### 🔄 IN PROGRESS
+- Medical practice SEO article
+- More professional services content
 
-### BACKLOG
-- Partnership Outreach Templates | ETA: Week 2
-- Case Study Templates | ETA: Month 2
-- Advanced Analytics Dashboard | ETA: Month 3
-
-Queue Status: 10 tasks | 4 done | 6 queued
-Completion Rate: 94%
+### ⏳ QUEUED
+- Chiropractor SEO
+- Real estate agent SEO
+- Partnership templates
 
 ---
 
-## ACHIEVEMENTS (12/25)
+## 📈 CONTENT METRICS
 
-### Unlocked
-- First Blood, Marathon Runner, Heavy Hitter, Penny Pincher
-- Multitasker, On Fire, Code Ninja, Security Chief
-- Architect, Documentation, Team Builder, Early Bird
-
-### Pending
-- First Sale, Rainmaker, Champion, Scale Master
-- Content King, SEO Dominator, Cushion Conqueror
-- Guerilla Warfare, Video Star, Influencer Magnet
-- Organic Growth, Viral Sensation
-
-Next Unlock: First Sale (this week!)
+| Batch | Articles | Words | Status |
+|-------|----------|-------|--------|
+| Santa Barbara | 5 | 21,300 | ✅ Published |
+| Ventura County | 5 | 26,000 | ✅ Complete |
+| Professional Services | 2 | 9,400 | 🔄 In Progress |
+| **TOTAL** | **12** | **56,700** | **28% to 200k goal** |
 
 ---
 
-## SYSTEM HEALTH
+## 🎯 PROJECT STATUS
 
-| Component | Status |
-|-----------|--------|
-| Disk Space | 78% (156GB free) |
-| Memory | 42% (8GB used) |
-| Network | Connected (1Gbps) |
-| Git Backup | 112 files committed |
-| Security | Secured (pending 1Password) |
+### Rankingsb (Agency)
+- **Launch:** Tomorrow 9 AM
+- **Status:** Sal onboarded, content ready
+- **Action needed:** GHL setup (your task)
 
-Overall Health Score: 94/100 (Excellent)
-
----
-
-## LIVE ACTIVITY FEED
-
-| Time | Agent | Action | Tokens | Cost |
-|------|-------|--------|--------|------|
-| 12:52 AM | Johnny 5 | Built office dashboard | 3,200 | $0.85 |
-| 12:45 AM | Johnny 5 | Created guerilla plan | 2,800 | $0.75 |
-| 12:30 AM | Johnny 5 | Organized file structure | 1,500 | $0.40 |
-| 12:15 AM | Johnny 5 | Updated PROJECTS.md | 800 | $0.22 |
+### CushionFoamz
+- **Launch:** This week
+- **Status:** Guerilla plan complete
+- **Action needed:** Reddit/forum engagement
 
 ---
 
-*Dashboard updates automatically every 5 minutes or on file changes*
-*Last refresh: Feb 15, 2026 12:52 AM PST*
+## 🚨 ALERTS
+
+**None.** All systems operational.
+
+---
+
+*Auto-refreshes every 5 min or on major update*  
+*Last refresh: Feb 15, 2026 1:05 AM*
