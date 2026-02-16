@@ -9,7 +9,6 @@
 - Setup Fee: $1,995
 - **Your Cut (50%): $997**
 - **Paid:** Within 48 hours of client payment
-- Monthly SaaS: $297 (Ruben keeps 100%)
 
 **Volume Bonuses (on top of $997):**
 - 5 closes/month: +$500 bonus
@@ -260,7 +259,7 @@ Hi [Name], confirming our call tomorrow at [time]. I'll call you at this number.
 
 ## GOHIGHLEVEL LOGIN INFO
 
-**URL:** [Ruben's GHL subdomain].gohighlevel.com  
+**URL:** app.rankingsb.com  
 **Email:** vasquez.salvador.jr@gmail.com  
 **Password:** SFexIYGYlRvIcFtI0plP  
 **Mobile App:** Download "LeadConnector" from app store
@@ -326,7 +325,7 @@ $997 per Growth tier close, paid within 48 hours
 $8,000-12,000/month realistic by Month 2
 
 **Your support:**
-Ruben: [phone] | Johnny 5: Available 24/7
+Ruben: 805.258.9236 | Johnny 5: Available 24/7
 
 ---
 
