@@ -1,0 +1,26 @@
+# Boat Cushion Rescue (15s)
+## ID: boat-rescue-15s
+## Duration: 15 seconds
+## Style: Lifestyle/Marine
+## Aspect Ratio: 16:9
+
+Marine lifestyle video showing boat cushion transformation on a sunny day.
+
+BEFORE:
+Weathered boat cushions on deck. Cracks in vinyl, faded colors, water stains visible. Close-up of water-soaked regular foam inside. Text: "Regular foam fails"
+
+TRANSITION:
+Hand removes old cushion, shows measuring tape.
+
+AFTER:
+Fresh marine-grade foam being inserted into cover. Zipping up. Cushion placed back on boat seat. Person relaxing. Boat in background on water.
+Text overlay: "Marine-grade foam at cushionfoamz.com"
+
+Nautical atmosphere, blue water, sunshine, premium feel.
+
+Style: Marine lifestyle, luxury boating, product showcase, cinematic.
+
+FOCUS: Before/after with brief transition. Hook → Problem → Solution → CTA. One quick establishing shot.
+
+---
+Expected output: cushionfoamz-boat-rescue-15s.mp4

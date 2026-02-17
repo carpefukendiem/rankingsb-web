@@ -1,0 +1,26 @@
+# How to Measure Cushions (15s)
+## ID: how-to-measure-15s
+## Duration: 15 seconds
+## Style: Tutorial/Educational
+## Aspect Ratio: 16:9
+
+Educational tutorial video showing hands measuring a couch cushion.
+
+SCENE: Overhead camera angle looking down at rectangular cushion.
+
+ACTION:
+1. Hands enter frame holding measuring tape
+2. Measure LENGTH (left to right) - text overlay "Length"
+3. Measure WIDTH (front to back) - text overlay "Width"  
+4. Measure THICKNESS/HEIGHT - text overlay "Thickness"
+5. Hands write down dimensions on notepad
+6. Text appears: "Enter at cushionfoamz.com"
+
+Close-up shots, clear lighting, instructional graphics, arrows showing dimensions.
+
+Style: Educational content, clean aesthetic, instructional video.
+
+FOCUS: Before/after with brief transition. Hook → Problem → Solution → CTA. One quick establishing shot.
+
+---
+Expected output: cushionfoamz-how-to-measure-15s.mp4

@@ -1,0 +1,22 @@
+# Couch Fix Transformation (30s)
+## ID: couch-fix-30s
+## Duration: 30 seconds
+## Style: Commercial/Product
+## Aspect Ratio: 16:9
+
+A dynamic split-screen marketing video showing furniture transformation.
+
+LEFT SIDE - BEFORE:
+Close-up of sad, sagging couch cushion with dim lighting. Flattened foam visible. Person sits down and cushion compresses completely.
+
+RIGHT SIDE - AFTER:  
+Same couch with plump, new cushion. Bright lighting. Person sits and cushion springs back up. Text overlay: "Like new!"
+
+CENTER: Arrow pointing left to right. Text: "Custom foam from cushionfoamz.com"
+
+Style: Marketing video, bright colors, energetic, professional product photography aesthetic.
+
+FOCUS: Full narrative arc. Hook → Problem → Agitation → Solution → Proof → CTA. Multiple angles, lifestyle shots included.
+
+---
+Expected output: cushionfoamz-couch-fix-30s.mp4

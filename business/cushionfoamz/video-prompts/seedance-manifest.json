@@ -1,0 +1,114 @@
+{
+  "generated": "2026-02-17T08:32:15.117Z",
+  "totalVideos": 12,
+  "videos": [
+    {
+      "id": "couch-fix-10s",
+      "name": "Couch Fix Transformation (10s)",
+      "prompt": "A dynamic split-screen marketing video showing furniture transformation.\n\nLEFT SIDE - BEFORE:\nClose-up of sad, sagging couch cushion with dim lighting. Flattened foam visible. Person sits down and cushion compresses completely.\n\nRIGHT SIDE - AFTER:  \nSame couch with plump, new cushion. Bright lighting. Person sits and cushion springs back up. Text overlay: \"Like new!\"\n\nCENTER: Arrow pointing left to right. Text: \"Custom foam from cushionfoamz.com\"\n\nStyle: Marketing video, bright colors, energetic, professional product photography aesthetic.\n\nFOCUS: Single powerful before/after shot. Quick hook and immediate payoff. No extra scenes.",
+      "duration": 10,
+      "style": "Commercial/Product",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-couch-fix-10s.mp4"
+    },
+    {
+      "id": "couch-fix-15s",
+      "name": "Couch Fix Transformation (15s)",
+      "prompt": "A dynamic split-screen marketing video showing furniture transformation.\n\nLEFT SIDE - BEFORE:\nClose-up of sad, sagging couch cushion with dim lighting. Flattened foam visible. Person sits down and cushion compresses completely.\n\nRIGHT SIDE - AFTER:  \nSame couch with plump, new cushion. Bright lighting. Person sits and cushion springs back up. Text overlay: \"Like new!\"\n\nCENTER: Arrow pointing left to right. Text: \"Custom foam from cushionfoamz.com\"\n\nStyle: Marketing video, bright colors, energetic, professional product photography aesthetic.\n\nFOCUS: Before/after with brief transition. Hook → Problem → Solution → CTA. One quick establishing shot.",
+      "duration": 15,
+      "style": "Commercial/Product",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-couch-fix-15s.mp4"
+    },
+    {
+      "id": "couch-fix-30s",
+      "name": "Couch Fix Transformation (30s)",
+      "prompt": "A dynamic split-screen marketing video showing furniture transformation.\n\nLEFT SIDE - BEFORE:\nClose-up of sad, sagging couch cushion with dim lighting. Flattened foam visible. Person sits down and cushion compresses completely.\n\nRIGHT SIDE - AFTER:  \nSame couch with plump, new cushion. Bright lighting. Person sits and cushion springs back up. Text overlay: \"Like new!\"\n\nCENTER: Arrow pointing left to right. Text: \"Custom foam from cushionfoamz.com\"\n\nStyle: Marketing video, bright colors, energetic, professional product photography aesthetic.\n\nFOCUS: Full narrative arc. Hook → Problem → Agitation → Solution → Proof → CTA. Multiple angles, lifestyle shots included.",
+      "duration": 30,
+      "style": "Commercial/Product",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-couch-fix-30s.mp4"
+    },
+    {
+      "id": "how-to-measure-10s",
+      "name": "How to Measure Cushions (10s)",
+      "prompt": "Educational tutorial video showing hands measuring a couch cushion.\n\nSCENE: Overhead camera angle looking down at rectangular cushion.\n\nACTION:\n1. Hands enter frame holding measuring tape\n2. Measure LENGTH (left to right) - text overlay \"Length\"\n3. Measure WIDTH (front to back) - text overlay \"Width\"  \n4. Measure THICKNESS/HEIGHT - text overlay \"Thickness\"\n5. Hands write down dimensions on notepad\n6. Text appears: \"Enter at cushionfoamz.com\"\n\nClose-up shots, clear lighting, instructional graphics, arrows showing dimensions.\n\nStyle: Educational content, clean aesthetic, instructional video.\n\nFOCUS: Single powerful before/after shot. Quick hook and immediate payoff. No extra scenes.",
+      "duration": 10,
+      "style": "Tutorial/Educational",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-how-to-measure-10s.mp4"
+    },
+    {
+      "id": "how-to-measure-15s",
+      "name": "How to Measure Cushions (15s)",
+      "prompt": "Educational tutorial video showing hands measuring a couch cushion.\n\nSCENE: Overhead camera angle looking down at rectangular cushion.\n\nACTION:\n1. Hands enter frame holding measuring tape\n2. Measure LENGTH (left to right) - text overlay \"Length\"\n3. Measure WIDTH (front to back) - text overlay \"Width\"  \n4. Measure THICKNESS/HEIGHT - text overlay \"Thickness\"\n5. Hands write down dimensions on notepad\n6. Text appears: \"Enter at cushionfoamz.com\"\n\nClose-up shots, clear lighting, instructional graphics, arrows showing dimensions.\n\nStyle: Educational content, clean aesthetic, instructional video.\n\nFOCUS: Before/after with brief transition. Hook → Problem → Solution → CTA. One quick establishing shot.",
+      "duration": 15,
+      "style": "Tutorial/Educational",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-how-to-measure-15s.mp4"
+    },
+    {
+      "id": "how-to-measure-30s",
+      "name": "How to Measure Cushions (30s)",
+      "prompt": "Educational tutorial video showing hands measuring a couch cushion.\n\nSCENE: Overhead camera angle looking down at rectangular cushion.\n\nACTION:\n1. Hands enter frame holding measuring tape\n2. Measure LENGTH (left to right) - text overlay \"Length\"\n3. Measure WIDTH (front to back) - text overlay \"Width\"  \n4. Measure THICKNESS/HEIGHT - text overlay \"Thickness\"\n5. Hands write down dimensions on notepad\n6. Text appears: \"Enter at cushionfoamz.com\"\n\nClose-up shots, clear lighting, instructional graphics, arrows showing dimensions.\n\nStyle: Educational content, clean aesthetic, instructional video.\n\nFOCUS: Full narrative arc. Hook → Problem → Agitation → Solution → Proof → CTA. Multiple angles, lifestyle shots included.",
+      "duration": 30,
+      "style": "Tutorial/Educational",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-how-to-measure-30s.mp4"
+    },
+    {
+      "id": "boat-rescue-10s",
+      "name": "Boat Cushion Rescue (10s)",
+      "prompt": "Marine lifestyle video showing boat cushion transformation on a sunny day.\n\nBEFORE:\nWeathered boat cushions on deck. Cracks in vinyl, faded colors, water stains visible. Close-up of water-soaked regular foam inside. Text: \"Regular foam fails\"\n\nTRANSITION:\nHand removes old cushion, shows measuring tape.\n\nAFTER:\nFresh marine-grade foam being inserted into cover. Zipping up. Cushion placed back on boat seat. Person relaxing. Boat in background on water.\nText overlay: \"Marine-grade foam at cushionfoamz.com\"\n\nNautical atmosphere, blue water, sunshine, premium feel.\n\nStyle: Marine lifestyle, luxury boating, product showcase, cinematic.\n\nFOCUS: Single powerful before/after shot. Quick hook and immediate payoff. No extra scenes.",
+      "duration": 10,
+      "style": "Lifestyle/Marine",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-boat-rescue-10s.mp4"
+    },
+    {
+      "id": "boat-rescue-15s",
+      "name": "Boat Cushion Rescue (15s)",
+      "prompt": "Marine lifestyle video showing boat cushion transformation on a sunny day.\n\nBEFORE:\nWeathered boat cushions on deck. Cracks in vinyl, faded colors, water stains visible. Close-up of water-soaked regular foam inside. Text: \"Regular foam fails\"\n\nTRANSITION:\nHand removes old cushion, shows measuring tape.\n\nAFTER:\nFresh marine-grade foam being inserted into cover. Zipping up. Cushion placed back on boat seat. Person relaxing. Boat in background on water.\nText overlay: \"Marine-grade foam at cushionfoamz.com\"\n\nNautical atmosphere, blue water, sunshine, premium feel.\n\nStyle: Marine lifestyle, luxury boating, product showcase, cinematic.\n\nFOCUS: Before/after with brief transition. Hook → Problem → Solution → CTA. One quick establishing shot.",
+      "duration": 15,
+      "style": "Lifestyle/Marine",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-boat-rescue-15s.mp4"
+    },
+    {
+      "id": "boat-rescue-30s",
+      "name": "Boat Cushion Rescue (30s)",
+      "prompt": "Marine lifestyle video showing boat cushion transformation on a sunny day.\n\nBEFORE:\nWeathered boat cushions on deck. Cracks in vinyl, faded colors, water stains visible. Close-up of water-soaked regular foam inside. Text: \"Regular foam fails\"\n\nTRANSITION:\nHand removes old cushion, shows measuring tape.\n\nAFTER:\nFresh marine-grade foam being inserted into cover. Zipping up. Cushion placed back on boat seat. Person relaxing. Boat in background on water.\nText overlay: \"Marine-grade foam at cushionfoamz.com\"\n\nNautical atmosphere, blue water, sunshine, premium feel.\n\nStyle: Marine lifestyle, luxury boating, product showcase, cinematic.\n\nFOCUS: Full narrative arc. Hook → Problem → Agitation → Solution → Proof → CTA. Multiple angles, lifestyle shots included.",
+      "duration": 30,
+      "style": "Lifestyle/Marine",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-boat-rescue-30s.mp4"
+    },
+    {
+      "id": "patio-glowup-10s",
+      "name": "Outdoor Patio Glow-Up (10s)",
+      "prompt": "Bright lifestyle video showing backyard patio furniture transformation.\n\nBEFORE:\nFaded outdoor cushions on patio furniture. Dull colors, stains, flat cushions. Overcast lighting. Uninviting backyard.\n\nTRANSITION:\nQuick montage: Measuring cushions → Ordering online → Package arriving → Unboxing new weather-resistant foam.\n\nAFTER:\nVibrant patio setup with new plump cushions. String lights. Person enjoying lemonade. Summertime vibes.\nText: \"Patio season ready! cushionfoamz.com\"\n\nGolden hour lighting, warm colors, inviting backyard oasis feel.\n\nStyle: Home & garden lifestyle, summer vibes, transformation reveal.\n\nFOCUS: Single powerful before/after shot. Quick hook and immediate payoff. No extra scenes.",
+      "duration": 10,
+      "style": "Lifestyle/Home",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-patio-glowup-10s.mp4"
+    },
+    {
+      "id": "patio-glowup-15s",
+      "name": "Outdoor Patio Glow-Up (15s)",
+      "prompt": "Bright lifestyle video showing backyard patio furniture transformation.\n\nBEFORE:\nFaded outdoor cushions on patio furniture. Dull colors, stains, flat cushions. Overcast lighting. Uninviting backyard.\n\nTRANSITION:\nQuick montage: Measuring cushions → Ordering online → Package arriving → Unboxing new weather-resistant foam.\n\nAFTER:\nVibrant patio setup with new plump cushions. String lights. Person enjoying lemonade. Summertime vibes.\nText: \"Patio season ready! cushionfoamz.com\"\n\nGolden hour lighting, warm colors, inviting backyard oasis feel.\n\nStyle: Home & garden lifestyle, summer vibes, transformation reveal.\n\nFOCUS: Before/after with brief transition. Hook → Problem → Solution → CTA. One quick establishing shot.",
+      "duration": 15,
+      "style": "Lifestyle/Home",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-patio-glowup-15s.mp4"
+    },
+    {
+      "id": "patio-glowup-30s",
+      "name": "Outdoor Patio Glow-Up (30s)",
+      "prompt": "Bright lifestyle video showing backyard patio furniture transformation.\n\nBEFORE:\nFaded outdoor cushions on patio furniture. Dull colors, stains, flat cushions. Overcast lighting. Uninviting backyard.\n\nTRANSITION:\nQuick montage: Measuring cushions → Ordering online → Package arriving → Unboxing new weather-resistant foam.\n\nAFTER:\nVibrant patio setup with new plump cushions. String lights. Person enjoying lemonade. Summertime vibes.\nText: \"Patio season ready! cushionfoamz.com\"\n\nGolden hour lighting, warm colors, inviting backyard oasis feel.\n\nStyle: Home & garden lifestyle, summer vibes, transformation reveal.\n\nFOCUS: Full narrative arc. Hook → Problem → Agitation → Solution → Proof → CTA. Multiple angles, lifestyle shots included.",
+      "duration": 30,
+      "style": "Lifestyle/Home",
+      "aspectRatio": "16:9",
+      "filename": "cushionfoamz-patio-glowup-30s.mp4"
+    }
+  ]
+}
