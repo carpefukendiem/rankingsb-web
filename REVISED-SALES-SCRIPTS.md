@@ -22,18 +22,46 @@ marketing. Most of our [industry] clients see 30-50% more calls within
 Worth a 15-minute conversation to see if this fits [Company]?"
 ```
 
+
+
+
+
+##PITCH 2 (1 min)
+
+````
+[Name], this is Sal Vasquez with Ranking SB. I'm the local rep here in Santa Barbara.
+
+I was looking at [Company]'s online presence. You're not showing up when people search for [service] in [city]. Is getting more local customers something you're focused on this year?
+
+[If yes] Great. We've been helping Santa Barbara businesses grow since 2018 — over 19 years of digital marketing experience on our team. We help [industry] companies rank higher on Google so customers find them instead of their competitors. And we get big agency results on a small agency budget.
+
+Here's how it works:
+
+ONE-TIME INVESTMENT: $1,995 — split into two payments.
+Half to kick things off, half when we deliver. We build your entire local SEO foundation — Google Business Profile optimization, website fixes, location pages, review system, competitor tracking, and more.
+
+MONTHLY: $297 — less than a Starbucks a day.
+This covers everything you need to run and grow your local presence — two-way texting and email, reputation management with automatic review generation, live web chat, Facebook Messenger, GMB messaging, dedicated call tracking with recorded calls and missed-call text-back, text-to-pay and invoicing, email marketing, local citations, ongoing monitoring, and a monthly strategy call. The whole toolkit.
+
+Unlike Google Ads where you pay for every click and disappear when you stop, with this you OWN the rankings.
+
+Here's what I'd like to do — I've actually already started putting together a quick audit of [Company]'s online presence. I'd love to stop by for 15 minutes and walk you through it in person. No pitch, just a real-time look at where you stand and where the opportunities are. That way you can see our expertise firsthand. Would [day] or [day] work better for a quick meet?
+
+[If not in person] Totally understand — we can do a quick Zoom instead. I'll share my screen and walk you through everything live. What does [day] look like?
+````
 ---
 
 ## PRICING BREAKDOWN (When Asked)
 
 ```
-"$1,995 one-time covers:
+"$1,995, 1/2 to initiate work 1/2 Upon completion covers:
 • Complete Google Business Profile optimization
 • Website technical SEO fixes
 • 25 local citation builds
 • 2 location pages created
 • Review generation system setup
-• Competitor tracking dashboard
+• Leadflow System Full Setup
+
 
 $297/month includes:
 • 2 blog articles written for you

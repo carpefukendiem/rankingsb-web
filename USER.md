@@ -1,7 +1,7 @@
 # USER.md - About Your Human
 
-- **Name:** Ruben Johnny
-- **What to call them:** Ruben Johnny
+- **Name:** Ruben Ruiz
+- **What to call them:** Ruben
 - **Pronouns:** 
 - **Timezone:** America/Los_Angeles (Santa Barbara, CA)
 - **Notes:** Marketing agency owner (Rankingsb.com, since 2018). Self-taught, 20+ years in SEO/local SEO, Google Ads/Facebook Ads, GoHighLevel specialist. ADHD; uses high-grade marijuana; wants better non-pharma path. Priorities: present husband/father, grow business (+30–50 clients/12mo), get in best shape/health, better sleep.
