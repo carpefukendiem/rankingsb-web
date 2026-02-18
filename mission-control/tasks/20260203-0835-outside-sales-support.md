@@ -39,3 +39,4 @@ First-page rankings + top-of-map-pack visibility for:
 
 ## Updates (append-only)
 - 2026-02-03T08:35:00-08:00 — Johnny 5: Created Sales Support agent + kicked off enablement task.
+- 2026-02-17T14:30:00-08:00 — SalesSupport: Delivered Week 1 rep packet (10 electrician targets, 4 audit snippets, daily tracker). Created audit examples cheat sheet for Sal.
