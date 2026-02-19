@@ -31,6 +31,7 @@ A clean, reusable set of GoHighLevel snapshots, automations, and SOPs for onboar
 - 2026-02-03T07:36:00-08:00 — PM: Posted standup to #mission-control; waiting on default offer + intake flow details.
 - 2026-02-17T08:10:00-08:00 — PM: GHL setup COMPLETE. Sal user account + 9-stage pipeline live. Discord alerts configured. Ready to receive leads at 9 AM launch.
 - 2026-02-17T10:30:00-08:00 — PM: Deliverable created: mission-control/docs/ghl-framework.md — full documentation of automation framework.
+- 2026-02-19T10:30:00-08:00 — PM: Updated framework docs with content publishing workflow. 20 blogs + 10 social posts ready. OAuth token obtained (needs blog scope).
 
 ## Deliverables
 - mission-control/docs/ghl-framework.md

@@ -1,0 +1,83 @@
+{
+  "ghl_automation": {
+    "version": "1.0",
+    "api": {
+      "base_url": "https://app.rankingsb.com",
+      "version": "v2",
+      "key_status": "configured",
+      "rate_limits": {
+        "requests_per_minute": 60,
+        "requests_per_hour": 1000
+      }
+    },
+    "locations": {
+      "rankingsb": {
+        "id": " REPLACE_WITH_ACTUAL_ID",
+        "name": "Rankings SB",
+        "blog_enabled": true,
+        "social_enabled": true,
+        "social_accounts": {
+          "facebook": " REPLACE",
+          "instagram": " REPLACE",
+          "linkedin": " REPLACE",
+          "twitter": null
+        }
+      },
+      "cushionfoamz": {
+        "id": " REPLACE_WITH_ACTUAL_ID",
+        "name": "Foam Cushions",
+        "blog_enabled": true,
+        "social_enabled": true,
+        "social_accounts": {
+          "facebook": " REPLACE",
+          "instagram": " REPLACE",
+          "pinterest": " REPLACE",
+          "tiktok": null
+        }
+      }
+    },
+    "publishing": {
+      "default_schedule": {
+        "rankingsb": {
+          "frequency": "twice_weekly",
+          "days": ["monday", "thursday"],
+          "time": "08:00"
+        },
+        "cushionfoamz": {
+          "frequency": "weekly",
+          "days": ["wednesday"],
+          "time": "09:00"
+        }
+      },
+      "auto_publish": false,
+      "approval_required": true,
+      "notification_channels": ["discord", "webchat"]
+    },
+    "social_media": {
+      "auto_schedule": true,
+      "schedule_delay_days": 1,
+      "schedule_time": "09:00",
+      "hashtag_sets": {
+        "rankingsb": ["#SEO", "#Marketing", "#SantaBarbara", "#SmallBusiness", "#DigitalMarketing", "#LocalSEO"],
+        "cushionfoamz": ["#HomeDecor", "#DIY", "#Furniture", "#Cushions", "#HomeImprovement", "#CustomFoam"]
+      },
+      "post_templates": {
+        "new_blog": "📝 New blog post: {title}\n\n{excerpt}\n\nRead more: {url}\n\n{hashtags}",
+        "tips": "💡 {tip}\n\n{cta}\n\n{hashtags}",
+        "promotion": "🎯 {offer}\n\n{details}\n\nShop now: {url}\n\n{hashtags}"
+      }
+    },
+    "content_sources": {
+      "rankingsb": {
+        "articles_dir": "/Users/rubenruiz/.openclaw/workspace/content/seo-articles",
+        "images_dir": "/Users/rubenruiz/.openclaw/workspace/content/images",
+        "published_archive": "/Users/rubenruiz/.openclaw/workspace/content/published"
+      },
+      "cushionfoamz": {
+        "articles_dir": "/Users/rubenruiz/.openclaw/workspace/business/cushionfoamz/02-content/blog-posts",
+        "images_dir": "/Users/rubenruiz/.openclaw/workspace",
+        "published_archive": "/Users/rubenruiz/.openclaw/workspace/business/cushionfoamz/02-content/published"
+      }
+    }
+  }
+}

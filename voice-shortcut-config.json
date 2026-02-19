@@ -1,0 +1,98 @@
+{
+  "shortcutName": "Talk to Johnny 5",
+  "version": "1.0",
+  "description": "Instant voice communication with Johnny 5 AI",
+  "setup": {
+    "step1": "Open Shortcuts app on your Mac",
+    "step2": "Create new shortcut",
+    "step3": "Add actions from below",
+    "step4": "Assign keyboard shortcut: Cmd+Shift+J"
+  },
+  "actions": [
+    {
+      "name": "Dictate Text",
+      "category": "Documents",
+      "settings": {
+        "locale": "English (United States)",
+        "stopListening": "After a pause"
+      },
+      "notes": "This uses macOS native dictation - works offline, very accurate"
+    },
+    {
+      "name": "Set Variable",
+      "settings": {
+        "variableName": "UserVoiceInput",
+        "value": "Dictate Text output"
+      }
+    },
+    {
+      "name": "If",
+      "settings": {
+        "condition": "UserVoiceInput has any value"
+      },
+      "actions": [
+        {
+          "name": "Run Shell Script",
+          "settings": {
+            "shell": "/bin/bash",
+            "script": "echo \"$1\" > ~/.openclaw/workspace/voice-input.txt && echo \"Message saved\"",
+            "input": "UserVoiceInput"
+          }
+        },
+        {
+          "name": "Show Notification",
+          "settings": {
+            "title": "Johnny 5",
+            "body": "🎤 Message sent! Johnny is responding..."
+          }
+        },
+        {
+          "name": "Wait",
+          "settings": {
+            "duration": "3 seconds"
+          }
+        },
+        {
+          "name": "Get Contents of URL",
+          "settings": {
+            "url": "http://localhost:18789/api/voice-input",
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json"
+            },
+            "body": {
+              "text": "UserVoiceInput",
+              "timestamp": "Current Date"
+            }
+          },
+          "optional": true,
+          "notes": "If this fails, it falls back to file-based communication"
+        }
+      ]
+    },
+    {
+      "name": "Otherwise",
+      "actions": [
+        {
+          "name": "Show Notification",
+          "settings": {
+            "title": "Johnny 5",
+            "body": "❌ No speech detected. Try again."
+          }
+        }
+      ]
+    },
+    {
+      "name": "End If"
+    }
+  ],
+  "keyboardShortcut": {
+    "modifier": "Command + Shift",
+    "key": "J",
+    "notes": "Press this anywhere to activate voice input"
+  },
+  "alternativeMethod": {
+    "description": "If Shortcuts doesn't work, use this AppleScript",
+    "script": "tell application \"System Events\" to tell process \"OpenClaw\"\n  set frontmost to true\n  keystroke \"v\" using command down\nend tell"
+  }
+}

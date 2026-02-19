@@ -41,12 +41,18 @@ A repeatable lead gen pipeline that produces qualified local-business leads and 
 - **Lead Source:** Google Maps scraping
 - **Status:** 20 leads loaded, Sal calling now
 
-### Phase 2: HVAC (Planned)
-- Similar profile to electricians
-- Seasonal demand spikes
-- High lifetime value
+### Phase 2: HVAC (ACTIVE - Week 2)
+- **Status:** 20 leads researched, packet delivered to Sal
+- **Similar profile to electricians**
+- **Seasonal demand spikes**
+- **High lifetime value**
 
-### Phase 3: Dentists / Med Spas (Planned)
+### Phase 3: Plumbing (Planned - Week 3)
+- **Next batch after HVAC**
+- **Emergency service model**
+- **High search volume**
+
+### Phase 4: Dentists / Med Spas (Planned)
 - Higher ticket
 - More competitive
 - Require refined pitch
@@ -150,11 +156,12 @@ Worth a conversation about how we could help [Business Name]?
 
 ## Next Actions
 
-- [ ] Document Day 1 results (after Sal finishes)
-- [ ] Prepare Day 2 lead batch (next 20 electricians)
+- [ ] Get Sal's Week 1 results (Day 1-3 calls, audits, closes)
+- [ ] Import 20 HVAC leads to GHL pipeline
+- [ ] Deliver Week 2 packet to Sal (HVAC focus)
 - [ ] Create case study from first close
-- [ ] Expand to HVAC niche
+- [ ] Research 20 Plumbing leads (Week 3 prep)
 
 ---
 
-*Last updated: February 17, 2026 — Launch Day*
+*Last updated: February 19, 2026 — Week 2 Active*

@@ -142,12 +142,37 @@ Wanted to chat about your free audit. Call back or reply here.
 
 ---
 
+## Content Publishing Workflow
+
+### Blog Posts (SEO Articles)
+**Status:** 20 articles prepared, awaiting publication
+**Location:** `content/seo-articles/`
+
+**Publishing Options:**
+1. **API (Preferred):** Requires `blogs/post.write` OAuth scope
+2. **Browser Automation:** Using Chrome extension for bulk upload
+3. **Manual:** Copy-paste into GHL blog editor
+
+**Planned Content Calendar:**
+- Week 1: 5 articles (HVAC, Plumbing, Roofing focus)
+- Week 2: 5 articles (Solar, Appliance Repair)
+- Week 3: 5 articles (Medical/Dental)
+- Week 4: 5 articles (Legal/Professional services)
+
+### Social Media
+**Status:** 10 posts + 12 images generated
+**Location:** `content/social-media-images/week1/`
+**Action:** Upload to GHL Social Planner
+
+---
+
 ## Maintenance Tasks
 
 ### Weekly
 - [ ] Review pipeline for stalled leads
 - [ ] Check automation logs for errors
 - [ ] Tag cleanup (remove outdated tags)
+- [ ] Publish 2-3 blog articles
 
 ### Monthly
 - [ ] Snapshot backup (export)
@@ -175,7 +200,8 @@ Wanted to chat about your free audit. Call back or reply here.
 - [ ] Zapier integration (external tools)
 - [ ] Custom dashboard for Ruben
 - [ ] Automated reporting (weekly email)
+- [ ] Blog publishing API integration (OAuth scope: blogs/post.write)
 
 ---
 
-*Last updated: February 17, 2026 — Launch Day*
+*Last updated: February 19, 2026 — Week 2 Active*
