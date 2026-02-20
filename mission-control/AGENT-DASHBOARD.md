@@ -4,8 +4,8 @@
 **Last Updated:** February 19, 2026 - 11:15 PM PST  
 **System Status:** 🟢 OPERATIONAL  
 **Gateway:** Connected (Port 18789)  
-**Active Agents:** 7  
-**Queue:** 3 tasks pending
+**Active Agents:** 8  
+**Queue:** 4 tasks pending
 
 ---
 
@@ -123,6 +123,22 @@ pulse track metric --name="upwork-applications" --target=10
 
 ---
 
+### 8. **Vista** 🌴 (Experiences & Travel)
+**Role:** Curates family adventures, plans trips, finds hidden gems  
+**Status:** 🟢 ACTIVE  
+**Current Task:** Pueblo Bonito Los Cabos vacation plan (June 22-29)  
+**Queue:** Disneyland (Dec 2026), Hawaii (July 2026)  
+**Personality:** Cultured, detail-obsessed, knows best experiences  
+**Last Output:** `experiences/Pueblo-Bonito-Los-Cabos-June-2026.md`
+
+**Commands:**
+```bash
+vista plan trip --destination="hawaii" --dates="july-2026" --family=5
+vista find activities --location="santa-barbara" --type="family-friendly" --budget=medium
+```
+
+---
+
 ## 🚀 INACTIVE AGENTS (Can Spawn on Demand)
 
 ### 8. **Blaze** 🔥 (Crisis Response)
@@ -154,9 +170,11 @@ pulse track metric --name="upwork-applications" --target=10
 | Priority | Agent | Task | Due | Status |
 |----------|-------|------|-----|--------|
 | P0 | Spike | Research 20 Plumbing leads | Feb 20 | ⏳ PENDING |
+| P0 | Vista | Book Pueblo Bonito activities | Feb 25 | ⏳ PENDING |
 | P0 | Code | Build CushionFoamz configurator | Feb 21 | ⏳ PENDING |
 | P1 | Nova | Write 10 blog posts | Feb 22 | ⏳ PENDING |
 | P1 | Pixel | Create 12 social images | Feb 20 | ⏳ PENDING |
+| P1 | Vista | Plan Disneyland trip (Dec 2026) | Mar 1 | 📋 QUEUED |
 | P2 | Dash | Update audit snippets library | Feb 23 | 📋 QUEUED |
 | P2 | Scout | Research Upwork market trends | Feb 24 | 📋 QUEUED |
 
