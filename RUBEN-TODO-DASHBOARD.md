@@ -4,9 +4,9 @@
 
 ---
 
-## 🔴 CRITICAL - DO TODAY (Thursday Feb 19)
+## 🔴 CRITICAL - DO TODAY (Friday Feb 20)
 
-### Rankingsb Day 3 - EVENING SPRINT
+### Rankingsb Day 4 - FRIDAY SPRINT
 - [x] **8:00 AM** - Morning brief delivered ✅
 - [x] **8:10 AM** - PM standup posted ✅
 - [x] **Content** - 14 articles published to GHL ✅
