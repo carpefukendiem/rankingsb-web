@@ -58,6 +58,15 @@
 - None technical — all systems operational
 - **Need approval:** CallRail (~$30/mo) for call tracking
 
+### System Documentation
+- ✅ **GHL Framework** — Automation map created
+  - File: `mission-control/ghl-framework.md`
+  - Visual 9-stage pipeline flow
+  - 6 automation workflows defined
+  - 3 email sequences mapped
+  - 5 smart lists configured
+  - Reporting dashboard specs
+
 ---
 
-*Last updated: Feb 20, 2026 8:10 AM*
+*Last updated: Feb 20, 2026 10:30 AM*
