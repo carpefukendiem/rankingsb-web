@@ -10,7 +10,13 @@
     "background": "#ffffff",
     "surface": "#f1f5f9",
     "text": "#565a7c",
-    "textMuted": "#6b7280"
+    "textMuted": "#6b7280",
+    "logo": {
+      "lightBlue": "#60ebef",
+      "mediumBlue": "#3484c6",
+      "darkBlue": "#203993",
+      "primaryBlue": "#3283c8"
+    }
   },
   "fonts": {
     "heading": "Inter",
