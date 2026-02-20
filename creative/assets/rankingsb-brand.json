@@ -4,13 +4,13 @@
   "description": "SEO & Digital Marketing Agency in Santa Barbara",
   "url": "https://rankingsb.com",
   "colors": {
-    "primary": "#00ff88",
-    "secondary": "#0a0a0a",
-    "accent": "#ff3366",
-    "background": "#0a0a0a",
-    "surface": "#1a1a1a",
-    "text": "#ffffff",
-    "textMuted": "#888888"
+    "primary": "#188bf6",
+    "secondary": "#f8fafc",
+    "accent": "#188bf6",
+    "background": "#ffffff",
+    "surface": "#f1f5f9",
+    "text": "#565a7c",
+    "textMuted": "#6b7280"
   },
   "fonts": {
     "heading": "Inter",
