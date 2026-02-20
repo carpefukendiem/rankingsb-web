@@ -540,3 +540,7 @@
  3 files changed, 140 insertions(+), 3 deletions(-)
  create mode 100644 mission-control/SAL-MONITORING-SETUP.md
 [2026-02-20 09:17:33] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 3cd0704] Autosave: 2026-02-20 09:19:33 - Workspace sync
+ 4 files changed, 91 insertions(+), 1 deletion(-)
+ create mode 100644 scripts/ghl-sal-monitor.js
+[2026-02-20 09:19:33] ✅ Autosave successful
