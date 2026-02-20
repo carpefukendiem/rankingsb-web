@@ -582,6 +582,53 @@
             document.getElementById('timestamp').textContent = now.toLocaleString('en-US', options);
         }
         updateTimestamp();
+        
+        // Token cost tracker (simulated - replace with real API calls)
+        function updateTokenCosts() {
+            // These would be populated from actual API calls or log parsing
+            const costs = {
+                openrouter: { today: 0.45, month: 6.80 },
+                elevenlabs: { today: 0.00, month: 0.15 },
+                gemini: { today: 0.00, month: 0.00 },
+                brave: { today: 0.00, month: 0.00 },
+                ghl: { today: 0.00, month: 0.00 },
+                vercel: { today: 0.00, month: 0.00 }
+            };
+            
+            const totalToday = Object.values(costs).reduce((sum, c) => sum + c.today, 0);
+            const totalMonth = Object.values(costs).reduce((sum, c) => sum + c.month, 0);
+            const budgetRemaining = Math.max(0, 30 - totalMonth);
+            const budgetPercent = Math.round((budgetRemaining / 30) * 100);
+            
+            // Update display
+            document.getElementById('total-cost').textContent = totalToday.toFixed(2);
+            document.getElementById('month-cost').textContent = '$' + totalMonth.toFixed(2);
+            document.getElementById('budget-remaining').textContent = budgetPercent + '%';
+            
+            // Update service breakdown
+            document.getElementById('or-today').textContent = '$' + costs.openrouter.today.toFixed(2);
+            document.getElementById('or-month').textContent = '$' + costs.openrouter.month.toFixed(2);
+            document.getElementById('el-today').textContent = '$' + costs.elevenlabs.today.toFixed(2);
+            document.getElementById('el-month').textContent = '$' + costs.elevenlabs.month.toFixed(2);
+            document.getElementById('gm-today').textContent = '$' + costs.gemini.today.toFixed(2);
+            document.getElementById('gm-month').textContent = '$' + costs.gemini.month.toFixed(2);
+            document.getElementById('br-today').textContent = '$' + costs.brave.today.toFixed(2);
+            document.getElementById('br-month').textContent = '$' + costs.brave.month.toFixed(2);
+            document.getElementById('ghl-today').textContent = '$' + costs.ghl.today.toFixed(2);
+            document.getElementById('ghl-month').textContent = '$' + costs.ghl.month.toFixed(2);
+            document.getElementById('vc-today').textContent = '$' + costs.vercel.today.toFixed(2);
+            document.getElementById('vc-month').textContent = '$' + costs.vercel.month.toFixed(2);
+            
+            // Color code budget
+            const budgetEl = document.getElementById('budget-remaining');
+            if (budgetPercent > 50) budgetEl.style.color = '#00ff00';
+            else if (budgetPercent > 25) budgetEl.style.color = '#ffff00';
+            else budgetEl.style.color = '#ff4444';
+        }
+        
+        updateTokenCosts();
+        // Update every 5 minutes
+        setInterval(updateTokenCosts, 300000);
     </script>
 </body>
 </html>
