@@ -1,0 +1,34 @@
+{
+  "name": "Rankingsb",
+  "shortName": "Rankingsb",
+  "description": "SEO & Digital Marketing Agency in Santa Barbara",
+  "url": "https://rankingsb.com",
+  "colors": {
+    "primary": "#00ff88",
+    "secondary": "#0a0a0a",
+    "accent": "#ff3366",
+    "background": "#0a0a0a",
+    "surface": "#1a1a1a",
+    "text": "#ffffff",
+    "textMuted": "#888888"
+  },
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter"
+  },
+  "logo": {
+    "light": "/assets/logo-light.svg",
+    "dark": "/assets/logo-dark.svg",
+    "icon": "/assets/logo-icon.svg"
+  },
+  "social": {
+    "facebook": "https://facebook.com/rankingsb",
+    "instagram": "https://instagram.com/rankingsb",
+    "linkedin": "https://linkedin.com/company/rankingsb"
+  },
+  "contact": {
+    "email": "hello@rankingsb.com",
+    "phone": "(805) 555-0123",
+    "address": "Santa Barbara, CA"
+  }
+}

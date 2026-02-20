@@ -1,0 +1,32 @@
+{
+  "name": "CushionFoamz",
+  "shortName": "CushionFoamz",
+  "description": "Custom Cushions & Foam Products",
+  "url": "https://cushionfoamz.com",
+  "colors": {
+    "primary": "#4f46e5",
+    "secondary": "#f8fafc",
+    "accent": "#f59e0b",
+    "background": "#ffffff",
+    "surface": "#f1f5f9",
+    "text": "#0f172a",
+    "textMuted": "#64748b"
+  },
+  "fonts": {
+    "heading": "Inter",
+    "body": "Inter"
+  },
+  "logo": {
+    "light": "/assets/logo-light.svg",
+    "dark": "/assets/logo-dark.svg",
+    "icon": "/assets/logo-icon.svg"
+  },
+  "social": {
+    "facebook": "https://facebook.com/cushionfoamz",
+    "instagram": "https://instagram.com/cushionfoamz"
+  },
+  "contact": {
+    "email": "support@cushionfoamz.com",
+    "phone": "(805) 555-0199"
+  }
+}
