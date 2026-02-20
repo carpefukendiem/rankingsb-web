@@ -1,0 +1,119 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Johnny5//Ruben Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ruben's Productivity Schedule
+X-WR-TIMEZONE:America/Los_Angeles
+
+BEGIN:VEVENT
+UID:daily-workout-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260220T040000
+DTEND;TZID=America/Los_Angeles:20260220T050000
+RRULE:FREQ=DAILY;UNTIL=20261231T235959Z
+SUMMARY:💪 WORKOUT - No Excuses
+DESCRIPTION:David Goggins mode. Discipline = income.\n\nLocation: Gym or home\nFocus: Strength + cardio\nGoal: 45-60 min intense workout
+COLOR:11
+END:VEVENT
+
+BEGIN:VEVENT
+UID:daily-upwork-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260220T050000
+DTEND;TZID=America/Los_Angeles:20260220T060000
+RRULE:FREQ=DAILY;UNTIL=20261231T235959Z
+SUMMARY:💰 Upwork - Apply to 10 Jobs
+DESCRIPTION:Goal: 10 applications/day minimum\n\nTemplates: business/Ruben-Upwork-Cover-Letters.md\nJobs List: business/Upwork-Jobs-Tonight.md\nLink: https://www.upwork.com/ab/find-work/\n\nTrack applications:\nnode scripts/upwork-tracker.js add "Job Title" "Company" "URL" "Rate"
+COLOR:9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:daily-cushionfoamz-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260220T060000
+DTEND;TZID=America/Los_Angeles:20260220T063000
+RRULE:FREQ=DAILY;UNTIL=20261231T235959Z
+SUMMARY:📱 CushionFoamz Marketing
+DESCRIPTION:Post 1-2 Reddit responses + check social media\n\nResponses: CUSHIONFOAMZ-REDDIT-CONVERSATIONS.md\n\nLinks:\n- Reddit DIY: https://www.reddit.com/r/DIY/\n- Reddit Upholstery: https://www.reddit.com/r/upholstery/\n- CushionFoamz: https://cushionfoamz.com
+COLOR:10
+END:VEVENT
+
+BEGIN:VEVENT
+UID:friday-review-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260221T093000
+DTEND;TZID=America/Los_Angeles:20260221T113000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20261231T235959Z
+SUMMARY:📊 Week Review + Planning
+DESCRIPTION:Review week's results with Johnny 5\n\n- Check Upwork tracker summary\n- Review CushionFoamz engagement\n- Update sales pipelines\n- Send invoices\n- Plan next week\n\nCommands:\nnode scripts/upwork-tracker.js summary
+COLOR:7
+END:VEVENT
+
+BEGIN:VEVENT
+UID:evening-review-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260220T210000
+DTEND;TZID=America/Los_Angeles:20260220T220000
+RRULE:FREQ=DAILY;UNTIL=20261231T235959Z
+SUMMARY:🌙 Daily Review + Tomorrow Prep
+DESCRIPTION:Set 3 priorities for next day\n\n- Review Johnny 5's daily output\n- Check calendar for tomorrow\n- Set 3 main priorities\n- Prepare materials needed
+COLOR:8
+END:VEVENT
+
+BEGIN:VEVENT
+UID:monday-work-block-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260224T110000
+DTEND;TZID=America/Los_Angeles:20260224T143000
+RRULE:FREQ=WEEKLY;BYDAY=MO;UNTIL=20261231T235959Z
+SUMMARY:🔥 Client Work / Sales Calls
+DESCRIPTION:Focus: Closing deals, client calls, proposal reviews\n\nPriority: Revenue-generating activities
+COLOR:9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:tuesday-work-block-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260225T100000
+DTEND;TZID=America/Los_Angeles:20260225T143000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20261231T235959Z
+SUMMARY:⚡ Client Work / Project Delivery
+DESCRIPTION:Focus: Delivering work, client updates, billing
+COLOR:9
+END:VEVENT
+
+BEGIN:VEVENT
+UID:wednesday-prospecting-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260226T093000
+DTEND;TZID=America/Los_Angeles:20260226T133000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20261231T235959Z
+SUMMARY:🎯 Prospecting / Cold Outreach
+DESCRIPTION:Focus: Sending audits, follow-up calls, new lead gen\n\nLink: https://app.rankingsb.com/prospecting/add-prospect\n\nGoal: 5 audits sent, 5 follow-up calls
+COLOR:6
+END:VEVENT
+
+BEGIN:VEVENT
+UID:thursday-content-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260227T093000
+DTEND;TZID=America/Los_Angeles:20260227T133000
+RRULE:FREQ=WEEKLY;BYDAY=TH;UNTIL=20261231T235959Z
+SUMMARY:📝 Content Creation / Long-term Assets
+DESCRIPTION:Focus: Blog posts, social media, SEO content\n\n- Review Johnny 5 published content\n- Schedule social media posts\n- Plan next week's content
+COLOR:5
+END:VEVENT
+
+BEGIN:VEVENT
+UID:friday-admin-001@johnny5.ruben
+DTSTAMP:20260220T080000Z
+DTSTART;TZID=America/Los_Angeles:20260228T093000
+DTEND;TZID=America/Los_Angeles:20260228T113000
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20261231T235959Z
+SUMMARY:📋 Admin / Invoicing / Planning
+DESCRIPTION:Focus: Week review, admin tasks, planning
+COLOR:7
+END:VEVENT
+
+END:VCALENDAR
