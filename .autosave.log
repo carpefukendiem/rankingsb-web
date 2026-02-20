@@ -536,3 +536,7 @@
 [nightly-2026-02-01-client-support-os e113af2] Autosave: 2026-02-20 09:15:32 - Workspace sync
  3 files changed, 6 insertions(+), 2 deletions(-)
 [2026-02-20 09:15:33] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 26bf8bc] Autosave: 2026-02-20 09:17:33 - Workspace sync
+ 3 files changed, 140 insertions(+), 3 deletions(-)
+ create mode 100644 mission-control/SAL-MONITORING-SETUP.md
+[2026-02-20 09:17:33] ✅ Autosave successful
