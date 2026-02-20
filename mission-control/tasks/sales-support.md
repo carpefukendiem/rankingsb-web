@@ -36,6 +36,14 @@
 - [x] Emergency service angles
 - [x] Commercial/property manager scripts
 
+### Week 4 Deliverables (COMPLETE - Feb 20)
+- [x] Week 4 packet created (Roofing focus)
+- [x] 20 roofing leads researched (SB + Ventura)
+- [x] 5 roofing-specific audit snippets
+- [x] Storm season angle scripts
+- [x] Insurance/commercial property manager angles
+- [x] Emergency service hooks
+
 ---
 
 ## Deliverables Log
@@ -53,6 +61,9 @@
 | Feb 19 | Week 3 packet (Plumbing) | ✅ Created | `SAL-WEEK-3-PACKET.md` |
 | Feb 19 | Additional audit snippets | ✅ Added | 15 total snippets |
 | Feb 19 | Emergency/commercial angles | ✅ Created | HVAC + Plumbing focus |
+| Feb 20 | Week 4 packet (Roofing) | ✅ Created | `SAL-WEEK-4-PACKET.md` |
+| Feb 20 | 20 Roofing leads | ✅ Researched | SB + Ventura counties |
+| Feb 20 | 5 Roofing audit snippets | ✅ Created | Storm + insurance angles |
 
 ---
 
@@ -62,8 +73,8 @@
 |------|---------------|------------|--------|
 | 1 | Electricians | 20 | ✅ Complete |
 | 2 | HVAC | 20 | ✅ Complete |
-| 3 | Plumbing | 20 | ✅ Ready |
-| 4 | Roofing | 20 | ⏳ Pending |
+| 3 | Plumbing | 20 | ✅ Complete |
+| 4 | Roofing | 20 | ✅ Ready (Feb 24) |
 | 5 | Solar | 20 | ⏳ Pending |
 | 6 | Appliance Repair | 20 | ⏳ Pending |
 
