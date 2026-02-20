@@ -115,10 +115,19 @@
 - [ ] Schedule Week 3 kickoff call
 
 ### This Week
-- [ ] Check in with Sal daily (5 min)
+- [x] Check in with Sal daily (5 min)
 - [ ] Review audit quality
 - [ ] Celebrate first close (when it happens)
-- [ ] Prep Week 4 packet (Roofing)
+- [x] Prep Week 4 packet (Roofing) ✅ DONE
+
+### Next Week (Feb 24-28)
+- [ ] Deliver Week 4 packet to Sal
+- [ ] Schedule Week 4 kickoff call (storm season angle)
+- [ ] Check in daily
+- [ ] Prep Week 5 (Solar) — pending
+
+### Ongoing
+- [ ] Get Sal's Week 1-3 results (still critical)
 
 ---
 
