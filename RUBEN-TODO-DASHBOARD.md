@@ -6,17 +6,20 @@
 
 ## 🔴 CRITICAL - DO TODAY (Thursday Feb 19)
 
-### Rankingsb Day 3
+### Rankingsb Day 3 - EVENING SPRINT
 - [x] **8:00 AM** - Morning brief delivered ✅
 - [x] **8:10 AM** - PM standup posted ✅
 - [x] **Content** - 14 articles published to GHL ✅
 - [x] **Leads** - 20 HVAC leads researched ✅
 - [x] **Social Media** - 10 posts + 12 images generated ✅
-- [x] **Sales** - Week 2 & 3 packets ready for Sal ✅
+- [x] **Sales** - Week 2, 3 & 4 packets ready for Sal ✅
+- [ ] **GHL Blog SEO** - Fill all 14 posts (IN PROGRESS)
+- [ ] **Upwork Applications** - Apply to 5 jobs (IN PROGRESS)
+- [ ] **Reddit Responses** - Post 3 responses (IN PROGRESS)
 - [ ] **Get Sal's Week 1-2 results**
 - [ ] **Close first deal** (Goal: by Friday)
 
-**Progress:** 6/8 complete
+**Progress:** 6/9 complete, 3 in progress
 
 ---
 
