@@ -1,0 +1,35 @@
+# AUTOSAVE CONFIGURATION
+## Johnny 5 Workspace Auto-Save Settings
+
+# Enable/disable autosave (true/false)
+AUTOSAVE_ENABLED=true
+
+# Autosave interval in seconds (default: 120 = 2 minutes)
+AUTOSAVE_INTERVAL=120
+
+# Maximum log file size in MB (rotation)
+MAX_LOG_SIZE_MB=10
+
+# Git remote to push to (optional - leave empty to disable auto-push)
+# Set this if you want changes pushed to GitHub automatically
+AUTO_PUSH_REMOTE=""
+
+# Push interval (only if AUTO_PUSH_REMOTE is set)
+# How many saves before pushing (default: 5 = every 10 minutes)
+PUSH_AFTER_SAVES=5
+
+# Directories to exclude from autosave (space-separated)
+EXCLUDE_DIRS="node_modules .git .tokens"
+
+# Minimum file size change to trigger autosave (in bytes)
+# Prevents saves for tiny changes (default: 10)
+MIN_CHANGE_SIZE=10
+
+# Auto-save on these specific events (true/false)
+SAVE_ON_FILE_CHANGE=true
+SAVE_ON_COMMAND_COMPLETE=true
+SAVE_BEFORE_LONG_OPERATION=true
+
+# Emergency save settings
+EMERGENCY_SAVE_ON_CRASH=true
+EMERGENCY_SAVE_INTERVAL=30
