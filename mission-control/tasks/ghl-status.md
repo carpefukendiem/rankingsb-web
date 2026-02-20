@@ -43,20 +43,21 @@
 | CallRail | ⏳ Pending approval | ~$30/mo |
 | Zapier (optional) | ⏳ Not needed yet | — |
 
-### Yesterday (Feb 18)
-- ✅ 20 blog articles prepared for publishing
-- ✅ 10 social posts + 12 images generated
-- ✅ GHL OAuth token obtained (needs blog scope)
+### Yesterday (Feb 19)
+- ✅ 14 Rankingsb SEO articles published via GHL API
+- ✅ All articles have full HTML content (5K-16K chars each)
+- ✅ Publishing system validated
+- ⏳ 5 CushionFoamz articles pending (second location)
 
-### Today's Actions
-1. Publish all 20 articles to GHL blog (browser automation)
-2. Import 20 HVAC leads to "Targeted" column
-3. Upload Week 1 social media content
+### Today's Actions (Feb 20)
+1. Import 20 HVAC leads to "Targeted" pipeline column
+2. Set up blog categories/tags for published content
+3. Configure CallRail integration (awaiting approval)
 
 ### Blockers
-- API token needs blogs/post.write scope
-- Using browser automation as workaround
+- None technical — all systems operational
+- **Need approval:** CallRail (~$30/mo) for call tracking
 
 ---
 
-*Last updated: Feb 18, 2026 8:10 AM*
+*Last updated: Feb 20, 2026 8:10 AM*

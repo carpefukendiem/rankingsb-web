@@ -15,29 +15,31 @@
 - **Import:** To GHL "Targeted (Not Contact)" column
 - **Calling:** Sal handles outreach
 
-### Yesterday (Feb 18)
-- ✅ 20 HVAC leads researched (overnight)
-- ✅ Week 2 packet created for Sal
-- ⏳ Sal Day 1 results still pending
+### Yesterday (Feb 19)
+- ✅ 14 Rankingsb articles published to GHL (full content)
+- ✅ 20 HVAC leads ready for import
+- ✅ Week 2, 3 & 4 packets delivered to Sal
+- ⏳ Sal Day 1-3 results still pending
 
-### Today (Feb 19)
-- 🎯 Get Sal's Week 1 results (Critical)
-- 🎯 Import 20 HVAC leads to GHL
-- 🎯 Research 20 Plumbing leads (next batch)
-- 🎯 Post CushionFoamz Reddit responses
+### Today (Feb 20) — Friday
+- 🎯 **CRITICAL:** Get Sal's Week 1 results (4 days of calling)
+- 🎯 Import 20 HVAC leads to GHL pipeline
+- 🎯 5 Upwork applications (audit-first prospecting)
+- 🎯 3 CushionFoamz Reddit responses
+- 🎯 Close first deal (Weekend goal)
 
-### Metrics to Track
-- Leads researched per day
-- Leads imported to GHL
-- Calls made by Sal
-- Conversations had
-- Audits scheduled
-- Deals closed
+### Metrics to Track (Week 1)
+| Metric | Target | Actual |
+|--------|--------|--------|
+| Calls made | 100 | ?? |
+| Conversations | 20 | ?? |
+| Audits scheduled | 5 | ?? |
+| Deals closed | 2 | 0 |
 
 ### Blockers
-- None currently
-- Awaiting Sal's Day 1 report
+- **Awaiting Sal's report** — Day 1-4 results needed
+- Lost main client → income pivot to Upwork + audit prospecting
 
 ---
 
-*Last updated: Feb 18, 2026 8:10 AM*
+*Last updated: Feb 20, 2026 8:10 AM*
