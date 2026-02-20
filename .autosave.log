@@ -544,3 +544,8 @@
  4 files changed, 91 insertions(+), 1 deletion(-)
  create mode 100644 scripts/ghl-sal-monitor.js
 [2026-02-20 09:19:33] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os ce7b5c1] Autosave: 2026-02-20 09:21:34 - Workspace sync
+ 3 files changed, 265 insertions(+)
+ create mode 100644 GHL-API-TOKEN-SETUP.md
+ create mode 100644 scripts/ghl-test-token.js
+[2026-02-20 09:21:34] ✅ Autosave successful
