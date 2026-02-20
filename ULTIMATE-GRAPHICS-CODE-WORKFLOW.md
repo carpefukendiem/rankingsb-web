@@ -1,7 +1,8 @@
 # 🎨 Ultimate Graphics + Code Workflow
 ## Best-in-Class, Automated, Comprehensive
 
-**Philosophy:** Idea → Visual → Code → Live in minutes, not hours  
+**Philosophy:** Idea → Direct Code → Live in minutes, not hours  
+**Rule:** No Figma. No mockups. Build directly in code always.  
 **Target:** One-person agency with AI assistance  
 **Key Principle:** Never start from blank. Always build on templates.
 
@@ -27,9 +28,9 @@
                        ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  GENERATION LAYER (Parallel AI workers)                     │
-│  ├─ Graphics: Nano Banana Pro → Figma/Canva                 │
-│  ├─ Code: Claude Code/Codex → GitHub PR                     │
-│  ├─ Copy: Claude → Markdown → CMS                           │
+│  ├─ Graphics: Nano Banana Pro → Direct export               │
+│  ├─ Code: Claude Code/Codex → Direct build → Live           │
+│  ├─ Copy: Claude → Direct to site                           │
 │  └─ Video: Seedance 2 → Social formats                      │
 └──────────────────────┬──────────────────────────────────────┘
                        ▼
@@ -250,28 +251,35 @@
 
 ---
 
-## 🔗 PIPELINE 3: GRAPHICS + CODE INTEGRATION
+## 🔗 PIPELINE 3: DIRECT-TO-CODE WORKFLOW
 
-### The "Design-to-Code" Bridge
+### Screenshot → Live Site (No Mockups)
 
-**Problem:** Designers make mockups, developers rebuild them
-**Solution:** Automated design-to-code pipeline
+**Rule:** We never design in Figma. We build directly in code.
 
 **Flow:**
-1. **Figma Design** → Structured design system
-2. **Figma Plugin** → "Export to Code" button
-3. **Code Generation**:
-   - Anima/Figma-to-HTML → React/Tailwind
-   - Or custom: Vision model reads Figma → generates code
-4. **Component Match** → Map to existing shadcn/ui components
-5. **Asset Export** → Auto-extract images, icons, fonts
-6. **Live Preview** → Side-by-side: Figma | Code | Live
+1. **Reference Input** → Screenshot of competitor or sketch
+2. **Vision Analysis** → Extract layout, colors, components
+3. **Direct Code Gen** → Next.js + Tailwind code (no mockup phase)
+4. **Live Preview** → Vercel preview URL in 60 seconds
+5. **Iterate** → Voice/text tweaks → Code update → New preview
+6. **Ship** → Merge → Production
+
+**Example:**
+```
+You: [Screenshot] "Make a pricing page like this"
+→ 60 seconds: Preview URL with working pricing page
+→ You: "Make the CTA button bigger and green"
+→ 30 seconds: Updated preview
+→ You: "Ship it"
+→ Live on production
+```
 
 **Tools:**
-- Design: Figma (with auto-layout, components)
-- Bridge: Anima / Figma-to-Code / custom Claude vision
-- Code: Next.js + Tailwind
-- Sync: GitHub Actions watch Figma changes
+- Vision: Claude/GPT-4V reads screenshots
+- Code: Claude Code → Next.js + Tailwind + shadcn/ui
+- Preview: Vercel instant deploy
+- Iteration: Voice/text → code → preview loop
 
 ---
 
@@ -317,12 +325,10 @@ System:
    - Typography hierarchy
    - Component types
 2. Adapts to your brand (colors, fonts, logo)
-3. Generates:
-   - Figma mockup
-   - Next.js code
-   - Copy suggestions
-4. Shows 3 variants: Similar | Improved | Disruptive
-5. You pick, it deploys
+3. Generates Next.js code directly (no mockup)
+4. Deploys preview URL in 60 seconds
+5. Shows 3 variants: Similar | Improved | Disruptive
+6. You pick, it deploys to production
 ```
 
 ---
@@ -384,10 +390,10 @@ workspace/
 | Task | Primary | Alternative |
 |------|---------|-------------|
 | AI Generation | Nano Banana Pro | Midjourney, DALL-E |
-| Vector/Layout | Figma | Adobe Illustrator |
-| Quick Graphics | Canva | Adobe Express |
+| Code-Based Design | Tailwind + shadcn/ui | Chakra UI |
+| Quick Graphics | Canva | Nano Banana direct |
 | Photo Editing | Photoshop | Photopea |
-| Batch Export | Figma plugins | Custom scripts |
+| Batch Export | Custom scripts | Sharp (Node.js) |
 
 ### Code
 | Task | Primary | Alternative |
@@ -406,7 +412,7 @@ workspace/
 | Voice Input | Whisper (local) |
 | Vision Analysis | Claude/GPT-4V |
 | Project Mgmt | Linear/GitHub Issues |
-| Design Handoff | Figma Dev Mode |
+| Code Preview | Vercel preview deploys |
 | Asset CDN | Cloudinary/Imgix |
 | Automation | OpenClaw agents |
 
