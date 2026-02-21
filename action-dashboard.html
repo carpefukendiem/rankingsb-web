@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⚡ ACTION DASHBOARD | Johnny 5</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
             background: #0a0a0a;
@@ -19,25 +14,17 @@
             padding: 20px;
             min-height: 100vh;
         }
-        
         .header {
             text-align: center;
             padding: 20px 0;
             border-bottom: 2px solid #00ff00;
             margin-bottom: 30px;
         }
-        
         .header h1 {
             font-size: 2em;
             text-shadow: 0 0 20px #00ff00;
             margin-bottom: 5px;
         }
-        
-        .header p {
-            opacity: 0.7;
-            font-size: 0.9em;
-        }
-        
         .back-link {
             position: absolute;
             top: 20px;
@@ -50,96 +37,14 @@
             font-size: 0.85em;
             transition: all 0.3s;
         }
-        
-        .back-link:hover {
-            background: rgba(0, 255, 0, 0.2);
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
+        .back-link:hover { background: rgba(0, 255, 0, 0.2); }
+        .section { margin-bottom: 40px; }
         .section-title {
             font-size: 1.3em;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(0, 255, 0, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-        
-        .button-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-        }
-        
-        .action-card {
-            background: rgba(0, 255, 0, 0.05);
-            border: 1px solid #00ff00;
-            border-radius: 10px;
-            padding: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .action-card:hover {
-            background: rgba(0, 255, 0, 0.15);
-            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .action-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
-            transition: left 0.5s;
-        }
-        
-        .action-card:hover::before {
-            left: 100%;
-        }
-        
-        .action-icon {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        
-        .action-title {
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        
-        .action-desc {
-            font-size: 0.85em;
-            opacity: 0.7;
-            margin-bottom: 15px;
-        }
-        
-        .action-meta {
-            font-size: 0.75em;
-            opacity: 0.5;
-            border-top: 1px solid rgba(0, 255, 0, 0.2);
-            padding-top: 10px;
-        }
-        
-        .priority-high {
-            border-color: #ff4444;
-            box-shadow: 0 0 10px rgba(255, 68, 68, 0.2);
-        }
-        
-        .priority-high:hover {
-            box-shadow: 0 0 30px rgba(255, 68, 68, 0.4);
-        }
-        
         .daily-tracker {
             background: rgba(0, 255, 0, 0.05);
             border: 1px solid #00ff00;
@@ -147,114 +52,47 @@
             padding: 20px;
             margin-bottom: 30px;
         }
-        
         .tracker-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 15px;
         }
-        
-        .tracker-date {
-            font-size: 0.9em;
-            opacity: 0.7;
-        }
-        
-        .quick-links {
+        .checklist { list-style: none; }
+        .checklist li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0, 255, 0, 0.1);
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        
-        .quick-link {
-            background: rgba(0, 255, 0, 0.1);
-            border: 1px solid #00ff00;
-            padding: 8px 16px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #00ff00;
-            font-size: 0.85em;
+            align-items: center;
+            gap: 12px;
             transition: all 0.3s;
         }
-        
-        .quick-link:hover {
-            background: rgba(0, 255, 0, 0.3);
+        .checklist li:hover { background: rgba(0, 255, 0, 0.05); }
+        .checklist li.completed { opacity: 0.5; }
+        .checklist li.completed span.task-text { text-decoration: line-through; }
+        .checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #00ff00;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s;
+            flex-shrink: 0;
         }
-        
-        .status-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.75em;
-            font-weight: bold;
-            margin-left: 10px;
-        }
-        
-        .status-new {
-            background: #ff4444;
-            color: #000;
-        }
-        
-        .status-pending {
-            background: #ffaa00;
-            color: #000;
-        }
-        
-        .status-done {
+        .checkbox:hover { background: rgba(0, 255, 0, 0.2); }
+        .checkbox.checked {
             background: #00ff00;
             color: #000;
         }
-        
-        .cushion-tracker {
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(0, 255, 136, 0.05));
-            border: 2px solid #4f46e5;
-        }
-        
-        .conversation-item {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(0, 255, 0, 0.2);
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 10px;
-            transition: all 0.3s;
-        }
-        
-        .conversation-item:hover {
-            border-color: #00ff00;
-            background: rgba(0, 255, 0, 0.05);
-        }
-        
-        .conversation-title {
-            font-weight: bold;
-            margin-bottom: 5px;
+        .task-actions {
+            margin-left: auto;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 8px;
         }
-        
-        .conversation-meta {
-            font-size: 0.8em;
-            opacity: 0.6;
-            margin-bottom: 8px;
-        }
-        
-        .response-preview {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 0.85em;
-            font-style: italic;
-            border-left: 3px solid #00ff00;
-            margin-top: 10px;
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
         .btn {
             padding: 6px 12px;
             border: 1px solid #00ff00;
@@ -262,51 +100,51 @@
             color: #00ff00;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 0.8em;
+            font-size: 0.75em;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .btn:hover { background: rgba(0, 255, 0, 0.2); }
+        .quick-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .quick-link {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #00ff00;
+            font-size: 0.9em;
             transition: all 0.3s;
         }
-        
-        .btn:hover {
-            background: rgba(0, 255, 0, 0.2);
+        .quick-link:hover {
+            background: rgba(0, 255, 0, 0.3);
+            transform: translateY(-2px);
         }
-        
-        .btn-primary {
-            background: rgba(0, 255, 0, 0.2);
+        .date-badge {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
         }
-        
-        .checklist {
-            list-style: none;
-        }
-        
-        .checklist li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(0, 255, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .checklist li:last-child {
-            border-bottom: none;
-        }
-        
-        .checkbox {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #00ff00;
+        .progress-bar {
+            height: 8px;
+            background: rgba(0, 255, 0, 0.1);
             border-radius: 4px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75em;
+            margin-top: 15px;
+            overflow: hidden;
         }
-        
-        .checkbox.checked {
+        .progress-fill {
+            height: 100%;
             background: #00ff00;
-            color: #000;
+            transition: width 0.5s;
         }
-        
         .footer {
             text-align: center;
             padding: 20px;
@@ -315,17 +153,6 @@
             font-size: 0.85em;
             opacity: 0.7;
         }
-        
-        @media (max-width: 768px) {
-            .button-grid {
-                grid-template-columns: 1fr;
-            }
-            .back-link {
-                position: static;
-                display: inline-block;
-                margin-bottom: 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -333,209 +160,197 @@
     
     <div class="header">
         <h1>⚡ ACTION DASHBOARD</h1>
-        <p>One-Click Task Execution | Daily Tracker | Conversation Monitor</p>
+        <p>Daily Execution Hub | Track Progress | Get Things Done</p>
     </div>
     
-    <!-- Daily Tracker -->
+    <!-- Date & Progress -->
     <div class="section">
         <div class="daily-tracker">
             <div class="tracker-header">
-                <h2>📅 TODAY'S CHECKLIST</h2>
-                <span class="tracker-date" id="current-date"></span>
+                <h2>📅 TODAY'S MISSION</h2>
+                <span class="date-badge" id="current-date"></span>
             </div>
-            <ul class="checklist">
-                <li><span class="checkbox" onclick="toggleCheck(this)"></span> Check Sal's yesterday results (GHL)</li>
-                <li><span class="checkbox" onclick="toggleCheck(this)"></span> Post 3 Reddit responses (CushionFoamz)</li>
-                <li><span class="checkbox" onclick="toggleCheck(this)"></span> Apply to 5 Upwork jobs</li>
-                <li><span class="checkbox" onclick="toggleCheck(this)"></span> Review daily conversation targets below</li>
-                <li><span class="checkbox" onclick="toggleCheck(this)"></span> Update TODO dashboard</li>
+            <div id="task-stats">Loading tasks...</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-bar" style="width: 0%"></div>
+            </div>
+            <p style="margin-top: 8px; font-size: 0.85em; opacity: 0.7;" id="progress-text">0% complete</p>
+        </div>
+    </div>
+    
+    <!-- Quick Access Links -->
+    <div class="section">
+        <h2 class="section-title">🔗 QUICK ACCESS</h2>
+        <div class="quick-links">
+            <a href="https://rankingsb-web.vercel.app" target="_blank" class="quick-link">🌐 Live Website</a>
+            <a href="https://app.rankingsb.com" target="_blank" class="quick-link">⚙️ GHL Dashboard</a>
+            <a href="RUBEN-TODO-DASHBOARD.md" class="quick-link">📋 TODO List</a>
+            <a href="mission-control/lead-gen-system.md" class="quick-link">🎯 Lead Gen System</a>
+            <a href="business/cushionfoamz/01-marketing/reddit-campaigns/" class="quick-link">💬 Reddit Tracker</a>
+            <a href="TOKEN-TRACKER.md" class="quick-link">💰 Token Costs</a>
+        </div>
+    </div>
+    
+    <!-- Daily Checklist -->
+    <div class="section">
+        <h2 class="section-title">✅ DAILY CHECKLIST</h2>
+        <div class="daily-tracker">
+            <ul class="checklist" id="daily-checklist">
+                <!-- Tasks loaded by JavaScript -->
             </ul>
         </div>
     </div>
     
-    <!-- CushionFoamz Conversation Tracker -->
+    <!-- This Week's Focus -->
     <div class="section">
-        <div class="daily-tracker cushion-tracker">
-            <div class="tracker-header">
-                <h2>🎯 CUSHIONFOAMZ CONVERSATIONS</h2>
-                <span class="status-badge status-new">3 NEW</span>
-            </div>
-            <p style="margin-bottom: 15px; opacity: 0.8;">
-                Latest Reddit conversations found by Spike. Click to open, copy response, post.
-            </p>
-            
-            <div class="conversation-item">
-                <div class="conversation-title">
-                    <span>Sagging couch cushion replacement help</span>
-                    <span class="status-badge status-new">NEW</span>
-                </div>
-                <div class="conversation-meta">
-                    r/DIY • 2 hours ago • 15 comments • High engagement
-                </div>
-                <div class="response-preview">
-                    "I had the same issue with my 10-year-old couch. Ended up ordering custom foam from CushionFoamz..."
-                </div>
-                <div class="action-buttons">
-                    <button class="btn btn-primary" onclick="openUrl('https://reddit.com/r/DIY/example1')">Open Reddit</button>
-                    <button class="btn" onclick="copyResponse(1)">Copy Response</button>
-                    <button class="btn" onclick="markDone(1)">Mark Done</button>
-                </div>
-            </div>
-            
-            <div class="conversation-item">
-                <div class="conversation-title">
-                    <span>Best foam for outdoor patio cushions?</span>
-                    <span class="status-badge status-pending">PENDING</span>
-                </div>
-                <div class="conversation-meta">
-                    r/HomeImprovement • 5 hours ago • 8 comments
-                </div>
-                <div class="response-preview">
-                    "For outdoor cushions, you need open-cell foam that's water-resistant. I recommend..."
-                </div>
-                <div class="action-buttons">
-                    <button class="btn btn-primary" onclick="openUrl('https://reddit.com/r/HomeImprovement/example2')">Open Reddit</button>
-                    <button class="btn" onclick="copyResponse(2)">Copy Response</button>
-                    <button class="btn" onclick="markDone(2)">Mark Done</button>
-                </div>
-            </div>
-            
-            <div class="conversation-item">
-                <div class="conversation-title">
-                    <span>DIY window seat cushion tutorial</span>
-                    <span class="status-badge status-new">NEW</span>
-                </div>
-                <div class="conversation-meta">
-                    r/woodworking • 8 hours ago • 23 comments • HOT
-                </div>
-                <div class="response-preview">
-                    "Great tutorial! For anyone who'd rather buy than DIY, custom window seat cushions..."
-                </div>
-                <div class="action-buttons">
-                    <button class="btn btn-primary" onclick="openUrl('https://reddit.com/r/woodworking/example3')">Open Reddit</button>
-                    <button class="btn" onclick="copyResponse(3)">Copy Response</button>
-                    <button class="btn" onclick="markDone(3)">Mark Done</button>
-                </div>
-            </div>
-            
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="business/cushionfoamz/01-marketing/reddit-campaigns/" class="quick-link">View All Conversations →</a>
-                <a href="agents/spike/outputs/cushionfoamz/" class="quick-link">Spike Research Output →</a>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Quick Action Buttons -->
-    <div class="section">
-        <h2 class="section-title">🚀 QUICK ACTIONS</h2>
-        <div class="button-grid">
-            <div class="action-card" onclick="runScript('new-landing')">
-                <div class="action-icon">🎯</div>
-                <div class="action-title">Create Landing Page</div>
-                <div class="action-desc">Build a new service landing page in 60 seconds. No mockups, direct to code.</div>
-                <div class="action-meta">Script: ./scripts/direct-build.sh</div>
-            </div>
-            
-            <div class="action-card" onclick="runScript('social-content')">
-                <div class="action-icon">📱</div>
-                <div class="action-title">Generate Social Content</div>
-                <div class="action-desc">Create 7 days of posts for Rankingsb or CushionFoamz with images and captions.</div>
-                <div class="action-meta">Script: ./scripts/generate-social.sh</div>
-            </div>
-            
-            <div class="action-card priority-high" onclick="openTask('sal-results')">
-                <div class="action-icon">📞</div>
-                <div class="action-title">Check Sal's Results</div>
-                <div class="action-desc">View daily calling activity, appointments scheduled, pipeline moves.</div>
-                <div class="action-meta">GHL Dashboard • HIGH PRIORITY</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('upwork-apps')">
-                <div class="action-icon">💼</div>
-                <div class="action-title">Apply to Upwork Jobs</div>
-                <div class="action-desc">Access cover letter templates and job tracker. Target: 5 apps/day.</div>
-                <div class="action-meta">Template: business/Ruben-Upwork-Cover-Letters.md</div>
-            </div>
-            
-            <div class="action-card" onclick="runScript('audit-generator')">
-                <div class="action-icon">🔍</div>
-                <div class="action-title">Generate SEO Audit</div>
-                <div class="action-desc">Create a 1-page audit report for a prospect. Lead magnet for sales.</div>
-                <div class="action-meta">CLI: ./scripts/audit-generator.sh</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('content-publish')">
-                <div class="action-icon">📝</div>
-                <div class="action-title">Publish Blog Content</div>
-                <div class="action-desc">Push prepared articles to GHL blog. Auto-format and SEO optimize.</div>
-                <div class="action-meta">Target: 1-2 posts/day</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('lead-research')">
-                <div class="action-icon">🎯</div>
-                <div class="action-title">Research New Leads</div>
-                <div class="action-desc">Generate 20 leads for next week's industry (Plumbing, Roofing, etc).</div>
-                <div class="action-meta">Agent: Spike • Output: 20-ELECTRICIAN-LEADS.md format</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('reddit-responses')">
-                <div class="action-icon">💬</div>
-                <div class="action-title">Post Reddit Responses</div>
-                <div class="action-desc">CushionFoamz guerilla marketing. Post 3 responses from tracked conversations.</div>
-                <div class="action-meta">Daily target: 3 posts • See tracker above</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('ghl-setup')">
-                <div class="action-icon">⚙️</div>
-                <div class="action-title">GHL Admin Tasks</div>
-                <div class="action-desc">Pipeline management, user setup, workflow configuration.</div>
-                <div class="action-meta">Location: app.rankingsb.com</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('token-check')">
-                <div class="action-icon">📊</div>
-                <div class="action-title">Check Token Usage</div>
-                <div class="action-desc">Review today's API costs and budget remaining.</div>
-                <div class="action-meta">Budget: $30/day • Current: See TOKEN-TRACKER.md</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('daily-brief')">
-                <div class="action-icon">📋</div>
-                <div class="action-title">View Daily Brief</div>
-                <div class="action-desc">Weather, priorities, overnight work summary, today's focus.</div>
-                <div class="action-meta">Auto-generated 8 AM • Discord #morning-brief</div>
-            </div>
-            
-            <div class="action-card" onclick="openTask('voice-command')">
-                <div class="action-icon">🎤</div>
-                <div class="action-title">Voice Command</div>
-                <div class="action-desc">Record voice → transcribe → auto-execute task (landing, social, etc).</div>
-                <div class="action-meta">Script: ./scripts/voice-router.sh</div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Quick Links -->
-    <div class="section">
-        <h2 class="section-title">🔗 ESSENTIAL FILES</h2>
-        <div class="quick-links">
-            <a href="RUBEN-TODO-DASHBOARD.md" class="quick-link">📋 TODO Dashboard</a>
-            <a href="ULTIMATE-GRAPHICS-CODE-WORKFLOW.md" class="quick-link">🎨 Graphics/Code Workflow</a>
-            <a href="20-ELECTRICIAN-LEADS.md" class="quick-link">🎯 Sales Leads</a>
-            <a href="REVISED-SALES-SCRIPTS-WITH-AUDIT.md" class="quick-link">📞 Sales Scripts</a>
-            <a href="TOKEN-TRACKER.md" class="quick-link">💰 Token Costs</a>
-            <a href="business/Ruben-Upwork-Cover-Letters.md" class="quick-link">💼 Upwork Templates</a>
-            <a href="CUSHIONFOAMZ-REDDIT-CONVERSATIONS.md" class="quick-link">💬 All Reddit Convos</a>
-            <a href="mission-control/logs/activity.log" class="quick-link">📊 Activity Log</a>
+        <h2 class="section-title">🎯 THIS WEEK'S FOCUS</h2>
+        <div class="daily-tracker">
+            <ul class="checklist" id="weekly-focus">
+                <!-- Weekly goals loaded by JavaScript -->
+            </ul>
         </div>
     </div>
     
     <div class="footer">
-        <p>⚡ Johnny 5 Action Dashboard | Built for speed, designed for ADHD</p>
-        <p style="margin-top: 5px; font-size: 0.8em;">No decision fatigue. Just click and execute.</p>
+        <p>⚡ Johnny 5 Action Dashboard | Updated: <span id="last-updated"></span></p>
     </div>
     
     <script>
+        // Daily tasks with actions
+        const dailyTasks = [
+            {
+                id: 'sal-check',
+                text: 'Check Sal\'s yesterday results (GHL)',
+                action: { type: 'link', url: 'https://app.rankingsb.com', label: 'Open GHL' },
+                completed: false
+            },
+            {
+                id: 'reddit-posts',
+                text: 'Post 3 Reddit responses (CushionFoamz)',
+                action: { type: 'link', url: 'business/cushionfoamz/01-marketing/reddit-campaigns/', label: 'View Convos' },
+                completed: false
+            },
+            {
+                id: 'upwork-apps',
+                text: 'Apply to 5 Upwork jobs',
+                action: { type: 'link', url: 'https://upwork.com', label: 'Upwork' },
+                completed: false
+            },
+            {
+                id: 'website-check',
+                text: 'Review website analytics',
+                action: { type: 'link', url: 'https://rankingsb-web.vercel.app', label: 'View Site' },
+                completed: false
+            },
+            {
+                id: 'token-check',
+                text: 'Check token usage (stay under budget)',
+                action: { type: 'link', url: 'TOKEN-TRACKER.md', label: 'View Costs' },
+                completed: false
+            }
+        ];
+        
+        // Weekly focus items
+        const weeklyFocus = [
+            {
+                id: 'week-4-delivery',
+                text: 'Deliver Week 4 Roofing packet to Sal (Monday)',
+                action: { type: 'file', path: 'business/AgencyRankingsb/sales/week-4-roofing/SAL-WEEK-4-PACKET.md', label: 'View Packet' },
+                completed: false
+            },
+            {
+                id: 'website-polish',
+                text: 'Polish new website (iterations from feedback)',
+                action: { type: 'link', url: 'https://rankingsb-web.vercel.app', label: 'View Site' },
+                completed: false
+            },
+            {
+                id: 'dashboard-improve',
+                text: 'Improve dashboard functionality',
+                action: { type: 'file', path: 'action-dashboard.html', label: 'This Page' },
+                completed: true
+            }
+        ];
+        
+        // Load saved state from localStorage
+        function loadState() {
+            const saved = localStorage.getItem('action-dashboard-state');
+            if (saved) {
+                const state = JSON.parse(saved);
+                const today = new Date().toDateString();
+                // Only restore if it's the same day
+                if (state.date === today) {
+                    dailyTasks.forEach(task => {
+                        if (state.daily[task.id] !== undefined) {
+                            task.completed = state.daily[task.id];
+                        }
+                    });
+                    weeklyFocus.forEach(item => {
+                        if (state.weekly[item.id] !== undefined) {
+                            item.completed = state.weekly[item.id];
+                        }
+                    });
+                }
+            }
+        }
+        
+        // Save state to localStorage
+        function saveState() {
+            const state = {
+                date: new Date().toDateString(),
+                daily: {},
+                weekly: {}
+            };
+            dailyTasks.forEach(task => state.daily[task.id] = task.completed);
+            weeklyFocus.forEach(item => state.weekly[item.id] = item.completed);
+            localStorage.setItem('action-dashboard-state', JSON.stringify(state));
+        }
+        
+        // Render tasks
+        function renderTasks(tasks, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = tasks.map(task => `
+                <li class="${task.completed ? 'completed' : ''}" data-id="${task.id}">
+                    <span class="checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask('${task.id}', '${containerId}')">
+                        ${task.completed ? '✓' : ''}
+                    </span>
+                    <span class="task-text">${task.text}</span>
+                    <div class="task-actions">
+                        ${task.action.type === 'link' 
+                            ? `<a href="${task.action.url}" target="_blank" class="btn">${task.action.label}</a>`
+                            : `<a href="${task.action.path}" class="btn">${task.action.label}</a>`
+                        }
+                    </div>
+                </li>
+            `).join('');
+            
+            updateProgress();
+        }
+        
+        // Toggle task completion
+        function toggleTask(taskId, listId) {
+            const tasks = listId === 'daily-checklist' ? dailyTasks : weeklyFocus;
+            const task = tasks.find(t => t.id === taskId);
+            if (task) {
+                task.completed = !task.completed;
+                saveState();
+                renderTasks(dailyTasks, 'daily-checklist');
+                renderTasks(weeklyFocus, 'weekly-focus');
+            }
+        }
+        
+        // Update progress bar
+        function updateProgress() {
+            const allTasks = [...dailyTasks, ...weeklyFocus];
+            const completed = allTasks.filter(t => t.completed).length;
+            const total = allTasks.length;
+            const percent = Math.round((completed / total) * 100);
+            
+            document.getElementById('progress-bar').style.width = percent + '%';
+            document.getElementById('progress-text').textContent = `${percent}% complete (${completed}/${total} tasks)`;
+            document.getElementById('task-stats').textContent = `${completed} of ${total} tasks completed`;
+        }
+        
         // Set current date
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
             weekday: 'long',
@@ -544,57 +359,13 @@
             day: 'numeric'
         });
         
-        // Toggle checkbox
-        function toggleCheck(el) {
-            el.classList.toggle('checked');
-            if (el.classList.contains('checked')) {
-                el.innerHTML = '✓';
-            } else {
-                el.innerHTML = '';
-            }
-        }
+        // Set last updated
+        document.getElementById('last-updated').textContent = new Date().toLocaleTimeString();
         
-        // Run scripts
-        function runScript(script) {
-            alert('Running: ' + script + '\n\nIn terminal, run:\n./scripts/' + script + '.sh');
-        }
-        
-        // Open tasks
-        function openTask(task) {
-            const tasks = {
-                'sal-results': 'Check GHL dashboard for Sal\'s daily activity\n\n1. Go to: app.rankingsb.com\n2. View pipeline\n3. Check calls made, appointments\n4. Update mission-control/tasks/leadgen-status.md',
-                'upwork-apps': 'Apply to 5 Upwork jobs\n\n1. Go to: upwork.com\n2. Use templates from: business/Ruben-Upwork-Cover-Letters.md\n3. Track in: scripts/upwork-tracker.js',
-                'content-publish': 'Publish blog content to GHL\n\n1. Open: business/cushionfoamz/02-content/blog-posts/\n2. Copy article\n3. Paste into GHL blog\n4. Add featured image\n5. Publish',
-                'lead-research': 'Research 20 new leads\n\nRun: ./scripts/spike-research.sh --industry=plumbing --count=20\n\nOr manually:\n1. Google: "plumbers santa barbara"\n2. Skip top 3 ranked\n3. Target businesses with weak SEO\n4. Add to: 20-PLUMBING-LEADS.md',
-                'reddit-responses': 'Post Reddit responses for CushionFoamz\n\n1. See tracker above\n2. Click "Open Reddit" on each conversation\n3. Copy pre-written response\n4. Post (be helpful, not salesy)\n5. Mark as Done',
-                'ghl-setup': 'GHL Admin Tasks\n\n1. Go to: app.rankingsb.com\n2. Check pipeline stages\n3. Review user permissions\n4. Update workflows as needed',
-                'token-check': 'Check Token Usage\n\nOpen: TOKEN-TRACKER.md\n\nBudget: $30/day\nAlert if >$20 by midday',
-                'daily-brief': 'View Daily Brief\n\nCheck Discord #morning-brief\nOr run: cat mission-control/logs/activity.log | tail -20',
-                'voice-command': 'Use Voice Command\n\n1. Record voice memo\n2. Run: ./scripts/voice-router.sh recording.wav\n3. Review output\n4. Confirm execution'
-            };
-            alert(tasks[task] || 'Task: ' + task);
-        }
-        
-        // Open URL
-        function openUrl(url) {
-            window.open(url, '_blank');
-        }
-        
-        // Copy response
-        function copyResponse(id) {
-            const responses = {
-                1: 'I had the same issue with my 10-year-old couch. Ended up ordering custom foam from CushionFoamz (cushionfoamz.com). Measured the covers, ordered the exact size, and it was like having a new couch. Cost about $180 vs $2000+ for a new sofa. Worth every penny!',
-                2: 'For outdoor cushions, you need open-cell foam that\'s water-resistant. I got mine from CushionFoamz - they have a "dryfast" foam specifically for outdoor use. Had them for 2 years now, no mold, dry quickly after rain.',
-                3: 'Great tutorial! For anyone who\'d rather buy than DIY, custom window seat cushions from CushionFoamz might save some headaches. They\'ll make any size/shape. Just FYI for those less crafty!'
-            };
-            navigator.clipboard.writeText(responses[id] || 'Response copied!');
-            alert('Response ' + id + ' copied to clipboard!');
-        }
-        
-        // Mark done
-        function markDone(id) {
-            alert('Conversation ' + id + ' marked as done!\n\nUpdate:\n- agents/spike/outputs/cushionfoamz/2026-MM-DD-conversations.md\n- Add: "Posted: [date] by Ruben"');
-        }
+        // Initialize
+        loadState();
+        renderTasks(dailyTasks, 'daily-checklist');
+        renderTasks(weeklyFocus, 'weekly-focus');
     </script>
 </body>
 </html>
