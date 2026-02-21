@@ -38,7 +38,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="tel:8052434300" className="hover:text-primary">(805) 243-4300</a></li>
+              <li><a href="tel:8053077600" className="hover:text-primary">(805) 307-7600</a></li>
               <li><a href="mailto:hello@rankingsb.com" className="hover:text-primary">hello@rankingsb.com</a></li>
               <li><Link href="/free-audit" className="text-blue-600 hover:text-blue-700 font-medium">Get Free Audit →</Link></li>
             </ul>

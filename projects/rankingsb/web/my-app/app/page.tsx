@@ -372,10 +372,10 @@ export default function HomePage() {
               Your free audit is waiting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8052434300">
+              <a href="tel:8053077600">
                 <Button size="lg" className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-slate-100">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (805) 243-4300
+                  Call (805) 307-7600
                 </Button>
               </a>
               <a href="/free-audit">
