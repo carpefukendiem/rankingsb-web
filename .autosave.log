@@ -2008,3 +2008,8 @@
  2 files changed, 169 insertions(+)
  create mode 100644 scripts/california-tacos-setup.sh
 [2026-02-21 11:07:32] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 2d98a88] Autosave: 2026-02-21 11:09:32 - Workspace sync
+ 3 files changed, 261 insertions(+)
+ create mode 100644 CALIFORNIA-TACOS-SETUP-CHECKLIST.md
+ mode change 100644 => 100755 scripts/california-tacos-setup.sh
+[2026-02-21 11:09:32] ✅ Autosave successful
