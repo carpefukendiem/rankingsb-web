@@ -60,10 +60,12 @@ export default function HomePage() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
-                  <Phone className="w-5 h-5" />
-                  Get Free SEO Audit
-                </Button>
+                <a href="/free-audit">
+                  <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
+                    <Phone className="w-5 h-5" />
+                    Get Free SEO Audit
+                  </Button>
+                </a>
                 <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10">
                   <Play className="w-5 h-5" />
                   See How It Works
@@ -370,14 +372,18 @@ export default function HomePage() {
               Your free audit is waiting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-slate-100">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (805) 555-0123
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white/10">
-                Get Free Audit
-                <ArrowUpRight className="w-5 h-5 ml-2" />
-              </Button>
+              <a href="tel:8052434300">
+                <Button size="lg" className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-slate-100">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (805) 243-4300
+                </Button>
+              </a>
+              <a href="/free-audit">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white/10">
+                  Get Free Audit
+                  <ArrowUpRight className="w-5 h-5 ml-2" />
+                </Button>
+              </a>
             </div>
           </div>
         </section>
