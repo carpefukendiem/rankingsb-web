@@ -35,13 +35,15 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              (805) 555-0123
+            <Button variant="ghost" size="sm" className="text-slate-700">
+              (805) 243-4300
             </Button>
-            <Button size="sm">
-              <Phone className="w-4 h-4 mr-2" />
-              Free Audit
-            </Button>
+            <Link href="/free-audit">
+              <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Phone className="w-4 h-4 mr-2" />
+                Free Audit
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -57,21 +59,17 @@ export function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col gap-4">
-              <Link href="/services" className="text-sm font-medium">
-                Services
-              </Link>
-              <Link href="/about" className="text-sm font-medium">
-                About
-              </Link>
-              <Link href="/case-studies" className="text-sm font-medium">
-                Case Studies
-              </Link>
-              <Link href="/blog" className="text-sm font-medium">
-                Blog
-              </Link>
-              <Button className="w-full mt-2">
+              <Link href="/" className="text-sm font-medium">Home</Link>
+              <Link href="/free-audit" className="text-sm font-medium text-blue-600">Free Audit</Link>
+              <Link href="/industries/electrician-seo" className="text-sm font-medium">Electrician SEO</Link>
+              <Link href="/industries/hvac-seo" className="text-sm font-medium">HVAC SEO</Link>
+              <Link href="/industries/plumber-seo" className="text-sm font-medium">Plumber SEO</Link>
+              <Link href="/industries/roofing-seo" className="text-sm font-medium">Roofing SEO</Link>
+              <Link href="/industries/solar-seo" className="text-sm font-medium">Solar SEO</Link>
+              <Link href="/industries/attorney-seo" className="text-sm font-medium">Attorney SEO</Link>
+              <Button className="w-full mt-2 bg-blue-600 text-white">
                 <Phone className="w-4 h-4 mr-2" />
-                Free Audit
+                (805) 243-4300
               </Button>
             </nav>
           </div>
