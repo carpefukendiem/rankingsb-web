@@ -1858,3 +1858,7 @@
 [nightly-2026-02-01-client-support-os fb75854] Autosave: 2026-02-21 09:29:12 - Workspace sync
  1 file changed, 3 insertions(+)
 [2026-02-21 09:29:12] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 7b521c6] Autosave: 2026-02-21 09:31:12 - Workspace sync
+ 2 files changed, 86 insertions(+)
+ create mode 100755 scripts/openclaw-setup.sh
+[2026-02-21 09:31:12] ✅ Autosave successful
