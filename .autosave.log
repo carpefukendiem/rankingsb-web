@@ -2004,3 +2004,7 @@
 [nightly-2026-02-01-client-support-os 0f1617f] Autosave: 2026-02-21 11:05:32 - Workspace sync
  1 file changed, 3 insertions(+)
 [2026-02-21 11:05:32] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 11c32d1] Autosave: 2026-02-21 11:07:32 - Workspace sync
+ 2 files changed, 169 insertions(+)
+ create mode 100644 scripts/california-tacos-setup.sh
+[2026-02-21 11:07:32] ✅ Autosave successful
