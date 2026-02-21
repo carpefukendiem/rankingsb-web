@@ -1557,3 +1557,7 @@
 [nightly-2026-02-01-client-support-os 7bd24ef] Autosave: 2026-02-21 00:02:01 - Workspace sync
  2 files changed, 21 insertions(+), 12 deletions(-)
 [2026-02-21 00:02:01] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 0442429] Autosave: 2026-02-21 00:18:03 - Workspace sync
+ 3 files changed, 378 insertions(+), 466 deletions(-)
+ create mode 100644 NICHE-BUSINESSES-STATUS.md
+[2026-02-21 00:18:03] ✅ Autosave successful
