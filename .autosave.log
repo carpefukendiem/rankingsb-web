@@ -2013,3 +2013,8 @@
  create mode 100644 CALIFORNIA-TACOS-SETUP-CHECKLIST.md
  mode change 100644 => 100755 scripts/california-tacos-setup.sh
 [2026-02-21 11:09:32] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os c9893c2] Autosave: 2026-02-21 11:11:33 - Workspace sync
+ 3 files changed, 492 insertions(+)
+ create mode 100644 CALIFORNIA-TACOS-CHAIN-CHECKLIST.md
+ create mode 100755 scripts/california-tacos-chain-setup.sh
+[2026-02-21 11:11:33] ✅ Autosave successful
