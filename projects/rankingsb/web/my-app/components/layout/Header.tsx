@@ -36,7 +36,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" size="sm" className="text-slate-700">
-              (805) 243-4300
+              (805) 307-7600
             </Button>
             <Link href="/free-audit">
               <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
@@ -69,7 +69,7 @@ export function Header() {
               <Link href="/industries/attorney-seo" className="text-sm font-medium">Attorney SEO</Link>
               <Button className="w-full mt-2 bg-blue-600 text-white">
                 <Phone className="w-4 h-4 mr-2" />
-                (805) 243-4300
+                (805) 307-7600
               </Button>
             </nav>
           </div>
