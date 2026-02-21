@@ -43,20 +43,21 @@
 | CallRail | ⏳ Pending approval | ~$30/mo |
 | Zapier (optional) | ⏳ Not needed yet | — |
 
-### Yesterday (Feb 19)
-- ✅ 14 Rankingsb SEO articles published via GHL API
-- ✅ All articles have full HTML content (5K-16K chars each)
-- ✅ Publishing system validated
-- ⏳ 5 CushionFoamz articles pending (second location)
+### Yesterday (Feb 20)
+- ✅ Website redeployed with correct phone (805-307-7600)
+- ✅ 11 pages live on Vercel
+- ✅ Week 4 Roofing packet created for Sal
+- ⏳ CushionFoamz articles still pending (need blogId)
 
-### Today's Actions (Feb 20)
-1. Import 20 HVAC leads to "Targeted" pipeline column
-2. Set up blog categories/tags for published content
-3. Configure CallRail integration (awaiting approval)
+### Today (Feb 21 — Weekend Sprint)
+1. Await site feedback from Ruben
+2. Build contact form backend (need Resend/Formspree)
+3. Research CushionFoamz Reddit conversations
 
 ### Blockers
-- None technical — all systems operational
-- **Need approval:** CallRail (~$30/mo) for call tracking
+- 🚫 **No data from Sal** — need Week 1-3 results
+- ⏳ Awaiting approval: CallRail ($30/mo)
+- ⏳ Awaiting blogId: CushionFoamz location #2
 
 ### System Documentation
 - ✅ **GHL Framework** — Automation map created
