@@ -3262,3 +3262,8 @@
 [nightly-2026-02-01-client-support-os e7e9b55] Autosave: 2026-02-22 01:00:22 - Workspace sync
  1 file changed, 3 insertions(+)
 [2026-02-22 01:00:22] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 6c880be] Autosave: 2026-02-22 01:02:22 - Workspace sync
+ 3 files changed, 675 insertions(+)
+ create mode 100644 agents/GHL-SPECIALIST.md
+ create mode 100644 business/cushionfoamz/PARTNERSHIP-PROGRAM-PLAYBOOK.md
+[2026-02-22 01:02:23] ✅ Autosave successful
