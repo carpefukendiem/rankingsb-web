@@ -1,21 +1,19 @@
 {
-  "name": "mission-control-dashboard",
-  "private": true,
-  "version": "0.1.0",
+  "name": "johnny5-memory",
+  "version": "1.0.0",
+  "description": "Conversation memory system for Johnny 5 AI assistant",
+  "main": "lib/conversation-memory.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "test:memory": "node scripts/test-memory.js",
+    "test:contact": "node lib/ghl-contact-backend.js",
+    "setup": "echo 'Run: npm install @supabase/supabase-js axios dotenv'"
   },
   "dependencies": {
-    "next": "16.1.6",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@supabase/supabase-js": "^2.39.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.0"
   },
-  "devDependencies": {
-    "@types/node": "25.2.0",
-    "@types/react": "19.2.10",
-    "typescript": "5.9.3"
-  }
+  "keywords": ["supabase", "memory", "ai", "conversation"],
+  "author": "Johnny 5",
+  "license": "MIT"
 }
