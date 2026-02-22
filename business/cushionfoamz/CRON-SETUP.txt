@@ -1,0 +1,8 @@
+# CushionFoamz Reddit Monitoring - Cron Setup
+# Add to crontab with: crontab -e
+
+# Run Reddit monitor daily at 8:00 AM PST
+0 8 * * * /Users/rubenruiz/.openclaw/workspace/business/cushionfoamz/scripts/reddit-monitor.sh >> /Users/rubenruiz/.openclaw/workspace/business/cushionfoamz/logs/cron.log 2>&1
+
+# Or run via OpenClaw cron:
+# openclaw cron add --name "cushionfoamz-reddit" --schedule "0 8 * * *" --command "/Users/rubenruiz/.openclaw/workspace/business/cushionfoamz/scripts/reddit-monitor.sh"
