@@ -38,10 +38,26 @@
 - **Pending:** Voice (Whisper input + ElevenLabs output)
 - **Pending:** Tailscale (remote laptop access)
 
+### Data & Memory Systems
+- **Conversation Memory:** Supabase PostgreSQL (built Feb 22, pending setup)
+  - Stores all conversations permanently
+  - Searchable history
+  - Session context & preferences
+  - Location: `lib/conversation-memory.js`
+- **Contact Backend:** GHL API integration (built Feb 22)
+  - Contact form → GHL contact + pipeline
+  - Location: `lib/ghl-contact-backend.js`
+
 ### File Organization
 ```
 workspace/
 ├── memory/              # Daily logs
+├── lib/                 # Core modules
+│   ├── conversation-memory.js    # Supabase memory system
+│   └── ghl-contact-backend.js    # Contact form handler
+├── config/              # Configuration
+│   ├── supabase-schema.sql       # Database schema
+│   └── supabase-config.md        # Connection docs
 ├── business/
 │   ├── AgencyRankingsb/  # Sales, content, clients
 │   └── cushionfoamz/     # Marketing, content
