@@ -28,7 +28,7 @@ export default function HomePage() {
           {/* Background image */}
           <div className="absolute inset-0">
             <img 
-              src="/images/hero-bg.jpg" 
+              src="/images/hero-bg.svg" 
               alt="Santa Barbara coastline - local SEO services"
               className="w-full h-full object-cover"
             />
@@ -238,7 +238,7 @@ export default function HomePage() {
                   <CardContent className="p-8">
                     <div className="flex items-center gap-4 mb-4">
                       <img 
-                        src={`/images/testimonial-${i + 1}.jpg`}
+                        src={`/images/testimonial-${i + 1}.svg`}
                         alt={`${testimonial.author} from ${testimonial.business}`}
                         className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
                       />
@@ -283,7 +283,7 @@ export default function HomePage() {
                 <Card key={i} className="border-0 shadow-md hover:shadow-xl transition-shadow group overflow-hidden">
                   <div className="h-40 overflow-hidden">
                     <img 
-                      src={`/images/service-${i + 1}.jpg`}
+                      src={`/images/service-${i + 1}.svg`}
                       alt={`${service.title} services for Santa Barbara businesses`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
