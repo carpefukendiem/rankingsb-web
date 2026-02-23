@@ -23,13 +23,16 @@ import {
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-        {/* HERO SECTION - Dark gradient with pattern */}
-        <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
-          {/* Background pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }} />
+        {/* HERO SECTION - With background image */}
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          {/* Background image */}
+          <div className="absolute inset-0">
+            <img 
+              src="/images/hero-bg.jpg" 
+              alt="Santa Barbara coastline - local SEO services"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-blue-900/95" />
           </div>
           
           <div className="container relative mx-auto px-4">
@@ -233,10 +236,17 @@ export default function HomePage() {
               ].map((testimonial, i) => (
                 <Card key={i} className="border-0 shadow-lg">
                   <CardContent className="p-8">
-                    <div className="flex gap-1 mb-4">
-                      {[1,2,3,4,5].map((star) => (
-                        <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      ))}
+                    <div className="flex items-center gap-4 mb-4">
+                      <img 
+                        src={`/images/testimonial-${i + 1}.jpg`}
+                        alt={`${testimonial.author} from ${testimonial.business}`}
+                        className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
+                      />
+                      <div className="flex gap-1">
+                        {[1,2,3,4,5].map((star) => (
+                          <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
                     </div>
                     <p className="text-slate-700 mb-6 italic">"{testimonial.quote}"</p>
                     <div className="border-t pt-4">
