@@ -1,9 +1,8 @@
 /**
  * GHL Contact Form Backend
  * Receives contact form submissions and creates contacts in GoHighLevel
+ * Uses native fetch (no axios dependency)
  */
-
-const axios = require('axios');
 
 class GHLContactBackend {
     constructor() {
@@ -64,31 +63,35 @@ class GHLContactBackend {
         };
 
         try {
-            const response = await axios.post(
-                `${this.baseUrl}/contacts/`,
-                payload,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${this.apiKey}`,
-                        'Content-Type': 'application/json',
-                        'Version': '2021-07-28'
-                    }
-                }
-            );
+            const response = await fetch(`${this.baseUrl}/contacts/`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${this.apiKey}`,
+                    'Content-Type': 'application/json',
+                    'Version': '2021-07-28'
+                },
+                body: JSON.stringify(payload)
+            });
 
-            console.log('✅ Contact created in GHL:', response.data.contact?.id);
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.message || `HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('✅ Contact created in GHL:', data.contact?.id);
             
             // Add to pipeline if configured
-            await this.addToPipeline(response.data.contact?.id, contactData);
+            await this.addToPipeline(data.contact?.id, contactData);
 
             return {
                 success: true,
-                contactId: response.data.contact?.id,
+                contactId: data.contact?.id,
                 message: 'Contact created successfully'
             };
         } catch (error) {
-            console.error('❌ Failed to create contact:', error.response?.data || error.message);
-            throw new Error(`GHL API Error: ${error.response?.data?.message || error.message}`);
+            console.error('❌ Failed to create contact:', error.message);
+            throw new Error(`GHL API Error: ${error.message}`);
         }
     }
 
@@ -111,21 +114,24 @@ class GHLContactBackend {
                 status: 'open'
             };
 
-            await axios.post(
-                `${this.baseUrl}/opportunities/`,
-                payload,
-                {
-                    headers: {
-                        'Authorization': `Bearer ${this.apiKey}`,
-                        'Content-Type': 'application/json',
-                        'Version': '2021-07-28'
-                    }
-                }
-            );
+            const response = await fetch(`${this.baseUrl}/opportunities/`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${this.apiKey}`,
+                    'Content-Type': 'application/json',
+                    'Version': '2021-07-28'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                console.warn('⚠️ Could not add to pipeline:', response.status);
+                return;
+            }
 
             console.log('✅ Contact added to pipeline');
         } catch (error) {
-            console.warn('⚠️ Could not add to pipeline:', error.response?.data?.message || error.message);
+            console.warn('⚠️ Could not add to pipeline:', error.message);
             // Don't fail the whole operation if pipeline add fails
         }
     }
@@ -158,7 +164,11 @@ class GHLContactBackend {
         };
 
         try {
-            await axios.post(webhookUrl, message);
+            await fetch(webhookUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(message)
+            });
             console.log('✅ Notification sent');
         } catch (error) {
             console.warn('⚠️ Failed to send notification:', error.message);
