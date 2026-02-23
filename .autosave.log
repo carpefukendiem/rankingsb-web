@@ -6519,3 +6519,8 @@
  2 files changed, 107 insertions(+)
  create mode 100644 website-sales-system/config.md
 [2026-02-23 15:05:39] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 77961c0] Autosave: 2026-02-23 15:07:39 - Workspace sync
+ 3 files changed, 558 insertions(+)
+ create mode 100644 website-sales-system/scripts/mockup-generator.js
+ create mode 100644 website-sales-system/scripts/prospect-scraper.js
+[2026-02-23 15:07:39] ✅ Autosave successful
