@@ -5,8 +5,8 @@
 
 const https = require('https');
 
-const API_KEY = 'pit-36c7d3ea-abe6-44b0-a0e3-0cf857094125';
-const BASE_URL = 'services.leadconnectorhq.com';
+const API_KEY = '5d8d5003-b167-4b6f-9f05-e7883a9f12f0';
+const BASE_URL = 'rest.gohighlevel.com';
 
 function apiRequest(endpoint) {
   return new Promise((resolve, reject) => {
@@ -16,6 +16,8 @@ function apiRequest(endpoint) {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${API_KEY}`,
+        'Channel': 'OAUTH',
+        'Accept': 'application/json',
         'Version': '2021-07-28',
         'Content-Type': 'application/json'
       }
