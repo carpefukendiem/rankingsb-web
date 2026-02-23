@@ -1,0 +1,14 @@
+{
+  "name": "ghl-monitoring",
+  "version": "1.0.0",
+  "description": "Sal's GHL Activity Monitoring System",
+  "main": "ghl-monitor.js",
+  "scripts": {
+    "monitor": "node ghl-monitor.js",
+    "test": "node test-connection.js",
+    "report": "node generate-report.js"
+  },
+  "keywords": ["ghl", "monitoring", "rankingsb"],
+  "author": "Sal",
+  "license": "MIT"
+}

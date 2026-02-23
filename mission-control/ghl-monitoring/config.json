@@ -1,0 +1,11 @@
+{
+  "apiKey": "pit-36c7d3ea-abe6-44b0-a0e3-0cf857094125",
+  "baseUrl": "services.leadconnectorhq.com",
+  "locationId": "",
+  "locationName": "Rankingsb",
+  "timezone": "America/Los_Angeles",
+  "monitoredUser": "Sal",
+  "reportEmail": "",
+  "webhookUrl": "",
+  "dailyRunTime": "18:00"
+}
