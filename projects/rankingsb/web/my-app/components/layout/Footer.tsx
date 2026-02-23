@@ -7,7 +7,10 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <h3 className="text-lg font-bold mb-4">Rankingsb</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo.webp" alt="Rankingsb" className="h-10 w-10 rounded-full object-cover" />
+              <h3 className="text-lg font-bold">Rankingsb</h3>
+            </div>
             <p className="text-muted-foreground mb-4">
               Santa Barbara's premier SEO and digital marketing agency. 
               We help local businesses rank higher and get more customers.

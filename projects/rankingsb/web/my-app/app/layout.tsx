@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -52,7 +54,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
+            <Header />
             {children}
+            <Footer />
             <Toaster />
           </TooltipProvider>
         </ThemeProvider>
