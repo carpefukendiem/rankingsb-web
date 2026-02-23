@@ -1,27 +1,44 @@
 # Sales Support Status — Sal Vasquez Enablement
 
-## Current Status: Week 6 Ready ✅
+## Current Status: 🔄 FRESH START — GHL Data Collection Live
+
+**Pivot Date:** February 23, 2026  
+**Data Source:** GHL API Monitoring (real-time)  
+**Approach:** Forward-looking only, no historical chasing
 
 ---
 
-## Packets Delivered
+## Previous Packets (Legacy — Informational Only)
 
-| Week | Industry | Leads | Status | Results |
-|------|----------|-------|--------|---------|
-| Week 1 | Electricians | 20 | ✅ Delivered Feb 17 | ❓ Awaiting feedback |
-| Week 2 | HVAC | 20 | ✅ Delivered Feb 18 | ❓ Awaiting feedback |
-| Week 3 | Plumbing | 20 | ✅ Delivered Feb 19 | ❓ Awaiting feedback |
-| Week 4 | Roofing | 20 | ✅ Delivered Feb 20 | ❓ Awaiting feedback |
-| Week 5 | Solar | 20 | ✅ Delivered Feb 21 | ❓ Awaiting feedback |
-| Week 6 | Landscaping | 20 | ✅ Delivered Feb 22 | — |
-
-**Total Leads Delivered:** 120  
-**Total Weeks Equipped:** 6  
-**Feedback Received:** 0
+Weeks 1-6 delivered Feb 17-22. Historical data not available. **Moving forward with GHL tracking.**
 
 ---
 
-## Supporting Materials Created
+## ✅ NEW SYSTEM: GHL-Tracked Data Collection
+
+**Live Since:** Feb 23, 2026 1:13 PM  
+**Tracking:** Calls, appointments, pipeline movements (automatic)  
+**Reports:** Daily at 6 PM PST  
+
+---
+
+## 🎯 WEEK 1 (NEW) — Carpet Cleaning
+
+**Industry:** Carpet Cleaning  
+**Angle:** Recurring revenue, spring cleaning season, residential focus  
+**Leads:** 20 fresh targets  
+**Week Of:** Feb 24 - Mar 2, 2026  
+**Status:** 🟡 CREATING NOW
+
+### Why Carpet Cleaning:
+- High repeat customer rate (quarterly service)
+- Spring season approaching (peak demand)
+- Local service area focus
+- Easy audit wins (Google Business Profile issues)
+
+---
+
+## Supporting Materials (All Ready)
 
 ### Scripts
 - ✅ Cold call opener (audit-first approach)
@@ -33,79 +50,53 @@
 - ✅ Electrician snippets (8)
 - ✅ HVAC snippets (8)
 - ✅ Plumbing snippets (8)
-- ✅ Roofing snippets (18 — storm season focus)
+- ✅ Roofing snippets (18)
 - ✅ Solar snippets (8)
-- ✅ Landscaping snippets (8 — NEW)
+- ✅ Landscaping snippets (8)
+- 🆕 Carpet Cleaning snippets (creating now)
 
-**Total Snippets:** 58 ready-to-use audit findings
-
-### Collateral
-- ✅ Sales process complete documentation
-- ✅ Revised sales scripts with audit approach
-- ✅ Lead gen system framework
-- ✅ GHL pipeline automation map
+**Total Snippets:** 58+ ready-to-use
 
 ---
 
-## Critical Blocker
+## GHL Monitoring — Live Data
 
-🚫 **NO FEEDBACK FROM SAL**
+| Metric | Source | Status |
+|--------|--------|--------|
+| Calls Made | GHL API | 🟢 Tracking Active |
+| Appointments | GHL Calendar | 🟢 Tracking Active |
+| Pipeline Moves | GHL Opportunities | 🟢 Tracking Active |
+| Daily Reports | Auto-generated | 🟢 6 PM PST Daily |
 
-Since Day 1 (Feb 17), zero data received:
-- Calls made per day: Unknown
-- Contact rate: Unknown
-- Audit appointments scheduled: Unknown
-- Proposals sent: Unknown
-- Closes: Unknown
-
-**Impact:** Cannot optimize scripts, can't troubleshoot objections, can't improve conversion rates.
+**Data Location:** `mission-control/ghl-monitoring/reports/`
 
 ---
 
-## Action Required
+## Commission Targets (Reset)
 
-**Ruben must contact Sal to get:**
-1. Daily call numbers (Week 1-6)
-2. Response rates (answering vs voicemail)
-3. Audit appointments scheduled
-4. Proposals sent
-5. Current pipeline stage distribution
-6. Objections being heard most often
-
----
-
-## Next Week (Week 7 Preview)
-
-**Industry:** Carpet Cleaning  
-**Angle:** Recurring revenue, local service, spring cleaning season  
-**Status:** Not yet created — waiting for Sal feedback to optimize approach
+| Week | Industry | Target Closes | Commission | Data Source |
+|------|----------|---------------|------------|-------------|
+| Week 1 | Carpet Cleaning | 2 | $1,994 | GHL Live |
+| Week 2 | TBD | 2 | $1,994 | GHL Live |
+| Week 3 | TBD | 2 | $1,994 | GHL Live |
+| **Month 1** | — | **6** | **$5,982** | — |
 
 ---
 
-## Files Location
+## Action Items
 
-All packets in: `mission-control/sales-support/`
-- `week1-electricians.md`
-- `week2-hvac.md`
-- `week3-plumbing.md`
-- `week4-roofing.md`
-- `week5-solar.md`
-- `week6-landscaping.md` (NEW)
+### Today:
+- [ ] Create Week 1 (Carpet Cleaning) packet
+- [ ] Generate 20 carpet cleaning leads
+- [ ] Create audit snippets for carpet niche
+- [ ] Deliver to Sal
 
----
-
-## Commission Potential
-
-| Week | Target Closes | Commission | Status |
-|------|---------------|------------|--------|
-| Week 1 | 2 | $1,994 | Unknown |
-| Week 2 | 2 | $1,994 | Unknown |
-| Week 3 | 2 | $1,994 | Unknown |
-| Week 4 | 2 | $1,994 | Unknown |
-| Week 5 | 2 | $1,994 | Unknown |
-| Week 6 | 2 | $1,994 | Target set |
-| **Total** | **12** | **$11,964** | **Month 1 Goal** |
+### This Week:
+- [ ] Monitor GHL data daily at 6 PM
+- [ ] Review Sal's actual call numbers (finally!)
+- [ ] Optimize based on real data
 
 ---
 
-*Last Updated: February 22, 2026 2:33 PM*
+*Last Updated: February 23, 2026 2:51 PM*  
+*Approach: Fresh start, GHL-tracked, no historical chasing*
