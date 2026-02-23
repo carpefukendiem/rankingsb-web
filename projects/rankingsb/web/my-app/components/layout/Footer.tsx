@@ -8,7 +8,12 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <img src="/logo.webp" alt="Rankingsb" className="h-12 w-12 rounded-full object-cover" />
+              <img 
+                src="/logo.webp" 
+                alt="Rankingsb Local SEO Agency" 
+                className="h-16 w-16 rounded-full object-cover border-2 border-blue-100 shadow-sm"
+                style={{ aspectRatio: '1/1' }}
+              />
             </div>
             <p className="text-muted-foreground mb-4">
               Santa Barbara's premier SEO and digital marketing agency. 
