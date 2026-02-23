@@ -11,14 +11,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo - Bigger and properly circular */}
+        <div className="flex h-24 items-center justify-between">
+          {/* Logo - Much bigger for visibility */}
           <Link href="/" className="flex items-center">
             <img 
               src="/logo.webp" 
-              alt="Rankingsb Local SEO Agency" 
-              className="h-16 w-16 rounded-full object-cover border-2 border-blue-100 shadow-sm"
-              style={{ aspectRatio: '1/1' }}
+              alt="Rankingsb Local SEO Agency Santa Barbara"
+              className="h-20 w-20 rounded-full object-cover border-2 border-blue-100 shadow-md"
+              style={{ aspectRatio: '1/1', minWidth: '80px', minHeight: '80px' }}
             />
           </Link>
 
