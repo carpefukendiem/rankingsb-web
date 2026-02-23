@@ -1,0 +1,13 @@
+<!-- Service 1: Local SEO - Google Maps optimization -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <!-- Map pin -->
+  <path d="M200 100 C200 80 185 65 165 65 C145 65 130 80 130 100 C130 125 165 170 165 170 C165 170 200 125 200 100 Z" fill="#ea4335"/>
+  <circle cx="165" cy="95" r="15" fill="white"/>
+  <!-- Map grid -->
+  <path d="M50 200 L350 200" stroke="#cbd5e0" stroke-width="2"/>
+  <path d="M50 240 L350 240" stroke="#cbd5e0" stroke-width="2"/>
+  <path d="M100 180 L100 280" stroke="#cbd5e0" stroke-width="2"/>
+  <path d="M230 180 L230 280" stroke="#cbd5e0" stroke-width="2"/>
+  <text x="200" y="50" font-family="Arial" font-size="24" fill="#2d3748" text-anchor="middle" font-weight="bold">Local SEO</text>
+</svg>

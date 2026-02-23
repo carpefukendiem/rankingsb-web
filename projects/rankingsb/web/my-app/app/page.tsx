@@ -280,9 +280,16 @@ export default function HomePage() {
                 { icon: BarChart3, title: "Google Ads", desc: "High-converting PPC campaigns that deliver immediate results" },
                 { icon: Users, title: "Content Marketing", desc: "Blog posts, service pages, and content that ranks and converts" },
               ].map((service, i) => (
-                <Card key={i} className="border-0 shadow-md hover:shadow-xl transition-shadow group">
+                <Card key={i} className="border-0 shadow-md hover:shadow-xl transition-shadow group overflow-hidden">
+                  <div className="h-40 overflow-hidden">
+                    <img 
+                      src={`/images/service-${i + 1}.jpg`}
+                      alt={`${service.title} services for Santa Barbara businesses`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <CardContent className="p-6">
-                    <div className="w-14 h-14 rounded-xl bg-blue-100 group-hover:bg-blue-500 transition-colors flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-blue-100 group-hover:bg-blue-500 transition-colors flex items-center justify-center mb-4 -mt-12 relative z-10 border-4 border-white">
                       <service.icon className="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" />
                     </div>
                     <h3 className="text-lg font-bold mb-2">{service.title}</h3>
