@@ -1,0 +1,21 @@
+{
+  "name": "website-sales-agent",
+  "version": "1.0.0",
+  "description": "Dedicated agent for $500 website sales automation",
+  "main": "scripts/system.js",
+  "scripts": {
+    "start": "node scripts/system.js run",
+    "stats": "node scripts/system.js stats",
+    "dashboard": "node scripts/system.js dashboard",
+    "scrape": "node scripts/prospect-scraper.js",
+    "mockup": "node scripts/mockup-generator.js",
+    "outreach": "node scripts/outreach-engine.js",
+    "payment": "node scripts/payment-handler.js"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

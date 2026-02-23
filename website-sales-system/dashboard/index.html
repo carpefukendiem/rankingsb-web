@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Sales System Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+    
+    header {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { opacity: 0.9; font-size: 1.1rem; }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+    .stat-card h3 {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+      margin-bottom: 0.5rem;
+    }
+    .stat-card .value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .stat-card .change {
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+    .positive { color: #10b981; }
+    .negative { color: #ef4444; }
+    
+    .progress-bar {
+      background: #334155;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+    }
+    .progress-fill {
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+    
+    .section {
+      background: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      margin-bottom: 1.5rem;
+    }
+    .section h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .pipeline-stage {
+      background: #0f172a;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .pipeline-stage .count {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #4f46e5;
+    }
+    .pipeline-stage .label {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-top: 0.25rem;
+    }
+    
+    .activity-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .activity-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem;
+      border-bottom: 1px solid #334155;
+    }
+    .activity-item:last-child { border-bottom: none; }
+    .activity-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      font-size: 1.25rem;
+    }
+    .activity-icon.new { background: #064e3b; }
+    .activity-icon.mockup { background: #1e3a8a; }
+    .activity-icon.outreach { background: #581c87; }
+    .activity-icon.payment { background: #065f46; }
+    .activity-content { flex: 1; }
+    .activity-title { font-weight: 500; }
+    .activity-meta { font-size: 0.875rem; color: #94a3b8; }
+    .activity-time { font-size: 0.75rem; color: #64748b; }
+    
+    .refresh-btn {
+      background: #4f46e5;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    .refresh-btn:hover { background: #4338ca; }
+    
+    .alert {
+      background: #fef3c7;
+      border: 1px solid #fbbf24;
+      color: #92400e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      header h1 { font-size: 1.75rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🚀 Website Sales System</h1>
+      <p>$500 Website Sales Automation | Southern California | Target: 100 outreaches/day</p>
+    </header>
+
+    <div id="alerts"></div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Total Prospects</h3>
+        <div class="value" id="total-prospects">0</div>
+        <div class="change positive">+<span id="today-new">0</span> today</div>
+      </div>
+      <div class="stat-card">
+        <h3>Today's Outreach</h3>
+        <div class="value" id="today-outreach">0</div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="target-progress" style="width: 0%"></div>
+        </div>
+        <div class="change"><span id="target-percent">0</span>% of 100 target</div>
+      </div>
+      <div class="stat-card">
+        <h3>Revenue</h3>
+        <div class="value" id="total-revenue">$0</div>
+        <div class="change positive"><span id="conversion-rate">0</span>% conversion</div>
+      </div>
+      <div class="stat-card">
+        <h3>Active Pipeline</h3>
+        <div class="value" id="active-pipeline">0</div>
+        <div class="change">Deals in progress</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📊 Sales Pipeline</h2>
+      <div class="pipeline" id="pipeline">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📈 By Category</h2>
+      <div class="pipeline" id="by-category">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🔔 Recent Activity</h2>
+      <div class="activity-list" id="activity">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Dashboard</button>
+    </div>
+  </div>
+
+  <script>
+    // Sample data structure - replace with actual API call
+    async function fetchData() {
+      // In production, this would call: node scripts/system.js dashboard
+      // For now, return sample data
+      return {
+        summary: {
+          totalProspects: 0,
+          todayNew: 0,
+          totalRevenue: 0,
+          conversionRate: 0,
+          todayOutreach: 0,
+          targetProgress: 0
+        },
+        pipeline: {
+          'Prospect Found': 0,
+          'Mockup Created': 0,
+          'Outreach Sent': 0,
+          'Engaged': 0,
+          'Meeting Scheduled': 0,
+          'Proposal Sent': 0,
+          'Payment Received': 0,
+          'In Production': 0,
+          'Delivered': 0,
+          'Hosting Active': 0
+        },
+        byCategory: {},
+        recentActivity: []
+      };
+    }
+
+    function updateDashboard(data) {
+      // Summary stats
+      document.getElementById('total-prospects').textContent = data.summary.totalProspects.toLocaleString();
+      document.getElementById('today-new').textContent = data.summary.todayNew;
+      document.getElementById('today-outreach').textContent = data.summary.todayOutreach;
+      document.getElementById('target-progress').style.width = data.summary.targetProgress + '%';
+      document.getElementById('target-percent').textContent = data.summary.targetProgress;
+      document.getElementById('total-revenue').textContent = '$' + data.summary.totalRevenue.toLocaleString();
+      document.getElementById('conversion-rate').textContent = data.summary.conversionRate;
+      
+      // Active pipeline (engaged + meeting + proposal)
+      const active = (data.pipeline['Engaged'] || 0) + 
+                     (data.pipeline['Meeting Scheduled'] || 0) + 
+                     (data.pipeline['Proposal Sent'] || 0);
+      document.getElementById('active-pipeline').textContent = active;
+
+      // Pipeline stages
+      const pipelineEl = document.getElementById('pipeline');
+      pipelineEl.innerHTML = Object.entries(data.pipeline)
+        .map(([stage, count]) => `
+          <div class="pipeline-stage">
+            <div class="count">${count}</div>
+            <div class="label">${stage}</div>
+          </div>
+        `).join('');
+
+      // By category
+      const categoryEl = document.getElementById('by-category');
+      if (Object.keys(data.byCategory).length > 0) {
+        categoryEl.innerHTML = Object.entries(data.byCategory)
+          .map(([cat, count]) => `
+            <div class="pipeline-stage">
+              <div class="count">${count}</div>
+              <div class="label">${cat}</div>
+            </div>
+          `).join('');
+      } else {
+        categoryEl.innerHTML = '<div style="color: #64748b; grid-column: 1/-1; text-align: center;">No data yet</div>';
+      }
+
+      // Activity
+      const activityEl = document.getElementById('activity');
+      if (data.recentActivity.length > 0) {
+        activityEl.innerHTML = data.recentActivity.map(item => {
+          const icons = {
+            'Prospect Found': '🔍',
+            'Mockup Created': '🎨',
+            'Outreach Sent': '📧',
+            'Engaged': '💬',
+            'Payment Received': '💰',
+            'In Production': '🚀'
+          };
+          const iconClass = item.stage.toLowerCase().replace(/\s+/g, '-');
+          return `
+            <div class="activity-item">
+              <div class="activity-icon ${iconClass}">${icons[item.stage] || '📋'}</div>
+              <div class="activity-content">
+                <div class="activity-title">${item.businessName}</div>
+                <div class="activity-meta">${item.stage}</div>
+              </div>
+              <div class="activity-time">${new Date(item.updatedAt).toLocaleTimeString()}</div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        activityEl.innerHTML = '<div style="color: #64748b; text-align: center; padding: 2rem;">No activity yet. System starting up...</div>';
+      }
+
+      // Check if we need alerts
+      const alertsEl = document.getElementById('alerts');
+      if (data.summary.todayOutreach < 50) {
+        alertsEl.innerHTML = '<div class="alert">⚠️ Behind on today\'s outreach target. Need to send more messages!</div>';
+      } else {
+        alertsEl.innerHTML = '';
+      }
+    }
+
+    async function refreshData() {
+      const data = await fetchData();
+      updateDashboard(data);
+    }
+
+    // Initial load
+    refreshData();
+
+    // Auto-refresh every 5 minutes
+    setInterval(refreshData, 5 * 60 * 1000);
+  </script>
+</body>
+</html>

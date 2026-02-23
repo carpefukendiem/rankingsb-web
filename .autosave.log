@@ -6524,3 +6524,8 @@
  create mode 100644 website-sales-system/scripts/mockup-generator.js
  create mode 100644 website-sales-system/scripts/prospect-scraper.js
 [2026-02-23 15:07:39] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os afad06f] Autosave: 2026-02-23 15:09:40 - Workspace sync
+ 3 files changed, 583 insertions(+)
+ create mode 100644 website-sales-system/scripts/outreach-engine.js
+ create mode 100644 website-sales-system/scripts/payment-handler.js
+[2026-02-23 15:09:40] ✅ Autosave successful
