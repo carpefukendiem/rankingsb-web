@@ -13,7 +13,8 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-3">
+            <img src="/logo.webp" alt="Rankingsb" className="h-10 w-10 rounded-full object-cover" />
             <span className="text-xl font-bold">Rankingsb</span>
           </Link>
 
