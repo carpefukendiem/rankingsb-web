@@ -1,0 +1,24 @@
+{
+  "lastUpdated": "2026-02-22",
+  "conversations": [],
+  "weeklyStats": {
+    "weekOf": "2026-02-22",
+    "conversationsFound": 0,
+    "responsesPosted": 0,
+    "dmsReceived": 0,
+    "quotesSent": 0,
+    "salesClosed": 0
+  },
+  "subreddits": [
+    {"name": "r/DIY", "joined": false, "priority": "high"},
+    {"name": "r/HomeImprovement", "joined": false, "priority": "high"},
+    {"name": "r/Furniture", "joined": false, "priority": "high"},
+    {"name": "r/InteriorDesign", "joined": false, "priority": "medium"},
+    {"name": "r/Decor", "joined": false, "priority": "medium"}
+  ],
+  "templates": [
+    "general-foam-question",
+    "price-sensitive",
+    "diy-help"
+  ]
+}
