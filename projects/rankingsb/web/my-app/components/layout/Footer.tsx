@@ -10,9 +10,8 @@ export function Footer() {
             <div className="flex items-center mb-4">
               <img 
                 src="/logo.webp" 
-                alt="Rankingsb Local SEO Agency" 
-                className="h-16 w-16 rounded-full object-cover border-2 border-blue-100 shadow-sm"
-                style={{ aspectRatio: '1/1' }}
+                alt="Rankingsb Local SEO Agency Santa Barbara"
+                className="h-14 w-auto object-contain"
               />
             </div>
             <p className="text-muted-foreground mb-4">
