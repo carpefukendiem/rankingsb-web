@@ -12,13 +12,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
-          {/* Logo - Full visibility, natural size */}
+          {/* Logo - 2:1 aspect ratio (rectangular) */}
           <Link href="/" className="flex items-center">
             <img 
               src="/logo.webp" 
               alt="Rankingsb Local SEO Agency Santa Barbara"
-              className="max-h-20 w-auto object-contain"
-              style={{ maxHeight: '80px', width: 'auto' }}
+              className="object-contain"
+              style={{ height: '64px', width: '128px' }}
             />
           </Link>
 
