@@ -36,7 +36,7 @@ export default function SolarSEOPage() {
               Local SEO for Santa Barbara solar companies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-yellow-500 hover:bg-yellow-600 text-white shadow-lg shadow-yellow-500/25">
+              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-yellow-500 hover:bg-yellow-600 text-slate-900 shadow-lg shadow-yellow-500/25 font-semibold">
                 <Phone className="w-5 h-5" />
                 Get Free SEO Audit
               </Button>

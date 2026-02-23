@@ -1,7 +1,7 @@
 // Next.js API Route - /api/contact
 // Receives contact form submissions and sends to GHL
 
-import { GHLContactBackend } from '@/lib/ghl-contact-backend';
+const { GHLContactBackend } = require('../../lib/ghl-contact-backend');
 
 export default async function handler(req, res) {
     // CORS headers
