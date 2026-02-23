@@ -1,27 +1,27 @@
 # 🎯 RUBEN'S LIVE TO-DO DASHBOARD
 ## Real-Time Task Tracker | Check Off As You Go
-### Last Updated: February 22, 2026 3:15 PM
+### Last Updated: February 22, 2026 11:15 PM
 
 ---
 
-## 🔴 CRITICAL - DO TODAY (Sunday Feb 22)
+## 🔴 CRITICAL - Week 2 (Feb 23 - Mar 1)
 
-### Rankingsb Day 5 - WEEKEND SPRINT
-- [x] **Website** - New site deployed with 11 pages ✅
+### Immediate Actions (Monday)
+- [ ] **Deploy Website** — Push 15 pages + new logo to Vercel
+- [ ] **Get Sal's Week 1-6 results** — Call/text for pipeline data
+- [ ] **TaxHawk Activation** — Meet your new tax specialist agent
+- [ ] **Export Bench Data** — 2024 transactions for TaxHawk audit
+
+### Rankingsb Priorities
+- [x] **Website** - 15 pages built, logo integrated ✅
 - [x] **Navigation** - All links working, NAP updated ✅
 - [x] **Dashboard** - Rebuilt with working links & checkboxes ✅
-- [x] **Week 4 Packet** - Roofing packet ready for Sal ✅
-- [x] **Week 5 Packet** - Solar packet delivered ✅
-- [x] **New Pages** - Services, About, Case Studies, Blog live ✅
-- [x] **Week 6 Packet** - Landscaping packet ready (Spring angle) ✅
-- [x] **Supabase Memory** - Built (pending your 15-min setup) ✅
-- [x] **GHL Contact Backend** - Ready for contact form ✅
-- [ ] **Get Sal's Week 1-6 results** (CRITICAL - still need this)
+- [x] **Week 4-6 Packets** - 120 leads delivered (Sal equipped) ✅
+- [x] **Supabase Memory** - Auto-logging conversations ✅
+- [ ] **Close 3 deals** (Week 2 goal)
 - [ ] **Upwork Applications** - Apply to 5 jobs
-- [ ] **Reddit Responses** - Post 3 CushionFoamz responses
-- [ ] **Close first deal** (Goal: TODAY - Sunday)
 
-**Progress:** 10/13 complete, 3 pending (GOAL: Close 1 deal today)
+**Progress:** Week 1 = 0/2 closes (unknown), Week 2 target = 3/3
 
 ---
 
@@ -39,14 +39,25 @@
 
 ## 🟡 HIGH PRIORITY - THIS WEEK
 
+### Tax Optimization (NEW PROJECT)
+- [ ] **Export Bench Data** — 2024 transactions CSV
+- [ ] **TaxHawk Audit** — Find $5K+ in missed deductions
+- [ ] **Entity Review** — Should you be S-Corp?
+- [ ] **2024 Amendment** — File if savings found
+- [ ] **2025 Setup** — Quarterly system to stay at $0
+
+**Goal:** $0 tax liability legally  
+**Agent:** TaxHawk 🦅 (ready for activation)
+
 ### CushionFoamz Launch
 - [ ] Join 5 subreddits (r/DIY, r/HomeImprovement, etc.)
 - [ ] Join 5 Facebook groups
 - [ ] Order Seedance Video #1 ($50)
 - [ ] Post 10 daily responses (start Tuesday)
+- [ ] **NEW:** Dashboard tracker for responded/unresponded conversations
 - [ ] First organic sale (Goal: by Friday)
 
-**Progress:** 0/5 complete
+**Progress:** 0/6 complete
 
 ### System Setup
 - [ ] Configure Twilio for SMS briefs
