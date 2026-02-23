@@ -9,10 +9,18 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
+// Load config if available
+let userConfig = {};
+const configPath = path.join(__dirname, 'config.json');
+if (fs.existsSync(configPath)) {
+  userConfig = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+}
+
 const CONFIG = {
-  apiKey: 'pit-36c7d3ea-abe6-44b0-a0e3-0cf857094125',
-  baseUrl: 'services.leadconnectorhq.com',
-  locationId: 'rankingsb', // Will need actual location ID from API
+  apiKey: userConfig.apiKey || 'pit-36c7d3ea-abe6-44b0-a0e3-0cf857094125',
+  baseUrl: userConfig.baseUrl || 'services.leadconnectorhq.com',
+  locationId: userConfig.locationId || '', // Set via config.json or setup.js
+  locationName: userConfig.locationName || 'Rankingsb',
   logDir: path.join(__dirname, 'logs'),
   reportsDir: path.join(__dirname, 'reports')
 };
@@ -277,6 +285,14 @@ ${this.activities.pipelineMovements.length > 0
     console.log('╔══════════════════════════════════════════════════╗');
     console.log('║    Sal GHL Activity Monitor - Rankingsb          ║');
     console.log('╚══════════════════════════════════════════════════╝\n');
+
+    // Validate configuration
+    if (!CONFIG.locationId) {
+      console.log('⚠️  Location ID not configured!');
+      console.log('   Run: node setup.js');
+      console.log('   Or edit config.json and add "locationId": "your-id"\n');
+      return { success: false, error: 'Location ID not configured' };
+    }
 
     try {
       // Check location first

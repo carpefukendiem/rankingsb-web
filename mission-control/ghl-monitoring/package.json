@@ -6,7 +6,9 @@
   "scripts": {
     "monitor": "node ghl-monitor.js",
     "test": "node test-connection.js",
-    "report": "node generate-report.js"
+    "setup": "node setup.js",
+    "report": "node view-report.js",
+    "daily": "./run-daily.sh"
   },
   "keywords": ["ghl", "monitoring", "rankingsb"],
   "author": "Sal",

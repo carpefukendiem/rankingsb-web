@@ -6218,3 +6218,17 @@
  2 files changed, 118 insertions(+)
  create mode 100644 mission-control/weekly-review-template.md
 [2026-02-23 12:03:02] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 3687dc7] Autosave: 2026-02-23 12:05:02 - Workspace sync
+ 12 files changed, 1094 insertions(+)
+ create mode 100644 FILE-UPLOAD-GUIDE.md
+ create mode 100644 mission-control/ghl-monitoring/config.json
+ create mode 100755 mission-control/ghl-monitoring/ghl-monitor.js
+ create mode 100644 mission-control/ghl-monitoring/package.json
+ create mode 100755 mission-control/ghl-monitoring/run-daily.sh
+ create mode 100644 mission-control/ghl-monitoring/setup.js
+ create mode 100755 mission-control/ghl-monitoring/test-connection.js
+ create mode 100644 mission-control/weekly-review-EXAMPLE.md
+ create mode 100644 mission-control/weekly-review-HOW-TO.md
+ create mode 100755 mission-control/weekly-review.sh
+ create mode 100755 scripts/cushionfoamz-daily-search.sh
+[2026-02-23 12:05:02] ✅ Autosave successful
