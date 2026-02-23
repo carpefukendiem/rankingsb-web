@@ -1,5 +1,3 @@
-import { Header } from "@/components/layout/Header"
-import { Footer } from "@/components/layout/Footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -24,9 +22,7 @@ import {
 
 export default function HomePage() {
   return (
-    <>
-      <Header />
-      <main className="min-h-screen">
+    <main className="min-h-screen">
         {/* HERO SECTION - Dark gradient with pattern */}
         <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900">
           {/* Background pattern */}
@@ -388,7 +384,5 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   )
 }
