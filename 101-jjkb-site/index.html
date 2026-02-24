@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #E53935;
-            --primary-dark: #C62828;
-            --secondary: #1a1a1a;
-            --accent: #FF5722;
-            --accent-hover: #E64A19;
+            --primary: #C41E3A;
+            --primary-dark: #A01830;
+            --secondary: #0a1628;
+            --accent: #1e3a8a;
+            --accent-hover: #1e40af;
             --white: #ffffff;
             --gray-100: #f8f9fa;
             --gray-200: #e9ecef;
@@ -209,6 +209,13 @@
             display: block;
         }
 
+        .hero-stat-number {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
         .hero-subtitle {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.85);
@@ -265,15 +272,15 @@
         }
 
         .btn-primary {
-            background: var(--accent);
+            background: var(--primary);
             color: var(--white);
-            box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+            box-shadow: 0 4px 14px rgba(196, 30, 58, 0.4);
         }
 
         .btn-primary:hover {
-            background: var(--accent-hover);
+            background: var(--primary-dark);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
+            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.5);
         }
 
         .btn-secondary {
@@ -859,7 +866,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo" style="display: flex; align-items: center; gap: 0;">
-                <img src="logo.webp" alt="101 Jujutsu & Kickboxing" style="height: 55px; width: auto;">
+                <img src="logo.webp" alt="101 Jujutsu & Kickboxing" style="height: 75px; width: auto;">
             </a>
             <ul class="nav-links">
                 <li><a href="#programs">Programs</a></li>
@@ -1064,7 +1071,7 @@
             </div>
 
             <div style="text-align: center; margin-bottom: 3rem;">
-                <img src="gym-2.jpg" alt="Training at 101 Jujutsu & Kickboxing" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                <img src="training-photo.jpg" alt="Training at 101 Jujutsu & Kickboxing" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
             </div>
 
             <div class="features-grid">
