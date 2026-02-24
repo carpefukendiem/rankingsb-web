@@ -1,0 +1,13 @@
+<!-- Testimonial 2: Sarah Chen - HVAC -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="url(#bg2)"/>
+  <circle cx="100" cy="80" r="35" fill="#f7fafc"/>
+  <path d="M100 45 C120 45 135 60 135 80 C135 90 130 98 123 103 C140 115 150 135 150 160 L50 160 C50 135 60 115 77 103 C70 98 65 90 65 80 C65 60 80 45 100 45" fill="#f7fafc"/>
+  <text x="100" y="185" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Sarah C.</text>
+</svg>

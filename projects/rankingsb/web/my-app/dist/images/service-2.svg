@@ -1,0 +1,19 @@
+<!-- Service 2: On-Page SEO - Website optimization -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <!-- Browser window -->
+  <rect x="80" y="60" width="240" height="180" rx="8" fill="white" stroke="#cbd5e0" stroke-width="2"/>
+  <!-- Browser header -->
+  <rect x="80" y="60" width="240" height="30" rx="8" fill="#e2e8f0"/>
+  <circle cx="100" cy="75" r="6" fill="#fc8181"/>
+  <circle cx="120" cy="75" r="6" fill="#f6e05e"/>
+  <circle cx="140" cy="75" r="6" fill="#68d391"/>
+  <!-- Content lines -->
+  <rect x="100" y="110" width="200" height="12" rx="2" fill="#4299e1"/>
+  <rect x="100" y="135" width="160" height="8" rx="2" fill="#a0aec0"/>
+  <rect x="100" y="150" width="180" height="8" rx="2" fill="#a0aec0"/>
+  <rect x="100" y="165" width="140" height="8" rx="2" fill="#a0aec0"/>
+  <!-- Chart -->
+  <polyline points="100,210 140,190 180,200 220,170 260,180 300,150" fill="none" stroke="#48bb78" stroke-width="3"/>
+  <text x="200" y="40" font-family="Arial" font-size="24" fill="#2d3748" text-anchor="middle" font-weight="bold">On-Page SEO</text>
+</svg>
