@@ -6660,3 +6660,9 @@
 [nightly-2026-02-01-client-support-os b2e04c3] Autosave: 2026-02-23 16:31:58 - Workspace sync
  2 files changed, 1144 insertions(+), 1141 deletions(-)
 [2026-02-23 16:31:59] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 1b70b36] Autosave: 2026-02-23 16:33:59 - Workspace sync
+ 4 files changed, 653 insertions(+)
+ create mode 100644 business/tax-optimization/2025-deduction-analysis.md
+ create mode 100644 business/tax-optimization/2025-income-statement.md
+ create mode 100644 business/tax-optimization/2025-quarterly-estimates.md
+[2026-02-23 16:33:59] ✅ Autosave successful

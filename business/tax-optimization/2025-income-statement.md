@@ -146,6 +146,42 @@ GoHighLevel is the primary CRM/marketing platform for the business.
 
 ---
 
+## Stripe Capital Loan
+
+**Loan Agreement Found:** June 2, 2025
+
+### Loan Terms
+| Term | Value |
+|------|-------|
+| **Loan Amount** | $8,800.00 |
+| **Fixed Fee (Interest)** | $1,003.00 |
+| **Total Repayment** | $9,803.00 |
+| **Origination Date** | June 2, 2025 |
+| **Repayment Start** | June 9, 2025 |
+| **Final Repayment Date** | December 1, 2026 |
+| **Repayment Rate** | 15% of daily receivables |
+| **Minimum Payment** | $1,089.23 every 60 days |
+| **Lender** | Celtic Bank (via Stripe Capital) |
+
+### Interest Expense Deduction
+| Year | Deductible Interest | Calculation |
+|------|---------------------|-------------|
+| **2025** | **$390.56** | 213/547 days × $1,003 |
+| 2026 | $612.44 | Remaining interest |
+| **Total** | $1,003.00 | |
+
+### Business Purpose
+- **Loan Purpose:** Business operating capital / working capital
+- **Use of Funds:** General business operations and cash flow management
+- **Collateral:** Security interest in merchant receivables and Stripe account
+
+### Tax Treatment
+- **Interest Deductibility:** 100% deductible as business interest expense
+- **Where to Report:** Schedule C, Line 16 (Interest)
+- **Documentation:** Loan agreement saved at `/2025 taxes/file_1RVcnpCxPOau7mkvZykB67pT.pdf`
+
+---
+
 ## Attachments
 
 1. `2025-transactions-categorized.csv` - Complete transaction list

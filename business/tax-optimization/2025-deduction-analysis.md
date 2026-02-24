@@ -23,7 +23,37 @@ Based on analysis of 1,140 transactions across Wells Fargo Business, Chase Visa,
 
 ---
 
-## 2. Home Office Deduction
+## 2. Stripe Capital Loan Interest
+
+### Status: ✅ CLAIMED (Newly Discovered)
+
+**Loan Details:**
+| Term | Value |
+|------|-------|
+| **Lender** | Celtic Bank (via Stripe Capital) |
+| **Loan Amount** | $8,800.00 |
+| **Total Interest (Fixed Fee)** | $1,003.00 |
+| **Origination Date** | June 2, 2025 |
+| **Repayment Period** | June 2025 - December 2026 |
+
+**2025 Deductible Interest:**
+| Calculation | Amount |
+|-------------|--------|
+| Days in 2025 (Jun 2 - Dec 31) | 213 days |
+| Total loan term | 547 days |
+| **2025 deductible portion** | **$390.56** |
+
+**Tax Treatment:**
+- **Deductibility:** 100% deductible as business loan interest
+- **Where to Report:** Schedule C, Line 16 (Interest)
+- **Documentation:** Loan agreement on file
+- **Business Purpose:** Working capital for business operations
+
+**Important Note:** The remaining $612.44 of interest will be deductible in 2026.
+
+---
+
+## 3. Home Office Deduction
 
 ### Status: ⚠️ POTENTIAL MISS
 
@@ -209,12 +239,15 @@ Based on business type (CRM/marketing), likely subscriptions not captured:
 
 | Deduction | Estimated Amount | Tax Savings (15%) | Priority |
 |-----------|------------------|-------------------|----------|
+| Credit Card Interest (already claimed) | $2,925.42 | $439 | N/A |
+| Stripe Capital Interest (already claimed) | $390.56 | $59 | N/A |
 | Home Office | $1,500 | $225 | Medium |
 | Health Insurance | $5,000 | $750 | High |
 | Retirement Contribution | $13,500 | $2,025 | High |
 | Cell Phone/Internet | $1,800 | $270 | Medium |
 | Professional Development | $1,000 | $150 | Low |
-| **TOTAL POTENTIAL** | **$22,800** | **$3,420** | |
+| **TOTAL POTENTIAL (new)** | **$22,800** | **$3,420** | |
+| **TOTAL INTEREST CLAIMED** | **$3,315.98** | **$497** | |
 
 ---
 

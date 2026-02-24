@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Setup & Installation | AI Automation for Your Business</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ff41;
+            --primary-dark: #00cc33;
+            --bg-dark: #0a0a0a;
+            --bg-card: #111111;
+            --bg-hover: #1a1a1a;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --border: #222222;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated background grid */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--bg-dark);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background: var(--primary);
+            color: var(--bg-dark);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 5% 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        
+        .hero-badge::before {
+            content: '●';
+            color: var(--primary);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+            text-shadow: 0 0 40px rgba(0, 255, 65, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        /* Terminal Window */
+        .terminal-window {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            max-width: 700px;
+            margin: 60px auto 0;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .terminal-header {
+            background: var(--bg-hover);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .terminal-dot.red { background: #ff5f56; }
+        .terminal-dot.yellow { background: #ffbd2e; }
+        .terminal-dot.green { background: #27c93f; }
+        
+        .terminal-title {
+            margin-left: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .terminal-body {
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+        
+        .terminal-line {
+            margin-bottom: 4px;
+        }
+        
+        .terminal-prompt {
+            color: var(--primary);
+        }
+        
+        .terminal-command {
+            color: var(--text);
+        }
+        
+        .terminal-output {
+            color: var(--text-muted);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 5%;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 255, 65, 0.1);
+        }
+        
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        /* Coverage Area */
+        .coverage {
+            padding: 100px 5%;
+            background: var(--bg-card);
+        }
+        
+        .coverage-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .coverage-map {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .map-placeholder {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .coverage h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+        
+        .coverage p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        
+        .coverage-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 24px;
+        }
+        
+        .area-tag {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        /* Process Section */
+        .process {
+            padding: 100px 5%;
+        }
+        
+        .process-steps {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        
+        .process-step {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--bg-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            margin-bottom: 12px;
+        }
+        
+        .process-step p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.05), transparent);
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            color: var(--text);
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 5%;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .coverage-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+    
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-icon">⚡</div>
+            OpenClaw Setup
+        </a>
+        <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#coverage">Coverage</a>
+            <a href="#process">Process</a>
+        </nav>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Now serving California & Remote Worldwide</div>
+            <h1>AI Automation <span>Without</span> the Tech Headache</h1>
+            <p>Professional OpenClaw installation and setup for businesses that want AI agents working for them—not another project on their plate.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Schedule Installation</a>
+                <a href="#services" class="btn-secondary">Learn More</a>
+            </div>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot red"></div>
+                    <div class="terminal-dot yellow"></div>
+                    <div class="terminal-dot green"></div>
+                    <div class="terminal-title">openclaw-install.sh</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-command"> openclaw setup --business "Your Company"</span>
+                    </div>
+                    <div class="terminal-line terminal-output">✓ Installing OpenClaw framework...</div>
+                    <div class="terminal-line terminal-output">✓ Configuring AI agents...</div>
+                    <div class="terminal-line terminal-output">✓ Setting up automations...</div>
+                    <div class="terminal-line terminal-output">✓ Testing integrations...</div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-command"> openclaw status</span>
+                    </div>
+                    <div class="terminal-line terminal-output" style="color: var(--primary);">● OpenClaw is running. Your AI agents are online.</div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-command"> _</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>What You Get</h2>
+            <p>Full-service OpenClaw installation tailored to your business needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Local Installation</h3>
+                <p>On-site setup from Buellton to Thousand Oaks. I'll come to your office, configure everything on your systems, and train your team in person.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Remote Setup</h3>
+                <p>Same professional installation, done remotely via secure connection. Available worldwide. Perfect for teams without a California presence.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>AI Agent Configuration</h3>
+                <p>Custom-tuned agents for your specific workflows—sales, support, content, research, whatever your business needs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Automation Workflows</h3>
+                <p>Connect your existing tools (GHL, Slack, Gmail, etc.) into intelligent automation sequences that save hours every week.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Security & Privacy</h3>
+                <p>Enterprise-grade setup with proper API key management, secure connections, and data privacy best practices built in.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Training & Handoff</h3>
+                <p>Comprehensive training for your team plus documentation so you can manage and extend your OpenClaw setup confidently.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="coverage" id="coverage">
+        <div class="coverage-content">
+            <div class="coverage-text">
+                <h2>Local Service Area</h2>
+                <p>I provide on-site OpenClaw installation throughout California's Central Coast and beyond.</p>
+                <p>From the vineyards of Buellton to the tech corridors of Thousand Oaks, I bring professional AI automation setup directly to your door.</p>
+                <p>Not in California? No problem—I offer the same expert remote installation anywhere in the world.</p>
+                <div class="coverage-areas">
+                    <span class="area-tag">Buellton</span>
+                    <span class="area-tag">Santa Barbara</span>
+                    <span class="area-tag">Goleta</span>
+                    <span class="area-tag">Carpinteria</span>
+                    <span class="area-tag">Ventura</span>
+                    <span class="area-tag">Oxnard</span>
+                    <span class="area-tag">Thousand Oaks</span>
+                    <span class="area-tag">Remote Worldwide</span>
+                </div>
+            </div>
+            <div class="coverage-map">
+                <div class="map-placeholder">🗺️</div>
+                <p style="color: var(--text-muted);">Serving Central California<br>& Remote Clients Globally</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="process" id="process">
+        <div class="section-title">
+            <h2>Simple 3-Step Process</h2>
+            <p>From initial call to AI agents working for you</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Discovery Call</h3>
+                <p>30-minute consultation to understand your business, current tools, and automation goals. Remote or in-person.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Installation</h3>
+                <p>Professional OpenClaw setup on your systems. Local visit (CA) or remote session (worldwide). Typically 2-4 hours.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Go Live</h3>
+                <p>AI agents activated, automations running, team trained. You start saving time immediately. Ongoing support available.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta" id="contact">
+        <h2>Ready to Automate?</h2>
+        <p>Let's discuss how OpenClaw can work for your business. No obligation—just a conversation about what's possible.</p>
+        <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="company" placeholder="Company Name">
+            <textarea name="message" placeholder="Tell me about your business and what you'd like to automate..."></textarea>
+            <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>⚡ OpenClaw Setup & Installation Services | Buellton to Thousand Oaks & Remote Worldwide</p>
+    </footer>
+</body>
+</html>

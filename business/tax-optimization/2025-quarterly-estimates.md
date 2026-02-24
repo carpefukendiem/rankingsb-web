@@ -20,43 +20,44 @@
 | Source | Amount |
 |--------|--------|
 | Gross Business Income | $55,536.83 |
-| Business Expenses | ($4,317.92) |
-| **Net Business Profit (Schedule C)** | **$51,218.91** |
+| Business Expenses (before loan interest) | ($4,317.92) |
+| Stripe Capital Loan Interest | ($390.56) |
+| **Net Business Profit (Schedule C)** | **$50,828.35** |
 
 ### Tax Components
 
 #### 1. Self-Employment Tax
 | Calculation | Amount |
 |-------------|--------|
-| Net Profit | $51,218.91 |
-| SE Tax Base (92.35%) | $47,300.66 |
+| Net Profit | $50,828.35 |
+| SE Tax Base (92.35%) | $46,939.98 |
 | SE Tax Rate | 15.3% |
-| **SE Tax** | **$7,237.00** |
+| **SE Tax** | **$7,181.82** |
 
 **Breakdown:**
-- Social Security (12.4%): $5,865.28
-- Medicare (2.9%): $1,371.72
+- Social Security (12.4%): $5,820.56
+- Medicare (2.9%): $1,361.26
 
 **Note:** Only first $168,600 of earnings subject to Social Security tax in 2025. Full amount subject to Medicare.
 
 #### 2. Federal Income Tax
 | Calculation | Amount |
 |-------------|--------|
-| Net Profit | $51,218.91 |
-| QBI Deduction (20%) | ($10,243.78) |
-| 1/2 SE Tax Deduction | ($3,618.50) |
-| **Taxable Income** | **$37,356.63** |
+| Net Profit | $50,828.35 |
+| QBI Deduction (20%) | ($10,165.67) |
+| 1/2 SE Tax Deduction | ($3,590.99) |
+| **Taxable Income** | **$37,071.69** |
 | Federal Tax Rate (15%)* | 15% |
-| **Federal Income Tax** | **$5,603.49** |
+| **Federal Income Tax** | **$5,560.75** |
 
 *Assumes 15% tax bracket. Actual rate may vary based on total household income, filing status, and other factors.*
 
 #### 3. California State Income Tax
 | Calculation | Amount |
 |-------------|--------|
-| Estimated CA Taxable Income | $51,218.91 |
+| Estimated CA Taxable Income | $50,828.35 |
 | CA Tax Rate (estimated 6%) | 6% |
-| **CA State Tax** | **$3,073.13** |
+| **CA State Tax** | **$3,049.70** |
 
 **Note:** California does not follow federal QBI deduction. Tax rate estimated at 6% based on income level.
 
