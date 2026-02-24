@@ -7,9 +7,9 @@ const fs = require('fs');
 const path = require('path');
 
 // GHL Configuration
-const GHL_API_KEY = 'pit-2e5816e3-96f7-48ec-9caa-64fb68554766';
+const GHL_API_KEY = 'pit-02f417f4-8dcd-4794-a8ce-bdc507a926bb';
 const GHL_LOCATION_ID = 'yrvzyq2jB2me4Z23PFxP';
-const BASE_URL = 'https://rest.gohighlevel.com/v1';
+const BASE_URL = 'https://services.leadconnectorhq.com/v1';
 
 // Niche to Pipeline mapping
 const NICHE_PIPELINES = {
