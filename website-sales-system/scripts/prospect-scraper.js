@@ -1,100 +1,50 @@
+#!/usr/bin/env node
 /**
- * Website Sales System - Prospect Scraper with Brave Search
- * Finds real local businesses in SoCal using Brave Search API
+ * Website Sales System - Real Prospect Scraper
+ * Uses web_search tool to find actual local businesses in SoCal
+ * Extracts real business names, phones, and addresses from search results
  */
 
 const fs = require('fs');
 const path = require('path');
-const { web_search } = require('./web-search-wrapper');
+const { execSync } = require('child_process');
 
-// SoCal cities prioritized by population/business density
+// Target cities for SoCal
 const TARGET_CITIES = [
-  // Santa Barbara/Ventura
-  'Santa Barbara', 'Goleta', 'Carpinteria', 'Ventura', 'Oxnard', 'Camarillo', 'Thousand Oaks',
-  // LA County
-  'Los Angeles', 'Pasadena', 'Glendale', 'Burbank', 'Santa Monica', 'Venice',
-  'Marina del Rey', 'Culver City', 'Inglewood', 'Torrance', 'Long Beach',
-  'Anaheim', 'Santa Ana', 'Irvine', 'Newport Beach', 'Huntington Beach',
-  'Costa Mesa', 'Fullerton', 'Orange', 'Garden Grove', 'Westminster', 'Beverly Hills',
-  // San Diego
-  'San Diego', 'La Jolla', 'Chula Vista', 'Oceanside', 'Carlsbad', 'Encinitas', 'Escondido'
+  'Santa Barbara', 'Goleta', 'Ventura', 'Oxnard', 'Pasadena', 
+  'Los Angeles', 'Irvine', 'San Diego'
 ];
 
-// Search queries for finding businesses
-const SEARCH_QUERIES = [
-  // Contractors
-  { category: 'Contractor', query: '{city} HVAC contractor phone' },
-  { category: 'Contractor', query: '{city} plumber phone number' },
-  { category: 'Contractor', query: '{city} electrician contact' },
-  { category: 'Contractor', query: '{city} roofing contractor' },
-  { category: 'Contractor', query: '{city} solar installer phone' },
-  { category: 'Contractor', query: '{city} landscaping service contact' },
-  { category: 'Contractor', query: '{city} pest control phone' },
-  { category: 'Contractor', query: '{city} general contractor' },
-  // Home services
-  { category: 'Home Services', query: '{city} house cleaning service' },
-  { category: 'Home Services', query: '{city} carpet cleaning phone' },
-  { category: 'Home Services', query: '{city} window cleaning company' },
-  { category: 'Home Services', query: '{city} pressure washing service' },
-  { category: 'Home Services', query: '{city} junk removal phone' },
-  { category: 'Home Services', query: '{city} garage door repair' },
-  { category: 'Home Services', query: '{city} moving company' },
-  { category: 'Home Services', query: '{city} handyman service' },
-  // Restaurants
-  { category: 'Restaurant', query: '{city} restaurant contact' },
-  { category: 'Restaurant', query: '{city} cafe phone number' },
-  { category: 'Restaurant', query: '{city} bakery contact' },
-  { category: 'Restaurant', query: '{city} food truck' },
-  { category: 'Restaurant', query: '{city} catering service' },
-  // Retail
-  { category: 'Retail', query: '{city} boutique store' },
-  { category: 'Retail', query: '{city} gift shop phone' },
-  { category: 'Retail', query: '{city} furniture store contact' },
-  { category: 'Retail', query: '{city} clothing store' },
-  { category: 'Retail', query: '{city} specialty shop' },
-  // Professional
-  { category: 'Professional', query: '{city} accountant CPA' },
-  { category: 'Professional', query: '{city} lawyer attorney phone' },
-  { category: 'Professional', query: '{city} business consultant' },
-  { category: 'Professional', query: '{city} insurance agent' },
-  { category: 'Professional', query: '{city} financial advisor' },
-  { category: 'Professional', query: '{city} real estate agent' },
-  // Medical
-  { category: 'Medical', query: '{city} dentist office phone' },
-  { category: 'Medical', query: '{city} chiropractor contact' },
-  { category: 'Medical', query: '{city} massage therapist' },
-  { category: 'Medical', query: '{city} physical therapy' },
-  { category: 'Medical', query: '{city} dermatologist' },
-  { category: 'Medical', query: '{city} orthodontist' },
-  // Automotive
-  { category: 'Automotive', query: '{city} auto repair shop' },
-  { category: 'Automotive', query: '{city} car detailing service' },
-  { category: 'Automotive', query: '{city} mechanic shop phone' },
-  { category: 'Automotive', query: '{city} auto body shop' },
-  { category: 'Automotive', query: '{city} smog check station' },
-  { category: 'Automotive', query: '{city} tire shop' }
+// Business types to search for
+const BUSINESS_TYPES = [
+  { type: 'HVAC', category: 'Contractor' },
+  { type: 'plumber', category: 'Contractor' },
+  { type: 'electrician', category: 'Contractor' },
+  { type: 'roofing', category: 'Contractor' },
+  { type: 'dentist', category: 'Medical' },
+  { type: 'restaurant', category: 'Restaurant' },
+  { type: 'auto repair', category: 'Automotive' },
+  { type: 'landscaping', category: 'Home Services' }
 ];
 
-class ProspectScraper {
+class RealProspectScraper {
   constructor() {
     this.prospectsDir = path.join(__dirname, '..', 'prospects');
-    this.logsDir = path.join(__dirname, '..', 'logs');
+    this.exportsDir = path.join(__dirname, '..', 'exports');
     this.ensureDirectories();
     this.foundPhones = new Set();
     this.loadExistingPhones();
   }
 
   ensureDirectories() {
-    if (!fs.existsSync(this.prospectsDir)) {
-      fs.mkdirSync(this.prospectsDir, { recursive: true });
-    }
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
+    [this.prospectsDir, this.exportsDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
   }
 
   loadExistingPhones() {
-    // Load existing prospect phone numbers to avoid duplicates
     const files = fs.readdirSync(this.prospectsDir).filter(f => f.endsWith('.json'));
     for (const file of files) {
       try {
@@ -104,6 +54,7 @@ class ProspectScraper {
         }
       } catch (e) {}
     }
+    console.log(`📋 Loaded ${this.foundPhones.size} existing phone numbers to avoid duplicates`);
   }
 
   normalizePhone(phone) {
@@ -111,142 +62,228 @@ class ProspectScraper {
   }
 
   /**
-   * Search for businesses using Brave Search
+   * Call web_search tool directly via openclaw CLI
    */
-  async searchBusinesses(query, city, category) {
+  async webSearch(query, count = 10) {
     try {
-      console.log(`  🔍 Searching: ${query}...`);
+      // Use openclaw CLI to make web_search call
+      const cmd = `openclaw web_search "${query.replace(/"/g, '\\"')}" --count ${count} --country US 2>/dev/null`;
+      const result = execSync(cmd, { encoding: 'utf-8', timeout: 30000 });
       
-      // Use Brave Search via web_search tool
-      const results = await web_search(query, 10);
-      
-      if (!results || !results.results || results.results.length === 0) {
-        return [];
-      }
-
-      const businesses = [];
-      
-      for (const result of results.results) {
-        const business = this.extractBusinessInfo(result, city, category);
-        if (business && business.phone && !this.foundPhones.has(this.normalizePhone(business.phone))) {
-          this.foundPhones.add(this.normalizePhone(business.phone));
-          businesses.push(business);
-        }
+      // Parse the JSON results from openclaw output
+      // The output might have some text before/after JSON, so try to find it
+      const jsonMatch = result.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        return JSON.parse(jsonMatch[0]);
       }
       
-      return businesses;
+      // Try parsing the whole output
+      return JSON.parse(result);
     } catch (error) {
-      console.error(`  ❌ Search error for "${query}":`, error.message);
-      return [];
+      console.error(`  ❌ web_search error: ${error.message}`);
+      return null;
     }
+  }
+
+  /**
+   * Search for businesses in a city
+   */
+  async searchCityBusinesses(city, businessType, count = 5) {
+    const queries = [
+      `${businessType} ${city} CA phone`,
+      `${businessType} ${city} contact`,
+      `${businessType} ${city} business`,
+      `${businessType} near ${city} California`
+    ];
+    
+    const allResults = [];
+    
+    for (const query of queries) {
+      if (allResults.length >= count * 2) break;
+      
+      console.log(`  🔍 Searching: "${query}"`);
+      const result = await this.webSearch(query, 10);
+      
+      if (result && result.results) {
+        allResults.push(...result.results);
+      }
+      
+      // Rate limiting - small delay between searches
+      await this.delay(800);
+    }
+    
+    return allResults;
   }
 
   /**
    * Extract business info from search result
    */
   extractBusinessInfo(result, city, category) {
-    const title = this.cleanTitle(result.title);
+    const title = this.cleanTitle(result.title || '');
     const description = result.description || '';
     const url = result.url || '';
     
-    // Check if mock data has explicit hasWebsite flag
-    const explicitHasWebsite = result.hasWebsite;
+    if (!title || title.length < 3) return null;
     
-    // Extract phone number - first check explicit phone from mock, then parse
-    let phone = result.phone || null;
-    if (!phone) {
-      const phoneMatch = description.match(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/) ||
-                         title.match(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/);
-      phone = phoneMatch ? phoneMatch[0] : null;
-    }
-    
-    // Extract email - first check explicit email from mock, then parse
-    let email = result.email || null;
-    if (!email) {
-      const emailMatch = description.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/) ||
-                         description.match(/\b[A-Za-z0-9._%+-]+\s*@\s*[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/i);
-      email = emailMatch ? emailMatch[0].replace(/\s/g, '') : null;
-    }
-    
-    // Extract address
-    const addressMatch = description.match(/\d+\s+[A-Za-z]+\s+(?:St|Street|Ave|Avenue|Blvd|Boulevard|Rd|Road|Dr|Drive|Way|Ln|Lane)[.,]?\s*(?:#?\s*\d+)?/i) ||
-                         description.match(/\d+\s+[^,]+(?:Santa Barbara|Ventura|Oxnard|Camarillo|Los Angeles|San Diego|Pasadena|Glendale|Burbank|Santa Monica|Long Beach|Anaheim|Irvine|Newport Beach|Huntington Beach|Costa Mesa)/i);
-    const address = addressMatch ? addressMatch[0] : null;
-    
-    // Check if has website (not Yelp, Facebook, YellowPages, etc.)
-    // Use explicit flag if available (from mock data), otherwise detect from URL
-    const directorySites = ['yelp.com', 'facebook.com', 'yellowpages.com', 'bbb.org', 'mapquest.com', 
-                           'chamberofcommerce.com', 'angi.com', 'homeadvisor.com', 'thumbtack.com',
-                           'porch.com', 'buildzoom.com', 'houzz.com', 'nextdoor.com'];
-    
-    let hasWebsite;
-    if (typeof explicitHasWebsite === 'boolean') {
-      hasWebsite = explicitHasWebsite;
-    } else {
-      hasWebsite = url && !directorySites.some(site => url.includes(site));
-    }
-    
-    const websiteUrl = hasWebsite ? url : null;
+    // Extract phone number from title, description, or URL
+    let phone = this.extractPhone(title) || 
+                this.extractPhone(description) || 
+                this.extractPhone(url);
     
     if (!phone) return null;
     
+    const normalizedPhone = this.normalizePhone(phone);
+    
+    // Skip if already found
+    if (this.foundPhones.has(normalizedPhone)) {
+      return null;
+    }
+    
+    // Mark as found
+    this.foundPhones.add(normalizedPhone);
+    
+    // Extract email
+    const email = this.extractEmail(title) || this.extractEmail(description);
+    
+    // Extract address
+    const address = this.extractAddress(description, city);
+    
+    // Determine if has real website (not just a directory listing)
+    const directorySites = [
+      'yelp.com', 'facebook.com', 'yellowpages.com', 'bbb.org', 
+      'mapquest.com', 'chamberofcommerce.com', 'angi.com', 
+      'homeadvisor.com', 'thumbtack.com', 'porch.com', 
+      'buildzoom.com', 'houzz.com', 'nextdoor.com',
+      'manta.com', 'ezlocal.com', 'local.com', 'superpages.com',
+      'citysearch.com', 'foursquare.com', 'tripadvisor.com'
+    ];
+    
+    const hasRealWebsite = url && !directorySites.some(site => url.includes(site));
+    
+    // Get business name from title
+    let businessName = title;
+    // Remove common suffixes
+    businessName = businessName
+      .replace(/\s*[-|]\s*Yelp$/i, '')
+      .replace(/\s*[-|]\s*Facebook$/i, '')
+      .replace(/\s*[-|]\s*Google\s*Search$/i, '')
+      .replace(/\s*[-|]\s*Home$/i, '')
+      .replace(/\s*[-|]\s*Contact$/i, '')
+      .replace(/\s*[-|]\s*About$/i, '')
+      .replace(/\s*[-|]\s*Reviews$/i, '')
+      .trim();
+    
     return {
-      businessName: title,
+      businessName: businessName.substring(0, 100),
       phone,
       email,
       address,
       city,
       category,
-      website: websiteUrl,
-      hasWebsite: hasWebsite,
+      website: hasRealWebsite ? url : null,
+      hasWebsite: hasRealWebsite,
       sourceUrl: url,
-      description: description.substring(0, 300),
-      priority: !hasWebsite ? 1 : (email ? 2 : 3) // Priority: no website > has email > has website
+      description: description.substring(0, 200),
+      priority: !hasRealWebsite ? 1 : (email ? 2 : 3),
+      scrapedAt: new Date().toISOString()
     };
   }
 
+  extractPhone(text) {
+    if (!text) return null;
+    
+    // Various phone patterns
+    const patterns = [
+      /\(\d{3}\)\s*\d{3}[-.]\d{4}/,           // (805) 555-1234
+      /\(\d{3}\)\s*\d{3}\s*\d{4}/,            // (805) 555 1234
+      /\d{3}[-.]\d{3}[-.]\d{4}/,              // 805-555-1234
+      /\d{3}\s\d{3}[-.]\d{4}/,                // 805 555-1234
+      /\+?1[-.\s]?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/, // +1 805-555-1234
+      /\d{3}[-.]?\d{3}[-.]?\d{4}/             // 8055551234 (loose)
+    ];
+    
+    for (const pattern of patterns) {
+      const match = text.match(pattern);
+      if (match) {
+        return match[0];
+      }
+    }
+    
+    return null;
+  }
+
+  extractEmail(text) {
+    if (!text) return null;
+    const match = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/i);
+    return match ? match[0] : null;
+  }
+
+  extractAddress(text, city) {
+    if (!text) return null;
+    
+    // Look for street address patterns
+    const patterns = [
+      new RegExp(`\\d+\\s+[A-Za-z]+\\s+(?:St|Street|Ave|Avenue|Blvd|Boulevard|Rd|Road|Dr|Drive|Way|Ln|Lane|Ct|Court|Pl|Place)[.,]?\\s*(?:#\\s*\\d+)?,?\\s*${city}`, 'i'),
+      /\d+\s+[A-Za-z]+\s+(?:St|Street|Ave|Avenue|Blvd|Boulevard|Rd|Road|Dr|Drive|Way|Ln|Lane)[.,]?\s*(?:#\s*\d+)?/i,
+      /\d+\s+[^,]+(?:CA|California)\s*\d{5}/i,
+      new RegExp(`\\d+\\s+[^,]+${city}[^,]*,?\\s*(?:CA|California)?\\s*\\d{5}?`, 'i')
+    ];
+    
+    for (const pattern of patterns) {
+      const match = text.match(pattern);
+      if (match) {
+        return match[0].trim();
+      }
+    }
+    
+    return null;
+  }
+
   cleanTitle(title) {
-    if (!title) return 'Unknown Business';
-    // Remove content tags
-    title = title.replace(/<<<EXTERNAL_UNTRUSTED_CONTENT[^>]*>>>/g, '');
-    title = title.replace(/<<<END_EXTERNAL_UNTRUSTED_CONTENT[^>]*>>>/g, '');
-    title = title.replace(/Source: Web Search/g, '');
-    title = title.replace(/---/g, '');
-    // Extract business name (usually before | or -)
-    title = title.split(/[|\-–]/)[0].trim();
-    // Clean up
-    title = title.replace(/\s+/g, ' ').trim();
-    return title.substring(0, 100);
+    if (!title) return '';
+    
+    // Remove content tags if present
+    title = title
+      .replace(/<<<EXTERNAL_UNTRUSTED_CONTENT[^>]*>>>/g, '')
+      .replace(/<<<END_EXTERNAL_UNTRUSTED_CONTENT[^>]*>>>/g, '')
+      .replace(/Source: Web Search/g, '')
+      .replace(/---/g, '')
+      .trim();
+    
+    // Extract first part before delimiter
+    const parts = title.split(/[|\-–]/);
+    return parts[0].trim();
   }
 
   /**
-   * Generate prospects for a specific city/category
+   * Generate prospects for a specific city and business type
    */
-  async generateForCity(city, count = 10) {
+  async generateForCityAndType(city, businessType, category, targetCount = 3) {
     const businesses = [];
-    const queries = SEARCH_QUERIES.filter(q => 
-      // Randomize which categories we search for variety
-      Math.random() > 0.3
-    );
     
-    // Shuffle queries for variety
-    const shuffled = queries.sort(() => 0.5 - Math.random());
+    console.log(`\n📍 ${city} - ${businessType.toUpperCase()}`);
+    console.log('-'.repeat(50));
     
-    for (const item of shuffled) {
-      if (businesses.length >= count) break;
+    const results = await this.searchCityBusinesses(city, businessType, targetCount);
+    
+    for (const result of results) {
+      const business = this.extractBusinessInfo(result, city, category);
       
-      const query = item.query.replace('{city}', city);
-      const results = await this.searchBusinesses(query, city, item.category);
-      
-      for (const business of results) {
-        if (businesses.length >= count) break;
+      if (business) {
         businesses.push(business);
+        
+        const indicator = !business.hasWebsite ? '🔥' : (business.email ? '✉️' : '📞');
+        console.log(`  ${indicator} ${business.businessName}`);
+        console.log(`     Phone: ${business.phone}`);
+        if (business.email) console.log(`     Email: ${business.email}`);
+        if (business.address) console.log(`     Addr: ${business.address}`);
+        console.log(`     ${!business.hasWebsite ? 'NO WEBSITE - HOT LEAD!' : 'Has website'}`);
+        
+        if (businesses.length >= targetCount) break;
       }
-      
-      // Rate limiting - be nice to the API
-      await this.delay(500);
     }
     
+    console.log(`  Found ${businesses.length} unique prospects`);
     return businesses;
   }
 
@@ -254,37 +291,45 @@ class ProspectScraper {
    * Run full prospecting batch
    */
   async runBatch(targetCount = 100) {
-    console.log(`\n🚀 Starting prospect generation: ${targetCount} businesses\n`);
+    console.log(`\n🚀 Starting REAL prospect generation: ${targetCount} businesses`);
+    console.log('='.repeat(60));
+    console.log(`Target cities: ${TARGET_CITIES.join(', ')}`);
+    console.log(`Business types: ${BUSINESS_TYPES.map(b => b.type).join(', ')}`);
     console.log('='.repeat(60));
     
     const allProspects = [];
-    const prospectsPerCity = Math.ceil(targetCount / TARGET_CITIES.length);
     
-    // Shuffle cities for variety
+    // Calculate distribution
+    const totalCombinations = TARGET_CITIES.length * BUSINESS_TYPES.length;
+    const perCombination = Math.ceil(targetCount / totalCombinations);
+    
+    console.log(`\nSearching ${totalCombinations} city/type combinations, ~${perCombination} each`);
+    
+    // Shuffle for variety
     const shuffledCities = [...TARGET_CITIES].sort(() => 0.5 - Math.random());
+    const shuffledTypes = [...BUSINESS_TYPES].sort(() => 0.5 - Math.random());
     
     for (const city of shuffledCities) {
       if (allProspects.length >= targetCount) break;
       
-      console.log(`\n📍 ${city}`);
-      console.log('-'.repeat(40));
-      
-      const needed = Math.min(prospectsPerCity, targetCount - allProspects.length);
-      const businesses = await this.generateForCity(city, needed);
-      
-      for (const business of businesses) {
-        const prospect = this.saveProspect(business);
-        allProspects.push(prospect);
+      for (const { type, category } of shuffledTypes) {
+        if (allProspects.length >= targetCount) break;
         
-        const indicator = !business.hasWebsite ? '🔥' : (business.email ? '✉️' : '📞');
-        console.log(`  ${indicator} ${prospect.businessName}`);
-        console.log(`     Phone: ${prospect.phone}${prospect.email ? ' | Email: ' + prospect.email : ''}${prospect.hasWebsite ? ' | Has Website' : ' | NO WEBSITE - HOT LEAD!'}`);
+        const needed = Math.min(perCombination, targetCount - allProspects.length);
+        const businesses = await this.generateForCityAndType(city, type, category, needed);
+        
+        // Save each prospect
+        for (const business of businesses) {
+          const prospect = this.saveProspect(business);
+          allProspects.push(prospect);
+        }
+        
+        // Delay between searches
+        await this.delay(1000);
       }
       
-      console.log(`  Found ${businesses.length} prospects in ${city}`);
-      
-      // Delay between cities
-      await this.delay(1000);
+      // Longer delay between cities
+      await this.delay(2000);
     }
     
     console.log('\n' + '='.repeat(60));
@@ -310,7 +355,6 @@ class ProspectScraper {
     const prospect = {
       id,
       ...business,
-      query: business.query || '',
       stage: 'Prospect Found',
       status: 'active',
       createdAt: new Date().toISOString(),
@@ -321,6 +365,45 @@ class ProspectScraper {
     fs.writeFileSync(filepath, JSON.stringify(prospect, null, 2));
     
     return prospect;
+  }
+
+  /**
+   * Create CSV export
+   */
+  createCSVExport(filename = null) {
+    const prospects = this.getAllProspects();
+    
+    if (!filename) {
+      const date = new Date().toISOString().split('T')[0];
+      filename = `prospects-export-${date}.csv`;
+    }
+    
+    const filepath = path.join(this.exportsDir, filename);
+    
+    // CSV header
+    const headers = ['Business Name', 'Phone', 'Email', 'Address', 'City', 'Category', 'Has Website', 'Website URL', 'Stage', 'Created Date'];
+    
+    // CSV rows
+    const rows = prospects.map(p => [
+      `"${(p.businessName || '').replace(/"/g, '""')}"`,
+      p.phone || '',
+      p.email || '',
+      `"${(p.address || '').replace(/"/g, '""')}"`,
+      p.city || '',
+      p.category || '',
+      p.hasWebsite ? 'Yes' : 'No',
+      p.website || '',
+      p.stage || '',
+      p.createdAt ? p.createdAt.split('T')[0] : ''
+    ]);
+    
+    const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+    
+    fs.writeFileSync(filepath, csv);
+    console.log(`\n📁 CSV Export created: ${filepath}`);
+    console.log(`   Total records: ${prospects.length}`);
+    
+    return filepath;
   }
 
   /**
@@ -335,28 +418,6 @@ class ProspectScraper {
         return null;
       }
     }).filter(p => p !== null);
-  }
-
-  /**
-   * Get prospects by stage
-   */
-  getProspectsByStage(stage) {
-    return this.getAllProspects().filter(p => p.stage === stage);
-  }
-
-  /**
-   * Update prospect
-   */
-  updateProspect(prospectId, updates) {
-    const filepath = path.join(this.prospectsDir, `${prospectId}.json`);
-    if (!fs.existsSync(filepath)) return null;
-    
-    const prospect = JSON.parse(fs.readFileSync(filepath));
-    Object.assign(prospect, updates);
-    prospect.updatedAt = new Date().toISOString();
-    
-    fs.writeFileSync(filepath, JSON.stringify(prospect, null, 2));
-    return prospect;
   }
 
   /**
@@ -385,26 +446,23 @@ class ProspectScraper {
   }
 
   /**
-   * Get top prospects for outreach (prioritizes no-website leads)
+   * Get top prospects for outreach
    */
   getTopProspects(count = 20) {
-    const prospects = this.getAllProspects()
+    return this.getAllProspects()
       .filter(p => p.stage === 'Prospect Found')
       .sort((a, b) => {
-        // Sort by priority (no website = higher priority)
         if (!a.hasWebsite && b.hasWebsite) return -1;
         if (a.hasWebsite && !b.hasWebsite) return 1;
-        // Then by email availability
         if (a.email && !b.email) return -1;
         if (!a.email && b.email) return 1;
         return 0;
-      });
-    
-    return prospects.slice(0, count);
+      })
+      .slice(0, count);
   }
 
   /**
-   * Generate daily report
+   * Generate report
    */
   generateReport() {
     const prospects = this.getAllProspects();
@@ -440,11 +498,11 @@ class ProspectScraper {
   }
 }
 
-module.exports = ProspectScraper;
+module.exports = RealProspectScraper;
 
 // CLI usage
 if (require.main === module) {
-  const scraper = new ProspectScraper();
+  const scraper = new RealProspectScraper();
   
   const command = process.argv[2];
   
@@ -455,24 +513,28 @@ if (require.main === module) {
   } else if (command === 'top') {
     const count = parseInt(process.argv[3]) || 20;
     const top = scraper.getTopProspects(count);
-    console.log(`\n🔥 Top ${count} Prospects (prioritized by no-website, then email):\n`);
+    console.log(`\n🔥 Top ${count} Prospects:\n`);
     top.forEach((p, i) => {
       const hot = !p.hasWebsite ? '🔥' : '';
       console.log(`${i + 1}. ${hot} ${p.businessName}`);
       console.log(`   Phone: ${p.phone} | City: ${p.city} | Category: ${p.category}`);
       if (p.email) console.log(`   Email: ${p.email}`);
-      if (p.hasWebsite) console.log(`   Website: ${p.website}`);
+      if (p.address) console.log(`   Address: ${p.address}`);
       console.log('');
     });
-  } else if (command === 'scrape') {
+  } else if (command === 'export') {
+    scraper.createCSVExport();
+  } else if (command === 'scrape' || !command) {
     const count = parseInt(process.argv[3]) || 100;
     scraper.runBatch(count).then(() => {
+      // Auto-create CSV export after scraping
+      scraper.createCSVExport();
       process.exit(0);
     }).catch(err => {
       console.error('Error:', err);
       process.exit(1);
     });
   } else {
-    console.log('Usage: node prospect-scraper.js [report|stats|top [count]|scrape [count]]');
+    console.log('Usage: node prospect-scraper.js [scrape [count]|report|stats|top [count]|export]');
   }
 }
