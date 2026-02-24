@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975796120_7uzikz1qv",
+  "businessName": "Sparkle Clean Services",
+  "phone": "(805) 555-0902",
+  "email": "sparkle@clean.com",
+  "address": null,
+  "city": "Burbank",
+  "category": "Home Services",
+  "website": "https://clean.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://clean.com",
+  "description": "Sparkle Clean Services provides professional cleaning services in Santa Barbara, CA. Contact us at (805) 555-0902 or email sparkle@clean.com. We offer quality service at competitive rates.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:29:56.120Z",
+  "updatedAt": "2026-02-24T23:29:56.120Z"
+}

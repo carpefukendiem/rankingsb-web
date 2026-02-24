@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975787599_8nfjugqof",
+  "businessName": "El Paseo Mexican Grill",
+  "phone": "(805) 555-0423",
+  "email": "elpaseo@grill.com",
+  "address": null,
+  "city": "Marina del Rey",
+  "category": "Restaurant",
+  "website": "https://grill.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://grill.com",
+  "description": "El Paseo Mexican Grill provides professional restaurant services in Santa Barbara, CA. Contact us at (805) 555-0423 or email elpaseo@grill.com. We offer quality service at competitive rates.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:29:47.599Z",
+  "updatedAt": "2026-02-24T23:29:47.600Z"
+}

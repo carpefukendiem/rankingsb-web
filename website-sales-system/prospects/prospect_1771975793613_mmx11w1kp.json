@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975793613_mmx11w1kp",
+  "businessName": "Sweet Sensations Bakery",
+  "phone": "(805) 555-0670",
+  "email": "sweet@sensations.com",
+  "address": null,
+  "city": "Goleta",
+  "category": "Restaurant",
+  "website": "https://sensations.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://sensations.com",
+  "description": "Sweet Sensations Bakery provides professional bakery services in Santa Barbara, CA. Contact us at (805) 555-0670 or email sweet@sensations.com. We offer quality service at competitive rates.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:29:53.613Z",
+  "updatedAt": "2026-02-24T23:29:53.613Z"
+}

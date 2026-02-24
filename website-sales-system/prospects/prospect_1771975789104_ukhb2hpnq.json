@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975789104_ukhb2hpnq",
+  "businessName": "Mike's Plumbing Service",
+  "phone": "(805) 555-0123",
+  "email": "mike@mikesplumbing.com",
+  "address": null,
+  "city": "Carpinteria",
+  "category": "Medical",
+  "website": "https://mikesplumbing.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://mikesplumbing.com",
+  "description": "Mike's Plumbing Service provides professional plumber services in Santa Barbara, CA. Contact us at (805) 555-0123 or email mike@mikesplumbing.com. We offer quality service at competitive rates.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:29:49.104Z",
+  "updatedAt": "2026-02-24T23:29:49.104Z"
+}

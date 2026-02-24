@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975791610_s7i6aopay",
+  "businessName": "Smile Makers Dental",
+  "phone": "(805) 555-0567",
+  "email": "smiles@dental.com",
+  "address": null,
+  "city": "Huntington Beach",
+  "category": "Medical",
+  "website": "https://dental.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://dental.com",
+  "description": "Smile Makers Dental provides professional dentist services in Santa Barbara, CA. Contact us at (805) 555-0567 or email smiles@dental.com. We offer quality service at competitive rates.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:29:51.610Z",
+  "updatedAt": "2026-02-24T23:29:51.610Z"
+}
