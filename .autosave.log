@@ -8600,3 +8600,16 @@
  2 files changed, 280 insertions(+)
  create mode 100644 website-sales-system/scripts/ghl-import.js
 [2026-02-24 12:44:33] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os b334141] Autosave: 2026-02-24 12:46:33 - Workspace sync
+ 12 files changed, 418 insertions(+), 2 deletions(-)
+ create mode 100644 website-sales-system/exports/website-sales-all-prospects.csv
+ create mode 100644 website-sales-system/exports/website-sales-automotive.csv
+ create mode 100644 website-sales-system/exports/website-sales-contractor.csv
+ create mode 100644 website-sales-system/exports/website-sales-home-services.csv
+ create mode 100644 website-sales-system/exports/website-sales-medical.csv
+ create mode 100644 website-sales-system/exports/website-sales-other.csv
+ create mode 100644 website-sales-system/exports/website-sales-professional.csv
+ create mode 100644 website-sales-system/exports/website-sales-restaurant.csv
+ create mode 100644 website-sales-system/exports/website-sales-retail.csv
+ create mode 100644 website-sales-system/scripts/export-csv.js
+[2026-02-24 12:46:33] ✅ Autosave successful
