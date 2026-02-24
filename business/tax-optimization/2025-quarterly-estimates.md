@@ -8,9 +8,14 @@
 
 | Item | Amount |
 |------|--------|
-| **Net Business Profit** | $51,218.91 |
-| **Total Estimated Tax** | $17,992.97 |
+| **Net Business Profit** | $50,828.35 |
+| **Total Estimated Tax** | $17,855.77 |
 | **Effective Tax Rate** | 35.1% |
+
+### Note on Business Expenses
+- **Credit Card Interest:** $2,925.42 (fully deductible)
+- **Stripe Capital Loan Interest:** $390.56 (fully deductible - see details below)
+- **Total Interest Deduction:** $3,315.98
 
 ---
 
@@ -64,18 +69,18 @@
 #### 4. Total Estimated Tax
 | Tax Type | Amount |
 |----------|--------|
-| Self-Employment Tax | $7,237.00 |
-| Federal Income Tax | $5,603.49 |
-| CA State Tax | $3,073.13 |
-| **TOTAL ESTIMATED TAX** | **$15,913.62** |
+| Self-Employment Tax | $7,181.82 |
+| Federal Income Tax | $5,560.75 |
+| CA State Tax | $3,049.70 |
+| **TOTAL ESTIMATED TAX** | **$15,792.27** |
 
 **Revised Calculation (Conservative):**
 | Tax Type | Amount |
 |----------|--------|
-| Self-Employment Tax | $7,237.00 |
-| Federal Income Tax (higher estimate) | $7,682.84 |
-| CA State Tax (higher estimate) | $3,073.13 |
-| **TOTAL WITH BUFFER** | **$17,992.97** |
+| Self-Employment Tax | $7,181.82 |
+| Federal Income Tax (higher estimate) | $7,624.25 |
+| CA State Tax (higher estimate) | $3,049.70 |
+| **TOTAL WITH BUFFER** | **$17,855.77** |
 
 ---
 
@@ -83,17 +88,17 @@
 
 ### Safe Harbor Rule
 To avoid penalties, pay the **lesser** of:
-1. 90% of current year tax ($17,992.97 × 90% = $16,193.67)
+1. 90% of current year tax ($17,855.77 × 90% = $16,070.19)
 2. 100% of prior year tax (or 110% if AGI > $150,000)
 
 ### Recommended Quarterly Payments
 
 | Quarter | Due Date | Amount | Cumulative |
 |---------|----------|--------|------------|
-| **Q1 2025** | April 15, 2025 | $4,498.24 | $4,498.24 |
-| **Q2 2025** | June 15, 2025 | $4,498.24 | $8,996.48 |
-| **Q3 2025** | September 15, 2025 | $4,498.24 | $13,494.72 |
-| **Q4 2025** | January 15, 2026 | $4,498.25 | $17,992.97 |
+| **Q1 2025** | April 15, 2025 | $4,463.94 | $4,463.94 |
+| **Q2 2025** | June 15, 2025 | $4,463.94 | $8,927.88 |
+| **Q3 2025** | September 15, 2025 | $4,463.94 | $13,391.82 |
+| **Q4 2025** | January 15, 2026 | $4,463.95 | $17,855.77 |
 
 ### Uneven Income Distribution
 If income was not evenly distributed, payments can be adjusted:
@@ -101,10 +106,10 @@ If income was not evenly distributed, payments can be adjusted:
 **Example Uneven Distribution:**
 | Quarter | Income % | Payment |
 |---------|----------|---------|
-| Q1 | 20% | $3,598.59 |
-| Q2 | 30% | $5,397.89 |
-| Q3 | 35% | $6,297.54 |
-| Q4 | 15% | $2,698.95 |
+| Q1 | 20% | $3,571.15 |
+| Q2 | 30% | $5,356.73 |
+| Q3 | 35% | $6,249.52 |
+| Q4 | 15% | $2,678.37 |
 
 **Note:** Requires annualized income installment method (Form 2210).
 
@@ -204,6 +209,34 @@ Keep all tax records for **7 years** (federal statute of limitations).
 
 ---
 
+## Stripe Capital Loan - Tax Implications
+
+### Loan Details
+| Term | Value |
+|------|-------|
+| **Loan Amount** | $8,800.00 |
+| **Total Interest (Fixed Fee)** | $1,003.00 |
+| **Effective APR** | ~7.61% |
+| **Origination Date** | June 2, 2025 |
+| **Final Repayment** | December 1, 2026 |
+
+### 2025 Tax Impact
+- **Deductible Interest (2025):** $390.56
+- **Tax Savings (15% bracket):** ~$58.58
+- **Where to Report:** Schedule C, Line 16 (Interest)
+
+### 2026 Tax Planning
+- **Remaining Interest to Deduct (2026):** $612.44
+- Update 2026 estimated taxes to account for this additional deduction
+- Loan repayment is automatic via 15% of daily Stripe receivables
+
+### Documentation Required
+- [ ] Loan agreement (PDF on file)
+- [ ] Payment history showing interest allocation
+- [ ] Business purpose documentation
+
+---
+
 ## Action Items
 
 ### Before Filing 2025 Return
@@ -238,6 +271,7 @@ Keep all tax records for **7 years** (federal statute of limitations).
 
 ---
 
-*Based on net business profit of $51,218.91 from 2025 business activity*  
+*Based on net business profit of $50,828.35 from 2025 business activity*  
+*Includes Stripe Capital loan interest deduction of $390.56*  
 *Does not include other income sources, deductions, or credits*  
 *Consult a tax professional for personalized advice*
