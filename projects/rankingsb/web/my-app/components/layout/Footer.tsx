@@ -31,12 +31,12 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Industries</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
+              <li><Link href="/industries" className="hover:text-primary font-medium">View All Industries →</Link></li>
               <li><Link href="/industries/electrician-seo" className="hover:text-primary">Electrician SEO</Link></li>
               <li><Link href="/industries/hvac-seo" className="hover:text-primary">HVAC SEO</Link></li>
               <li><Link href="/industries/plumber-seo" className="hover:text-primary">Plumber SEO</Link></li>
               <li><Link href="/industries/roofing-seo" className="hover:text-primary">Roofing SEO</Link></li>
               <li><Link href="/industries/solar-seo" className="hover:text-primary">Solar SEO</Link></li>
-              <li><Link href="/industries/attorney-seo" className="hover:text-primary">Attorney SEO</Link></li>
             </ul>
           </div>
 
