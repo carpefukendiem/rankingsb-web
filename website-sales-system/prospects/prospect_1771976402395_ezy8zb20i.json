@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976402395_ezy8zb20i",
+  "businessName": "Jerry the Plumber",
+  "phone": "(805) 964-9841",
+  "email": null,
+  "address": null,
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://www.jerrytheplumber.net/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.jerrytheplumber.net/",
+  "description": "For quick and reliable Santa Barbara plumbing service, give us a call at (805) 964-9841 or contact us to send us a message",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:40:02.377Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:40:02.395Z",
+  "updatedAt": "2026-02-24T23:40:02.395Z"
+}

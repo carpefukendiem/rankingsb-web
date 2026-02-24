@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976402378_rb8aabs11",
+  "businessName": "Santa Barbara Plumber",
+  "phone": "(805) 516-5590",
+  "email": null,
+  "address": null,
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://www.lewisplumbingsantabarbara.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.lewisplumbingsantabarbara.com/",
+  "description": "With services informed by the latest ... Maria, Lompoc, Carpinteria, or any of the surrounding areas, call Lewis Plumbing at (805) 516-5590 or contact us online!",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:40:02.376Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:40:02.378Z",
+  "updatedAt": "2026-02-24T23:40:02.378Z"
+}

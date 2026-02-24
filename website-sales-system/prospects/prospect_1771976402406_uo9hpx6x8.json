@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976402406_uo9hpx6x8",
+  "businessName": "Wilson Plumbing",
+  "phone": "(805) 963-3454",
+  "email": null,
+  "address": "215 Gray Ave, Santa Barbara",
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://www.wilsonplumbingsantabarbara.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.wilsonplumbingsantabarbara.com/",
+  "description": "Call Douglas E. Wilson Plumbing at 805-963-3454 or click here to send us a message. Call (805) 963-3454 · 215 Gray Ave, Santa Barbara, CA 93101",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:40:02.377Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:40:02.406Z",
+  "updatedAt": "2026-02-24T23:40:02.406Z"
+}

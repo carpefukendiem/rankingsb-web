@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976402433_bfkb0xs63",
+  "businessName": "Dentist in Ventura CA",
+  "phone": "805-653-5606",
+  "email": null,
+  "address": null,
+  "city": "Ventura",
+  "category": "Medical",
+  "website": "https://www.venturasmile.com/meet-the-doctors/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.venturasmile.com/meet-the-doctors/",
+  "description": "please call Ventura Office Location Phone Number 805-653-5606 today!",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:40:02.414Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:40:02.433Z",
+  "updatedAt": "2026-02-24T23:40:02.433Z"
+}

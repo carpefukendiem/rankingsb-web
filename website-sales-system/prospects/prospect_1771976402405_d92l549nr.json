@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976402405_d92l549nr",
+  "businessName": "Plumbing Santa Barbara: Luigi Crisa",
+  "phone": "805.453.4722",
+  "email": null,
+  "address": null,
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://luigicrisaplumbing.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://luigicrisaplumbing.com/",
+  "description": "Consultations are free, so if you are reading this because you need a plumber, call Luigi 805.453.4722, or write to us from our Contact Luigi page.",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:40:02.377Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:40:02.405Z",
+  "updatedAt": "2026-02-24T23:40:02.405Z"
+}

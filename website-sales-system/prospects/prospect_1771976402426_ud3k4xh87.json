@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976402426_ud3k4xh87",
+  "businessName": "Best Dentist in Ventura CA on 3959 Telegraph Rd",
+  "phone": "805 658-1588",
+  "email": null,
+  "address": null,
+  "city": "Ventura",
+  "category": "Medical",
+  "website": "https://www.thesmileshapers.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.thesmileshapers.com/",
+  "description": "Contact us by phone at 805 658-1588.",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:40:02.413Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:40:02.426Z",
+  "updatedAt": "2026-02-24T23:40:02.426Z"
+}
