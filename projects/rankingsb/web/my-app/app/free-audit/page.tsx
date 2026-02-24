@@ -13,12 +13,16 @@ export const metadata: Metadata = {
 export default function FreeAuditPage() {
   return (
     <main className="min-h-screen">
-      <section className="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop"
+            alt="SEO analytics"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
         </div>
+        
         <div className="container relative mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -86,6 +90,11 @@ export default function FreeAuditPage() {
                         <option value="plumber">Plumber</option>
                         <option value="roofer">Roofing</option>
                         <option value="solar">Solar</option>
+                        <option value="attorney">Attorney / Law Firm</option>
+                        <option value="dental">Dental</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="ecommerce">E-commerce</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -118,14 +127,21 @@ export default function FreeAuditPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              { title: "Technical Audit", desc: "Site speed, mobile issues, broken links, meta tags" },
-              { title: "Competitor Analysis", desc: "What top 3 competitors are doing that you're not" },
-              { title: "Keyword Report", desc: "Best keywords for your industry and location" },
-              { title: "Action Plan", desc: "Step-by-step roadmap to page 1 rankings" },
+              { title: "Technical Audit", desc: "Site speed, mobile issues, broken links, meta tags", image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop" },
+              { title: "Competitor Analysis", desc: "What top 3 competitors are doing that you're not", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" },
+              { title: "Keyword Report", desc: "Best keywords for your industry and location", image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400&h=300&fit=crop" },
+              { title: "Action Plan", desc: "Step-by-step roadmap to page 1 rankings", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" },
             ].map((item, i) => (
-              <Card key={i} className="border-0 shadow-md">
+              <Card key={i} className="border-0 shadow-md overflow-hidden">
+                <div className="h-32 overflow-hidden">
+                  <img 
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-4 -mt-10 relative z-10 border-4 border-white">
                     <CheckCircle className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-lg font-bold text-center mb-2">{item.title}</h3>
@@ -149,13 +165,12 @@ export default function FreeAuditPage() {
               you'll walk away with valuable insights you can use.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/25">
-                <Phone className="w-5 h-5" />
-                Call (805) 555-0123
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                Get Free Audit Online
-              </Button>
+              <a href="tel:8053077600">
+                <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/25">
+                  <Phone className="w-5 h-5" />
+                  Call (805) 307-7600
+                </Button>
+              </a>
             </div>
           </div>
         </div>
