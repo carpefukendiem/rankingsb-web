@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525853_ql6qxhwqv",
+  "businessName": "Arbor Dental Group",
+  "phone": "(949) 551-1443",
+  "email": null,
+  "address": "14785 Jeffrey Rd #205 Irvine",
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://www.thearbordentalgroup.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.thearbordentalgroup.com/",
+  "description": "14785 Jeffrey Rd #205 Irvine, CA 92618 (949) 551-1443",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.841Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.854Z",
+  "updatedAt": "2026-02-24T23:42:05.854Z"
+}

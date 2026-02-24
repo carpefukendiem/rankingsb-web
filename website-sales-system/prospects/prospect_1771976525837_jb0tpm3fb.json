@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525837_jb0tpm3fb",
+  "businessName": "Landscaping in Irvine, CA",
+  "phone": "(949) 313-2633",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Home Services",
+  "website": "https://www.oclandscapingpros.com/irvine",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.oclandscapingpros.com/irvine",
+  "description": "Give us a call today at (949) 313-2633 for a free no-obligation quote",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.836Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.837Z",
+  "updatedAt": "2026-02-24T23:42:05.837Z"
+}

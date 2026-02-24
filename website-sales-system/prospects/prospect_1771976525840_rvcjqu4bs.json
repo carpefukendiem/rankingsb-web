@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525840_rvcjqu4bs",
+  "businessName": "US Electric Services",
+  "phone": "(858) 880-6080",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://uselectricservices.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://uselectricservices.com/",
+  "description": "(858) 880-6080",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.839Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.840Z",
+  "updatedAt": "2026-02-24T23:42:05.840Z"
+}

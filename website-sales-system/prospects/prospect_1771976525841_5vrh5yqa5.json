@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525841_5vrh5yqa5",
+  "businessName": "Dentist in Irvine CA",
+  "phone": "(949) 823-0006",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://www.qhdentaloffice.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.qhdentaloffice.com/",
+  "description": "Call us at QH Dental Phone Number (949) 823-0006",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.841Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.841Z",
+  "updatedAt": "2026-02-24T23:42:05.841Z"
+}

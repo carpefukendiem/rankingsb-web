@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525867_xq1cajp4l",
+  "businessName": "ANIMAE",
+  "phone": "619.432.1225",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Restaurant",
+  "website": "https://www.animaesd.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.animaesd.com/",
+  "description": "Call ANIMAE for reservations at 619.432.1225",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.860Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.867Z",
+  "updatedAt": "2026-02-24T23:42:05.867Z"
+}

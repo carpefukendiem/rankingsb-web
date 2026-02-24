@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525838_7qvb14v0v",
+  "businessName": "Plumber San Diego",
+  "phone": "619-596-0888",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://www.rotorooter.com/sandiego/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.rotorooter.com/sandiego/",
+  "description": "call our 24/7 hotline at 619-596-0888",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.838Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.838Z",
+  "updatedAt": "2026-02-24T23:42:05.838Z"
+}

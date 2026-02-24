@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525860_qkm4vneva",
+  "businessName": "Home",
+  "phone": "619.298.6802",
+  "email": null,
+  "address": "880 Harbor Island Drive San Diego",
+  "city": "San Diego",
+  "category": "Restaurant",
+  "website": "https://www.clevelsd.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.clevelsd.com/",
+  "description": "880 Harbor Island Drive San Diego, CA 92101 · Phone · 619.298.6802",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.859Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.860Z",
+  "updatedAt": "2026-02-24T23:42:05.860Z"
+}

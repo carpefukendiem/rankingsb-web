@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525832_kwhk395hk",
+  "businessName": "Oxnard Roofing",
+  "phone": "805-608-4154",
+  "email": null,
+  "address": "4154 for a free est",
+  "city": "Oxnard",
+  "category": "Contractor",
+  "website": "https://www.oxnardroofing.net/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.oxnardroofing.net/",
+  "description": "Call 805-608-4154 for a free estimate today",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.831Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.832Z",
+  "updatedAt": "2026-02-24T23:42:05.832Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525833_n9unixvaf",
+  "businessName": "SHOGUN RESTAURANT",
+  "phone": "(626) 351-8945",
+  "email": null,
+  "address": "470 N Halstead St, Pasadena",
+  "city": "Pasadena",
+  "category": "Restaurant",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/shogun-restaurant-pasadena-2",
+  "description": "470 N Halstead St, Pasadena, CA 91107, (626) 351-8945",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.833Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.833Z",
+  "updatedAt": "2026-02-24T23:42:05.833Z"
+}

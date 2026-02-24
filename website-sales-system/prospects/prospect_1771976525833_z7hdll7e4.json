@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525833_z7hdll7e4",
+  "businessName": "MAESTRO RESTAURANT",
+  "phone": "(626) 787-1512",
+  "email": null,
+  "address": "110 East Union St, Pasadena",
+  "city": "Pasadena",
+  "category": "Restaurant",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/maestro-restaurant-pasadena",
+  "description": "110 East Union St, Pasadena, CA 91103, (626) 787-1512",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.833Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.833Z",
+  "updatedAt": "2026-02-24T23:42:05.833Z"
+}

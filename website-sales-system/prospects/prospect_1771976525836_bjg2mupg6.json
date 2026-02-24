@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525836_bjg2mupg6",
+  "businessName": "Commercial Landscape Services Inc",
+  "phone": "(949) 660-8655",
+  "email": null,
+  "address": "1821 Reynolds Ave Irvine",
+  "city": "Irvine",
+  "category": "Home Services",
+  "website": "https://clssocal.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://clssocal.com/",
+  "description": "1821 Reynolds Ave Irvine CA 92614 Phone: (949) 660-8655",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.836Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.836Z",
+  "updatedAt": "2026-02-24T23:42:05.836Z"
+}

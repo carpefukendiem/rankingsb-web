@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525866_tqi0qua8m",
+  "businessName": "Home",
+  "phone": "619.814.1300",
+  "email": null,
+  "address": "880 B Harbor Island Drive San Diego",
+  "city": "San Diego",
+  "category": "Restaurant",
+  "website": "https://www.coasterra.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.coasterra.com/",
+  "description": "880 B Harbor Island Drive San Diego, CA 92101 · Phone · 619.814.1300",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.860Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.866Z",
+  "updatedAt": "2026-02-24T23:42:05.866Z"
+}

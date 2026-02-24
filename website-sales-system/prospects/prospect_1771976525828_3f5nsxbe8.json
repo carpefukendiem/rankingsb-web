@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525828_3f5nsxbe8",
+  "businessName": "Certified HVAC Repair in Goleta, California",
+  "phone": "805-242-9638",
+  "email": null,
+  "address": null,
+  "city": "Goleta",
+  "category": "Contractor",
+  "website": "https://www.allstarcomfortair.com/locations/goleta/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.allstarcomfortair.com/locations/goleta/",
+  "description": "Request a consultation for service from Allstar Heating & Air Conditioning today by giving us a call at 805-242-9638.",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.827Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.828Z",
+  "updatedAt": "2026-02-24T23:42:05.828Z"
+}

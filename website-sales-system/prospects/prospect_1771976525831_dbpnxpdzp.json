@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525831_dbpnxpdzp",
+  "businessName": "GREAT AMERICAN ROOFING",
+  "phone": "(805) 485-9426",
+  "email": null,
+  "address": "167 Lambert St",
+  "city": "Oxnard",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/great-american-roofing-oxnard",
+  "description": "167 Lambert St · Oxnard, CA 93036 · Phone number · (805) 485-9426",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.831Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.831Z",
+  "updatedAt": "2026-02-24T23:42:05.831Z"
+}

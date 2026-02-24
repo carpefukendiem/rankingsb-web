@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525837_a741cztzk",
+  "businessName": "Irvine Commercial Landscape Services",
+  "phone": "(800) 741-9150",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Home Services",
+  "website": "https://www.staygreen.com/service-areas/irvine/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.staygreen.com/service-areas/irvine/",
+  "description": "Call (800) 741-9150",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.836Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.837Z",
+  "updatedAt": "2026-02-24T23:42:05.837Z"
+}

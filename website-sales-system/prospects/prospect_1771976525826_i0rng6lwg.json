@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525826_i0rng6lwg",
+  "businessName": "Econo West Heating & Air Conditioning",
+  "phone": "805-335-3232",
+  "email": null,
+  "address": null,
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://www.econowestairsb.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.econowestairsb.com/",
+  "description": "Proudly Serving Santa Barbara & Ventura County · Call Us Today 805-335-3232 · 805-335-3232",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.825Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.826Z",
+  "updatedAt": "2026-02-24T23:42:05.826Z"
+}

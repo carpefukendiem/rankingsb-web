@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525847_u8etnvd6k",
+  "businessName": "Dentist in Irvine, CA",
+  "phone": "949-559-5110",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://www.irvinedentalstudio.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.irvinedentalstudio.com/",
+  "description": "Call us now at 949-559-5110",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.841Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.847Z",
+  "updatedAt": "2026-02-24T23:42:05.847Z"
+}

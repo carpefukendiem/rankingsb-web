@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525828_8w5pt5qrs",
+  "businessName": "AIR REPAIR",
+  "phone": "(805) 455-9549",
+  "email": null,
+  "address": null,
+  "city": "Goleta",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/air-repair-goleta",
+  "description": "Goleta, CA 93117 · Get directions ... Phone number · (805) 455-9549",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.827Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.828Z",
+  "updatedAt": "2026-02-24T23:42:05.828Z"
+}

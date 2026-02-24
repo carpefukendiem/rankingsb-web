@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525840_ypchn1rcs",
+  "businessName": "Local Electrician in San Diego County",
+  "phone": "(619) 920-5129",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://ansonelectricsd.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://ansonelectricsd.com/",
+  "description": "call us directly at (619) 920-5129",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.839Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.840Z",
+  "updatedAt": "2026-02-24T23:42:05.840Z"
+}

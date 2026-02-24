@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525840_igrs8zycv",
+  "businessName": "Electrical Repair",
+  "phone": "858-900-8535",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://www.srpelectricinc.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.srpelectricinc.com/",
+  "description": "Call today for service 858-900-8535",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.839Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.840Z",
+  "updatedAt": "2026-02-24T23:42:05.840Z"
+}

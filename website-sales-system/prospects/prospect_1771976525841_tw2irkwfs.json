@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525841_tw2irkwfs",
+  "businessName": "Light Breeze Dental",
+  "phone": "949-274-4719",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://www.lightbreezedental.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.lightbreezedental.com/",
+  "description": "Call Light Breeze Dental today at 949-274-4719",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.841Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.841Z",
+  "updatedAt": "2026-02-24T23:42:05.841Z"
+}

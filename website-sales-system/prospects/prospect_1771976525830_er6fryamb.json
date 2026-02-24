@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525830_er6fryamb",
+  "businessName": "Infinity Electric",
+  "phone": "(805) 650-9054",
+  "email": null,
+  "address": "6566 Beene Rd Ventura",
+  "city": "Ventura",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/infinity-electric-ventura",
+  "description": "Phone number · (805) 650-9054 · 6566 Beene Rd Ventura, CA 93003",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.829Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.830Z",
+  "updatedAt": "2026-02-24T23:42:05.830Z"
+}

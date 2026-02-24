@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525867_rddqyj6z3",
+  "businessName": "Lazy Dog Restaurants, LLC",
+  "phone": "(619) 481-6191",
+  "email": null,
+  "address": "1202 Camino Del Rio N San Diego",
+  "city": "San Diego",
+  "category": "Restaurant",
+  "website": "https://www.lazydogrestaurants.com/locations/san-diego-ca",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.lazydogrestaurants.com/locations/san-diego-ca",
+  "description": "1202 Camino Del Rio N San Diego, CA 92108 · Phone: (619) 481-6191",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.860Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.867Z",
+  "updatedAt": "2026-02-24T23:42:05.867Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525834_tttwoo5n8",
+  "businessName": "Auto Repair Los Angeles 90023",
+  "phone": "(323) 870-6282",
+  "email": null,
+  "address": null,
+  "city": "Los Angeles",
+  "category": "Automotive",
+  "website": "https://avosautorepair.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://avosautorepair.com/",
+  "description": "Please give us a call, (323) 870-6282, today",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.834Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.834Z",
+  "updatedAt": "2026-02-24T23:42:05.834Z"
+}

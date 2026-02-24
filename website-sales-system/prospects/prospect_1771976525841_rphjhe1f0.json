@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525841_rphjhe1f0",
+  "businessName": "Local Dentist Office in Irvine CA",
+  "phone": "949-236-6527",
+  "email": null,
+  "address": "5685 Alton Pkwy , Irvine",
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://www.dentistsofirvine.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.dentistsofirvine.com/",
+  "description": "5685 Alton Pkwy , Irvine, CA 92618 Call 949-236-6527",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.841Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.841Z",
+  "updatedAt": "2026-02-24T23:42:05.841Z"
+}

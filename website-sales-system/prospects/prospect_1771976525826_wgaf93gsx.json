@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525826_wgaf93gsx",
+  "businessName": "HVAC Company in Santa Barbara, CA",
+  "phone": "(805) 285-3988",
+  "email": null,
+  "address": "3988 today for an est",
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://crockerair.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://crockerair.com/",
+  "description": "Looking for a reliable HVAC company in Santa Barbara, CA to schedule service with? Call (805) 285-3988 today for an estimate!",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.823Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.826Z",
+  "updatedAt": "2026-02-24T23:42:05.826Z"
+}

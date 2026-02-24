@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525826_s0ohgckcf",
+  "businessName": "HVAC Services in Santa Barbara",
+  "phone": "(805) 954-9195",
+  "email": null,
+  "address": "9195 for fast",
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://www.westcoast-air.com/areas-we-serve/santa-barbara/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.westcoast-air.com/areas-we-serve/santa-barbara/",
+  "description": "Call us day or night at (805) 954-9195 for fast, reliable HVAC repair in Goleta & throughout Santa Barbara!",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.825Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.826Z",
+  "updatedAt": "2026-02-24T23:42:05.826Z"
+}

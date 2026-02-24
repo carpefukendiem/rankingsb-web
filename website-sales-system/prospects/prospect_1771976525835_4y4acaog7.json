@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525835_4y4acaog7",
+  "businessName": "L.A. AUTO REPAIR",
+  "phone": "(323) 846-9188",
+  "email": null,
+  "address": "4088 S Figueroa St, Los Angeles",
+  "city": "Los Angeles",
+  "category": "Automotive",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/l-a-auto-repair-los-angeles-3",
+  "description": "4088 S Figueroa St, Los Angeles, CA 90037, (323) 846-9188",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.834Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.835Z",
+  "updatedAt": "2026-02-24T23:42:05.835Z"
+}

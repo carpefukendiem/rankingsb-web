@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525838_4orjzmg0b",
+  "businessName": "California Plumbing Company",
+  "phone": "(619) 787-3443",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://californiaplumbingsd.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://californiaplumbingsd.com/",
+  "description": "call away at (619) 787-3443",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.838Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.838Z",
+  "updatedAt": "2026-02-24T23:42:05.838Z"
+}

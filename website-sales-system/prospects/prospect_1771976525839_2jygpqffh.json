@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525839_2jygpqffh",
+  "businessName": "San Diego Plumbers",
+  "phone": "(858) 544-6064",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://www.exodusplumbing.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.exodusplumbing.com/",
+  "description": "Call us today at (858) 544-6064",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.838Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.839Z",
+  "updatedAt": "2026-02-24T23:42:05.839Z"
+}

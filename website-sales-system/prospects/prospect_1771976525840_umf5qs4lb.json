@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525840_umf5qs4lb",
+  "businessName": "Electrician San Diego",
+  "phone": "858-227-7305",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://electricalinsight.com/san-diego/",
+  "hasWebsite": true,
+  "sourceUrl": "https://electricalinsight.com/san-diego/",
+  "description": "858-227-7305",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.839Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.840Z",
+  "updatedAt": "2026-02-24T23:42:05.840Z"
+}

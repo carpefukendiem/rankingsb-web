@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525835_z0t7h2lh2",
+  "businessName": "BEST AUTOMOTIVE REPAIR",
+  "phone": "(310) 276-1172",
+  "email": null,
+  "address": null,
+  "city": "Los Angeles",
+  "category": "Automotive",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/best-automotive-repair-los-angeles",
+  "description": "Please call +1 (310) 276-1172",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.834Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.835Z",
+  "updatedAt": "2026-02-24T23:42:05.835Z"
+}

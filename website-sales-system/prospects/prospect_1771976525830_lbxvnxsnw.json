@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525830_lbxvnxsnw",
+  "businessName": "MB Electrical Service",
+  "phone": "805.377.3442",
+  "email": null,
+  "address": null,
+  "city": "Ventura",
+  "category": "Contractor",
+  "website": "http://www.mbelectricalservice.com/",
+  "hasWebsite": true,
+  "sourceUrl": "http://www.mbelectricalservice.com/",
+  "description": "Text or call us at 805.377.3442",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.829Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.830Z",
+  "updatedAt": "2026-02-24T23:42:05.830Z"
+}

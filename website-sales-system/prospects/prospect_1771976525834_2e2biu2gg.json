@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525834_2e2biu2gg",
+  "businessName": "LA Auto Center auto repair downtown LA los angeles",
+  "phone": "(213) 747-2847",
+  "email": null,
+  "address": null,
+  "city": "Los Angeles",
+  "category": "Automotive",
+  "website": "https://www.laautocenter.biz/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.laautocenter.biz/",
+  "description": "Call us at (213) 747-2847",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.834Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.834Z",
+  "updatedAt": "2026-02-24T23:42:05.834Z"
+}

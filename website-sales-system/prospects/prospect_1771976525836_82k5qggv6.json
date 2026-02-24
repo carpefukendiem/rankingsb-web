@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525836_82k5qggv6",
+  "businessName": "Services provided by Southcal Landscape Corporation in Irvine",
+  "phone": "(949) 704-5574",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Home Services",
+  "website": "https://south-cal-landscape.com/Irvine_CA.htm",
+  "hasWebsite": true,
+  "sourceUrl": "https://south-cal-landscape.com/Irvine_CA.htm",
+  "description": "call Southcal Landscape Corporation at (949) 704-5574",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.836Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.836Z",
+  "updatedAt": "2026-02-24T23:42:05.836Z"
+}

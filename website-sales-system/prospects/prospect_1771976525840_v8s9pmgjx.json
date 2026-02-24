@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525840_v8s9pmgjx",
+  "businessName": "Residential Electrician San Diego, CA",
+  "phone": "619-575-5518",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://www.ochoaelectricsandiego.com/electrical-services",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.ochoaelectricsandiego.com/electrical-services",
+  "description": "on call 24/7 at 619-575-5518",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.839Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.840Z",
+  "updatedAt": "2026-02-24T23:42:05.840Z"
+}

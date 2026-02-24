@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525835_ca5kl7y97",
+  "businessName": "Auto Repair Shop in Los Angeles, CA",
+  "phone": "(424) 283-4303",
+  "email": null,
+  "address": "8687 W Pico Blvd Los Angeles",
+  "city": "Los Angeles",
+  "category": "Automotive",
+  "website": "https://carotechautomotive.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://carotechautomotive.com/",
+  "description": "You can call us at (424) 283-4303, swing by 8687 W Pico Blvd Los Angeles",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.834Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.835Z",
+  "updatedAt": "2026-02-24T23:42:05.835Z"
+}

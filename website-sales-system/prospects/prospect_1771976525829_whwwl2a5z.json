@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525829_whwwl2a5z",
+  "businessName": "Anacapa Plumbing and Derooting Santa Barbara, CA",
+  "phone": "(805) 570-4041",
+  "email": null,
+  "address": null,
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://anacapaplumbing.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://anacapaplumbing.com/",
+  "description": "Call (805) 570-4041",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.828Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.829Z",
+  "updatedAt": "2026-02-24T23:42:05.829Z"
+}

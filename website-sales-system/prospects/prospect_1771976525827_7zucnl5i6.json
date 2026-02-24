@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525827_7zucnl5i6",
+  "businessName": "Advanced Heating & Cooling of Santa Barbara",
+  "phone": "(805) 272-0677",
+  "email": null,
+  "address": null,
+  "city": "Santa Barbara",
+  "category": "Contractor",
+  "website": "https://www.advancedairandheating.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.advancedairandheating.com/",
+  "description": "Contact the best HVAC company in Santa Barbara for a free estimate. Call the heating and cooling experts at Advanced Air & Heating at (805) 272-0677.",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.826Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.827Z",
+  "updatedAt": "2026-02-24T23:42:05.827Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525828_dcjyrtfmg",
+  "businessName": "Goleta CA",
+  "phone": "(833) 538-9796",
+  "email": null,
+  "address": null,
+  "city": "Goleta",
+  "category": "Contractor",
+  "website": "https://www.conejoservices.com/goleta/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.conejoservices.com/goleta/",
+  "description": "Contact Information in Goleta : Phone: (833) 538-9796",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.828Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.828Z",
+  "updatedAt": "2026-02-24T23:42:05.828Z"
+}

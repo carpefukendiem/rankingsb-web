@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525832_q6bp5f9um",
+  "businessName": "Best Roofing Company in Oxnard CA",
+  "phone": "(805) 947-0033",
+  "email": null,
+  "address": null,
+  "city": "Oxnard",
+  "category": "Contractor",
+  "website": "https://www.athenaroofingoxnard.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.athenaroofingoxnard.com/",
+  "description": "(805) 947-0033",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.831Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.832Z",
+  "updatedAt": "2026-02-24T23:42:05.832Z"
+}

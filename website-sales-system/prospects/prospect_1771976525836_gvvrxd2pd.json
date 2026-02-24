@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525836_gvvrxd2pd",
+  "businessName": "Irvine, CA Landscaping Company",
+  "phone": "(949) 295-2090",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Home Services",
+  "website": "https://www.foreveryounglandscape.com/landscaping-irvine-ca",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.foreveryounglandscape.com/landscaping-irvine-ca",
+  "description": "Call Us Now (949) 295-2090 · Looking for a way to improve the appearance of your yard",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.835Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.836Z",
+  "updatedAt": "2026-02-24T23:42:05.836Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525834_dd9smrusz",
+  "businessName": "KATHLEENS RESTAURANT",
+  "phone": "(626) 578-0722",
+  "email": null,
+  "address": "595 N Lake Ave Pasadena",
+  "city": "Pasadena",
+  "category": "Restaurant",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/kathleens-restaurant-pasadena",
+  "description": "595 N Lake Ave Pasadena, CA 91101 · Phone (626) 578-0722",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.833Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.834Z",
+  "updatedAt": "2026-02-24T23:42:05.834Z"
+}

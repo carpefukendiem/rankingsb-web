@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525838_wv8jqm2h7",
+  "businessName": "Plumbing, HVAC & Drain Services in San Diego, CA",
+  "phone": "858-375-5633",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Contractor",
+  "website": "https://www.jpplumbers.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.jpplumbers.com/",
+  "description": "Give us a call at 858-375-5633",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.837Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.838Z",
+  "updatedAt": "2026-02-24T23:42:05.838Z"
+}

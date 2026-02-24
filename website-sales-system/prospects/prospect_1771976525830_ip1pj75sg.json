@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525830_ip1pj75sg",
+  "businessName": "Electrician Ventura County",
+  "phone": "805-509-8323",
+  "email": null,
+  "address": null,
+  "city": "Ventura",
+  "category": "Contractor",
+  "website": "https://electricianventuracounty.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://electricianventuracounty.com/",
+  "description": "call Hunter Electric 805-509-8323",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.829Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.830Z",
+  "updatedAt": "2026-02-24T23:42:05.830Z"
+}

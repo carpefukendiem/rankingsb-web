@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525830_fun6qjskw",
+  "businessName": "Ventura County",
+  "phone": "800-984-4312",
+  "email": null,
+  "address": null,
+  "city": "Ventura",
+  "category": "Contractor",
+  "website": "https://powell-electric.com/service-area/ventura-county/",
+  "hasWebsite": true,
+  "sourceUrl": "https://powell-electric.com/service-area/ventura-county/",
+  "description": "Call us today at 800-984-4312!",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.829Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.830Z",
+  "updatedAt": "2026-02-24T23:42:05.830Z"
+}

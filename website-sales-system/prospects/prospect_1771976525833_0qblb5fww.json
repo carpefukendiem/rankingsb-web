@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525833_0qblb5fww",
+  "businessName": "TOP RESTAURANT",
+  "phone": "(626) 792-1412",
+  "email": null,
+  "address": "1842 E Colorado Blvd, Pasadena",
+  "city": "Pasadena",
+  "category": "Restaurant",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/top-restaurant-pasadena",
+  "description": "1842 E Colorado Blvd, Pasadena, CA 91107, (626) 792-1412",
+  "priority": 1,
+  "scrapedAt": "2026-02-24T23:42:05.833Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.833Z",
+  "updatedAt": "2026-02-24T23:42:05.833Z"
+}

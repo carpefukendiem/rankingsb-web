@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525830_bdm92ugdy",
+  "businessName": "United Electric",
+  "phone": "(805) 650-8658",
+  "email": "info@venturaelectricians.com",
+  "address": "399 N Aviador St",
+  "city": "Ventura",
+  "category": "Contractor",
+  "website": "https://www.venturaelectricians.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.venturaelectricians.com/",
+  "description": "399 N Aviador St. Camarillo, CA 93010 (805) 650-8658 info@venturaelectricians.com",
+  "priority": 2,
+  "scrapedAt": "2026-02-24T23:42:05.829Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.830Z",
+  "updatedAt": "2026-02-24T23:42:05.830Z"
+}

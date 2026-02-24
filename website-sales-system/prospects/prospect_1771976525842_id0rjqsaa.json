@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525842_id0rjqsaa",
+  "businessName": "Dentist Irvine CA",
+  "phone": "(714) 505-9595",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://www.amoredentistry.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.amoredentistry.com/",
+  "description": "(714) 505-9595",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.841Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.842Z",
+  "updatedAt": "2026-02-24T23:42:05.842Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525833_auj0zhs7x",
+  "businessName": "Pasadena",
+  "phone": "(626) 202-1616",
+  "email": null,
+  "address": "218 S Lake Ave., Pasadena",
+  "city": "Pasadena",
+  "category": "Restaurant",
+  "website": "https://urbanecafe.com/location/pasadena/",
+  "hasWebsite": true,
+  "sourceUrl": "https://urbanecafe.com/location/pasadena/",
+  "description": "218 S Lake Ave., Pasadena, CA 91101 · Phone (626) 202-1616",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.833Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.833Z",
+  "updatedAt": "2026-02-24T23:42:05.833Z"
+}

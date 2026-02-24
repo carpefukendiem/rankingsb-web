@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525837_gsgo46zol",
+  "businessName": "Contact Irvine Landscapers",
+  "phone": "(949) 267-5564",
+  "email": null,
+  "address": "2600 Michelson Dr Suite 140 Irvine",
+  "city": "Irvine",
+  "category": "Home Services",
+  "website": "https://irvinelandscapers.com/contact/",
+  "hasWebsite": true,
+  "sourceUrl": "https://irvinelandscapers.com/contact/",
+  "description": "2600 Michelson Dr Suite 140 Irvine, CA 92612 · (949) 267-5564",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.836Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.837Z",
+  "updatedAt": "2026-02-24T23:42:05.837Z"
+}

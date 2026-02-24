@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771976525831_d50kme4yp",
+  "businessName": "Roofing Contractors",
+  "phone": "(805) 415-6027",
+  "email": null,
+  "address": null,
+  "city": "Oxnard",
+  "category": "Contractor",
+  "website": "https://www.garciagroofing.com/",
+  "hasWebsite": true,
+  "sourceUrl": "https://www.garciagroofing.com/",
+  "description": "Call today at (805) 415-6027",
+  "priority": 3,
+  "scrapedAt": "2026-02-24T23:42:05.831Z",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:42:05.831Z",
+  "updatedAt": "2026-02-24T23:42:05.831Z"
+}
