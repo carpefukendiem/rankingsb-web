@@ -1,0 +1,1019 @@
+date,description,amount,account,month,category,is_ghl,is_stripe_loan,is_income,is_business
+1/2/25,Stripe Transfer St-J1A4W0L7G7I9 Ruben Ruiz,301.75,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/2/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,40.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/2/25,Recurring Payment authorized on 01/01 Google *Gsuite_Ran,7.2,Wells Fargo Business,013125,Software/SaaS,False,False,False,True
+1/2/25,Recurring Payment authorized on 01/01 Sinch Mailgun,35.14,Wells Fargo Business,013125,Software/SaaS,False,False,False,True
+1/2/25,Recurring Payment authorized on 01/02 Highlevel Inc.,25.0,Wells Fargo Business,013125,Software/SaaS,True,False,False,True
+1/2/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,100.0,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/2/25,Purchase authorized on 01/02 Fairview Fuel D Goleta CA 45.49,180.71,Wells Fargo Business,013125,Travel,False,False,False,True
+1/3/25,Stripe Transfer St-T8S7J2Y1W6E6 Ruben Ruiz,32.05,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/3/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,800.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/3/25,Purchase authorized on 01/01 Pressed Juicery - Santa Barbara,14.0,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/3/25,Purchase authorized on 01/02 Powell Peralta 805-8457580 CA,4.4,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/3/25,Recurring Payment authorized on 01/02 x Corp. Paid Featu 16.00,978.36,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/6/25,Stripe Transfer St-E0H4E4V5Y8M4 Ruben Ruiz,19.92,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/6/25,Purchase authorized on 01/02 IN-N-Out Goleta Goleta CA,11.85,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Purchase authorized on 01/03 PY *Cajun Kitchen Goleta CA,28.25,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Purchase authorized on 01/03 Starbucks 05314 Goleta CA,13.65,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Purchase authorized on 01/04 Sq *Dart Coffee CO Santa,12.75,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Purchase authorized on 01/04 Waterfront Parking Santa,10.5,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Purchase authorized on 01/04 Finney's Goleta Goleta CA,79.93,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Recurring Payment authorized on 01/04 Highlevel Agency S,497.0,Wells Fargo Business,013125,Software/SaaS,True,False,False,True
+1/6/25,"Recurring Transfer to Carpefukendiem, LLC Business Market",25.0,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/6/25,Barclaycard US Creditcard 1215501948 Ruben Ruiz,175.0,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/6/25,Home Depot Online Pmt 250105 631583507931402 Ruben,350.0,Wells Fargo Business,013125,Office Supplies,False,False,False,True
+1/6/25,Chase Credit Crd Epay 250103 8078375148 Ruben Ruiz 250.00 -,455.65,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/7/25,Overdraft Fee for a Transaction Posted on 01/06 $350.00 Home,35.0,Wells Fargo Business,013125,Interest/Bank Fees,False,False,False,True
+1/7/25,Overdraft Fee for a Transaction Posted on 01/06 $250.00 Chase,35.0,Wells Fargo Business,013125,Interest/Bank Fees,False,False,False,True
+1/7/25,Stripe Transfer St-O1Q5T5F6W2F7 Ruben Ruiz 9.92 -,515.73,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/8/25,Stripe Transfer St-Q9V5U6Z7x8S5 Ruben Ruiz 22.27 -,493.46,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/9/25,Stripe Transfer St-P2P8C5V1W5M5 Ruben Ruiz 28.55 -,464.91,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/10/25,Recurring Payment authorized on 01/10 Highlevel Inc. 25.00 -,489.91,Wells Fargo Business,013125,Software/SaaS,True,False,False,True
+1/13/25,Overdraft Fee for a Transaction Posted on 01/10 $25.00,35.0,Wells Fargo Business,013125,Interest/Bank Fees,False,False,False,True
+1/13/25,Stripe Transfer St-W4B3x1B9O1C3 Ruben Ruiz 57.51 -,467.4,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/15/25,Stripe Transfer St-R5B8L9Z6M8T1 Ruben Ruiz 58.14 -,409.26,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/16/25,Stripe Transfer St-U3R0F9R7G8Z0 Ruben Ruiz 10.32 -,398.94,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/17/25,Stripe Transfer St-Z0B4W1N6W3E9 Ruben Ruiz 178.85 -,220.09,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/21/25,Stripe Transfer St-x1W1O1Z4Y2L2 Ruben Ruiz,300.46,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/21/25,Recurring Payment authorized on 01/17 Google *Google One,1.99,Wells Fargo Business,013125,Software/SaaS,False,False,False,True
+1/21/25,Purchase authorized on 01/21 Holister Fuel D Goleta CA,20.54,Wells Fargo Business,013125,Travel,False,False,False,True
+1/21/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref 57.00,0.84,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/22/25,Stripe Transfer St-M9G5D4V7O2D8 Ruben Ruiz,145.35,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/22/25,Recurring Payment authorized on 01/21 Highlevel Inc. 25.00,121.19,Wells Fargo Business,013125,Software/SaaS,True,False,False,True
+1/23/25,Stripe Transfer St-C2F4P2K6R5x3 Ruben Ruiz,1644.77,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/23/25,Recurring Payment authorized on 01/22 Ouraring Inc.,5.99,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/23/25,Zelle to Ruiz Janice on 01/23 Ref #Pp0Ygdk5Ff Health,1250.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/23/25,< Business to Business ACH Debit - Affirm Inc Affirm Pay 250122 17.01,492.96,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/24/25,Stripe Transfer St-x5W2Q9S5V0P9 Ruben Ruiz,11.48,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/24/25,Purchase authorized on 01/22 Marborg Disposal 805-9631852,75.0,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/24/25,Purchase authorized on 01/24 Milpas Liquor & Deli Santa,4.34,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/24/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,50.0,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/24/25,Zelle to Ruiz Janice on 01/24 Ref #Pp0Yghwfkn Owner Draw,100.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/24/25,United Fin Cas Ins Prem 250123 981362625 Ruben Ruben Ruiz 88.67,186.43,Wells Fargo Business,013125,Travel,False,False,False,True
+1/27/25,Zelle From Nailruiz Janice on 01/26 Ref # Pp0Ygnbnmt,240.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/27/25,Stripe Transfer St-L1O3N4D5Y1Q6 Ruben Ruiz,367.11,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/27/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,25.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/27/25,Purchase authorized on 01/24 Sq *Mony's Santa Barbara CA,10.88,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/27/25,Purchase authorized on 01/24 Chipotle 1459 Goleta CA,15.39,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/27/25,Purchase authorized on 01/24 Ptgc LLC Goleta Goleta CA,20.02,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/27/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,100.0,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/27/25,Recurring Payment authorized on 01/25 Dnh*Godaddy.Com,22.17,Wells Fargo Business,013125,Software/SaaS,False,False,False,True
+1/27/25,Purchase authorized on 01/26 Bream Optometry Goleta CA,190.0,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/27/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,60.0,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/27/25,Cox Comm Sab Bank Draft 012725 Lsggc91Qimulk6W Wells 155.06,245.02,Wells Fargo Business,013125,Communications,False,False,False,True
+1/28/25,Stripe Transfer St-G8T7D1R1F2P5 Ruben Ruiz,21.06,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/28/25,Purchase authorized on 01/27 Prime Video Channe,4.99,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/28/25,Purchase authorized on 01/27 Sq *Santa Barbara Santa Barbara,5.35,Wells Fargo Business,013125,Meals/Entertainment,False,False,False,True
+1/28/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref 50.00,205.74,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/29/25,Stripe Transfer St-J2Z6P8Z9U1V0 Ruben Ruiz,251.67,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/29/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,60.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/29/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,11.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/29/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,10.0,Wells Fargo Business,013125,Transfer,False,False,False,True
+1/29/25,Recurring Payment authorized on 01/28 Audible*Zc4C15Vd0,14.95,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/29/25,Vz Wireless Vw Vzw Webpay 250128 5029721 Ruben *Ruiz 218.86,304.6,Wells Fargo Business,013125,Uncategorized,False,False,False,True
+1/30/25,Overdraft Fee for a Transaction Posted on 01/29 $218.86 Vz,35.0,Wells Fargo Business,013125,Interest/Bank Fees,False,False,False,True
+1/30/25,Stripe Transfer St-L4D3I5U1K5J3 Ruben Ruiz,268.04,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/30/25,Purchase authorized on 01/29 Bench Accounting U Bench.CO,299.0,Wells Fargo Business,013125,Software/SaaS,False,False,False,True
+1/30/25,Recurring Payment authorized on 01/29 Highlevel Inc.,25.0,Wells Fargo Business,013125,Software/SaaS,True,False,False,True
+1/30/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref 125.00,88.64,Wells Fargo Business,013125,Loan/Payments,False,False,False,True
+1/31/25,Stripe Transfer St-B5C4P4C6Y0Z3 Ruben Ruiz,14.22,Wells Fargo Business,013125,Software/SaaS,False,False,True,True
+1/31/25,Monthly Service Fee 10.00,92.86,Wells Fargo Business,013125,Interest/Bank Fees,False,False,False,True
+2/3/25,Stripe Transfer St-Z9P3M0H0E3J6 Ruben Ruiz,33.68,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/3/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,15.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/3/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,20.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/3/25,Purchase authorized on 01/30 2Cocom*Bitdefender,34.99,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/3/25,Purchase authorized on 01/30 IN-N-Out Goleta Goleta CA,11.85,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/3/25,Purchase authorized on 01/31 Avenu Tax 800-556-,0.13,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/3/25,Purchase authorized on 01/31 Avenu Tax Admin We,4.23,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/3/25,Purchase authorized on 01/31 Wingstop 2592 Goleta CA,8.69,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/3/25,Purchase authorized on 01/31 Sq *Lighthouse Cof Goleta CA,3.5,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/3/25,Purchase authorized on 01/31 Chipotle 1688 Santa Barbara CA,27.24,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/3/25,Purchase authorized on 01/31 LA Cumbre Fuel Santa Barbar CA,10.0,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/3/25,Recurring Payment authorized on 02/01 Google *Gsuite_Ran,7.2,Wells Fargo Business,022825,Software/SaaS,False,False,False,True
+2/3/25,Purchase authorized on 02/01 Ace Parking 2293 Santa Barbara,3.0,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/3/25,Recurring Payment authorized on 02/01 Sinch Mailgun,35.28,Wells Fargo Business,022825,Software/SaaS,False,False,False,True
+2/3/25,Recurring Payment authorized on 02/02 Highlevel Inc.,25.0,Wells Fargo Business,022825,Software/SaaS,True,False,False,True
+2/3/25,Recurring Payment authorized on 02/02 x Corp. Paid Featu 16.00 -,25.57,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/4/25,Overdraft Fee for a Transaction Posted on 02/03 $25.00,35.0,Wells Fargo Business,022825,Interest/Bank Fees,False,False,False,True
+2/4/25,Overdraft Fee for a Transaction Posted on 02/03 $16.00,35.0,Wells Fargo Business,022825,Interest/Bank Fees,False,False,False,True
+2/4/25,Stripe Transfer St-B4Y4O0G7Q7H8 Ruben Ruiz 44.13 -,51.44,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/5/25,Stripe Transfer St-x8V3x5J8T0E5 Ruben Ruiz 40.99 -,10.45,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/6/25,Stripe Transfer St-M7R6E1Z7F1H6 Ruben Ruiz 9.45 -,1.0,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/7/25,Stripe Transfer St-A1J2F8Z4B2Q9 Ruben Ruiz 9.57,8.57,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/10/25,Stripe Transfer St-D4F3Q0G4x2R7 Ruben Ruiz,22.27,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/10/25,Recurring Payment authorized on 02/08 Highlevel Inc. 25.00,5.84,Wells Fargo Business,022825,Software/SaaS,True,False,False,True
+2/11/25,Stripe Transfer St-E9B0C7H0D2E4 Ruben Ruiz,19.12,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/11/25,Zelle From Nailruiz Janice on 02/11 Ref # Pp0Yj7Zljv Gas for,60.0,Wells Fargo Business,022825,Travel,False,False,False,True
+2/11/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,15.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/11/25,Purchase authorized on 02/11 Storke Fuel Dep Goleta CA 47.63,22.33,Wells Fargo Business,022825,Travel,False,False,False,True
+2/12/25,Stripe Transfer St-S2N4J9C8Q5J6 Ruben Ruiz,9.43,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/12/25,ATM Withdrawal authorized on 02/12 195 N Fairview Ave,20.0,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/12/25,Purchase authorized on 02/12 Fairview Fuel D Goleta CA 10.01,1.75,Wells Fargo Business,022825,Travel,False,False,False,True
+2/13/25,Stripe Transfer St-D9T6B7Q1K8Y9 Ruben Ruiz,88.7,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/13/25,Recurring Payment authorized on 02/12 Highlevel Inc. 25.00,65.45,Wells Fargo Business,022825,Software/SaaS,True,False,False,True
+2/14/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,26.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/14/25,Purchase authorized on 02/13 Ralphs #0 100 W.Carril Santa 45.71,45.74,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/18/25,Stripe Transfer St-I9W0E4N2W4J5 Ruben Ruiz,9.43,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/18/25,Recurring Payment authorized on 02/13 Google *Google One,1.99,Wells Fargo Business,022825,Software/SaaS,False,False,False,True
+2/18/25,Purchase authorized on 02/13 McCormix Oil Corpo Santa,20.25,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/18/25,Purchase authorized on 02/13 Paypal *Apple.Com/,5.99,Wells Fargo Business,022825,Software/SaaS,False,False,False,True
+2/18/25,Purchase authorized on 02/13 IN-N-Out Goleta Goleta CA,11.85,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/18/25,Purchase authorized on 02/15 Sprouts Farmers Market # 4.49,10.6,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/19/25,Recurring Payment authorized on 02/18 Loom Subscription 96.00 -,85.4,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/20/25,Overdraft Fee for a Transaction Posted on 02/19 $96.00,35.0,Wells Fargo Business,022825,Interest/Bank Fees,False,False,False,True
+2/20/25,Stripe Transfer St-R2N3B6O7L8I2 Ruben Ruiz,1153.45,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/20/25,Recurring Payment authorized on 02/19 Highlevel Inc.,25.0,Wells Fargo Business,022825,Software/SaaS,True,False,False,True
+2/20/25,Online Transfer to Ruiz R Ref #Ib0Rd38Gmv Everyday Checking,100.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/20/25,Zelle to Ruiz Janice on 02/20 Ref #Pp0Yjzxfcs Office Bookshelf 31.00,877.05,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/21/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,60.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/21/25,Purchase authorized on 02/20 Prime Video Channe,5.99,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/21/25,Purchase authorized on 02/20 Siteground Hosting,47.4,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/21/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,55.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/21/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,93.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/21/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,10.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/21/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,6.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/21/25,< Business to Business ACH Debit - Affirm Inc Affirm Pay 250220,17.01,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/21/25,Home Depot Online Pmt 250220 601624710019747 Ruben,165.0,Wells Fargo Business,022825,Office Supplies,False,False,False,True
+2/21/25,Chase Credit Crd Epay 250220 8193383966 Ruben Ruiz,225.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/21/25,Barclaycard US Creditcard 1233826250 Ruben Ruiz 243.50,69.15,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/24/25,Stripe Transfer St-A9P9S4D6V5O8 Ruben Ruiz,55.05,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/24/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,1.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/24/25,Purchase authorized on 02/20 McCormix Oil Corpo Santa,25.0,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/24/25,Purchase authorized on 02/21 PY *Cajun Kitchen Goleta CA,45.88,Wells Fargo Business,022825,Meals/Entertainment,False,False,False,True
+2/24/25,Recurring Payment authorized on 02/22 Ouraring Inc.,5.99,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/24/25,Vz Wireless Vw Vzw Webpay 250221 4568923 Ruben *Ruiz 50.00 -,1.67,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/25/25,Overdraft Fee for a Transaction Posted on 02/24 $50.00 Vz,35.0,Wells Fargo Business,022825,Interest/Bank Fees,False,False,False,True
+2/25/25,Stripe Transfer St-E0N4R1H3I5R3 Ruben Ruiz,1251.87,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/25/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,100.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/25/25,Recurring Payment authorized on 02/24 Dnh*Godaddy.Com,22.17,Wells Fargo Business,022825,Software/SaaS,False,False,False,True
+2/25/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref,500.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/25/25,Online Transfer to Ruiz R Way2Save Savings xxxxxx2929 Ref,700.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/25/25,United Fin Cas Ins Prem 250224 981362625 Ruben Ruben Ruiz 88.67,4.36,Wells Fargo Business,022825,Travel,False,False,False,True
+2/26/25,Stripe Transfer St-C6I8N6I7S5I6 Ruben Ruiz,400.59,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/26/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,626.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/26/25,Online Transfer to Ruiz R Way2Save Savings xxxxxx2929 Ref,375.0,Wells Fargo Business,022825,Loan/Payments,False,False,False,True
+2/26/25,Zelle to Ruiz Janice on 02/26 Ref #Pp0Yklwcy6 Health 625.00,30.95,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/27/25,Stripe Transfer St-P0N2T7E6P8K9 Ruben Ruiz,193.9,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/27/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,15.0,Wells Fargo Business,022825,Transfer,False,False,False,True
+2/27/25,Purchase with Cash Back $ 40.00 authorized on 02/27 Sprouts,44.49,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/27/25,Cox Comm Sab Bank Draft 022725 Lzp55Y7Tfgp9Kty Wells 179.54,15.82,Wells Fargo Business,022825,Communications,False,False,False,True
+2/28/25,Stripe Transfer St-x3N4L1G2Q1P4 Ruben Ruiz,22.23,Wells Fargo Business,022825,Software/SaaS,False,False,True,True
+2/28/25,Purchase authorized on 02/27 Prime Video Channe,4.99,Wells Fargo Business,022825,Uncategorized,False,False,False,True
+2/28/25,Monthly Service Fee 10.00,23.06,Wells Fargo Business,022825,Interest/Bank Fees,False,False,False,True
+3/3/25,Stripe Transfer St-V3J6I8M8P4M3 Ruben Ruiz,163.91,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/3/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,101.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/3/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,100.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/3/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,50.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/3/25,Purchase authorized on 02/28 Pressed Juicery - Santa Barbara,14.0,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/3/25,Recurring Payment authorized on 02/28 Audible*D28L31Zg3,14.95,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/3/25,Purchase authorized on 03/01 Google*Gsuite Rank CC,7.2,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/3/25,Recurring Payment authorized on 03/01 Sinch Mailgun,35.41,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/3/25,Recurring Payment authorized on 03/02 x Corp. Paid Featu,16.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/3/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,25.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/3/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,75.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/3/25,ATM Withdrawal authorized on 03/03 3804 State St Santa,40.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/3/25,Vz Wireless Vw Vzw Webpay 250302 8125360 Ruben *Ruiz 178.46,31.95,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/4/25,Stripe Transfer St-M2B0C4D4E0Y2 Ruben Ruiz,336.82,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/4/25,Purchase authorized on 03/03 Sq *Lighthouse Cof Santa,10.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/4/25,Purchase authorized on 03/03 Wingstop 1872 Santa Barbara,8.7,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/4/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,25.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/4/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref,150.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/4/25,ATM Withdrawal authorized on 03/04 195 N Fairview Ave,40.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/4/25,Purchase authorized on 03/04 Ptgc LLC Goleta Goleta CA 13.10,121.97,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/5/25,Stripe Transfer St-N0I6O4F5R1D8 Ruben Ruiz,9.47,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/5/25,Purchase authorized on 03/04 Coinledger-Inc Coinledger.Io,89.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/5/25,"Recurring Transfer to Carpefukendiem, LLC Business Market 25.00",16.45,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/6/25,Stripe Transfer St-B0U1B3C0Q7R3 Ruben Ruiz,249.55,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/6/25,Recurring Payment authorized on 03/05 Highlevel Inc.,25.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/6/25,Purchase authorized on 03/06 Talevi's Wines and Spirit Santa,5.05,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/6/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref 100.00,135.95,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/7/25,Stripe Transfer St-F6E6Z9O9U8L5 Ruben Ruiz,169.34,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/7/25,Zelle From Nailruiz Janice on 03/07 Ref # Pp0Ylm5Tz6 High 300.00,605.29,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/10/25,Stripe Transfer St-B7H8Q9x6U3T0 Ruben Ruiz,22.27,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/10/25,Purchase authorized on 03/07 Sq *Lighthouse Cof Santa,10.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/10/25,Purchase authorized on 03/07 Taqueria Lillys IN Santa Barbara,10.15,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/10/25,Purchase authorized on 03/07 Sq *Panino Goleta Goleta CA,18.45,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/10/25,Recurring Payment authorized on 03/07 Highlevel Agency S,497.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/10/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,45.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/10/25,Purchase authorized on 03/07 Taco Bell 027776 Goleta CA,8.24,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/10/25,Recurring Payment authorized on 03/08 Tradingviewv*Produ 155.40 -,116.68,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/11/25,Overdraft Fee for a Transaction Posted on 03/10 $155.40,35.0,Wells Fargo Business,033125,Interest/Bank Fees,False,False,False,True
+3/11/25,Stripe Transfer St-T0Y0C5Z1Z4D2 Ruben Ruiz,1202.23,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/11/25,Zelle to Ruiz Janice on 03/11 Ref #Pp0Ylxnb32 Gohighlevel,300.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/11/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref,40.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/11/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,150.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/11/25,Purchase authorized on 03/11 Ptgc LLC Goleta Goleta CA,20.14,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/11/25,Purchase authorized on 03/11 Costco Whse #0474 Goleta CA 3.80,536.61,Wells Fargo Business,033125,Office Supplies,False,False,False,True
+3/12/25,Stripe Transfer St-B4B6A4D5B7V1 Ruben Ruiz,9.63,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/12/25,Recurring Payment authorized on 03/11 Highlevel Inc.,25.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/12/25,Recurring Payment authorized on 03/11 Openai *Chatgpt Su,20.0,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/12/25,Purchase authorized on 03/11 Pp*Apple.Com/Bill,9.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/12/25,Chase Credit Crd Epay 250311 8243240478 Ruben Ruiz 222.00,269.25,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/13/25,Stripe Transfer St-O9J8R7R1M3G8 Ruben Ruiz,43.47,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/13/25,Purchase authorized on 03/11 Marborg Disposal 805-9631852,100.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/13/25,Vz Wireless Vw Vzw Webpay 250312 1894598 Ruben *Ruiz 225.00 -,12.28,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/14/25,Overdraft Fee for a Transaction Posted on 03/13 $225.00 Vz,35.0,Wells Fargo Business,033125,Interest/Bank Fees,False,False,False,True
+3/14/25,Stripe Transfer St-T1I7Y2E7H9Z8 Ruben Ruiz,23.97,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/14/25,Purchase authorized on 03/12 Little Caesars 123 Santa Barbara,7.6,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/14/25,Recurring Payment authorized on 03/13 Codecademy,149.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/14/25,Recurring Payment authorized on 03/13 Loom Subscription 45.08 -,225.98,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/17/25,Overdraft Fee for a Transaction Posted on 03/14 $45.08,35.0,Wells Fargo Business,033125,Interest/Bank Fees,False,False,False,True
+3/17/25,Recurring Payment authorized on 03/13 Google *Google One 1.99 -,262.97,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/18/25,Stripe Transfer St-F2W4U5H3E6V7 Ruben Ruiz 9.42 -,253.55,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/19/25,Stripe Transfer St-S9x8Q3W4T1T7 Ruben Ruiz,619.94,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/19/25,Recurring Payment authorized on 03/18 Highlevel Inc.,25.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/19/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,100.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/19/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref,41.39,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/19/25,ATM Withdrawal authorized on 03/19 3804 State St Santa,50.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/19/25,Purchase authorized on 03/19 Holister Fuel Depot Goleta CA 47.86,102.14,Wells Fargo Business,033125,Travel,False,False,False,True
+3/20/25,Upwork Escrow IN EDI Pymnts ACH790599148 Ruben Ruiz,225.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/20/25,Stripe Transfer St-Y6U4I5Y9F2P9 Ruben Ruiz,242.15,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/20/25,Recurring Payment authorized on 03/19 Apple.Com/Bill,5.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/20/25,Purchase authorized on 03/19 Billabong Santa Ba Santa Barbara,27.19,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/20/25,Purchase authorized on 03/19 Blenders ME Santa Barbara CA,7.75,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/20/25,Purchase authorized on 03/19 Taqueria Lillys IN Santa Barbara,10.15,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/20/25,"Recurring Payment authorized on 03/20 Cursor, Ai Powered",20.0,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/20/25,So Cal Edison CO Bill Paymt 250319 700232321310 Nail Janice 90.00,408.21,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/21/25,Stripe Transfer St-H4V8F6U8U2Z4 Ruben Ruiz,9.58,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/21/25,Purchase authorized on 03/19 Coldstone Creamery Goleta CA,24.93,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/21/25,Purchase authorized on 03/20 Bench Accounting U Bench.CO,299.0,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/21/25,Purchase authorized on 03/20 Prime Video Channe,5.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/21/25,Recurring Payment authorized on 03/20 Webflow.Com,24.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/21/25,Zelle to Ruiz Janice on 03/21 Ref #Pp0Ymyplr3 Soccer 40.00,23.87,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/24/25,Stripe Transfer St-T1P5Y9C8Z6L7 Ruben Ruiz,64.47,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/24/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,15.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/24/25,Purchase authorized on 03/21 Sq *Lighthouse Cof Goleta CA,6.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/24/25,Purchase authorized on 03/21 Sq *Lighthouse Cof Goleta CA,1.5,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/24/25,Purchase authorized on 03/21 Sq *Lighthouse Cof Goleta CA,6.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/24/25,Recurring Payment authorized on 03/22 Ouraring Inc.,5.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/24/25,Purchase authorized on 03/23 Prime Video *Sq7Be 14.99,68.86,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/25/25,Upwork Escrow IN EDI Pymnts ACH791356887 Ruben Ruiz,225.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/25/25,Stripe Transfer St-S4Y6E6S8U1A5 Ruben Ruiz,1251.81,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/25/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,60.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/25/25,Purchase authorized on 03/24 Pressed - Paseo Nu,14.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/25/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref,500.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/25/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,250.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/25/25,Zelle to Ruiz Janice on 03/25 Ref #Pp0Yn9Kb6V Health,750.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/25/25,United Fin Cas Ins Prem 250324 981362625 Ruben Ruben Ruiz 88.67,3.0,Wells Fargo Business,033125,Travel,False,False,False,True
+3/26/25,Stripe Transfer St-Z0A9T4x0J2Q4 Ruben Ruiz,367.11,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/26/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref,100.0,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/26/25,Purchase authorized on 03/26 Sprouts Farmers Market # 30.98,239.13,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/27/25,Stripe Transfer St-A7D2B8A6L8G3 Ruben Ruiz,231.63,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/27/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,60.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/27/25,Recurring Payment authorized on 03/26 Highlevel Inc.,25.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/27/25,Purchase authorized on 03/26 City of Sb Dtp Kio 8058971986,3.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/27/25,Purchase authorized on 03/26 The UPS Store 1514,11.43,Wells Fargo Business,033125,Communications,False,False,False,True
+3/27/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref 20.00,471.33,Wells Fargo Business,033125,Loan/Payments,False,False,False,True
+3/28/25,Purchase Return authorized on 03/26 Bench Accounting U,299.0,Wells Fargo Business,033125,Software/SaaS,False,False,False,True
+3/28/25,Stripe Transfer St-O9Y4P5x9G8Q2 Ruben Ruiz,35.07,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/28/25,Purchase authorized on 03/26 Screaming Frog Ltd,259.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/28/25,Purchase authorized on 03/27 Prime Video Channe,4.99,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/28/25,Zelle to Ruiz Janice on 03/27 Ref #Pp0Ynk9735 Health 100.00,441.41,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/31/25,Stripe Transfer St-C8U0J4N8K6U9 Ruben Ruiz,145.05,Wells Fargo Business,033125,Software/SaaS,False,False,True,True
+3/31/25,Online Transfer From Ruiz R Everyday Checking xxxxxx0928 Ref,11.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/31/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,45.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/31/25,Recurring Payment authorized on 03/28 Audible*Z48Z01AL0,14.95,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,Purchase authorized on 03/28 Jersey Mikes 20335 Isla Vista CA,26.64,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,Purchase authorized on 03/28 Jersey Mikes 20335 Isla Vista CA,3.95,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,Purchase authorized on 03/28 365 Market L 888 4 Troy MI,3.98,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,Purchase authorized on 03/29 Spo*Thedailygrind1 Santa,16.38,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,ATM Withdrawal authorized on 03/29 1036 Anacapa St Santa,40.0,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,Zelle to Ruiz Janice on 03/29 Ref #Pp0Ynpmywr Health,200.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/31/25,Purchase authorized on 03/29 7-Eleven Santa Barbara CA,6.51,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/31/25,Purchase authorized on 03/30 Cvs/Pharm 09860--222 W Santa,6.89,Wells Fargo Business,033125,Uncategorized,False,False,False,True
+3/31/25,Purchase authorized on 03/30 The Home Depot #6623 Goleta,52.62,Wells Fargo Business,033125,Office Supplies,False,False,False,True
+3/31/25,Recurring Payment authorized on 03/31 Highlevel Inc.,25.0,Wells Fargo Business,033125,Software/SaaS,True,False,False,True
+3/31/25,Zelle to Ruiz Janice on 03/31 Ref #Pp0Ynvsr3D Health,200.0,Wells Fargo Business,033125,Transfer,False,False,False,True
+3/31/25,Purchase authorized on 03/31 LA Cumbre Fuel Santa Barbar CA,20.01,Wells Fargo Business,033125,Meals/Entertainment,False,False,False,True
+3/31/25,Monthly Service Fee 10.00,15.53,Wells Fargo Business,033125,Interest/Bank Fees,False,False,False,True
+3/26/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+3/26/25,Recurring Payment authorized on 03/26 Midjourney Inc.,10.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+3/26/25,Purchase authorized on 03/26 Sprouts Farmers Market #,10.92,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+3/26/25,Coinbase Inc. 368400D6 250325 Rtl-KY5F9Mvs Ruben Ruiz 90.00 -,0.9,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+3/27/25,"Online Transfer From Carpefukendiem, LLC Business Checking 20.00",19.1,Wells Fargo Business,042325,Transfer,False,False,False,True
+3/31/25,"Online Transfer to Carpefukendiem, LLC Business Checking 11.00",8.1,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/1/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/1/25,"Online Transfer From Carpefukendiem, LLC Business Checking",25.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/1/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,125.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/1/25,Recurring Transfer to Ruiz R Way2Save Savings Ref,75.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/1/25,Purchase authorized on 04/01 Trader Joe S #11 Trader J Goleta,52.59,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/1/25,Kraken 8888378818 Kraken TX Ruben Ruiz,100.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/1/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,29.51,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/2/25,Purchase authorized on 04/02 Sprouts Farmers Market #,14.06,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/2/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,14.45,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/3/25,Purchase authorized on 04/03 Cvs/Pharmacy #09 09737--1,3.98,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/3/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,9.47,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/7/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/7/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,40.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/7/25,Purchase authorized on 04/05 Sprouts Farmers Market #,7.49,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/7/25,Recurring Payment authorized on 04/06 Affirm * Pay I0Bfl,17.01,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/7/25,Purchase with Cash Back $ 10.00 authorized on 04/06 Sprouts,17.99,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/7/25,Purchase authorized on 04/06 Trader Joe S #11 Trader J Goleta,11.24,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/7/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 3.00,12.74,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/8/25,Schwab Brokerage Moneylink 250408 558622457707442,893.55,Wells Fargo Business,042325,Office Supplies,False,False,False,True
+4/8/25,"Online Transfer From Carpefukendiem, LLC Business Checking",500.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/8/25,Purchase authorized on 04/07 Sq *Lighthouse Cof Goleta CA,1.5,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/8/25,"Online Transfer to Carpefukendiem, LLC Business Checking",300.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/8/25,Purchase authorized on 04/08 Trader Joe S #11 Trader J Goleta,20.19,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/8/25,Kraken 8888378818 Kraken TX Ruben Ruiz,400.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/8/25,Kraken 8888378818 Kraken TX Ruben Ruiz,500.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/8/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,182.6,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/9/25,Purchase authorized on 04/08 Chipotle 1688 Santa Barbara CA,29.01,Wells Fargo Business,042325,Meals/Entertainment,False,False,False,True
+4/9/25,Purchase authorized on 04/08 Chipotle 1688 Santa Barbara CA,3.93,Wells Fargo Business,042325,Meals/Entertainment,False,False,False,True
+4/9/25,Purchase with Cash Back $ 20.00 authorized on 04/09 Sprouts,26.99,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/9/25,Purchase authorized on 04/09 Sprouts Farmers Market #,10.99,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/9/25,Coinbase Inc. 6D74DA2A 250408 Rtl-Gdepqqzr Ruben Ruiz,50.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/9/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 4.00,57.68,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/10/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,150.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/10/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,11.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/10/25,Purchase authorized on 04/09 IN-N-Out Goleta Goleta CA,11.85,Wells Fargo Business,042325,Meals/Entertainment,False,False,False,True
+4/10/25,Purchase authorized on 04/09 Pressed - Paseo Nu,35.3,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/10/25,Kraken 8888378818 Kraken TX Ruben Ruiz,150.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/10/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,19.53,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/11/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174 30.00,49.53,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/14/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,10.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/14/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/14/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,100.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/14/25,"Online Transfer From Carpefukendiem, LLC Business Checking",83.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/14/25,"Online Transfer From Carpefukendiem, LLC Business Checking",165.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/14/25,Purchase authorized on 04/10 Habit Buellton 433 Buellton CA,15.6,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/14/25,Purchase authorized on 04/11 Sq *Panino Goleta Goleta CA,27.7,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/14/25,Purchase authorized on 04/12 Ptgc LLC Goleta Goleta CA,12.38,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/14/25,"Online Transfer to Carpefukendiem, LLC Business Checking",5.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/14/25,Purchase authorized on 04/13 Sprouts Farmers Market #,10.18,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/14/25,Purchase authorized on 04/14 Trader Joe S #11 Trader J Goleta,24.14,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/14/25,Coinbase Inc. 08826E43 250414 Rtl-7Cm5T7Up Ruben Ruiz,100.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/14/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 5.00,227.53,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/15/25,"Online Transfer From Carpefukendiem, LLC Business Checking 200.00",427.53,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/16/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,200.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/16/25,So Cal Gas Paid Scgc 250415 1529145412,165.0,Wells Fargo Business,042325,Travel,False,False,False,True
+4/16/25,Coinbase Inc. 34A43800 250415 Rtl-Rsmtlwwf Ruben Ruiz 400.00,62.53,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/17/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/17/25,Purchase authorized on 04/16 Spo*Thedailygrind1 Santa,33.83,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/17/25,Purchase authorized on 04/17 Costco Whse #0474 Goleta CA,3.8,Wells Fargo Business,042325,Office Supplies,False,False,False,True
+4/17/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,42.9,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/18/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/18/25,Purchase authorized on 04/17 Sq *Lighthouse Cof Goleta CA,13.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/18/25,Purchase with Cash Back $ 20.00 authorized on 04/18 Trader,52.07,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/18/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,75.83,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/21/25,Instant Pmt From Coinbase on 04/21,218.4,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/21/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0S3Rbdfj",50.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/21/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,11.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/21/25,Purchase authorized on 04/17 Camino Real Cinema,21.5,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/21/25,Zelle to Lopez Paco on 04/19 Ref #Rp0Yqtgg5Y Cuts,90.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/21/25,Zelle to Ruiz Janice on 04/21 Ref #Pp0Yqzbzct Joint Credit,200.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/21/25,"Online Transfer to Carpefukendiem, LLC Business Checking",15.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/21/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,27.73,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/22/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174 100.00,127.73,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",1000.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/23/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0S52Yv6R",300.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/23/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0S538Qbn",150.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",20.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/23/25,Purchase authorized on 04/21 Albertsons #0357 Goleta CA,17.39,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/23/25,Purchase authorized on 04/23 Trader Joe S #11 Trader J Goleta,39.74,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/23/25,Kraken 8888378818 Kraken TX Ruben Ruiz,105.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/23/25,Coinbase Inc. 362CA8D6 250423 Rtl-6Prjwd5V Ruben Ruiz,1000.0,Wells Fargo Business,042325,Uncategorized,False,False,False,True
+4/23/25,Paypal Inst Xfer 250423 Honeylove Ruben Ruiz,70.18,Wells Fargo Business,042325,Software/SaaS,False,False,False,True
+4/23/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,363.42,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/1/25,Recurring Transfer From Ruiz R Everyday Checking Ref #Op0RV748Wh 75.00,77.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/2/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928,1.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/2/25,"Online Transfer to Carpefukendiem, LLC Business Checking xxxxxx9898 Ref 78.00",0.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/3/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,1.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/4/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,2.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/8/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 3.00,5.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/9/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,7.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/10/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928,4.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/10/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref #Ib0Rylvmfp 11.00,0.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/11/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,2.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/15/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 5.00,7.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/18/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,9.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/21/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928,2.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/21/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref #Ib0S4Jzpfv on 11.00,0.0,Wells Fargo Business,042325,Loan/Payments,False,False,False,True
+4/22/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,1.0,Wells Fargo Business,042325,Transfer,False,False,False,True
+4/24/25,Purchase authorized on 04/23 Paypal *Thrivecaus,53.22,Wells Fargo Business,052325,Software/SaaS,False,False,False,True
+4/24/25,Purchase authorized on 04/23 Amazon Mktpl*FI0H3,57.1,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+4/24/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,251.1,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+4/25/25,Purchase authorized on 04/23 Amazon Mktpl*Yf2R0,50.62,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+4/25/25,Kraken 8888378818 Kraken TX Ruben Ruiz,100.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+4/25/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,99.48,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+4/28/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,100.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/28/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,25.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/28/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/28/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,120.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/28/25,Purchase authorized on 04/23 Amazon Mktpl*Yl3Tl,26.93,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+4/28/25,Purchase authorized on 04/24 Amazon Mktpl*Iz9W1,26.69,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+4/28/25,Recurring Payment authorized on 04/26 Midjourney Inc.,10.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+4/28/25,Purchase authorized on 04/26 Shell Service Station Goleta CA,52.28,Wells Fargo Business,052325,Travel,False,False,False,True
+4/28/25,"Online Transfer to Carpefukendiem, LLC Business Checking",7.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+4/28/25,Purchase authorized on 04/27 Trader Joe S #11 Trader J Goleta,2.74,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+4/28/25,Purchase authorized on 04/27 Costco Whse #0474 Goleta CA,19.98,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+4/28/25,Purchase authorized on 04/27 Target St 6865 Hollist Goleta CA,80.45,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+4/28/25,"Online Transfer to Carpefukendiem, LLC Business Checking",2.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+4/28/25,Kraken 8888378818 Kraken TX Ruben Ruiz,30.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+4/28/25,Kraken 8888378818 Kraken TX Ruben Ruiz,100.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+4/28/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 6.00,0.41,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+4/30/25,"Online Transfer From Carpefukendiem, LLC Business Checking",400.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/30/25,Kraken 8888378818 Kraken TX Ruben Ruiz 350.00,50.41,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/1/25,"Online Transfer From Carpefukendiem, LLC Business Checking",300.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/1/25,Purchase with Cash Back $ 20.00 authorized on 04/30,25.52,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/1/25,Purchase authorized on 04/30 Trader Joe S #11 Trader J Goleta,19.83,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/1/25,Recurring Transfer to Ruiz R Way2Save Savings Ref,75.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/1/25,Coinbase Inc. 9FC27CF8 250501 Rtl-2Sg8Lkfn Ruben Ruiz,300.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/1/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00 -,71.94,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/2/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,75.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/2/25,"Online Transfer From Carpefukendiem, LLC Business Checking",30.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/2/25,Kraken 8888378818 Kraken TX Ruben Ruiz,50.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/2/25,Overdraft Protection From 3037212929 34.84,17.9,Wells Fargo Business,052325,Interest/Bank Fees,False,False,False,True
+5/5/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,9.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/5/25,Purchase authorized on 05/02 Nikka Japanese Mar Goleta CA,17.9,Wells Fargo Business,052325,Meals/Entertainment,False,False,False,True
+5/5/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,8.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/6/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,4.4,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/6/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174 100.00,112.4,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/7/25,Purchase authorized on 05/05 Eller's Donut Hous Santa Barbara,4.0,Wells Fargo Business,052325,Meals/Entertainment,False,False,False,True
+5/7/25,Purchase authorized on 05/06 Sq *Lighthouse Cof Santa,7.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/7/25,Purchase authorized on 05/06 Miner's Ace Hardwa Goleta CA,15.2,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/7/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 3.00,83.2,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/8/25,Purchase with Cash Back $ 20.00 authorized on 05/07 Sprouts,26.99,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/8/25,Purchase authorized on 05/08 Costco Whse #0474 Goleta CA,3.8,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+5/8/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,50.41,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/9/25,Instant Pmt From Coinbase on 05/09,2161.5,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/9/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,30.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/9/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,50.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/9/25,Purchase authorized on 05/07 IN-N-Out Goleta Goleta CA,11.85,Wells Fargo Business,052325,Meals/Entertainment,False,False,False,True
+5/9/25,ATM Withdrawal authorized on 05/09 195 N Fairview Ave,40.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/9/25,Purchase authorized on 05/09 Holister Fuel Depot Goleta CA,22.58,Wells Fargo Business,052325,Travel,False,False,False,True
+5/9/25,Purchase authorized on 05/09 Costco Whse #0474 Goleta CA,150.85,Wells Fargo Business,052325,Office Supplies,False,False,False,True
+5/9/25,Purchase authorized on 05/09 Sprouts Farmers Market #,21.77,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/9/25,Purchase authorized on 05/09 Michaels Stores 9963 1 Goleta,39.95,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/9/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 5.00,1999.91,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/12/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/12/25,Purchase authorized on 05/08 Coldstone Creamery Goleta CA,18.94,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/09 Tst*Renauds Bakery Santa,21.33,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/09 Jewelry Couture By Ventura CA,1779.6,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/09 Pressed - Paseo Nu,35.3,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/09 Taqueria Lillys IN Goleta CA,10.36,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/09 Beverages & Mor Goleta CA,14.87,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/10 Blenders ME Santa Barbara CA,14.75,Wells Fargo Business,052325,Meals/Entertainment,False,False,False,True
+5/12/25,Purchase authorized on 05/10 WF Pkg Luke Self-P Santa,3.5,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/10 Tst*Benchmark Eate Santa,73.7,Wells Fargo Business,052325,Software/SaaS,False,False,False,True
+5/12/25,Purchase authorized on 05/10 City of Sb Dtp Kio 8058971986,6.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Purchase authorized on 05/10 Trader Joe S #11 Trader J Goleta,23.85,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/12/25,Recurring Payment authorized on 05/11 Highlevel Inc.,25.0,Wells Fargo Business,052325,Software/SaaS,True,False,False,True
+5/12/25,Overdraft Protection From 3037212929 11.16,3.87,Wells Fargo Business,052325,Interest/Bank Fees,False,False,False,True
+5/15/25,"Online Transfer From Carpefukendiem, LLC Business Checking",700.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/15/25,Kraken 8888378818 Kraken TX Ruben Ruiz 500.00,203.87,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/16/25,"Online Transfer to Carpefukendiem, LLC Business Checking",50.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/16/25,Purchase authorized on 05/16 Sprouts Farmers Market #,27.31,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/16/25,Coinbase Inc. 8072606F 250515 Rtl-H57Mrc8P Ruben Ruiz,100.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/16/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,25.56,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/19/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,300.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/19/25,"Online Transfer From Carpefukendiem, LLC Business Checking",20.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/19/25,Purchase authorized on 05/16 Sq *Lighthouse Cof Santa,13.75,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/19/25,Purchase authorized on 05/16 Santa Cruz Market Goleta CA,4.18,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/19/25,Purchase authorized on 05/17 Chipotle 1459 Goleta CA,4.19,Wells Fargo Business,052325,Meals/Entertainment,False,False,False,True
+5/19/25,Kraken 8888378818 Kraken TX Ruben Ruiz,300.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/19/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 3.00,20.44,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/20/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Sgrfdy7",100.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/20/25,Purchase authorized on 05/19 Trader Joe S #11 Trader J Goleta,8.18,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/20/25,Purchase authorized on 05/19 Cvs/Pharmacy #09 09156--5,3.2,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/20/25,ATM Withdrawal authorized on 05/20 195 N Fairview Ave,40.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/20/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,67.06,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/21/25,Purchase authorized on 05/20 Trader Joe S #11 Trader J Goleta,2.13,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/21/25,Purchase authorized on 05/21 Cvs/Pharm 09156--5875 Goleta,6.63,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/21/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,56.3,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/22/25,ATM Withdrawal authorized on 05/22 3804 State St Santa,20.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/22/25,ATM Withdrawal authorized on 05/22 3804 State St Santa 20.00,16.3,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/23/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,130.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",40.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",1000.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/23/25,Purchase authorized on 05/21 Taco Bell 027776 Goleta CA,10.85,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/23/25,Purchase authorized on 05/22 Albertsons #035 Goleta CA,1.08,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/23/25,Kraken 8888378818 Kraken TX Ruben Ruiz,170.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/23/25,"Kraken 8888378818 Kraken TX Ruben Ruiz 1,000.00",4.37,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+5/7/25,Kraken 8888378818 Kraken TX Ruben Ruiz Reference # 021214890853954,100.0,Wells Fargo Business,052325,Uncategorized,False,False,False,True
+4/24/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,3.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/25/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,5.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/28/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928,1.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+4/28/25,"Online Transfer to Carpefukendiem, LLC Business Checking xxxxxx9898 Ref 5.00",1.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+4/29/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 6.00,7.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/1/25,Recurring Transfer From Ruiz R Everyday Checking Ref #Op0S7Rvvwl 75.00,82.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/2/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,84.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/5/25,Overdraft Protection to 6632930928,34.84,Wells Fargo Business,052325,Interest/Bank Fees,False,False,False,True
+5/5/25,"Online Transfer to Carpefukendiem, LLC Business Checking xxxxxx9898 Ref",40.0,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/5/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref #Ib0S92Cwrf 9.00,0.16,Wells Fargo Business,052325,Loan/Payments,False,False,False,True
+5/6/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,1.16,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/8/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 3.00,4.16,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/9/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,6.16,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/12/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 5.00,11.16,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/13/25,Overdraft Protection to 6632930928 11.16,0.0,Wells Fargo Business,052325,Interest/Bank Fees,False,False,False,True
+5/19/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,1.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/20/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 3.00,4.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/21/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,6.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/22/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,8.0,Wells Fargo Business,052325,Transfer,False,False,False,True
+5/27/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Sjd2Gp6",100.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+5/27/25,"Online Transfer From Carpefukendiem, LLC Business Checking",53.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+5/27/25,Purchase authorized on 05/23 Dollartree Goleta CA,3.97,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/27/25,Purchase authorized on 05/24 Trader Joe S #11 Trader J Goleta,38.65,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/27/25,Purchase authorized on 05/24 Sprouts Farmers Market #,13.14,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/27/25,Purchase authorized on 05/25 Sq *Children's Cre Santa Barbara,15.0,Wells Fargo Business,062525,Meals/Entertainment,False,False,False,True
+5/27/25,Recurring Payment authorized on 05/26 Midjourney Inc.,10.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/27/25,Recurring Payment authorized on 05/26 Affirm * Pay Xwp6I,17.01,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/27/25,Purchase authorized on 05/26 Sprouts Farmers Market # 5.99,53.61,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/29/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Skmhqly",50.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+5/29/25,"Online Transfer From Carpefukendiem, LLC Business Checking",300.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+5/29/25,"Online Transfer From Carpefukendiem, LLC Business Checking",350.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+5/29/25,Purchase authorized on 05/29 Sprouts Farmers Market #,13.58,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/29/25,Coinbase Inc. 1A468Ecf 250529 Rtl-2SW8Usgf Ruben Ruiz,500.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/29/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,239.03,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+5/30/25,Purchase authorized on 05/29 Sprouts Farmers Market #,43.75,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/30/25,Purchase authorized on 05/29 Rite Aid 05791 Goleta CA,2.99,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/30/25,"Online Transfer to Carpefukendiem, LLC Business Checking",50.0,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+5/30/25,Coinbase Inc. 2042F808 250530 Rtl-RN9Tw732 Ruben Ruiz,100.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/30/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,40.29,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/2/25,Purchase authorized on 05/31 Trader Joe S #11 Trader J Goleta,15.97,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/2/25,"Online Transfer to Carpefukendiem, LLC Business Market Rate",6.0,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/2/25,Purchase authorized on 06/01 Albertsons #035 Goleta CA,7.51,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/2/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,8.81,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/3/25,Purchase authorized on 06/02 Sq *Lighthouse Cof Goleta CA,7.75,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/3/25,Purchase authorized on 06/03 Trader Joe S #11 Trader J Goleta,2.06,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/3/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00 -,3.0,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/4/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,10.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/4/25,"Online Transfer From Carpefukendiem, LLC Business Checking",7000.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/4/25,"Online Transfer From Carpefukendiem, LLC Business Checking",500.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/4/25,"Kraken 8888378818 Kraken TX Ruben Ruiz 7,000.00",507.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/5/25,ATM Cash Deposit on 06/05 195 N Fairview Ave Goleta CA,700.0,Wells Fargo Business,062525,Income,False,False,True,True
+6/5/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,15.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/5/25,Purchase authorized on 06/03 Taco Bell 027776 Goleta CA,10.85,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/5/25,"Online Transfer to Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/5/25,Coinbase Inc. Aa153DE5 250604 Rtl-8Mqmgw6T Ruben Ruiz,150.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/5/25,Coinbase Inc. C1802678 250604 Rtl-2F8Wgghe Ruben Ruiz,350.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/5/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,610.15,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/6/25,Purchase authorized on 06/04 Milpas Liquor & DE Santa,4.74,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/6/25,Purchase authorized on 06/05 Sprouts Farmers Market #,11.32,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/6/25,"Online Transfer to Carpefukendiem, LLC Business Checking",60.0,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/6/25,Kraken 8888378818 Kraken TX Ruben Ruiz,500.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/6/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,32.09,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/9/25,"Online Transfer From Carpefukendiem, LLC Business Checking",10.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/9/25,Purchase authorized on 06/05 Jersey Mikes 20335 Isla Vista CA,25.05,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/9/25,Purchase authorized on 06/06 Starbucks Store 05 Goleta CA,3.45,Wells Fargo Business,062525,Meals/Entertainment,False,False,False,True
+6/9/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,11.59,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/10/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Sq744Js",100.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/10/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/10/25,Purchase authorized on 06/09 Sq *Lighthouse Cof Goleta CA,7.5,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/10/25,Purchase authorized on 06/10 Trader Joe S #11 Trader J Goleta,142.58,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/10/25,Purchase authorized on 06/10 Costco Whse #0474 Goleta CA,22.98,Wells Fargo Business,062525,Office Supplies,False,False,False,True
+6/10/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 3.00,35.53,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/12/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,130.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/12/25,"Online Transfer From Carpefukendiem, LLC Business Checking",10.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/12/25,"Online Transfer From Carpefukendiem, LLC Business Checking",10.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/12/25,Purchase authorized on 06/12 Sprouts Farmers Market #,17.2,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/12/25,Kraken 8888378818 Kraken TX Ruben Ruiz,150.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/12/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,17.33,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/13/25,Purchase authorized on 06/12 Target 0002 Goleta CA,8.16,Wells Fargo Business,062525,Office Supplies,False,False,False,True
+6/13/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,8.17,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/16/25,Purchase authorized on 06/12 Albertsons #0357 Goleta CA,1.13,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/16/25,Purchase authorized on 06/14 Albertsons #0357 Goleta CA,12.09,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/16/25,Overdraft Protection From 3037212929 25.00,19.95,Wells Fargo Business,062525,Interest/Bank Fees,False,False,False,True
+6/18/25,"Online Transfer From Carpefukendiem, LLC Business Checking",250.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/18/25,Kraken 8888378818 Kraken TX Ruben Ruiz 250.00,19.95,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/20/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,40.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/20/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/20/25,Purchase authorized on 06/18 Sprouts Farmers Market #,2.81,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/20/25,Purchase authorized on 06/19 Sq *McConnell's FI Santa Barbara,25.0,Wells Fargo Business,062525,Meals/Entertainment,False,False,False,True
+6/20/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,50.14,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",30.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",20.76,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/23/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Svvjm6S",40.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/23/25,"Online Transfer From Carpefukendiem, LLC Business Checking",25.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/23/25,Purchase authorized on 06/19 Hotel Californian Santa Barbara,3.0,Wells Fargo Business,062525,Meals/Entertainment,False,False,False,True
+6/23/25,Purchase authorized on 06/19 Rusty S Pizza Parl Santa Barbara,31.91,Wells Fargo Business,062525,Meals/Entertainment,False,False,False,True
+6/23/25,Purchase authorized on 06/20 Prime Video Channe,5.99,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/23/25,Purchase with Cash Back $ 10.00 authorized on 06/21 Trader,51.47,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/23/25,Purchase authorized on 06/22 Sq *Lighthouse Cof Goleta CA,7.25,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/23/25,Purchase authorized on 06/23 Sprouts Farmers Market #,47.44,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/23/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 6.00,12.84,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/24/25,Purchase authorized on 06/24 Albertsons #035 Goleta CA,4.62,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/24/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,7.22,Wells Fargo Business,062525,Loan/Payments,False,False,False,True
+6/25/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0SW859Pd",1000.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/25/25,"Online Transfer From Carpefukendiem, LLC Business Checking",120.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/25/25,"Online Transfer From Carpefukendiem, LLC Business Checking",700.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/25/25,ATM Withdrawal authorized on 06/25 195 N Fairview Ave,20.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/25/25,Kraken 8888378818 Kraken TX Ruben Ruiz,120.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/25/25,Kraken 8888378818 Kraken TX Ruben Ruiz,940.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+6/25/25,Monthly Service Fee 10.00,737.22,Wells Fargo Business,062525,Interest/Bank Fees,False,False,False,True
+5/28/25,Kraken 8888378818 Kraken TX Ruben Ruiz Reference # 021214895753031,100.0,Wells Fargo Business,062525,Uncategorized,False,False,False,True
+5/30/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,9.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/2/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,11.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/3/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,13.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/4/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,15.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/6/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,16.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/9/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,18.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/10/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,20.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/11/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 3.00,23.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/13/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,24.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/16/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,25.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/17/25,Overdraft Protection to 6632930928 25.00,0.0,Wells Fargo Business,062525,Interest/Bank Fees,False,False,False,True
+6/23/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,2.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/24/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 6.00,8.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/25/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,9.0,Wells Fargo Business,062525,Transfer,False,False,False,True
+6/26/25,"Online Transfer From Carpefukendiem, LLC Business Checking",600.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+6/26/25,"Online Transfer From Carpefukendiem, LLC Business Market",75.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+6/26/25,Recurring Payment authorized on 06/26 Midjourney Inc.,10.0,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/26/25,So Cal Gas Paid Scgc 250625 1529145412,54.23,Wells Fargo Business,072425,Travel,False,False,False,True
+6/26/25,Kraken 8888378818 Kraken TX Ruben Ruiz,600.0,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/26/25,Kraken 8888378818 Kraken TX Ruben Ruiz 700.00,47.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/30/25,"Online Transfer From Carpefukendiem, LLC Business Market",100.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+6/30/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,50.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+6/30/25,"Online Transfer From Carpefukendiem, LLC Business Market",500.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+6/30/25,Purchase authorized on 06/26 Prime Video *Nq6Kg,14.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/30/25,Purchase authorized on 06/27 Prime Video Channe,4.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/30/25,Purchase authorized on 06/27 PY *Shalhoob's Santa Barbara CA,21.58,Wells Fargo Business,072425,Meals/Entertainment,False,False,False,True
+6/30/25,Purchase authorized on 06/28 Sprouts Farmers Market #,5.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/30/25,Zelle to Lopez Paco on 06/28 Ref #Rp0Yyvqrz3 Cuts,85.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+6/30/25,ATM Withdrawal authorized on 06/28 195 N Fairview Ave,20.0,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/30/25,Purchase authorized on 06/28 Albertsons #035 Goleta CA,16.51,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+6/30/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 5.00,523.93,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/1/25,Instant Pmt From Coinbase on 07/01,2418.75,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/1/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,250.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/1/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/1/25,"Online Transfer From Carpefukendiem, LLC Business Checking",18.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/1/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,90.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/1/25,Purchase authorized on 06/30 Nikepos_US Camarillo CA,405.61,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/1/25,Purchase authorized on 06/30 Ls Rocket Fizz Sod,6.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/1/25,Recurring Transfer to Ruiz R Way2Save Savings Ref,75.0,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/1/25,Purchase authorized on 07/01 Sprouts Farmers Market #,6.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/1/25,"Online Transfer to Carpefukendiem, LLC Business Market Rate",10.0,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/1/25,Zelle to Ruiz Janice on 07/01 Ref #Pp0Yz6L5Pd Health,2235.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/1/25,"Online Transfer to Carpefukendiem, LLC Business Checking",50.0,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/1/25,Online Transfer to Nail-Ruiz J Way2Save Savings xxxxxx4174 Ref,500.0,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/1/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 3.00,108.09,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/2/25,Purchase authorized on 06/30 Milpas Liquor & DE Santa,3.0,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/2/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,104.09,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/3/25,"Online Transfer From Carpefukendiem, LLC Business Checking",50.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/3/25,Purchase authorized on 07/03 Sprouts Farmers Market #,3.29,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/3/25,Purchase with Cash Back $ 30.00 authorized on 07/03 Sprouts,35.59,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/3/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,113.21,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/7/25,"Online Transfer From Carpefukendiem, LLC Business Checking",150.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/7/25,Purchase authorized on 07/02 Prime Video *N34Qf,7.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/7/25,Purchase authorized on 07/03 Prime Video *N35Hx,19.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/7/25,Purchase authorized on 07/03 Fairview Twin Goleta CA,56.72,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/7/25,Purchase authorized on 07/05 Sprouts Farmers Market #,33.98,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/7/25,Purchase authorized on 07/05 Pressed - Paseo Nu,35.3,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/7/25,Purchase authorized on 07/05 Hotel Californian Santa Barbara,3.0,Wells Fargo Business,072425,Meals/Entertainment,False,False,False,True
+7/7/25,Purchase authorized on 07/06 Sq *Lighthouse Cof Goleta CA,48.25,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/7/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 7.00,50.98,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/8/25,Purchase authorized on 07/07 Sp Powertoolsadapt Les Cedres,31.15,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/8/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,18.83,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/9/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,300.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/9/25,"Online Transfer From Carpefukendiem, LLC Business Checking 50.00",368.83,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/10/25,Kraken 8888378818 Kraken TX Ruben Ruiz 350.00,18.83,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/14/25,"Online Transfer From Carpefukendiem, LLC Business Checking",1000.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/14/25,Purchase authorized on 07/11 Sprouts Farmers Market #,6.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/14/25,Purchase authorized on 07/13 Prime Video *Nr82L,14.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/14/25,Kraken 8888378818 Kraken TX Ruben Ruiz,750.0,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/14/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,244.85,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/17/25,Purchase authorized on 07/17 Sprouts Farmers Market #,14.28,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/17/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,229.57,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/18/25,"Online Transfer to Carpefukendiem, LLC Business Market Rate 150.00",79.57,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/21/25,Purchase authorized on 07/20 Prime Video Channe,5.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/21/25,Purchase authorized on 07/20 Costco Whse #0474 Goleta CA,24.16,Wells Fargo Business,072425,Office Supplies,False,False,False,True
+7/21/25,Purchase authorized on 07/20 The Home Depot #6623 Goleta,5.61,Wells Fargo Business,072425,Office Supplies,False,False,False,True
+7/21/25,Purchase authorized on 07/20 Sprouts Farmers Market #,15.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/21/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 4.00,23.82,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/22/25,"Online Transfer From Carpefukendiem, LLC Business Market",50.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/22/25,Purchase authorized on 07/21 Prime Video *8E9Dr,22.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/22/25,Purchase authorized on 07/21 Sprouts Farmers Market #,12.5,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/22/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,36.33,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/23/25,Purchase authorized on 07/22 Prime Video Channe,9.99,Wells Fargo Business,072425,Uncategorized,False,False,False,True
+7/23/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,25.34,Wells Fargo Business,072425,Loan/Payments,False,False,False,True
+7/1/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928,5.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/1/25,Recurring Transfer From Ruiz R Everyday Checking Ref #Op0Syhnwd8 75.00,89.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/2/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 3.00,92.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/3/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,93.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/7/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,95.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/8/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 7.00,102.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/9/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,103.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/15/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,105.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/18/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,106.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/22/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 4.00,110.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/23/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,112.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/24/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,113.0,Wells Fargo Business,072425,Transfer,False,False,False,True
+7/25/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+7/25/25,Purchase authorized on 07/24 Albertsons #035 Goleta CA,12.27,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+7/25/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,112.07,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+7/28/25,Purchase authorized on 07/25 Costco Whse #0474 Goleta CA,49.46,Wells Fargo Business,082525,Office Supplies,False,False,False,True
+7/28/25,Recurring Payment authorized on 07/26 Midjourney Inc.,10.0,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+7/28/25,Purchase authorized on 07/27 Prime Video Channe,4.99,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+7/28/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,45.62,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/1/25,Instant Pmt From Coinbase on 08/01,1545.26,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/1/25,"Online Transfer From Carpefukendiem, LLC Business Checking",150.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/1/25,"Online Transfer From Carpefukendiem, LLC Business Market",50.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/1/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,25.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/1/25,Purchase authorized on 07/31 Albertsons #035 Goleta CA,12.27,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/1/25,"Zelle to Ruiz Janice on 08/01 Ref #Pp0Z499L9C Health 1,800.00",3.61,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/4/25,"Online Transfer From Carpefukendiem, LLC Business Checking",720.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/4/25,Purchase authorized on 08/01 Carls Jr 427 Goleta CA,10.65,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/4/25,Purchase authorized on 08/04 Sprouts Farmers Market #,5.99,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/4/25,Kraken 8888378818 Kraken TX Ruben Ruiz,700.0,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/4/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,4.97,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/5/25,"Online Transfer From Carpefukendiem, LLC Business Checking 40.00",44.97,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/7/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,30.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/7/25,Purchase authorized on 08/05 Tst*Sama Sama San Santa,19.48,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/7/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,54.49,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/8/25,"Online Transfer From Carpefukendiem, LLC Business Checking 100.00",154.49,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/11/25,Purchase authorized on 08/07 PY *Shalhoob's Santa Barbara CA,53.89,Wells Fargo Business,082525,Meals/Entertainment,False,False,False,True
+8/11/25,Purchase authorized on 08/08 31Stdaa-Ventura CT Ventura CA,56.73,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/11/25,Purchase authorized on 08/08 Sq *Dandy Souvenir Ventura CA,21.67,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/11/25,Purchase authorized on 08/11 Albertsons #035 Goleta CA,5.6,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/11/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 4.00,12.6,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/14/25,"Online Transfer From Carpefukendiem, LLC Business Checking 100.00",112.6,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/15/25,Kraken 8888378818 Kraken TX Ruben Ruiz 100.00,12.6,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/18/25,"Online Transfer From Carpefukendiem, LLC Business Checking",75.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/18/25,Purchase authorized on 08/17 Paypal *Acquisitio 4029357733,9.75,Wells Fargo Business,082525,Software/SaaS,False,False,False,True
+8/18/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,76.85,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/19/25,Purchase authorized on 08/18 Trader Joe S #11 5767 Cal,7.65,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/19/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,68.2,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/20/25,"Online Transfer From Carpefukendiem, LLC Business Checking",2.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/20/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,11.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/20/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/20/25,Zelle to Ruiz Janice on 08/19 Ref # Wfct0Z66Xnxt CC,81.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/20/25,Purchase authorized on 08/20 Sprouts Farmers Market #,14.78,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/20/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,84.42,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/21/25,Purchase authorized on 08/20 Prime Video Channe,5.99,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/21/25,Socalgas Paid Scgc 250820 1529145412,50.0,Wells Fargo Business,082525,Travel,False,False,False,True
+8/21/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,27.43,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+8/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking 100.00",127.43,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/25/25,Purchase authorized on 08/22 Albertsons #0357 Goleta CA,16.3,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/25/25,Purchase authorized on 08/22 Prime Video Channe,9.99,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/25/25,Purchase authorized on 08/22 Rusty S Pizza Parl Santa Barbara,57.85,Wells Fargo Business,082525,Meals/Entertainment,False,False,False,True
+8/25/25,Purchase authorized on 08/23 Pet House Goleta CA,17.39,Wells Fargo Business,082525,Uncategorized,False,False,False,True
+8/25/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 4.00,21.9,Wells Fargo Business,082525,Loan/Payments,False,False,False,True
+7/28/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,114.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+7/29/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,116.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/5/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,118.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/8/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,119.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/12/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 4.00,123.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/19/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,124.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/20/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,125.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/21/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,126.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/22/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,127.0,Wells Fargo Business,082525,Transfer,False,False,False,True
+8/26/25,Recurring Payment authorized on 08/26 Midjourney Inc. 10.00,11.9,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+8/28/25,Purchase authorized on 08/27 Prime Video Channe,4.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+8/28/25,Overdraft Protection From 3037212929 25.00,31.91,Wells Fargo Business,092425,Interest/Bank Fees,False,False,False,True
+8/29/25,Purchase authorized on 08/28 Audible*7I23W9623,14.95,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+8/29/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,15.96,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/2/25,Instant Pmt From Coinbase on 08/31,1117.61,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/2/25,Purchase authorized on 08/29 Prime Video *Tw6Qg,5.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/2/25,"Online Transfer to Carpefukendiem, LLC Business Checking",9.95,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/2/25,Purchase authorized on 08/31 Prime Video *Bn4LF,17.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/2/25,Zelle to Ruiz Janice on 08/31 Ref # Wfct0Z7D5W7Y Health,1100.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/2/25,Purchase authorized on 08/31 Prime Video *Aj65D,19.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/2/25,Overdraft Protection From 3037212929 25.00,4.65,Wells Fargo Business,092425,Interest/Bank Fees,False,False,False,True
+9/3/25,"Online Transfer From Carpefukendiem, LLC Business Checking 100.00",104.65,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/4/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/4/25,ATM Withdrawal authorized on 09/03 195 N Fairview Ave 40.00,164.65,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/5/25,Purchase authorized on 09/03 Albertsons #0357 Goleta CA,6.63,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/5/25,Purchase authorized on 09/03 Taco Bell 027776 Goleta CA,9.33,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/5/25,Purchase authorized on 09/04 Beverages & More # Goleta CA,19.65,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/5/25,"Online Transfer to Carpefukendiem, LLC Business Checking 115.00",14.04,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/8/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,20.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/8/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,10.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/8/25,Purchase authorized on 09/05 Tst* Nothing Bundt Goleta CA,13.5,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/8/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,29.54,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/9/25,Purchase authorized on 09/08 Nyx*Clean Wave Car Barbara CA,16.0,Wells Fargo Business,092425,Meals/Entertainment,False,False,False,True
+9/9/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,12.54,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/10/25,"Online Transfer From Carpefukendiem, LLC Business Checking 100.00",112.54,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/11/25,"Online Transfer From Carpefukendiem, LLC Business Checking 250.00",362.54,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/12/25,"Online Transfer From Carpefukendiem, LLC Business Checking",40.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/12/25,Kraken 8888378818 Kraken TX Ruben Ruiz 300.00,102.54,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/15/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,7.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/15/25,"Online Transfer From Carpefukendiem, LLC Business Checking",10.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/15/25,Purchase authorized on 09/13 Finney's Goleta Goleta CA,87.0,Wells Fargo Business,092425,Meals/Entertainment,False,False,False,True
+9/15/25,Purchase authorized on 09/14 Sprouts Farmers Market #,13.28,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/15/25,Purchase authorized on 09/14 Sq *Lighthouse Cof Goleta CA,6.5,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/15/25,Overdraft Protection From 3037212929 25.00,37.76,Wells Fargo Business,092425,Interest/Bank Fees,False,False,False,True
+9/16/25,"Online Transfer From Carpefukendiem, LLC Business Checking",250.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/16/25,Purchase authorized on 09/15 Prime Video *Ch89H,14.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/16/25,Kraken 8888378818 Kraken TX Ruben Ruiz,200.0,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/16/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,71.77,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/18/25,"Online Transfer From Carpefukendiem, LLC Business Checking",300.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/18/25,Kraken 8888378818 Kraken TX Ruben Ruiz 250.00,121.77,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking",200.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking",250.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking",15.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/22/25,Purchase authorized on 09/18 Albertsons #0357 Goleta CA,6.85,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/22/25,Purchase authorized on 09/20 Prime Video Channe,5.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/22/25,Purchase authorized on 09/20 Target T-3298 Santa Barbara CA,44.77,Wells Fargo Business,092425,Meals/Entertainment,False,False,False,True
+9/22/25,Purchase authorized on 09/21 Tillys #227 Goleta CA,48.91,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/22/25,"Online Transfer to Carpefukendiem, LLC Business Checking",30.0,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/22/25,Kraken 8888378818 Kraken TX Ruben Ruiz,200.0,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/22/25,Kraken 8888378818 Kraken TX Ruben Ruiz,250.0,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/22/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 4.00,96.25,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/23/25,Purchase authorized on 09/22 Prime Video Channe,9.99,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/23/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,85.26,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/24/25,Purchase authorized on 09/22 PY *Shalhoob's Fun Santa,4.5,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/24/25,Purchase authorized on 09/23 Sq *Panino Goleta Goleta CA,42.23,Wells Fargo Business,092425,Uncategorized,False,False,False,True
+9/24/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,36.53,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+8/26/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 4.00,131.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+8/29/25,Overdraft Protection to 6632930928 25.00,106.0,Wells Fargo Business,092425,Interest/Bank Fees,False,False,False,True
+9/2/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,107.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/3/25,Overdraft Protection to 6632930928 25.00,82.0,Wells Fargo Business,092425,Interest/Bank Fees,False,False,False,True
+9/8/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref #Ib0Ttldlf3 on 20.00,62.0,Wells Fargo Business,092425,Loan/Payments,False,False,False,True
+9/9/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,63.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/10/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,64.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/16/25,Overdraft Protection to 6632930928 25.00,39.0,Wells Fargo Business,092425,Interest/Bank Fees,False,False,False,True
+9/17/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,40.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/23/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 4.00,44.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/24/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,45.0,Wells Fargo Business,092425,Transfer,False,False,False,True
+9/25/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0V2Ly9J3",30.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/25/25,Purchase with Cash Back $ 20.00 authorized on 09/24 Sprouts,30.28,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/25/25,Purchase authorized on 09/25 Sprouts Farmers Market # 24.97,11.28,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/26/25,Recurring Payment authorized on 09/26 Midjourney Inc. 10.00,1.28,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/29/25,"Online Transfer From Carpefukendiem, LLC Business Checking",10.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/29/25,"Online Transfer From Carpefukendiem, LLC Business Market",20.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/29/25,"Online Transfer From Carpefukendiem, LLC Business Market",450.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/29/25,Purchase authorized on 09/27 Prime Video Channe,4.99,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/29/25,Purchase authorized on 09/27 Dollartree Goleta CA,2.04,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/29/25,Purchase authorized on 09/27 Sp Aggressive Socc,26.21,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/29/25,Purchase authorized on 09/28 Audible*NJ4Ze5Y60,14.95,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/29/25,Purchase authorized on 09/28 Cvs/Pharmacy #09156 Goleta,6.3,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/29/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 5.00,421.79,Wells Fargo Business,102425,Loan/Payments,False,False,False,True
+9/30/25,Instant Pmt From Coinbase on 09/30,528.65,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/30/25,"Online Transfer From Carpefukendiem, LLC Business Checking",945.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/30/25,Purchase authorized on 09/29 Jewelry Couture By Ventura CA,398.68,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+9/30/25,Zelle to Ruiz Janice on 09/30 Ref # Wfct0Zbhrdsm Health,965.0,Wells Fargo Business,102425,Professional Services,False,False,False,True
+9/30/25,Zelle to Ruiz Janice on 09/30 Ref # Wfct0Zbjq34P Health,530.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/30/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,0.76,Wells Fargo Business,102425,Loan/Payments,False,False,False,True
+10/3/25,"Online Transfer From Carpefukendiem, LLC Business Checking",300.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/3/25,Kraken 8888378818 Kraken TX Ruben Ruiz 250.00,50.76,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/6/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,40.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/6/25,Purchase authorized on 10/05 Starbucks 05314 Goleta CA,11.7,Wells Fargo Business,102425,Meals/Entertainment,False,False,False,True
+10/6/25,Purchase authorized on 10/05 Finney's Goleta Goleta CA,68.51,Wells Fargo Business,102425,Meals/Entertainment,False,False,False,True
+10/6/25,Purchase authorized on 10/05 Sprouts Farmers Market # 10.48,0.07,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/8/25,"Online Transfer From Carpefukendiem, LLC Business Checking",250.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/8/25,Kraken 8888378818 Kraken TX Ruben Ruiz 250.00,0.07,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/9/25,"Online Transfer From Carpefukendiem, LLC Business Checking 300.00",300.07,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/10/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/10/25,"Online Transfer to Carpefukendiem, LLC Business Checking",50.0,Wells Fargo Business,102425,Loan/Payments,False,False,False,True
+10/10/25,Kraken 8888378818 Kraken TX Ruben Ruiz 250.00,100.07,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/14/25,Purchase authorized on 10/11 Storke Fuel Dep Goleta CA,42.82,Wells Fargo Business,102425,Travel,False,False,False,True
+10/14/25,Purchase authorized on 10/11 Chipotle 1459 Goleta CA,34.91,Wells Fargo Business,102425,Meals/Entertainment,False,False,False,True
+10/14/25,Purchase authorized on 10/11 Rusty S Pizza Parl Goleta CA,17.3,Wells Fargo Business,102425,Meals/Entertainment,False,False,False,True
+10/14/25,Purchase authorized on 10/11 Rusty S Pizza Parl Goleta CA 5.44 -,0.4,Wells Fargo Business,102425,Meals/Entertainment,False,False,False,True
+10/16/25,"Online Transfer From Carpefukendiem, LLC Business Checking 251.00",250.6,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/17/25,Kraken Kraken TX Kraken TX Ruben Ruiz 250.00,0.6,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/21/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/21/25,"Online Transfer From Carpefukendiem, LLC Business Checking",60.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/21/25,Purchase authorized on 10/20 Prime Video Channe,5.99,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/21/25,Kraken Kraken TX Kraken TX Ruben Ruiz,150.0,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/21/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,3.61,Wells Fargo Business,102425,Loan/Payments,False,False,False,True
+10/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking",150.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/22/25,Kraken Kraken TX Kraken TX Ruben Ruiz,150.0,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/22/25,Overdraft Protection From 3037212929 14.00,17.61,Wells Fargo Business,102425,Interest/Bank Fees,False,False,False,True
+10/23/25,Purchase authorized on 10/22 Prime Video Channe,12.99,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/23/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,3.62,Wells Fargo Business,102425,Loan/Payments,False,False,False,True
+9/25/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,47.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+9/30/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 5.00,52.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/1/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,53.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/6/25,ATM Withdrawal authorized on 10/06 195 N Fairview Ave Goleta CA 40.00,13.0,Wells Fargo Business,102425,Uncategorized,False,False,False,True
+10/22/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,14.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/23/25,Overdraft Protection to 6632930928 14.00,0.0,Wells Fargo Business,102425,Interest/Bank Fees,False,False,False,True
+10/24/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,1.0,Wells Fargo Business,102425,Transfer,False,False,False,True
+10/27/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Vg6Mtnm",100.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+10/27/25,"Online Transfer From Carpefukendiem, LLC Business Checking",25.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+10/27/25,Purchase authorized on 10/26 Cvs/Pharmacy #09156 Goleta,92.83,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+10/27/25,ATM Withdrawal authorized on 10/26 195 N Fairview Ave,20.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+10/27/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,14.79,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+10/28/25,Purchase authorized on 10/27 Prime Video Channe,4.99,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+10/28/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,8.8,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+10/30/25,"Online Transfer From Carpefukendiem, LLC Business Checking",10.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+10/30/25,Recurring Payment authorized on 10/29 Midjourney Inc. 10.00,8.8,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/4/25,ATM Cash Deposit on 11/04 195 N Fairview Ave Goleta CA,156.0,Wells Fargo Business,112625,Income,False,False,True,True
+11/4/25,"Online Transfer From Carpefukendiem, LLC Business Checking 4.00",168.8,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/5/25,Instant Pmt From Coinbase on 11/05,109.8,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/5/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,35.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/5/25,Purchase authorized on 11/05 Sprouts Farmers Market #,12.21,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/5/25,Purchase authorized on 11/05 Wingstop 2592 Goleta CA,10.86,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/5/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,288.53,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/6/25,Purchase authorized on 11/05 Starbucks 05314 Goleta CA,4.75,Wells Fargo Business,112625,Meals/Entertainment,False,False,False,True
+11/6/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,282.78,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/7/25,ATM Cash Deposit on 11/07 195 N Fairview Ave Goleta CA,700.0,Wells Fargo Business,112625,Income,False,False,True,True
+11/7/25,Purchase authorized on 11/05 Dlr Wdtc Package 7147814669,200.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/7/25,Purchase authorized on 11/05 Tst* Jeannine's at Santa Barbara,63.99,Wells Fargo Business,112625,Meals/Entertainment,False,False,False,True
+11/7/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,716.79,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/10/25,"Online Transfer From Carpefukendiem, LLC Business Checking",300.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/10/25,"Online Transfer to Carpefukendiem, LLC Business Checking",105.0,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/10/25,Purchase authorized on 11/08 Sq *Eller's Donut Santa Barbara,64.0,Wells Fargo Business,112625,Meals/Entertainment,False,False,False,True
+11/10/25,Kraken Kraken TX Kraken TX Ruben Ruiz,600.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/10/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,246.79,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/12/25,"Online Transfer From Carpefukendiem, LLC Business Checking",150.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/12/25,Purchase authorized on 11/10 Prime Video *BT56M,9.99,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/12/25,Purchase authorized on 11/11 Prime Video *B88Vg,19.99,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/12/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,364.81,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/13/25,ATM Withdrawal authorized on 11/12 195 N Fairview Ave 360.00,4.81,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/17/25,ATM Cash Deposit on 11/15 195 N Fairview Ave Goleta CA,330.0,Wells Fargo Business,112625,Income,False,False,True,True
+11/17/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Vqcqqd4",1250.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/17/25,Recurring Payment authorized on 11/15 Amazon,149.77,Wells Fargo Business,112625,Office Supplies,False,False,False,True
+11/17/25,Purchase authorized on 11/16 Taqueria Lillys IN Goleta CA,14.05,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/17/25,Purchase authorized on 11/17 Sprouts Farmers Market #,2.85,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/17/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,1416.14,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/19/25,Purchase authorized on 11/17 Dlr Wdtc Package 7147814669,1400.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/19/25,Purchase authorized on 11/17 Starbucks Store 05 Goleta CA,2.25,Wells Fargo Business,112625,Meals/Entertainment,False,False,False,True
+11/19/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,11.89,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/20/25,"Online Transfer From Carpefukendiem, LLC Business Checking",250.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/20/25,Purchase authorized on 11/19 Prime Video *B07J9,3.79,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/20/25,Kraken Kraken TX Kraken TX Ruben Ruiz,250.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/20/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,7.1,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/21/25,"Online Transfer From Carpefukendiem, LLC Business Checking",31.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/21/25,Purchase authorized on 11/20 Prime Video Channe,5.99,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/21/25,Purchase authorized on 11/20 Sprouts Farmers Market #,22.4,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/21/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,7.71,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/24/25,ATM Cash Deposit on 11/22 195 N Fairview Ave Goleta CA,1050.0,Wells Fargo Business,112625,Income,False,False,True,True
+11/24/25,"Online Transfer From Carpefukendiem, LLC Business Checking",20.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/24/25,Purchase authorized on 11/22 Prime Video Channe,12.99,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/24/25,Kraken Kraken TX Kraken TX Ruben Ruiz,1000.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/24/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,63.72,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/25/25,Purchase authorized on 11/23 Habit LA Cumbre 43 Santa,21.28,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/25/25,Purchase authorized on 11/23 Habit LA Cumbre 43 Santa,24.0,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/25/25,Purchase authorized on 11/23 Starbucks 06674 Santa Barbara,5.95,Wells Fargo Business,112625,Meals/Entertainment,False,False,False,True
+11/25/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 3.00,9.49,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/26/25,Online Transfer From Ruiz R Way2Save Savings xxxxxx2929 Ref,9.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/26/25,Purchase authorized on 11/25 Albertsons #035 Goleta CA,9.97,Wells Fargo Business,112625,Uncategorized,False,False,False,True
+11/26/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929,1.0,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/26/25,Monthly Service Fee 10.00 -,2.48,Wells Fargo Business,112625,Interest/Bank Fees,False,False,False,True
+10/28/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,2.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+10/29/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,3.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/6/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,5.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/7/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,6.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/10/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,8.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/12/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,9.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/13/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,11.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/17/25,"Online Transfer to Carpefukendiem, LLC Business Checking xxxxxx9898 Ref 10.00",1.0,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/18/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,3.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/20/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,5.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/21/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,6.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/24/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,8.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/25/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,9.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/26/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928,3.0,Wells Fargo Business,112625,Transfer,False,False,False,True
+11/26/25,Online Transfer to Ruiz R Everyday Checking xxxxxx0928 Ref #Ib0Vth5Tq8 9.00,3.0,Wells Fargo Business,112625,Loan/Payments,False,False,False,True
+11/28/25,"Online Transfer From Carpefukendiem, LLC Business Checking 10.00",7.52,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/1/25,Instant Pmt From Coinbase on 12/01,1309.39,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/1/25,Instant Pmt From Coinbase on 12/01,237.74,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/1/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Vwndbl7",559.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/1/25,"Online Transfer From Carpefukendiem, LLC Business Market",5.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/1/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/1/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,20.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/1/25,Zelle to Ruiz Janice on 12/01 Ref # Wfct0Zk3Kvrq Health,1900.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/1/25,Zelle to Ruiz Janice on 12/01 Ref # Wfct0Zk3Swhz Health 250.00,8.65,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/2/25,"Online Transfer to Carpefukendiem, LLC Business Checking 8.50",0.15,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/4/25,"Online Transfer From Carpefukendiem, LLC Business Checking 20.00",20.15,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/8/25,"Online Transfer From Carpefukendiem, LLC Business Market",25.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/8/25,Purchase authorized on 12/04 Tst*Lighthouse Cof Santa,6.25,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/8/25,Purchase authorized on 12/04 IN-N-Out Goleta Goleta CA,10.88,Wells Fargo Business,122325,Meals/Entertainment,False,False,False,True
+12/8/25,Purchase authorized on 12/07 Sprouts Farmers Market # 12.58,15.44,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/9/25,Purchase authorized on 12/08 Panda Express #973 Goleta CA,9.9,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/9/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,4.54,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/10/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0Vzzff2T",75.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/10/25,Purchase authorized on 12/09 Amazon Prime*Kl3S7,2.99,Wells Fargo Business,122325,Office Supplies,False,False,False,True
+12/10/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 1.00,75.55,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/12/25,Instant Pmt From Coinbase Inc AS Custodian for on 12/12,475.99,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/12/25,"Online Transfer From Carpefukendiem, LLC Ref #Ib0W2Lckb9",1144.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/12/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,15.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/12/25,"Online Transfer to Carpefukendiem, LLC Business Checking",50.0,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/12/25,"Online Transfer to Carpefukendiem, LLC Business Checking 1,641.00",19.54,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/15/25,Purchase authorized on 12/11 South Coast Deli G Goleta CA 18.99,0.55,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/17/25,Instant Pmt From Coinbase on 12/17 290.78,291.33,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/18/25,Purchase authorized on 12/17 Dlr Coffee House Anaheim CA,21.28,Wells Fargo Business,122325,Meals/Entertainment,False,False,False,True
+12/18/25,Purchase authorized on 12/17 Cheesecake Anaheim Anaheim,118.47,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/18/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,149.58,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/19/25,"Online Transfer From Carpefukendiem, LLC Business Checking",54.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/19/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,30.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/19/25,"Online Transfer From Carpefukendiem, LLC Business Checking",100.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/19/25,Purchase authorized on 12/17 Dlr Off The Page Anaheim CA,51.7,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/19/25,Purchase authorized on 12/17 Dlr Studio Store Anaheim CA,21.55,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/19/25,Purchase authorized on 12/17 Dlr Pym Testkitche Anaheim CA,27.45,Wells Fargo Business,122325,Education/Training,False,False,False,True
+12/19/25,Purchase authorized on 12/17 Dlr Seaside Souven Anaheim CA,21.54,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/19/25,Purchase authorized on 12/17 Napolini Anaheim CA,12.93,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/19/25,Kraken Kraken TX Kraken TX Ruben Ruiz,15.0,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/19/25,Kraken Kraken TX Kraken TX Ruben Ruiz,100.0,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/19/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 5.00,78.41,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/22/25,"Online Transfer From Carpefukendiem, LLC Business Checking",40.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/22/25,Online Transfer From Nail-Ruiz J Way2Save Savings xxxxxx4174,69.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/22/25,Purchase authorized on 12/20 Prime Video Channe,5.99,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/22/25,"Purchase authorized on 12/20 Pressed Juicery, I 310-883-2114",10.0,Wells Fargo Business,122325,Meals/Entertainment,False,False,False,True
+12/22/25,Purchase authorized on 12/20 Sprouts Farmers Market #,11.77,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/22/25,Purchase authorized on 12/22 Sprouts Farmers Market #,12.98,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/22/25,Kraken Kraken TX Kraken TX Ruben Ruiz,75.0,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/22/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 4.00,67.67,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/23/25,Purchase authorized on 12/21 Taco Bell 027776 Goleta CA,9.99,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/23/25,Purchase authorized on 12/22 Prime Video Channe,12.99,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/23/25,ATM Withdrawal authorized on 12/22 195 N Fairview Ave,20.0,Wells Fargo Business,122325,Uncategorized,False,False,False,True
+12/23/25,Save As You Go Transfer Debit to Xxxxxxxxxxx2929 2.00,22.69,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+11/28/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,4.0,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/2/25,"Online Transfer to Carpefukendiem, LLC Business Checking xxxxxx9898 Ref 3.50",0.5,Wells Fargo Business,122325,Loan/Payments,False,False,False,True
+12/10/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,1.5,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/11/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 1.00,2.5,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/19/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 2.00,4.5,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/22/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 5.00,9.5,Wells Fargo Business,122325,Transfer,False,False,False,True
+12/23/25,Save As You Go Transfer Credit From Xxxxxxxxxxx0928 4.00,13.5,Wells Fargo Business,122325,Transfer,False,False,False,True
