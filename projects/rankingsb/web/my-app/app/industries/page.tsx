@@ -136,7 +136,7 @@ const industries = [
     color: "bg-amber-600",
     lightColor: "bg-amber-100",
     textColor: "text-amber-700",
-    image: "/images/auto-mechanic-santa-barbara.jpg",
+    image: "/images/2026-02-24-auto-mechanic-santa-barbara.png",
     stats: "+150% service calls"
   },
   {
@@ -147,7 +147,7 @@ const industries = [
     color: "bg-lime-500",
     lightColor: "bg-lime-100",
     textColor: "text-lime-700",
-    image: "/images/gym-fitness-santa-barbara.jpg",
+    image: "/images/2026-02-24-gym-fitness-santa-barbara.png",
     stats: "60+ new members/month"
   },
   {
@@ -158,7 +158,7 @@ const industries = [
     color: "bg-slate-500",
     lightColor: "bg-slate-100",
     textColor: "text-slate-600",
-    image: "/images/business-consulting-santa-barbara.jpg",
+    image: "/images/2026-02-24-business-consulting-santa-barbara.png",
     stats: "Custom solutions"
   }
 ]

@@ -1,5 +1,5 @@
 :HL["/_next/static/chunks/665dc3aa4aa2d85c.css","style"]
-:HL["/_next/static/chunks/0b3d079abb52e1c9.css","style"]
+:HL["/_next/static/chunks/ff27baf3cde8b011.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/logo.webp","image"]
 :HL["https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop","image"]
@@ -9,4 +9,4 @@
 :HL["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop","image"]
 :HL["https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop","image"]
 :HL["https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop","image"]
-0:{"buildId":"vc-HL8MgjYJp8IESk9kXQ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blog","paramType":null,"paramKey":"blog","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"BjySA1D5gMn_mvD1che4l","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"blog","paramType":null,"paramKey":"blog","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
