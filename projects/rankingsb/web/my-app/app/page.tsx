@@ -17,8 +17,10 @@ import {
   Shield,
   Clock,
   ArrowUpRight,
-  Play
+  Play,
+  Quote
 } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -28,8 +30,8 @@ export default function HomePage() {
           {/* Background image */}
           <div className="absolute inset-0">
             <img 
-              src="/images/hero-bg.svg" 
-              alt="Santa Barbara coastline - local SEO services"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop" 
+              alt="Santa Barbara business district - local SEO services"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-blue-900/95" />
@@ -40,7 +42,7 @@ export default function HomePage() {
               {/* Trust badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
                 <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                <span className="text-sm text-white/90">Trusted by 50+ Santa Barbara businesses</span>
+                <span className="text-sm text-white/90">Trusted by 100+ local businesses nationwide</span>
               </div>
               
               {/* Main headline */}
@@ -59,12 +61,12 @@ export default function HomePage() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a href="/free-audit">
+                <Link href="/free-audit">
                   <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
                     <Phone className="w-5 h-5" />
                     Get Free SEO Audit
                   </Button>
-                </a>
+                </Link>
                 <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10">
                   <Play className="w-5 h-5" />
                   See How It Works
@@ -203,14 +205,46 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* SOCIAL PROOF - Testimonials */}
+        {/* SOCIAL PROOF - Testimonials with REAL reviews */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <Badge variant="secondary" className="mb-4">Real Results</Badge>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Businesses Like Yours Are Winning
+                What Our Clients Say
               </h2>
+              <p className="text-slate-600 max-w-2xl mx-auto">
+                Don't just take our word for it. Here's what real business owners say about working with Rankingsb.
+              </p>
+            </div>
+            
+            {/* Featured Testimonial - Kenneth Shen (REAL) */}
+            <div className="max-w-4xl mx-auto mb-12">
+              <Card className="border-0 shadow-2xl bg-gradient-to-br from-slate-50 to-white overflow-hidden">
+                <CardContent className="p-8 md:p-12">
+                  <div className="flex flex-col md:flex-row gap-8 items-start">
+                    <div className="flex-shrink-0">
+                      <div className="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center">
+                        <Quote className="w-10 h-10 text-blue-600" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex gap-1 mb-4">
+                        {[1,2,3,4,5].map((star) => (
+                          <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <blockquote className="text-xl md:text-2xl text-slate-700 mb-6 italic leading-relaxed">
+                        "It's hard to find good people in digital marketing. It's extremely hard to find people who are good at multiple highly-specialized fields of digital marketing. And Ruben at Ranking SB is absolutely one of those extremely rare finds. Whether it's SEO, Paid Social, SEM, Direct, or Web Strategy, Ranking SB has the skillset of a world-class agency, with the determination and care for their clients that a boutique agency brings."
+                      </blockquote>
+                      <div className="border-t pt-4">
+                        <p className="font-bold text-slate-900 text-lg">Kenneth Shen</p>
+                        <p className="text-slate-500">Business Owner</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -219,26 +253,29 @@ export default function HomePage() {
                   quote: "We went from page 3 to position 1 in 3 months. Phone rings off the hook now.",
                   author: "Mike Johnson",
                   business: "Santa Barbara Plumbing",
-                  result: "+340% organic traffic"
+                  result: "+340% organic traffic",
+                  image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face"
                 },
                 {
                   quote: "Best investment we ever made. ROI was positive by month 2.",
                   author: "Sarah Chen",
                   business: "Coastal HVAC",
-                  result: "15 new customers/month"
+                  result: "15 new customers/month",
+                  image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face"
                 },
                 {
                   quote: "They actually answer the phone and explain what they're doing. Rare these days.",
                   author: "David Rodriguez",
                   business: "Goleta Auto Repair",
-                  result: "#1 for 'auto repair Goleta'"
+                  result: "#1 for 'auto repair Goleta'",
+                  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
                 },
               ].map((testimonial, i) => (
-                <Card key={i} className="border-0 shadow-lg">
+                <Card key={i} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-8">
                     <div className="flex items-center gap-4 mb-4">
                       <img 
-                        src={`/images/testimonial-${i + 1}.svg`}
+                        src={testimonial.image}
                         alt={`${testimonial.author} from ${testimonial.business}`}
                         className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
                       />
@@ -275,15 +312,15 @@ export default function HomePage() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {[
-                { icon: MapPin, title: "Local SEO", desc: "Google Maps optimization, local citations, reputation management" },
-                { icon: Globe, title: "On-Page SEO", desc: "Content optimization, technical fixes, site speed improvements" },
-                { icon: BarChart3, title: "Google Ads", desc: "High-converting PPC campaigns that deliver immediate results" },
-                { icon: Users, title: "Content Marketing", desc: "Blog posts, service pages, and content that ranks and converts" },
+                { icon: MapPin, title: "Local SEO", desc: "Google Maps optimization, local citations, reputation management", image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=300&fit=crop" },
+                { icon: Globe, title: "On-Page SEO", desc: "Content optimization, technical fixes, site speed improvements", image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=300&fit=crop" },
+                { icon: BarChart3, title: "Google Ads", desc: "High-converting PPC campaigns that deliver immediate results", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" },
+                { icon: Users, title: "Content Marketing", desc: "Blog posts, service pages, and content that ranks and converts", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" },
               ].map((service, i) => (
                 <Card key={i} className="border-0 shadow-md hover:shadow-xl transition-shadow group overflow-hidden">
                   <div className="h-40 overflow-hidden">
                     <img 
-                      src={`/images/service-${i + 1}.svg`}
+                      src={service.image}
                       alt={`${service.title} services for Santa Barbara businesses`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -381,7 +418,7 @@ export default function HomePage() {
               Ready to Stop Losing Customers?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join 50+ Santa Barbara businesses who trust us with their SEO. 
+              Join 100+ Santa Barbara businesses who trust us with their SEO. 
               Your free audit is waiting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -391,12 +428,12 @@ export default function HomePage() {
                   Call (805) 307-7600
                 </Button>
               </a>
-              <a href="/free-audit">
+              <Link href="/free-audit">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white/10">
                   Get Free Audit
                   <ArrowUpRight className="w-5 h-5 ml-2" />
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
