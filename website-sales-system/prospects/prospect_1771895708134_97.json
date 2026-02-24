@@ -1,0 +1,16 @@
+{
+  "city": "Ventura",
+  "query": "Ventura consultant",
+  "category": "Professional",
+  "id": "prospect_1771895708134_97",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 1,
+  "createdAt": "2026-02-24T01:15:09.048Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

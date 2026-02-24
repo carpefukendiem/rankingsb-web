@@ -1,0 +1,21 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara HVAC contractor",
+  "category": "Contractor",
+  "id": "prospect_1771895708133_0",
+  "businessName": "Elite Santa Barbara Services",
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 1,
+  "createdAt": "2026-02-24T01:15:08.134Z",
+  "status": "found",
+  "stage": "Outreach Sent",
+  "mockupPath": "/Users/rubenruiz/.openclaw/workspace/website-sales-system/mockups/prospect_1771895708133_0_quality-santa-barbara-contractors.html",
+  "previewUrl": "https://previews.rankingsb.com/quality-santa-barbara-contractors",
+  "updatedAt": "2026-02-24T01:15:09.204Z",
+  "lastContact": "2026-02-24T01:15:09.203Z",
+  "outreachChannel": "email"
+}

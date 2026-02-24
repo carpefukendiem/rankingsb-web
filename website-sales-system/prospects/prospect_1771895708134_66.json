@@ -1,0 +1,16 @@
+{
+  "city": "Carpinteria",
+  "query": "Carpinteria boutique",
+  "category": "Retail",
+  "id": "prospect_1771895708134_66",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 3,
+  "createdAt": "2026-02-24T01:15:08.744Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

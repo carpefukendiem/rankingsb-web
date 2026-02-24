@@ -1,0 +1,16 @@
+{
+  "city": "Carpinteria",
+  "query": "Carpinteria plumber",
+  "category": "Contractor",
+  "id": "prospect_1771895708133_53",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 1,
+  "createdAt": "2026-02-24T01:15:08.628Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

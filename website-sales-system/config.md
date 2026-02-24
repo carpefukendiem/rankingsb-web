@@ -63,8 +63,8 @@
 
 ## Daily Targets
 - **100 outreaches per day**
-- 20 new prospects researched
-- 5 mockups generated
+- **100 new prospects researched per day**
+- 5 mockups generated (for hot prospects)
 - 10 follow-ups sent
 
 ---

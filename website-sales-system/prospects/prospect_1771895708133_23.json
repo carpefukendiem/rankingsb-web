@@ -1,0 +1,16 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara auto repair",
+  "category": "Automotive",
+  "id": "prospect_1771895708133_23",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 3,
+  "createdAt": "2026-02-24T01:15:08.362Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

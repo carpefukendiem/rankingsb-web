@@ -204,8 +204,8 @@ class WebsiteSalesSystem {
     const stats = this.getStats();
     console.log('Current stats:', stats);
     
-    // 1. Generate new prospects (20/day)
-    const prospects = await this.generateProspects(20);
+    // 1. Generate new prospects (100/day)
+    const prospects = await this.generateProspects(100);
     
     // 2. Create mockups (5/day prioritized)
     const priorityProspects = prospects.filter(p => p.priority <= 2).slice(0, 5);

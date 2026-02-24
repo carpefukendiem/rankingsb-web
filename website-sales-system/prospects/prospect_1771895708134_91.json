@@ -1,0 +1,16 @@
+{
+  "city": "Ventura",
+  "query": "Ventura bakery",
+  "category": "Restaurant",
+  "id": "prospect_1771895708134_91",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 3,
+  "createdAt": "2026-02-24T01:15:08.989Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

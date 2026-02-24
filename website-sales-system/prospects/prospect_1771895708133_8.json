@@ -1,0 +1,21 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara carpet cleaning",
+  "category": "Home Services",
+  "id": "prospect_1771895708133_8",
+  "businessName": "Quality Santa Barbara Home Services",
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 2,
+  "createdAt": "2026-02-24T01:15:08.211Z",
+  "status": "found",
+  "stage": "Outreach Sent",
+  "mockupPath": "/Users/rubenruiz/.openclaw/workspace/website-sales-system/mockups/prospect_1771895708133_8_pro-santa-barbara-cleaning.html",
+  "previewUrl": "https://previews.rankingsb.com/pro-santa-barbara-cleaning",
+  "updatedAt": "2026-02-24T01:15:09.309Z",
+  "lastContact": "2026-02-24T01:15:09.309Z",
+  "outreachChannel": "email"
+}

@@ -1,0 +1,16 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara mechanic",
+  "category": "Automotive",
+  "id": "prospect_1771895708133_25",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 3,
+  "createdAt": "2026-02-24T01:15:08.379Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

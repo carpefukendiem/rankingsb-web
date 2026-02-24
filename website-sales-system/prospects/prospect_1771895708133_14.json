@@ -1,0 +1,16 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara boutique",
+  "category": "Retail",
+  "id": "prospect_1771895708133_14",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 2,
+  "createdAt": "2026-02-24T01:15:08.270Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

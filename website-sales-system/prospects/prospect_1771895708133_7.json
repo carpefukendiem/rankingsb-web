@@ -1,0 +1,21 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara house cleaning",
+  "category": "Home Services",
+  "id": "prospect_1771895708133_7",
+  "businessName": "Pro Santa Barbara Care",
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 1,
+  "createdAt": "2026-02-24T01:15:08.199Z",
+  "status": "found",
+  "stage": "Outreach Sent",
+  "mockupPath": "/Users/rubenruiz/.openclaw/workspace/website-sales-system/mockups/prospect_1771895708133_7_trusted-santa-barbara-home-services.html",
+  "previewUrl": "https://previews.rankingsb.com/trusted-santa-barbara-home-services",
+  "updatedAt": "2026-02-24T01:15:09.290Z",
+  "lastContact": "2026-02-24T01:15:09.290Z",
+  "outreachChannel": "email"
+}

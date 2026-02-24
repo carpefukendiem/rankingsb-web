@@ -1,0 +1,16 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara furniture store",
+  "category": "Retail",
+  "id": "prospect_1771895708133_16",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 3,
+  "createdAt": "2026-02-24T01:15:08.293Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

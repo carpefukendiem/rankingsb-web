@@ -1,0 +1,16 @@
+{
+  "city": "Carpinteria",
+  "query": "Carpinteria restaurant",
+  "category": "Restaurant",
+  "id": "prospect_1771895708133_63",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 2,
+  "createdAt": "2026-02-24T01:15:08.714Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}

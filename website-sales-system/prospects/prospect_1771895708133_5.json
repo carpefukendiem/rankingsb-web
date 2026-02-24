@@ -1,0 +1,21 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara landscaping service",
+  "category": "Home Services",
+  "id": "prospect_1771895708133_5",
+  "businessName": "Premier Santa Barbara Cleaning",
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 2,
+  "createdAt": "2026-02-24T01:15:08.182Z",
+  "status": "found",
+  "stage": "Outreach Sent",
+  "mockupPath": "/Users/rubenruiz/.openclaw/workspace/website-sales-system/mockups/prospect_1771895708133_5_santa-barbara-care.html",
+  "previewUrl": "https://previews.rankingsb.com/santa-barbara-care",
+  "updatedAt": "2026-02-24T01:15:09.272Z",
+  "lastContact": "2026-02-24T01:15:09.272Z",
+  "outreachChannel": "email"
+}

@@ -1,0 +1,21 @@
+{
+  "city": "Santa Barbara",
+  "query": "Santa Barbara plumber",
+  "category": "Contractor",
+  "id": "prospect_1771895708133_1",
+  "businessName": "Quality Santa Barbara HVAC",
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 2,
+  "createdAt": "2026-02-24T01:15:08.140Z",
+  "status": "found",
+  "stage": "Outreach Sent",
+  "mockupPath": "/Users/rubenruiz/.openclaw/workspace/website-sales-system/mockups/prospect_1771895708133_1_elite-santa-barbara-plumbing.html",
+  "previewUrl": "https://previews.rankingsb.com/elite-santa-barbara-plumbing",
+  "updatedAt": "2026-02-24T01:15:09.235Z",
+  "lastContact": "2026-02-24T01:15:09.234Z",
+  "outreachChannel": "email"
+}

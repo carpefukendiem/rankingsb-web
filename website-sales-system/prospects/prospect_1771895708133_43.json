@@ -1,0 +1,16 @@
+{
+  "city": "Goleta",
+  "query": "Goleta accountant",
+  "category": "Professional",
+  "id": "prospect_1771895708133_43",
+  "businessName": null,
+  "website": null,
+  "phone": null,
+  "email": null,
+  "address": null,
+  "hasWebsite": false,
+  "priority": 1,
+  "createdAt": "2026-02-24T01:15:08.540Z",
+  "status": "found",
+  "stage": "Prospect Found"
+}
