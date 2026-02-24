@@ -230,6 +230,49 @@ open ~/.openclaw/workspace/dashboard.html
 
 ---
 
+## 🎨 WEBSITE BUILD STANDARDS (Established Feb 24, 2026)
+
+### Quality Benchmark: 101 Jujutsu & Kickboxing Site
+**Golden Rule:** Every website must meet or exceed 101 JJKB quality.
+
+### Pre-Build Requirements:
+- [ ] Real logo file (PNG/SVG), sized 75px+ in navbar
+- [ ] Exact colors extracted FROM logo (never guess)
+- [ ] Real testimonials only (pull from GMB/Yelp)
+- [ ] Client photos preferred, AI-generated second, curated Unsplash third
+- [ ] NEVER generic stock photos
+
+### Page Structure Minimums:
+- [ ] Sticky navbar with logo image (not text)
+- [ ] Hero with headline, subhead, CTA, lead form
+- [ ] Services/industries grid
+- [ ] Why choose us / features
+- [ ] Real testimonials
+- [ ] Final CTA section
+- [ ] Full footer with sitemap
+
+### Quality Checks Before Deploy:
+- [ ] All links work (test every one)
+- [ ] Blog cards clickable
+- [ ] Mobile responsive
+- [ ] No "Johnny 5" as author (use client business name)
+- [ ] Interlinked throughout (relative links)
+- [ ] SITEMAP.md created
+- [ ] Would I pay $2,000+ for this?
+
+### Lessons Learned:
+- Logo text must be readable (size matters)
+- Colors must match brand exactly
+- Multiple iterations are normal and necessary
+- AI images > stock photos
+- Real reviews > fake testimonials
+- Full site interlinking critical
+- Client feedback drives quality
+
+**Full Standards Doc:** `WEBSITE-BUILD-STANDARDS.md`
+
+---
+
 *Memory compiled: February 16, 2026*
 *System version: 2026.2.14*
 *Status: Pre-launch, fully documented*

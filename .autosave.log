@@ -9117,3 +9117,128 @@
  create mode 120000 projects/rankingsb/web/my-app/public/images/business-consulting-santa-barbara.png
  create mode 120000 projects/rankingsb/web/my-app/public/images/gym-fitness-santa-barbara.png
 [2026-02-24 15:15:08] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 570fab1] Autosave: 2026-02-24 15:17:09 - Workspace sync
+ 324 files changed, 1730 insertions(+), 476 deletions(-)
+ create mode 100644 projects/rankingsb/SITEMAP.md
+ rename projects/rankingsb/web/my-app/dist/_next/static/{vc-HL8MgjYJp8IESk9kXQ => BjySA1D5gMn_mvD1che4l}/_buildManifest.js (86%)
+ rename projects/rankingsb/web/my-app/dist/_next/static/{vc-HL8MgjYJp8IESk9kXQ => BjySA1D5gMn_mvD1che4l}/_clientMiddlewareManifest.json (100%)
+ create mode 100644 projects/rankingsb/web/my-app/dist/_next/static/BjySA1D5gMn_mvD1che4l/_ssgManifest.js
+ delete mode 100644 projects/rankingsb/web/my-app/dist/_next/static/chunks/0b3d079abb52e1c9.css
+ create mode 100644 projects/rankingsb/web/my-app/dist/_next/static/chunks/662848c856531f7f.js
+ create mode 100644 projects/rankingsb/web/my-app/dist/_next/static/chunks/89d2518f8fd211e1.js
+ rename projects/rankingsb/web/my-app/dist/_next/static/chunks/{c241b3d69d266f74.js => 9012f15e7b57bfda.js} (94%)
+ delete mode 100644 projects/rankingsb/web/my-app/dist/_next/static/chunks/b342a97e339c87ae.js
+ delete mode 100644 projects/rankingsb/web/my-app/dist/_next/static/chunks/cbb0481e71645fca.js
+ rename projects/rankingsb/web/my-app/dist/_next/static/chunks/{c48b88b78f87a98e.js => e14c9c4e2d801458.js} (99%)
+ create mode 100644 projects/rankingsb/web/my-app/dist/_next/static/chunks/ff27baf3cde8b011.css
+ rename projects/rankingsb/web/my-app/dist/_next/static/chunks/{turbopack-d1dc7912ce65f7fe.js => turbopack-4a8dd92779a027a0.js} (92%)
+ rename projects/rankingsb/web/my-app/dist/_next/static/chunks/{turbopack-aaae8d1f4a3a9d23.js => turbopack-bcbfa279deae7320.js} (98%)
+ rename projects/rankingsb/web/my-app/dist/_next/static/chunks/{turbopack-96fdd5367218f62c.js => turbopack-dcd1080cc7a1aa90.js} (91%)
+ delete mode 100644 projects/rankingsb/web/my-app/dist/_next/static/vc-HL8MgjYJp8IESk9kXQ/_ssgManifest.js
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide/__next._head.txt
+ rename projects/rankingsb/web/my-app/dist/{industries/real-estate-seo => blog/electrician-seo-guide}/__next._index.txt (95%)
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide/__next.blog.$d$slug.__PAGE__.txt
+ rename projects/rankingsb/web/my-app/dist/{industries/real-estate-seo/__next.industries.real-estate-seo.txt => blog/electrician-seo-guide/__next.blog.$d$slug.txt} (85%)
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/electrician-seo-guide/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next.blog.$d$slug.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next.blog.$d$slug.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/get-more-reviews/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next.blog.$d$slug.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next.blog.$d$slug.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-business-profile-guide/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next.blog.$d$slug.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next.blog.$d$slug.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/google-maps-ranking/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next.blog.$d$slug.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next.blog.$d$slug.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/hvac-seasonal-seo/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next.blog.$d$slug.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next.blog.$d$slug.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/local-citation-sites/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next.blog.$d$slug.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next.blog.$d$slug.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/blog/seo-vs-google-ads/__next.blog.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-about-team.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-auto-mechanic-santa-barbara.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-business-consulting-santa-barbara.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-case-study-success.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-gym-fitness-santa-barbara.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-happy-client.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/2026-02-24-santa-barbara-hero.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/auto-mechanic-santa-barbara.jpg
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/auto-mechanic-santa-barbara.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/business-consulting-santa-barbara.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/images/gym-fitness-santa-barbara.png
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo/__next.industries.auto-mechanic-seo.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/auto-mechanic-seo/__next.industries.auto-mechanic-seo.txt
+ rename projects/rankingsb/web/my-app/dist/industries/{real-estate-seo => auto-mechanic-seo}/__next.industries.txt (85%)
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo/__next._index.txt
+ rename projects/rankingsb/web/my-app/dist/industries/{real-estate-seo => gym-fitness-seo}/__next._tree.txt (62%)
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo/__next.industries.gym-fitness-seo.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo/__next.industries.gym-fitness-seo.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/gym-fitness-seo/__next.industries.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo.html
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next._full.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next._head.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next._index.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next._tree.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next.industries.other-seo.__PAGE__.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next.industries.other-seo.txt
+ create mode 100644 projects/rankingsb/web/my-app/dist/industries/other-seo/__next.industries.txt
+ delete mode 100644 projects/rankingsb/web/my-app/dist/industries/real-estate-seo.html
+ delete mode 100644 projects/rankingsb/web/my-app/dist/industries/real-estate-seo.txt
+ delete mode 100644 projects/rankingsb/web/my-app/dist/industries/real-estate-seo/__next._full.txt
+ delete mode 100644 projects/rankingsb/web/my-app/dist/industries/real-estate-seo/__next._head.txt
+ delete mode 100644 projects/rankingsb/web/my-app/dist/industries/real-estate-seo/__next.industries.real-estate-seo.__PAGE__.txt
+[2026-02-24 15:17:09] ✅ Autosave successful
