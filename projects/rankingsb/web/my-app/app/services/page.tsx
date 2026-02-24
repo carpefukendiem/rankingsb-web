@@ -32,7 +32,7 @@ export default function ServicesPage() {
                   Get Free Audit
                 </Button>
               </Link>
-              <Link href="/industries/electrician-seo">
+              <Link href="/industries">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                   View Industries
                 </Button>
