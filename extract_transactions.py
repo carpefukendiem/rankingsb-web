@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Extract and categorize 2025 bank/credit card transactions for TaxHawk tax analysis.
+Version 2 - Improved parsing for Chase and Barclays
 """
 
 import pdfplumber
@@ -15,12 +16,12 @@ from collections import defaultdict
 TAX_DIR = '/Users/rubenruiz/Desktop/Johnny5-Inbox/2025 taxes'
 OUTPUT_DIR = '/Users/rubenruiz/.openclaw/workspace/business/tax-optimization'
 
-# Business expense categories with 370+ patterns
+# Business expense categories with patterns
 EXPENSE_CATEGORIES = {
     'Software/SaaS': [
         r'gohighlevel', r'highlevel', r'ghl', r'mailgun', r'sinch',
         r'google.*workspace', r'gsuite', r'google.*one', r'google.*cloud',
-        r'notion', r'slack', r'zoom', r'calendly', r'hubspot',
+        r'google \*', r'notion', r'slack', r'zoom', r'calendly', r'hubspot',
         r'salesforce', r'zapier', r'make', r'integromat',
         r'openai', r'anthropic', r'claude', r'chatgpt',
         r'github', r'gitlab', r'bitbucket', r'vercel', r'netlify',
@@ -56,7 +57,9 @@ EXPENSE_CATEGORIES = {
         r'grubhub', r'doordash', r'ubereats', r'postmates',
         r'seatgeek', r'stubhub', r'ticketmaster', r'eventbrite',
         r'finney', r'cajun kitchen', r'pressed juicery',
-        r'dart coffee', r'waterfront',
+        r'dart coffee', r'waterfront', r'joe\'s cafe',
+        r'taco bell', r'burger king', r'wendy',
+        r'eats', r'kitchen', r'diner', r'grill',
     ],
     'Office Supplies': [
         r'office depot', r'staples', r'amazon', r'walmart', r'target',
@@ -110,6 +113,7 @@ EXPENSE_CATEGORIES = {
         r'health.*insurance', r'medical', r'dental', r'vision',
         r'massage', r'chiropractor', r'physical.*therapy',
         r'vitamin', r'supplement', r'nutrition',
+        r'sprouts', r'whole foods', r'trader.*joe',
     ],
     'Interest/Bank Fees': [
         r'interest', r'finance.*charge', r'late.*fee',
@@ -140,11 +144,6 @@ EXPENSE_CATEGORIES = {
     ],
 }
 
-INCOME_KEYWORDS = [
-    r'stripe.*transfer', r'stripe', r'payment.*received',
-    r'ach.*credit', r'wire.*in', r'deposit',
-]
-
 GHL_KEYWORDS = [
     r'highlevel', r'gohighlevel', r'ghl',
 ]
@@ -164,11 +163,6 @@ def categorize_transaction(description):
     
     return 'Uncategorized'
 
-def is_income(description):
-    """Check if transaction is income."""
-    desc_lower = description.lower()
-    return any(re.search(kw, desc_lower) for kw in INCOME_KEYWORDS)
-
 def is_ghl(description):
     """Check if transaction is GoHighLevel related."""
     desc_lower = description.lower()
@@ -183,7 +177,6 @@ def parse_amount(amount_str):
     """Parse amount string to float."""
     if not amount_str:
         return 0.0
-    # Remove commas, dollar signs, etc.
     cleaned = re.sub(r'[$,]', '', str(amount_str).strip())
     try:
         return float(cleaned)
@@ -210,19 +203,15 @@ def extract_wf_transactions(pdf_path, month_name):
                     rest = date_match.group(2)
                     
                     # Try to extract amount at end (positive or negative)
-                    # Pattern: number at end with optional decimal
                     amount_match = re.search(r'([\d,]+\.\d{2})\s*$', rest)
                     if amount_match:
                         amount_str = amount_match.group(1)
                         description = rest[:amount_match.start()].strip()
                         
-                        # Determine if debit or credit based on context
-                        # For WF, debits usually appear after deposits in same line
-                        # or have specific patterns
                         amount = parse_amount(amount_str)
                         
-                        # Skip balance-only lines
-                        if any(x in description.lower() for x in ['balance', 'continued', 'transaction history']):
+                        # Skip balance-only lines and headers
+                        if any(x in description.lower() for x in ['balance', 'continued', 'transaction history', 'date', 'description']):
                             continue
                             
                         transactions.append({
@@ -238,6 +227,8 @@ def extract_wf_transactions(pdf_path, month_name):
 def extract_chase_transactions(pdf_path, month_str):
     """Extract transactions from Chase credit card PDF."""
     transactions = []
+    year = month_str[:4]
+    month = month_str[4:6]
     
     with pdfplumber.open(pdf_path) as pdf:
         for page in pdf.pages:
@@ -246,27 +237,44 @@ def extract_chase_transactions(pdf_path, month_str):
                 continue
                 
             lines = text.split('\n')
+            in_transaction_section = False
             
             for line in lines:
-                # Chase format: "Jan 15 Description City State Amount"
-                date_match = re.match(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})\s+(.+)$', line.strip())
+                # Look for section headers
+                if 'TRANSACTION' in line.upper() and 'DESCRIPTION' in line.upper():
+                    in_transaction_section = True
+                    continue
+                
+                if 'INTEREST CHARGED' in line.upper() or 'TOTAL INTEREST' in line.upper():
+                    in_transaction_section = True
+                
+                if 'Year-to-Date totals' in line.lower():
+                    in_transaction_section = False
+                    
+                # Chase format: "12/14 STAPLES 00108894 GOLETA CA 31.53"
+                # or "01/03 Payment Thank You - Web -250.00"
+                date_match = re.match(r'^(\d{2}/\d{2})\s+(.+)$', line.strip())
                 if date_match:
-                    month_name = date_match.group(1)
-                    day = date_match.group(2)
-                    rest = date_match.group(3)
+                    date_str = date_match.group(1)
+                    rest = date_match.group(2)
                     
                     # Extract amount (usually at end)
-                    amount_match = re.search(r'([\d,]+\.\d{2})\s*$', rest)
+                    # Handle negative amounts like "-250.00"
+                    amount_match = re.search(r'(-?[\d,]+\.\d{2})\s*$', rest)
                     if amount_match:
                         amount_str = amount_match.group(1)
                         description = rest[:amount_match.start()].strip()
                         
                         amount = parse_amount(amount_str)
                         
+                        # Skip summary lines
+                        if any(x in description.lower() for x in ['total', 'beginning balance', 'new balance']):
+                            continue
+                            
                         transactions.append({
-                            'date': f"{month_name} {day}, 2025",
+                            'date': f"{date_str}/{year}",
                             'description': description,
-                            'amount': -amount,  # Credit card charges are negative
+                            'amount': -amount,  # Credit card charges are expenses (negative)
                             'account': 'Chase Visa',
                             'month': month_str,
                         })
@@ -276,34 +284,70 @@ def extract_chase_transactions(pdf_path, month_str):
 def extract_barclays_transactions(pdf_path):
     """Extract transactions from Barclays credit card PDF."""
     transactions = []
+    year = "2025"
     
     with pdfplumber.open(pdf_path) as pdf:
+        # Get statement period from first page
+        statement_period = None
+        for page in pdf.pages[:1]:
+            text = page.extract_text()
+            if text:
+                period_match = re.search(r'Statement Period (\d{2}/\d{2}/\d{2})', text)
+                if period_match:
+                    statement_period = period_match.group(1)
+                    year = "20" + statement_period.split('/')[-1]
+        
         for page in pdf.pages:
             text = page.extract_text()
             if not text:
                 continue
                 
             lines = text.split('\n')
+            in_transaction_section = False
             
             for line in lines:
-                # Barclays format similar to Chase
-                date_match = re.match(r'^(\d{2}/\d{2}/\d{4})\s+(.+)$', line.strip())
-                if date_match:
-                    date_str = date_match.group(1)
-                    rest = date_match.group(2)
+                # Look for transaction table header
+                if 'Transaction Date' in line and 'Description' in line:
+                    in_transaction_section = True
+                    continue
+                
+                if 'Total payments' in line or 'Total purchase' in line or 'Total interest' in line:
+                    continue
                     
-                    # Extract amount
-                    amount_match = re.search(r'([\d,]+\.\d{2})\s*$', rest)
+                if 'Year-to-Date Totals' in line:
+                    in_transaction_section = False
+                
+                # Barclays format: "Dec 02 Dec 02 Payment Received WELLS FARGO B N/A -$150.00"
+                # or transaction dates like "Dec 05 Dec 05 LATE PAYMENT FEE $40.00"
+                tx_match = re.match(r'^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{2})\s+(.+)$', line.strip())
+                if tx_match:
+                    trans_month = tx_match.group(1)
+                    trans_day = tx_match.group(2)
+                    rest = tx_match.group(5)
+                    
+                    # Extract amount - look for pattern like "$40.00" or "-$150.00"
+                    amount_match = re.search(r'(-?\$[\d,]+\.\d{2})\s*$', rest)
                     if amount_match:
                         amount_str = amount_match.group(1)
                         description = rest[:amount_match.start()].strip()
                         
+                        # Remove "N/A" for points if present
+                        description = re.sub(r'\s+N/A\s*$', '', description)
+                        
                         amount = parse_amount(amount_str)
                         
+                        # Convert month name to number
+                        month_map = {
+                            'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04',
+                            'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08',
+                            'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
+                        }
+                        month_num = month_map.get(trans_month, '01')
+                        
                         transactions.append({
-                            'date': date_str,
+                            'date': f"{month_num}/{trans_day}/{year}",
                             'description': description,
-                            'amount': -amount,  # Credit card charges are negative
+                            'amount': -amount,  # Credit card charges are expenses
                             'account': 'Barclays Visa',
                             'month': '',
                         })
@@ -320,7 +364,7 @@ def main():
     
     for pdf_file in wf_files:
         pdf_path = os.path.join(wf_dir, pdf_file)
-        month_name = pdf_file.split()[0]  # e.g., "013125" -> "013125"
+        month_name = pdf_file.split()[0]
         print(f"  {pdf_file}...")
         try:
             txs = extract_wf_transactions(pdf_path, month_name)
@@ -336,7 +380,7 @@ def main():
     
     for pdf_file in chase_files:
         pdf_path = os.path.join(chase_dir, pdf_file)
-        month_str = pdf_file[:6]  # e.g., "20250115"
+        month_str = pdf_file[:8]  # e.g., "20250115"
         print(f"  {pdf_file}...")
         try:
             txs = extract_chase_transactions(pdf_path, month_str)
@@ -368,8 +412,7 @@ def main():
         tx['category'] = categorize_transaction(tx['description'])
         tx['is_ghl'] = is_ghl(tx['description'])
         tx['is_stripe_loan'] = is_stripe_loan(tx['description'])
-        tx['is_income'] = is_income(tx['description'])
-        tx['is_business'] = True  # Default to business for business accounts
+        tx['is_business'] = tx['account'] == 'Wells Fargo Business' or not any(k in tx['description'].lower() for k in ['personal', 'venmo', 'zelle'])
     
     # Save to CSV
     csv_path = os.path.join(OUTPUT_DIR, '2025-transactions-categorized.csv')
@@ -384,7 +427,10 @@ def main():
     # Generate summary statistics
     categories = defaultdict(float)
     ghl_total = 0
+    ghl_transactions = []
     stripe_income = 0
+    total_income = 0
+    total_expenses = 0
     
     for tx in all_transactions:
         cat = tx['category']
@@ -393,16 +439,26 @@ def main():
         
         if tx['is_ghl']:
             ghl_total += abs(amt)
+            ghl_transactions.append(tx)
         
-        if tx['is_income']:
-            stripe_income += amt
+        if cat == 'Income':
+            total_income += amt
+        elif amt < 0:
+            total_expenses += abs(amt)
     
     print("\n=== CATEGORY SUMMARY ===")
     for cat, total in sorted(categories.items(), key=lambda x: abs(x[1]), reverse=True):
         print(f"  {cat}: ${total:,.2f}")
     
     print(f"\nGoHighLevel Total: ${ghl_total:,.2f}")
-    print(f"Stripe Income: ${stripe_income:,.2f}")
+    print(f"Total Income: ${total_income:,.2f}")
+    print(f"Total Expenses: ${total_expenses:,.2f}")
+    print(f"Net: ${total_income - total_expenses:,.2f}")
+    
+    if ghl_transactions:
+        print(f"\n=== GHL TRANSACTIONS ({len(ghl_transactions)}) ===")
+        for tx in ghl_transactions[:10]:
+            print(f"  {tx['date']}: {tx['description'][:50]}... ${abs(tx['amount']):.2f}")
     
     return all_transactions
 
