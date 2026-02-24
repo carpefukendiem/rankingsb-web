@@ -11,8 +11,10 @@ import {
   Scale, 
   Stethoscope, 
   ShoppingBag, 
-  Home as HomeIcon, 
   UtensilsCrossed,
+  Car,
+  Dumbbell,
+  Briefcase,
   ArrowRight,
   Phone,
   TrendingUp,
@@ -23,7 +25,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Industries We Serve | Rankingsb Santa Barbara",
-  description: "Specialized SEO services for local businesses in Santa Barbara. Electricians, HVAC, plumbers, attorneys, and more.",
+  description: "Specialized SEO services for local businesses in Santa Barbara. Electricians, HVAC, plumbers, attorneys, auto repair, gyms, and more.",
 }
 
 const industries = [
@@ -116,17 +118,6 @@ const industries = [
     stats: "+220% organic traffic"
   },
   {
-    title: "Real Estate SEO",
-    description: "Stand out in a competitive market. Rank for 'real estate agent Santa Barbara' and neighborhood searches.",
-    icon: HomeIcon,
-    href: "/industries/real-estate-seo",
-    color: "bg-emerald-500",
-    lightColor: "bg-emerald-100",
-    textColor: "text-emerald-600",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
-    stats: "12+ listings/month"
-  },
-  {
     title: "Restaurant SEO",
     description: "Fill more tables with local SEO. Rank for 'restaurants near me' and cuisine-specific searches.",
     icon: UtensilsCrossed,
@@ -137,6 +128,39 @@ const industries = [
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
     stats: "+85% reservation increase"
   },
+  {
+    title: "Auto Mechanic SEO",
+    description: "Get more repair calls with local SEO for auto shops. Rank for 'auto repair near me' and capture vehicle service customers.",
+    icon: Car,
+    href: "/industries/auto-mechanic-seo",
+    color: "bg-amber-600",
+    lightColor: "bg-amber-100",
+    textColor: "text-amber-700",
+    image: "/images/auto-mechanic-santa-barbara.jpg",
+    stats: "+150% service calls"
+  },
+  {
+    title: "Gym & Fitness SEO",
+    description: "Attract new members with local SEO for fitness centers. Rank for 'gym near me' and personal training searches.",
+    icon: Dumbbell,
+    href: "/industries/gym-fitness-seo",
+    color: "bg-lime-500",
+    lightColor: "bg-lime-100",
+    textColor: "text-lime-700",
+    image: "/images/gym-fitness-santa-barbara.jpg",
+    stats: "60+ new members/month"
+  },
+  {
+    title: "Other Businesses",
+    description: "No matter your industry, we can help you rank higher. Custom SEO strategies for any business type in Santa Barbara.",
+    icon: Briefcase,
+    href: "/industries/other-seo",
+    color: "bg-slate-500",
+    lightColor: "bg-slate-100",
+    textColor: "text-slate-600",
+    image: "/images/business-consulting-santa-barbara.jpg",
+    stats: "Custom solutions"
+  }
 ]
 
 export default function IndustriesPage() {
@@ -254,7 +278,7 @@ export default function IndustriesPage() {
                   <div className="h-48 overflow-hidden relative">
                     <img 
                       src={industry.image}
-                      alt={`${industry.title} services`}
+                      alt={industry.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
