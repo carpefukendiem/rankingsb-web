@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975971475_3e9jf5g18",
+  "businessName": "City Experts",
+  "phone": "(805) 555-0300",
+  "email": "info@cityexperts.com",
+  "address": null,
+  "city": "Inglewood",
+  "category": "Professional",
+  "website": "https://cityexperts.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://cityexperts.com.com",
+  "description": "City Experts provides professional default services in Santa Barbara, CA. Contact us at (805) 555-0300 or email info@cityexperts.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:51.475Z",
+  "updatedAt": "2026-02-24T23:32:51.475Z"
+}

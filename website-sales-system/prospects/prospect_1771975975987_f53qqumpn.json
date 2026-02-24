@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975975987_f53qqumpn",
+  "businessName": "Crystal Clear Cleaners",
+  "phone": "(805) 555-0934",
+  "email": "crystal@clean.com",
+  "address": null,
+  "city": "Carlsbad",
+  "category": "Home Services",
+  "website": "https://clean.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://clean.com.com",
+  "description": "Crystal Clear Cleaners provides professional cleaning services in Carlsbad carpet, CA. Contact us at (805) 555-0934 or email crystal@clean.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:55.987Z",
+  "updatedAt": "2026-02-24T23:32:55.987Z"
+}

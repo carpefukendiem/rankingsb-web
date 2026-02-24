@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975972978_tkhmwxu37",
+  "businessName": "Lightning Electric",
+  "phone": "(805) 555-0445",
+  "email": null,
+  "address": null,
+  "city": "La Jolla",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/lightning-electric-la-jolla",
+  "description": "Lightning Electric provides professional electrician services in La Jolla, CA. Contact us at (805) 555-0445. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:52.978Z",
+  "updatedAt": "2026-02-24T23:32:52.978Z"
+}

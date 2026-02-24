@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975982501_8j4znr3s5",
+  "businessName": "Coastal Plumbing Experts",
+  "phone": "(805) 555-0658",
+  "email": "coastal@plumbing.com",
+  "address": null,
+  "city": "Culver City",
+  "category": "Contractor",
+  "website": "https://plumbing.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://plumbing.com.com",
+  "description": "Coastal Plumbing Experts provides professional plumber services in Culver City, CA. Contact us at (805) 555-0658 or email coastal@plumbing.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:33:02.501Z",
+  "updatedAt": "2026-02-24T23:33:02.501Z"
+}

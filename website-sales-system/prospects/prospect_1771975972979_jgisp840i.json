@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975972979_jgisp840i",
+  "businessName": "Power Up Electrical",
+  "phone": "(805) 555-0278",
+  "email": null,
+  "address": null,
+  "city": "La Jolla",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/power-up-electrical-la-jolla",
+  "description": "Power Up Electrical provides professional electrician services in La Jolla, CA. Contact us at (805) 555-0278. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:52.979Z",
+  "updatedAt": "2026-02-24T23:32:52.979Z"
+}

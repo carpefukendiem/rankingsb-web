@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975978492_1oz2n4suq",
+  "businessName": "Bright Tooth Dental",
+  "phone": "(805) 555-0490",
+  "email": "bright@dental.com",
+  "address": null,
+  "city": "Irvine",
+  "category": "Medical",
+  "website": "https://dental.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://dental.com.com",
+  "description": "Bright Tooth Dental provides professional dentist services in Irvine, CA. Contact us at (805) 555-0490 or email bright@dental.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:58.492Z",
+  "updatedAt": "2026-02-24T23:32:58.492Z"
+}

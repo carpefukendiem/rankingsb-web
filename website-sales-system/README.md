@@ -1,270 +1,239 @@
-# Website Sales System
-
-**$500 Website Sales Automation for Southern California Local Businesses**
-
----
+# Website Sales System - Setup Guide
 
 ## Overview
+Automated daily prospect generation system that finds 100 local SoCal businesses without websites and exports the top 20 hot leads for outreach.
 
-This system automates the entire process of finding local businesses without websites, creating preview mockups, outreach, and closing deals for $500 website builds.
+## What's Working
 
-### The Workflow
+### ✅ Core Features
+- **Brave Search Integration** - Finds real businesses with phone/email (mock mode for demo)
+- **Daily Automation** - Cron job runs at 8 AM PST daily
+- **Smart Prioritization** - Businesses WITHOUT websites flagged as 🔥 HOT LEADS
+- **CSV Export** - Daily export of top 20 prospects with call scripts
+- **Category Exports** - Separate CSVs for GHL import by business category
 
-1. **Prospect Research** — Find 20 businesses/day in SoCal without websites
-2. **Mockup Generation** — Create custom homepage previews with their branding
-3. **Outreach** — Send 100 messages/day (email, SMS, WhatsApp)
-4. **Sales** — Handle objections, send payment links, close deals
-5. **Handoff** — Notify team when payment received, build the site
+### 📊 Current Status
+- Cron job: **Active** (runs daily at 8 AM)
+- API Mode: **Mock Data** (for testing/demo)
+- Prospects stored: `/prospects/*.json`
+- Daily exports: `/exports/daily-top-20-YYYY-MM-DD.csv`
 
----
+## Quick Start
 
-## Pricing Structure
+### 1. Test the System (No API Key Needed)
+```bash
+cd /Users/rubenruiz/.openclaw/workspace/website-sales-system
 
-| Package | Price | Includes |
-|---------|-------|----------|
-| **Base** | $500 one-time | 5-page website, custom design, 7-day delivery |
-| **Hosting** | $39/month | Hosting + minor updates |
-| **Extra Pages** | $50 each | Additional pages beyond the 5 included |
-| **Priority** | +$150 | 3-day delivery instead of 7 |
+# Test with 5 prospects
+node scripts/daily-automation.js test 5
 
----
+# Generate 100 prospects now
+node scripts/daily-automation.js run
 
-## System Components
+# Export top 20 for today
+node scripts/daily-export.js daily 20
+```
 
-### Core Scripts
+### 2. View Daily Export
+```bash
+# Latest export is at
+exports/daily-top-20-YYYY-MM-DD.csv
 
-| Script | Purpose |
-|--------|---------|
-| `scripts/system.js` | Main orchestrator — ties everything together |
-| `scripts/prospect-scraper.js` | Find and manage prospects |
-| `scripts/mockup-generator.js` | Create homepage previews |
-| `scripts/outreach-engine.js` | Generate email/SMS/WhatsApp sequences |
-| `scripts/payment-handler.js` | Stripe integration and order management |
+# Open in Excel/Sheets
+open exports/daily-top-20-$(date +%Y-%m-%d).csv
+```
 
-### Data Directories
+### 3. Check Stats
+```bash
+node scripts/prospect-scraper.js stats
+node scripts/prospect-scraper.js report
+```
 
+## To Enable LIVE Brave Search (Real Data)
+
+### Step 1: Get Brave API Key
+1. Go to https://api.search.brave.com/app/keys
+2. Sign up for a free account (10,000 queries/month)
+3. Create a new API key
+4. Copy the key
+
+### Step 2: Update .env File
+Edit `.env` and replace:
+```
+BRAVE_API_KEY=YOUR_BRAVE_API_KEY_HERE
+```
+With your actual key:
+```
+BRAVE_API_KEY=BSAb9xxxxxYOUR_KEY_HERE
+```
+
+### Step 3: Test Live Search
+```bash
+node scripts/web-search-wrapper.js "plumber Santa Barbara phone" 3
+```
+
+Now the system will use real Brave Search instead of mock data!
+
+## System Architecture
+
+### File Structure
 ```
 website-sales-system/
-├── prospects/     # JSON files for each prospect
-├── mockups/       # HTML preview files
-├── orders/        # Order records
-├── logs/          # Outreach activity logs
-├── dashboard/     # Web dashboard
-└── templates/     # Email/SMS templates
+├── .env                          # API keys and config
+├── config.md                     # Business rules and targets
+├── run-daily.sh                  # Cron script (runs at 8 AM)
+├── scripts/
+│   ├── prospect-scraper.js       # Main scraper with Brave API
+│   ├── web-search-wrapper.js     # API wrapper (live + mock modes)
+│   ├── daily-automation.js       # Daily workflow orchestrator
+│   ├── daily-export.js           # CSV export for Ruben
+│   ├── business-researcher.js    # Additional enrichment
+│   ├── export-csv.js             # GHL category exports
+│   ├── mockup-generator.js       # Website mockup creator
+│   ├── outreach-engine.js        # Email/SMS templates
+│   └── system.js                 # Legacy orchestrator
+├── prospects/                    # JSON files for each prospect
+├── exports/                      # CSV exports
+├── logs/                         # Daily automation logs
+└── README.md                     # This file
 ```
 
----
+### Daily Workflow (8 AM PST)
+1. **Generate 100 Prospects** - Searches SoCal cities across categories
+2. **Extract Contact Info** - Phone numbers, emails, addresses
+3. **Detect Websites** - Flags businesses WITHOUT websites as 🔥 hot leads
+4. **Export Top 20** - Creates CSV with call scripts and outreach angles
+5. **Log Results** - Saves to `logs/cron-YYYY-MM-DD.log`
 
-## Getting Started
+### Prospect Priority System
+- 🔥 **HOT** - No website (immediate need) - PRIORITY 1
+- ⚡ **WARM** - Has website + email (upgrade opportunity) - PRIORITY 2
+- 📞 **COLD** - Has website, phone only - PRIORITY 3
 
-### 1. Install Dependencies
+### Data Points Collected
+- Business name
+- Phone number
+- Email (if available)
+- Address (if found)
+- City
+- Category (Contractor, Restaurant, etc.)
+- Has website? (boolean)
+- Website URL (if exists)
+- Priority score
+- Source URL
 
+## CSV Export Format
+
+The daily export includes:
+- Priority (🔥 HOT / ⚡ WARM / 📞 COLD)
+- Business Name
+- Phone
+- Email
+- Address
+- City
+- Category
+- Has Website (Yes/No)
+- Current Website (if exists)
+- Why They're a Good Target
+- Suggested Outreach Angle
+- Call Script
+- Prospect ID
+- Date Found
+
+## Manual Commands
+
+### Generate Prospects
 ```bash
-cd website-sales-system
-npm init -y
-npm install stripe node-fetch
-```
+# Generate N prospects
+node scripts/prospect-scraper.js scrape 50
 
-### 2. Configure Environment
+# Get top prospects
+node scripts/prospect-scraper.js top 20
 
-Edit `.env` with your actual API keys:
-
-```bash
-# Required
-STRIPE_SECRET_KEY=sk_live_...
-STRIPE_PUBLISHABLE_KEY=pk_live_...
-
-# Optional (for SMS/WhatsApp)
-TWILIO_ACCOUNT_SID=...
-TWILIO_AUTH_TOKEN=...
-```
-
-### 3. Run the System
-
-```bash
 # View stats
-node scripts/system.js stats
-
-# View dashboard data
-node scripts/system.js dashboard
-
-# Run full daily workflow
-node scripts/system.js run
+node scripts/prospect-scraper.js stats
 ```
 
----
-
-## Daily Targets
-
-| Metric | Target |
-|--------|--------|
-| New prospects researched | 20 |
-| Mockups created | 5 |
-| Outreach messages sent | 100 |
-| Expected responses | 10-15 |
-| Expected meetings | 3-5 |
-| Expected closes | 1-2 |
-
-**Revenue target:** $500-1000/day
-
----
-
-## Pipeline Stages
-
-1. **Prospect Found** → Research complete
-2. **Mockup Created** → Preview ready
-3. **Outreach Sent** → Initial contact made
-4. **Engaged** → Prospect responded
-5. **Meeting Scheduled** → Call/demo booked
-6. **Proposal Sent** → Payment link shared
-7. **Payment Received** → Stripe webhook triggered
-8. **In Production** → Handed to Ruben
-9. **Delivered** → Site live
-10. **Hosting Active** → $39/mo recurring
-
----
-
-## Sales Scripts
-
-### Initial Email
-
-```
-Subject: Your {businessName} deserves a professional website
-
-Hi {contactName},
-
-I came across {businessName} while searching for {category} businesses in {city}. I noticed you don't currently have a website, and I wanted to reach out because I think you're missing out on potential customers.
-
-I've created a quick preview of what your website could look like:
-👉 {previewUrl}
-
-Here's what I'm offering:
-✅ Professional 5-page website ($500 one-time)
-✅ Custom design with your branding
-✅ Mobile-friendly and fast
-✅ 7-day delivery
-✅ $39/month hosting included
-
-No risk - you only pay when you're happy with the design.
-
-Interested? Reply to this email or call me at 805-307-7600.
-
-Best,
-Ruben
-```
-
-### Phone Close
-
-```
-"Here's what I'm proposing: For $500, I'll build you a complete 5-page 
-website based on that preview. You saw the quality - custom design, your 
-branding, mobile-friendly. $39/month covers hosting and any small updates. 
-I can have it live in 7 days."
-
-"I'm sending you the secure payment link now. Once you complete it, I'll 
-send you a quick questionnaire to gather your final details, and we'll be 
-live in 7 days."
-```
-
----
-
-## Common Objections & Rebuttals
-
-| Objection | Rebuttal |
-|-----------|----------|
-| "Too expensive" | "$500 is less than $2/day over the first year. One new customer typically covers that cost." |
-| "Don't need a website" | "76% of people search online before choosing a {category}. Your competitors with websites are getting those calls." |
-| "Already have Facebook" | "You don't own that platform. Plus, many people don't use Facebook or trust business pages there." |
-| "Too busy" | "A website works 24/7 answering questions while you focus on the work. Setup takes 30 minutes." |
-| "Need to think about it" | "I'll keep your preview active for 7 more days. I'll follow up next week." |
-
----
-
-## Payment Links
-
-- **Base Package ($500):** `https://buy.stripe.com/mk_1T07I7EuKXuKfbciRJp9zBcw`
-- **With Upsells:** `https://buy.stripe.com/mk_1T07IHEuKXuKfbciiKrAIogv`
-
----
-
-## Dashboard
-
-Open `dashboard/index.html` in your browser to view:
-- Total prospects and pipeline status
-- Today's outreach progress
-- Revenue stats
-- Recent activity
-
-Or integrate into main dashboard with:
-```html
-<a href="website-sales-system/dashboard/index.html" class="nav-button">
-  🚀 Website Sales
-</a>
-```
-
----
-
-## Automation
-
-### Cron Job (Daily at 9 AM)
-
+### Export Data
 ```bash
-0 9 * * * cd /Users/rubenruiz/.openclaw/workspace/website-sales-system && node scripts/system.js run >> logs/cron.log 2>&1
+# Daily top 20
+node scripts/daily-export.js daily 20
+
+# Export by category (for GHL)
+node scripts/daily-export.js category
+
+# Do both
+node scripts/daily-export.js all
 ```
 
-### Stripe Webhook
-
-Set up webhook endpoint to handle `checkout.session.completed` events:
+### Update Prospect Stage
 ```javascript
-// POST /webhook/stripe
-const result = paymentHandler.processWebhook(payload);
+const ProspectScraper = require('./scripts/prospect-scraper');
+const scraper = new ProspectScraper();
+scraper.updateProspect('prospect_xxx', { stage: 'Outreach Sent' });
 ```
-
----
-
-## Team Handoff
-
-When payment received:
-1. ✅ Stripe webhook fires
-2. ✅ Discord alert sent to #sales-alerts
-3. ✅ SMS sent to Ruben: "New $500 order: [Business Name]"
-4. ✅ GHL opportunity created in "In Production" stage
-5. Ruben builds remaining 4 pages + any upsells
-6. Mark complete in GHL
-
----
 
 ## Target Geography
+- Santa Barbara County (Santa Barbara, Goleta, Carpinteria)
+- Ventura County (Ventura, Oxnard, Camarillo, Thousand Oaks)
+- Los Angeles County (LA, Pasadena, Glendale, Burbank, Santa Monica, etc.)
+- Orange County (Anaheim, Santa Ana, Irvine, Newport Beach, etc.)
+- San Diego County (San Diego, La Jolla, Chula Vista, Oceanside, etc.)
 
-**Southern California:**
-- Santa Barbara County
-- Ventura County
-- Los Angeles County
-- Orange County
-- San Diego County
+## Business Categories
+1. **Contractors** - HVAC, plumbing, electrical, roofing, solar
+2. **Home Services** - Landscaping, cleaning, pest control
+3. **Restaurants** - Local, independent eateries
+4. **Retail** - Local shops, boutiques
+5. **Professional Services** - Accountants, lawyers, consultants
+6. **Medical** - Dentists, chiropractors, therapists
+7. **Automotive** - Mechanics, detailers, body shops
 
----
+## Cron Job
+```
+0 8 * * * /Users/rubenruiz/.openclaw/workspace/website-sales-system/run-daily.sh
+```
+Runs daily at 8:00 AM PST.
 
-## Business Categories (Priority)
+To modify:
+```bash
+crontab -e
+```
 
-1. **Contractors** (HVAC, plumbing, electrical, roofing, solar)
-2. **Home Services** (landscaping, cleaning, pest control)
-3. **Restaurants** (local, independent)
-4. **Retail** (local shops, boutiques)
-5. **Professional Services** (accountants, lawyers, consultants)
-6. **Medical** (dentists, chiropractors, therapists)
-7. **Automotive** (mechanics, detailers, body shops)
+## Logs
+- Automation logs: `logs/cron-YYYY-MM-DD.log`
+- Error logs: `logs/error-TIMESTAMP.log`
+- Daily reports: `logs/report-YYYY-MM-DD.json`
 
----
+## Troubleshooting
+
+### No prospects being found
+- Check if in mock mode (add real Brave API key for live data)
+- Check logs: `tail -f logs/cron-$(date +%Y-%m-%d).log`
+- Test search: `node scripts/web-search-wrapper.js "plumber Santa Barbara" 3`
+
+### Duplicate prospects
+- System tracks phone numbers to avoid duplicates
+- Existing prospects loaded from `/prospects/*.json`
+
+### Export is empty
+- Run scraper first: `node scripts/daily-automation.js run`
+- Check if prospects exist: `ls prospects/ | wc -l`
+
+## Future Enhancements
+- [ ] GHL API integration (auto-import contacts)
+- [ ] Discord notifications for hot leads
+- [ ] Email verification (check if emails are valid)
+- [ ] Website screenshot capture (for businesses with poor sites)
+- [ ] Mockup generator integration (auto-create preview sites)
+
+## Pricing Context
+- **Base Package**: $500 (5-page website, 7-day delivery)
+- **Hosting**: $39/month recurring
+- **Upsells**: Extra pages ($50), priority delivery (+$150)
 
 ## Support
-
-For issues or questions:
-1. Check logs in `logs/` directory
-2. Run `node scripts/system.js stats` for diagnostics
-3. Review this README for common solutions
-
----
-
-*System Version: 1.0*
-*Built: February 23, 2026*
+For issues or questions, check the logs first:
+```bash
+tail -50 logs/cron-$(date +%Y-%m-%d).log
+```

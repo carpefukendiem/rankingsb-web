@@ -142,29 +142,42 @@ const MOCK_BUSINESSES = {
 
 function getMockResults(query, count) {
   // Determine which mock category to use
-  let category = 'plumber'; // default
+  let category = 'default';
   
   for (const key of Object.keys(MOCK_BUSINESSES)) {
-    if (query.toLowerCase().includes(key)) {
+    if (key !== 'default' && query.toLowerCase().includes(key)) {
       category = key;
       break;
     }
   }
   
   // Extract city from query
-  const cityMatch = query.match(/(?:in|near)\s+([A-Za-z\s]+)$/) || 
-                    query.match(/^([A-Za-z\s]+)\s+(?:plumber|HVAC|electrician)/);
+  const cityMatch = query.match(/([A-Za-z\s]+(?:Beach|Barbara|Angeles|Diego|Valley|Verde)?)\s+(?:plumber|HVAC|electrician|restaurant|dentist|cleaning|cafe|roofing|chiropractor|bakery|contractor|landscaping|auto)/i) ||
+                    query.match(/(?:in|near)\s+([A-Za-z\s]+?)(?:\s+(?:plumber|HVAC|electrician|restaurant|dentist|cleaning|cafe|roofing|chiropractor|bakery|contractor|landscaping|auto))?$/i);
   const city = cityMatch ? cityMatch[1].trim() : 'Santa Barbara';
   
-  const businesses = MOCK_BUSINESSES[category] || MOCK_BUSINESSES['plumber'];
+  const businesses = MOCK_BUSINESSES[category] || MOCK_BUSINESSES['default'];
   
-  return businesses.slice(0, count).map(b => ({
-    title: `${b.name} - ${city}, CA | Phone: ${b.phone}`,
-    url: b.email ? `https://${b.email.split('@')[1]}` : `https://example-${Math.random().toString(36).substr(2, 5)}.com`,
-    description: `${b.name} provides professional ${category} services in ${city}, CA. Contact us at ${b.phone}${b.email ? ' or email ' + b.email : ''}. We offer quality service at competitive rates.`,
-    published: '',
-    siteName: b.name
-  }));
+  // Shuffle and get random selection
+  const shuffled = [...businesses].sort(() => 0.5 - Math.random());
+  
+  return shuffled.slice(0, count).map(b => {
+    // For businesses without websites, use directory-style URL
+    const url = b.hasWebsite 
+      ? `https://${b.email ? b.email.split('@')[1] : b.name.toLowerCase().replace(/[^a-z]/g, '')}.com`
+      : `https://www.yelp.com/biz/${b.name.toLowerCase().replace(/[^a-z]/g, '-')}-${city.toLowerCase().replace(/\s+/g, '-')}`;
+    
+    return {
+      title: `${b.name} - ${city}, CA`,
+      url: url,
+      description: `${b.name} provides professional ${category} services in ${city}, CA. Contact us at ${b.phone}${b.email ? ' or email ' + b.email : ''}.${b.hasWebsite ? '' : ' Call for appointments and quotes.'}`,
+      published: '',
+      siteName: b.name,
+      hasWebsite: b.hasWebsite,
+      phone: b.phone,
+      email: b.email
+    };
+  });
 }
 
 /**

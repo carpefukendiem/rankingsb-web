@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975919707_1mpyd9xw4",
+  "businessName": "Morning Brew Cafe",
+  "phone": "(805) 555-0679",
+  "email": null,
+  "address": null,
+  "city": "San Diego",
+  "category": "Restaurant",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/morning-brew-cafe-san-diego",
+  "description": "Morning Brew Cafe provides professional cafe services in San Diego, CA. Contact us at (805) 555-0679. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:31:59.707Z",
+  "updatedAt": "2026-02-24T23:31:59.707Z"
+}

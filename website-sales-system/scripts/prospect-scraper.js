@@ -149,15 +149,24 @@ class ProspectScraper {
     const description = result.description || '';
     const url = result.url || '';
     
-    // Extract phone number
-    const phoneMatch = description.match(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/) ||
-                       title.match(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/);
-    const phone = phoneMatch ? phoneMatch[0] : null;
+    // Check if mock data has explicit hasWebsite flag
+    const explicitHasWebsite = result.hasWebsite;
     
-    // Extract email
-    const emailMatch = description.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/) ||
-                       description.match(/\b[A-Za-z0-9._%+-]+\s*@\s*[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/i);
-    const email = emailMatch ? emailMatch[0].replace(/\s/g, '') : null;
+    // Extract phone number - first check explicit phone from mock, then parse
+    let phone = result.phone || null;
+    if (!phone) {
+      const phoneMatch = description.match(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/) ||
+                         title.match(/\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/);
+      phone = phoneMatch ? phoneMatch[0] : null;
+    }
+    
+    // Extract email - first check explicit email from mock, then parse
+    let email = result.email || null;
+    if (!email) {
+      const emailMatch = description.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/) ||
+                         description.match(/\b[A-Za-z0-9._%+-]+\s*@\s*[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/i);
+      email = emailMatch ? emailMatch[0].replace(/\s/g, '') : null;
+    }
     
     // Extract address
     const addressMatch = description.match(/\d+\s+[A-Za-z]+\s+(?:St|Street|Ave|Avenue|Blvd|Boulevard|Rd|Road|Dr|Drive|Way|Ln|Lane)[.,]?\s*(?:#?\s*\d+)?/i) ||
@@ -165,10 +174,18 @@ class ProspectScraper {
     const address = addressMatch ? addressMatch[0] : null;
     
     // Check if has website (not Yelp, Facebook, YellowPages, etc.)
+    // Use explicit flag if available (from mock data), otherwise detect from URL
     const directorySites = ['yelp.com', 'facebook.com', 'yellowpages.com', 'bbb.org', 'mapquest.com', 
                            'chamberofcommerce.com', 'angi.com', 'homeadvisor.com', 'thumbtack.com',
                            'porch.com', 'buildzoom.com', 'houzz.com', 'nextdoor.com'];
-    const hasWebsite = url && !directorySites.some(site => url.includes(site));
+    
+    let hasWebsite;
+    if (typeof explicitHasWebsite === 'boolean') {
+      hasWebsite = explicitHasWebsite;
+    } else {
+      hasWebsite = url && !directorySites.some(site => url.includes(site));
+    }
+    
     const websiteUrl = hasWebsite ? url : null;
     
     if (!phone) return null;
@@ -181,10 +198,10 @@ class ProspectScraper {
       city,
       category,
       website: websiteUrl,
-      hasWebsite: !!websiteUrl,
+      hasWebsite: hasWebsite,
       sourceUrl: url,
       description: description.substring(0, 300),
-      priority: !websiteUrl ? 1 : (email ? 2 : 3) // Priority: no website > has email > has website
+      priority: !hasWebsite ? 1 : (email ? 2 : 3) // Priority: no website > has email > has website
     };
   }
 

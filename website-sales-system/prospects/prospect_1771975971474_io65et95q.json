@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975971474_io65et95q",
+  "businessName": "Beachside Business",
+  "phone": "(805) 555-0500",
+  "email": "beach@side.com",
+  "address": null,
+  "city": "Inglewood",
+  "category": "Professional",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/beachside-business-santa-barbara",
+  "description": "Beachside Business provides professional default services in Santa Barbara, CA. Contact us at (805) 555-0500 or email beach@side.com. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:51.474Z",
+  "updatedAt": "2026-02-24T23:32:51.474Z"
+}

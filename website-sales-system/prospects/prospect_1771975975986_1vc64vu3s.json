@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975975986_1vc64vu3s",
+  "businessName": "Maid Perfect",
+  "phone": "(805) 555-0235",
+  "email": null,
+  "address": null,
+  "city": "Carlsbad",
+  "category": "Home Services",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/maid-perfect-carlsbad-carpet",
+  "description": "Maid Perfect provides professional cleaning services in Carlsbad carpet, CA. Contact us at (805) 555-0235. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:55.986Z",
+  "updatedAt": "2026-02-24T23:32:55.986Z"
+}

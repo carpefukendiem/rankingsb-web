@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975972978_zc6oaokdg",
+  "businessName": "Volt Masters Electric",
+  "phone": "(805) 555-0145",
+  "email": "volts@electric.com",
+  "address": null,
+  "city": "La Jolla",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/volt-masters-electric-la-jolla",
+  "description": "Volt Masters Electric provides professional electrician services in La Jolla, CA. Contact us at (805) 555-0145 or email volts@electric.com. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:52.978Z",
+  "updatedAt": "2026-02-24T23:32:52.978Z"
+}

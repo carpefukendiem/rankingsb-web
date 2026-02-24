@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975980497_0a7hq2ri8",
+  "businessName": "Nature's Edge Design",
+  "phone": "(805) 555-0512",
+  "email": "nature@edge.com",
+  "address": null,
+  "city": "Pasadena",
+  "category": "Contractor",
+  "website": "https://edge.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://edge.com.com",
+  "description": "Nature's Edge Design provides professional landscaping services in Pasadena, CA. Contact us at (805) 555-0512 or email nature@edge.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:33:00.497Z",
+  "updatedAt": "2026-02-24T23:33:00.497Z"
+}

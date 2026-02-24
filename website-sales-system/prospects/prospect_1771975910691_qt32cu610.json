@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975910691_qt32cu610",
+  "businessName": "Santa Barbara Roofers",
+  "phone": "(805) 555-0790",
+  "email": null,
+  "address": null,
+  "city": "Camarillo",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/santa-barbara-roofers-camarillo-roofing",
+  "description": "Santa Barbara Roofers provides professional roofing services in Camarillo roofing, CA. Contact us at (805) 555-0790. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:31:50.691Z",
+  "updatedAt": "2026-02-24T23:31:50.693Z"
+}

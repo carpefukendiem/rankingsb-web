@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975913699_m08opez3g",
+  "businessName": "Coastal Dental Care",
+  "phone": "(805) 555-0890",
+  "email": null,
+  "address": null,
+  "city": "Huntington Beach",
+  "category": "Medical",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/coastal-dental-care-huntington-beach",
+  "description": "Coastal Dental Care provides professional dentist services in Huntington Beach, CA. Contact us at (805) 555-0890. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:31:53.699Z",
+  "updatedAt": "2026-02-24T23:31:53.699Z"
+}

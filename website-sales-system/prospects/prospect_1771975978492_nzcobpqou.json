@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975978492_nzcobpqou",
+  "businessName": "Family Dental Center",
+  "phone": "(805) 555-0367",
+  "email": null,
+  "address": null,
+  "city": "Irvine",
+  "category": "Medical",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/family-dental-center-irvine",
+  "description": "Family Dental Center provides professional dentist services in Irvine, CA. Contact us at (805) 555-0367. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:58.492Z",
+  "updatedAt": "2026-02-24T23:32:58.492Z"
+}

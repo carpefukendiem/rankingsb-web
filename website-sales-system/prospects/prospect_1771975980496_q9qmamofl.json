@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975980496_q9qmamofl",
+  "businessName": "Green Thumb Landscaping",
+  "phone": "(805) 555-0678",
+  "email": "green@thumb.com",
+  "address": null,
+  "city": "Pasadena",
+  "category": "Contractor",
+  "website": null,
+  "hasWebsite": false,
+  "sourceUrl": "https://www.yelp.com/biz/green-thumb-landscaping-pasadena",
+  "description": "Green Thumb Landscaping provides professional landscaping services in Pasadena, CA. Contact us at (805) 555-0678 or email green@thumb.com. Call for appointments and quotes.",
+  "priority": 1,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:33:00.496Z",
+  "updatedAt": "2026-02-24T23:33:00.496Z"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975915202_bsfe84m88",
+  "businessName": "Coastal Electric Co",
+  "phone": "(805) 555-0578",
+  "email": "coastal@electric.com",
+  "address": null,
+  "city": "Encinitas",
+  "category": "Contractor",
+  "website": "https://electric.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://electric.com.com",
+  "description": "Coastal Electric Co provides professional electrician services in Encinitas, CA. Contact us at (805) 555-0578 or email coastal@electric.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:31:55.202Z",
+  "updatedAt": "2026-02-24T23:31:55.202Z"
+}

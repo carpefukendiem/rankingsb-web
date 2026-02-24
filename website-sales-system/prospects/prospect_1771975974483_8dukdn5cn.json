@@ -1,0 +1,19 @@
+{
+  "id": "prospect_1771975974483_8dukdn5cn",
+  "businessName": "Build Right Construction",
+  "phone": "(805) 555-0724",
+  "email": "build@right.com",
+  "address": null,
+  "city": "Encinitas",
+  "category": "Contractor",
+  "website": "https://right.com.com",
+  "hasWebsite": true,
+  "sourceUrl": "https://right.com.com",
+  "description": "Build Right Construction provides professional contractor services in Encinitas general, CA. Contact us at (805) 555-0724 or email build@right.com.",
+  "priority": 2,
+  "query": "",
+  "stage": "Prospect Found",
+  "status": "active",
+  "createdAt": "2026-02-24T23:32:54.483Z",
+  "updatedAt": "2026-02-24T23:32:54.483Z"
+}
