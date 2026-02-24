@@ -9255,3 +9255,8 @@
 [nightly-2026-02-01-client-support-os ab0473d] Autosave: 2026-02-24 15:25:11 - Workspace sync
  1 file changed, 3 insertions(+)
 [2026-02-24 15:25:11] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 526a669] Autosave: 2026-02-24 15:27:11 - Workspace sync
+ 4 files changed, 718 insertions(+), 123 deletions(-)
+ create mode 100644 website-sales-system/scripts/daily-export.js
+ create mode 100644 website-sales-system/scripts/web-search-wrapper.js
+[2026-02-24 15:27:11] ✅ Autosave successful
