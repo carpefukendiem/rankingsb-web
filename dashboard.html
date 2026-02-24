@@ -126,6 +126,15 @@
             background: #00ff41;
             color: #0a0a0a;
         }
+        .btn-action {
+            background: rgba(255,100,100,0.2);
+            border-color: #ff6464;
+            color: #ff9999;
+        }
+        .btn-action:hover {
+            background: #ff6464;
+            color: #0a0a0a;
+        }
         .metric-row {
             display: flex;
             justify-content: space-between;
@@ -170,6 +179,14 @@
         .priority-high { color: #ff6666; }
         .priority-med { color: #ffcc00; }
         .priority-low { color: #66ccff; }
+        .reminder-box {
+            background: rgba(255,100,100,0.1);
+            border: 1px solid #ff6464;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -178,7 +195,7 @@
         <div class="status-bar">
             <div class="status-item">
                 <div class="label">DATE</div>
-                <div class="value" id="date">2026-02-23</div>
+                <div class="value" id="date">2026-02-24</div>
             </div>
             <div class="status-item">
                 <div class="label">STATUS</div>
@@ -186,7 +203,7 @@
             </div>
             <div class="status-item">
                 <div class="label">AGENTS</div>
-                <div class="value">2 ACTIVE</div>
+                <div class="value">3 ACTIVE</div>
             </div>
         </div>
     </header>
@@ -199,22 +216,36 @@
                     <span class="status-dot green"></span>
                     <h3>🎯 DAILY ACTIONS</h3>
                 </div>
+                
+                <div class="reminder-box">
+                    🔴 <strong>REMINDER:</strong> Follow up with <strong>German Auto Services</strong> tomorrow
+                    <br><a href="https://calendar.google.com" target="_blank" style="color: #ff9999;">→ Add to Google Calendar</a>
+                </div>
+
                 <div class="section-title">Apply to 5 Upwork Jobs</div>
                 <ul class="action-list">
-                    <li><input type="checkbox"> <a href="file:///Users/rubenruiz/.openclaw/workspace/UPWORK-JOBS-10-FRESH.md">Job 1: Local SEO for Plumber</a></li>
-                    <li><input type="checkbox"> <a href="file:///Users/rubenruiz/.openclaw/workspace/UPWORK-JOBS-10-FRESH.md">Job 2: GHL CRM for Real Estate</a></li>
-                    <li><input type="checkbox"> <a href="file:///Users/rubenruiz/.openclaw/workspace/UPWORK-JOBS-10-FRESH.md">Job 3: Facebook/Google Ads</a></li>
-                    <li><input type="checkbox"> <a href="file:///Users/rubenruiz/.openclaw/workspace/UPWORK-JOBS-10-FRESH.md">Job 4: SEO Audit & Fix</a></li>
-                    <li><input type="checkbox"> <a href="file:///Users/rubenruiz/.openclaw/workspace/UPWORK-JOBS-10-FRESH.md">Job 5: GHL Sales Funnel</a></li>
+                    <li><input type="checkbox"> <a href="https://www.upwork.com/nx/search/jobs/?q=local%20seo%20plumber" target="_blank">Job 1: Local SEO for Plumber</a></li>
+                    <li><input type="checkbox"> <a href="https://www.upwork.com/nx/search/jobs/?q=gohighlevel%20real%20estate" target="_blank">Job 2: GHL CRM for Real Estate</a></li>
+                    <li><input type="checkbox"> <a href="https://www.upwork.com/nx/search/jobs/?q=facebook%20ads%20manager" target="_blank">Job 3: Facebook/Google Ads</a></li>
+                    <li><input type="checkbox"> <a href="https://www.upwork.com/nx/search/jobs/?q=seo%20audit" target="_blank">Job 4: SEO Audit & Fix</a></li>
+                    <li><input type="checkbox"> <a href="https://www.upwork.com/nx/search/jobs/?q=sales%20funnel%20gohighlevel" target="_blank">Job 5: GHL Sales Funnel</a></li>
                 </ul>
+                <div style="margin-top: 10px;">
+                    <a href="file:///Users/rubenruiz/.openclaw/workspace/business/Ruben-Upwork-Cover-Letters.md" class="btn">Cover Letter Templates</a>
+                </div>
+
                 <div class="section-title">CushionFoamz Responses</div>
                 <ul class="action-list">
-                    <li><input type="checkbox"> Check daily conversations file</li>
+                    <li><input type="checkbox"> <a href="file:///Users/rubenruiz/.openclaw/workspace/memory/2026-02-24.md">Check daily conversations file</a></li>
                     <li><input type="checkbox"> Post 3 Reddit responses</li>
                 </ul>
+                <div style="margin-top: 10px;">
+                    <a href="file:///Users/rubenruiz/.openclaw/workspace/business/cushionfoamz/PROSPECTING-GUIDE.md" class="btn">View Strategy</a>
+                </div>
+
                 <div class="section-title">Sal Follow-up</div>
                 <ul class="action-list">
-                    <li><input type="checkbox" class="priority-high"> <strong>Text/Call Sal for Week 1-6 results</strong></li>
+                    <li><input type="checkbox" class="priority-high"> <strong>Text/Call Sal for Week 1 results</strong></li>
                 </ul>
             </div>
 
@@ -228,11 +259,11 @@
                 <div class="section-title">Rankingsb</div>
                 <div class="metric-row">
                     <span class="metric-label">Website</span>
-                    <span class="metric-value"><a href="https://rankingsb-web.vercel.app">LIVE</a></span>
+                    <span class="metric-value"><a href="https://rankingsb-web.vercel.app">DEPLOYING TODAY</a></span>
                 </div>
                 <div class="metric-row">
-                    <span class="metric-label">Pages</span>
-                    <span class="metric-value">12 → 28 (BUILDING)</span>
+                    <span class="metric-label">Status</span>
+                    <span class="metric-value" style="color: #ffcc00;">BUILDING NOW</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Sal Monitoring</span>
@@ -242,11 +273,15 @@
                 <div class="section-title">CushionFoamz</div>
                 <div class="metric-row">
                     <span class="metric-label">Daily Search</span>
-                    <span class="metric-value">READY</span>
+                    <span class="metric-value">ACTIVE</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Conversations</span>
                     <span class="metric-value"><a href="file:///Users/rubenruiz/.openclaw/workspace/agents/spike/outputs/cushionfoamz">VIEW FILES</a></span>
+                </div>
+                <div class="metric-row">
+                    <span class="metric-label">Spike Status</span>
+                    <span class="metric-value" style="color: #ff6666;">VERIFYING DAILY RUN</span>
                 </div>
 
                 <div class="section-title">TaxHawk</div>
@@ -269,14 +304,13 @@
             </div>
             <div class="quick-links">
                 <a href="https://rankingsb-web.vercel.app" class="quick-link">Rankingsb Website</a>
-                <a href="file:///Users/rubenruiz/.openclaw/workspace/UPWORK-JOBS-10-FRESH.md" class="quick-link">Upwork Jobs</a>
+                <a href="https://www.upwork.com" class="quick-link" target="_blank">Upwork</a>
                 <a href="file:///Users/rubenruiz/.openclaw/workspace/business/tax-optimization/PROJECT-BRIEF.md" class="quick-link">TaxHawk Brief</a>
                 <a href="file:///Users/rubenruiz/.openclaw/workspace/mission-control/weekly-review-template.md" class="quick-link">Weekly Review</a>
                 <a href="file:///Users/rubenruiz/.openclaw/workspace/RUBEN-TODO-DASHBOARD.md" class="quick-link">To-Do Dashboard</a>
                 <a href="file:///Users/rubenruiz/.openclaw/workspace/mission-control/logs/activity.log" class="quick-link">Activity Log</a>
                 <a href="file:///Users/rubenruiz/.openclaw/workspace/business/Ruben-Upwork-Cover-Letters.md" class="quick-link">Cover Letters</a>
-                <a href="file:///Users/rubenruiz/.openclaw/workspace/FILE-UPLOAD-GUIDE.md" class="quick-link">File Upload Guide</a>
-                <a href="file:///Users/rubenruiz/.openclaw/workspace/website-sales-system/dashboard/index.html" class="quick-link" style="background: rgba(255,100,100,0.15); border-color: #ff6464;">🚀 Website Sales</a>
+                <a href="file:///Users/rubenruiz/.openclaw/workspace/action-dashboard.html" class="quick-link btn-action">🎯 ACTION DASHBOARD</a>
             </div>
         </div>
 
@@ -289,7 +323,7 @@
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">OpenRouter (Kimi)</span>
-                    <span class="metric-value">~$3.50 est</span>
+                    <span class="metric-value">~$4.50 est</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Brave Search</span>
@@ -301,25 +335,25 @@
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Total Est. Daily</span>
-                    <span class="metric-value">~$5.00</span>
+                    <span class="metric-value">~$6.00</span>
                 </div>
                 <div style="margin-top: 15px; font-size: 0.85em; opacity: 0.7;">
-                    <em>Detailed dashboard coming soon...</em>
+                    <em>101 JJKB site deployed | Rankingsb building...</em>
                 </div>
             </div>
 
             <div class="card">
                 <div class="card-header">
                     <span class="status-dot green"></span>
-                    <h3>🗓️ WEEKLY REVIEW</h3>
+                    <h3>🗓️ THIS WEEK</h3>
                 </div>
                 <div class="metric-row">
-                    <span class="metric-label">Last Review</span>
-                    <span class="metric-value">--</span>
+                    <span class="metric-label">Week 2 Goal</span>
+                    <span class="metric-value">3 CLOSES</span>
                 </div>
                 <div class="metric-row">
-                    <span class="metric-label">Template</span>
-                    <span class="metric-value"><a href="file:///Users/rubenruiz/.openclaw/workspace/mission-control/weekly-review-template.md">READY</a></span>
+                    <span class="metric-label">Current</span>
+                    <span class="metric-value" style="color: #ff6666;">0/3</span>
                 </div>
                 <div class="metric-row">
                     <span class="metric-label">Next Review</span>
@@ -348,7 +382,7 @@
     </div>
 
     <footer class="footer">
-        <p>⚡ Johnny 5 Command Center | Auto-refresh: 30s | Last updated: 2026-02-23 12:10 PST</p>
+        <p>⚡ Johnny 5 Command Center | Auto-refresh: 30s | Last updated: 2026-02-24 2:30 PM PST</p>
     </footer>
 
     <script>
