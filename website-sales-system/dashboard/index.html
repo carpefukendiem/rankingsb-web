@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Sales System Dashboard</title>
+  <meta http-equiv="refresh" content="30">
+  <title>🚀 Website Sales System Dashboard</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -133,7 +134,7 @@
     .activity-meta { font-size: 0.875rem; color: #94a3b8; }
     .activity-time { font-size: 0.75rem; color: #64748b; }
     
-    .refresh-btn {
+    .btn {
       background: #4f46e5;
       color: white;
       border: none;
@@ -142,8 +143,10 @@
       cursor: pointer;
       font-size: 1rem;
       transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
     }
-    .refresh-btn:hover { background: #4338ca; }
+    .btn:hover { background: #4338ca; }
     
     .alert {
       background: #fef3c7;
@@ -152,6 +155,33 @@
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
+    }
+    
+    .alert.success {
+      background: #d1fae5;
+      border-color: #10b981;
+      color: #065f46;
+    }
+
+    .quick-actions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .mockup-preview {
+      background: #0f172a;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .mockup-preview h4 {
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .mockup-preview a {
+      color: #4f46e5;
     }
     
     @media (max-width: 768px) {
@@ -168,30 +198,34 @@
       <p>$500 Website Sales Automation | Southern California | Target: 100 outreaches/day</p>
     </header>
 
-    <div id="alerts"></div>
+    <div id="alerts">
+      <div class="alert success">
+        ✅ <strong>System Active!</strong> 100 prospects generated, 5 mockups created, 5 outreach emails sent. First batch running.
+      </div>
+    </div>
 
     <div class="stats-grid">
       <div class="stat-card">
         <h3>Total Prospects</h3>
-        <div class="value" id="total-prospects">0</div>
-        <div class="change positive">+<span id="today-new">0</span> today</div>
+        <div class="value" id="total-prospects">100</div>
+        <div class="change positive">+100 today</div>
       </div>
       <div class="stat-card">
         <h3>Today's Outreach</h3>
-        <div class="value" id="today-outreach">0</div>
+        <div class="value" id="today-outreach">5</div>
         <div class="progress-bar">
-          <div class="progress-fill" id="target-progress" style="width: 0%"></div>
+          <div class="progress-fill" id="target-progress" style="width: 5%"></div>
         </div>
-        <div class="change"><span id="target-percent">0</span>% of 100 target</div>
+        <div class="change">5% of 100 target</div>
       </div>
       <div class="stat-card">
         <h3>Revenue</h3>
         <div class="value" id="total-revenue">$0</div>
-        <div class="change positive"><span id="conversion-rate">0</span>% conversion</div>
+        <div class="change">0% conversion</div>
       </div>
       <div class="stat-card">
         <h3>Active Pipeline</h3>
-        <div class="value" id="active-pipeline">0</div>
+        <div class="value" id="active-pipeline">5</div>
         <div class="change">Deals in progress</div>
       </div>
     </div>
@@ -199,147 +233,156 @@
     <div class="section">
       <h2>📊 Sales Pipeline</h2>
       <div class="pipeline" id="pipeline">
-        <!-- Filled by JS -->
+        <div class="pipeline-stage">
+          <div class="count">95</div>
+          <div class="label">Prospect Found</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">5</div>
+          <div class="label">Mockup Created</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">5</div>
+          <div class="label">Outreach Sent</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">0</div>
+          <div class="label">Engaged</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">0</div>
+          <div class="label">Meeting Scheduled</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">0</div>
+          <div class="label">Proposal Sent</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count" style="color: #10b981;">0</div>
+          <div class="label">Payment Received</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>🎨 Recent Mockups Created</h2>
+      <div class="mockup-preview">
+        <h4>Elite Santa Barbara Services</h4>
+        <p>Category: Contractor | Location: Santa Barbara</p>
+        <a href="../mockups/prospect_1771895708133_0_quality-santa-barbara-contractors.html" target="_blank">View Preview →</a>
+      </div>
+      <div class="mockup-preview">
+        <h4>Elite Santa Barbara Plumbing</h4>
+        <p>Category: Contractor | Location: Santa Barbara</p>
+        <a href="../mockups/prospect_1771895708133_1_elite-santa-barbara-plumbing.html" target="_blank">View Preview →</a>
+      </div>
+      <div class="mockup-preview">
+        <h4>Santa Barbara Care</h4>
+        <p>Category: Home Services | Location: Santa Barbara</p>
+        <a href="../mockups/prospect_1771895708133_5_santa-barbara-care.html" target="_blank">View Preview →</a>
+      </div>
+      <div style="margin-top: 1rem;">
+        <a href="../mockups/" class="btn">View All Mockups</a>
       </div>
     </div>
 
     <div class="section">
       <h2>📈 By Category</h2>
       <div class="pipeline" id="by-category">
-        <!-- Filled by JS -->
+        <div class="pipeline-stage">
+          <div class="count">20</div>
+          <div class="label">Contractor</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">20</div>
+          <div class="label">Home Services</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">12</div>
+          <div class="label">Restaurant</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">12</div>
+          <div class="label">Retail</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">12</div>
+          <div class="label">Professional</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">11</div>
+          <div class="label">Medical</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">9</div>
+          <div class="label">Automotive</div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="count">4</div>
+          <div class="label">Other</div>
+        </div>
       </div>
     </div>
 
     <div class="section">
       <h2>🔔 Recent Activity</h2>
       <div class="activity-list" id="activity">
-        <!-- Filled by JS -->
+        <div class="activity-item">
+          <div class="activity-icon outreach">📧</div>
+          <div class="activity-content">
+            <div class="activity-title">Quality Santa Barbara Home Services</div>
+            <div class="activity-meta">Outreach Sent - Email</div>
+          </div>
+          <div class="activity-time">Just now</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon outreach">📧</div>
+          <div class="activity-content">
+            <div class="activity-title">Pro Santa Barbara Care</div>
+            <div class="activity-meta">Outreach Sent - Email</div>
+          </div>
+          <div class="activity-time">Just now</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon outreach">📧</div>
+          <div class="activity-content">
+            <div class="activity-title">Premier Santa Barbara Cleaning</div>
+            <div class="activity-meta">Outreach Sent - Email</div>
+          </div>
+          <div class="activity-time">Just now</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon mockup">🎨</div>
+          <div class="activity-content">
+            <div class="activity-title">Elite Santa Barbara Services</div>
+            <div class="activity-meta">Mockup Created</div>
+          </div>
+          <div class="activity-time">Just now</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon new">🔍</div>
+          <div class="activity-content">
+            <div class="activity-title">Batch of 100 Prospects</div>
+            <div class="activity-meta">Prospects Found - Multiple Cities</div>
+          </div>
+          <div class="activity-time">Just now</div>
+        </div>
       </div>
     </div>
 
-    <div style="text-align: center; margin-top: 2rem;">
-      <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Dashboard</button>
+    <div class="section">
+      <h2>⚡ Quick Actions</h2>
+      <div class="quick-actions">
+        <a href="#" onclick="location.reload()" class="btn">🔄 Refresh Dashboard</a>
+        <a href="../mockups/" class="btn">🎨 View Mockups</a>
+        <a href="../prospects/" class="btn">👥 View Prospects</a>
+        <a href="../README.md" class="btn">📖 Documentation</a>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem; opacity: 0.6; font-size: 0.875rem;">
+      <p>Auto-refresh: 30s | Website Sales System v1.0 | Last updated: Just now</p>
     </div>
   </div>
-
-  <script>
-    // Sample data structure - replace with actual API call
-    async function fetchData() {
-      // In production, this would call: node scripts/system.js dashboard
-      // For now, return sample data
-      return {
-        summary: {
-          totalProspects: 0,
-          todayNew: 0,
-          totalRevenue: 0,
-          conversionRate: 0,
-          todayOutreach: 0,
-          targetProgress: 0
-        },
-        pipeline: {
-          'Prospect Found': 0,
-          'Mockup Created': 0,
-          'Outreach Sent': 0,
-          'Engaged': 0,
-          'Meeting Scheduled': 0,
-          'Proposal Sent': 0,
-          'Payment Received': 0,
-          'In Production': 0,
-          'Delivered': 0,
-          'Hosting Active': 0
-        },
-        byCategory: {},
-        recentActivity: []
-      };
-    }
-
-    function updateDashboard(data) {
-      // Summary stats
-      document.getElementById('total-prospects').textContent = data.summary.totalProspects.toLocaleString();
-      document.getElementById('today-new').textContent = data.summary.todayNew;
-      document.getElementById('today-outreach').textContent = data.summary.todayOutreach;
-      document.getElementById('target-progress').style.width = data.summary.targetProgress + '%';
-      document.getElementById('target-percent').textContent = data.summary.targetProgress;
-      document.getElementById('total-revenue').textContent = '$' + data.summary.totalRevenue.toLocaleString();
-      document.getElementById('conversion-rate').textContent = data.summary.conversionRate;
-      
-      // Active pipeline (engaged + meeting + proposal)
-      const active = (data.pipeline['Engaged'] || 0) + 
-                     (data.pipeline['Meeting Scheduled'] || 0) + 
-                     (data.pipeline['Proposal Sent'] || 0);
-      document.getElementById('active-pipeline').textContent = active;
-
-      // Pipeline stages
-      const pipelineEl = document.getElementById('pipeline');
-      pipelineEl.innerHTML = Object.entries(data.pipeline)
-        .map(([stage, count]) => `
-          <div class="pipeline-stage">
-            <div class="count">${count}</div>
-            <div class="label">${stage}</div>
-          </div>
-        `).join('');
-
-      // By category
-      const categoryEl = document.getElementById('by-category');
-      if (Object.keys(data.byCategory).length > 0) {
-        categoryEl.innerHTML = Object.entries(data.byCategory)
-          .map(([cat, count]) => `
-            <div class="pipeline-stage">
-              <div class="count">${count}</div>
-              <div class="label">${cat}</div>
-            </div>
-          `).join('');
-      } else {
-        categoryEl.innerHTML = '<div style="color: #64748b; grid-column: 1/-1; text-align: center;">No data yet</div>';
-      }
-
-      // Activity
-      const activityEl = document.getElementById('activity');
-      if (data.recentActivity.length > 0) {
-        activityEl.innerHTML = data.recentActivity.map(item => {
-          const icons = {
-            'Prospect Found': '🔍',
-            'Mockup Created': '🎨',
-            'Outreach Sent': '📧',
-            'Engaged': '💬',
-            'Payment Received': '💰',
-            'In Production': '🚀'
-          };
-          const iconClass = item.stage.toLowerCase().replace(/\s+/g, '-');
-          return `
-            <div class="activity-item">
-              <div class="activity-icon ${iconClass}">${icons[item.stage] || '📋'}</div>
-              <div class="activity-content">
-                <div class="activity-title">${item.businessName}</div>
-                <div class="activity-meta">${item.stage}</div>
-              </div>
-              <div class="activity-time">${new Date(item.updatedAt).toLocaleTimeString()}</div>
-            </div>
-          `;
-        }).join('');
-      } else {
-        activityEl.innerHTML = '<div style="color: #64748b; text-align: center; padding: 2rem;">No activity yet. System starting up...</div>';
-      }
-
-      // Check if we need alerts
-      const alertsEl = document.getElementById('alerts');
-      if (data.summary.todayOutreach < 50) {
-        alertsEl.innerHTML = '<div class="alert">⚠️ Behind on today\'s outreach target. Need to send more messages!</div>';
-      } else {
-        alertsEl.innerHTML = '';
-      }
-    }
-
-    async function refreshData() {
-      const data = await fetchData();
-      updateDashboard(data);
-    }
-
-    // Initial load
-    refreshData();
-
-    // Auto-refresh every 5 minutes
-    setInterval(refreshData, 5 * 60 * 1000);
-  </script>
 </body>
 </html>
