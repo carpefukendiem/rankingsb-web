@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FFD700;
-            --primary-dark: #E6C200;
+            --primary: #E53935;
+            --primary-dark: #C62828;
             --secondary: #1a1a1a;
-            --accent: #DC2626;
-            --accent-hover: #B91C1C;
+            --accent: #FF5722;
+            --accent-hover: #E64A19;
             --white: #ffffff;
             --gray-100: #f8f9fa;
             --gray-200: #e9ecef;
@@ -132,11 +132,24 @@
             cursor: pointer;
         }
 
+        /* Logo Section */
+        .logo-section {
+            background: var(--secondary);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .logo-section img {
+            max-width: 450px;
+            width: 90%;
+            height: auto;
+        }
+
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.92), rgba(26, 26, 26, 0.85)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"><rect fill="%23111" width="1920" height="1080"/><g opacity="0.3"><polygon fill="%23FFD700" points="0,0 400,0 200,400"/><polygon fill="%23DC2626" points="1520,0 1920,0 1720,300"/></g></svg>');
+            min-height: 80vh;
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.75)),
+                        url('hero-kickboxing.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -153,7 +166,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E53935' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             opacity: 0.5;
         }
 
@@ -378,8 +391,8 @@
         .form-submit {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--secondary);
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: var(--white);
             border: none;
             border-radius: 8px;
             font-size: 1.1rem;
@@ -392,7 +405,7 @@
 
         .form-submit:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 8px 25px rgba(229, 57, 53, 0.4);
         }
 
         .form-note {
@@ -534,7 +547,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E53935' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         .why-us .section-header h2 {
@@ -858,8 +871,8 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">101</div>
+            <a href="#" class="logo" style="font-size: 1.25rem;">
+                <span style="color: var(--primary);">101</span>
                 <span>Jujutsu & Kickboxing</span>
             </a>
             <ul class="nav-links">
@@ -872,6 +885,11 @@
             <button class="mobile-menu-btn">☰</button>
         </div>
     </nav>
+
+    <!-- Logo Section -->
+    <section class="logo-section">
+        <img src="logo.png" alt="101 Jujutsu & Kickboxing Logo">
+    </section>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1062,6 +1080,10 @@
             <div class="section-header">
                 <h2>Why Train With Us?</h2>
                 <p>We're not just another martial arts gym. We're a community dedicated to helping you become your best self.</p>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <img src="jiu-jitsu.jpg" alt="Jiu Jitsu Training" style="max-width: 100%; height: auto; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
             </div>
 
             <div class="features-grid">
