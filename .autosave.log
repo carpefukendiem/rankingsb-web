@@ -10026,3 +10026,14 @@
  create mode 100644 TONIGHTS-IMPLEMENTATIONS.md
  create mode 100644 affiliate-website-system/scripts/scout.py
 [2026-02-24 22:32:46] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os a3c9ad3] Autosave: 2026-02-24 22:34:46 - Workspace sync
+ 9 files changed, 1950 insertions(+)
+ create mode 100644 affiliate-website-system/scripts/builder.py
+ create mode 100644 affiliate-website-system/scripts/outreach.py
+ create mode 100644 skills/demo-video/.env.example
+ create mode 100644 skills/demo-video/.gitignore
+ create mode 100644 skills/demo-video/compose-video.js
+ create mode 100644 skills/demo-video/generate-voiceover.js
+ create mode 100644 skills/demo-video/install.sh
+ create mode 100644 skills/demo-video/record-demo.js
+[2026-02-24 22:34:46] ✅ Autosave successful

@@ -1,0 +1,89 @@
+#!/usr/bin/env node
+
+/**
+ * Demo Video Command Wrapper
+ * 
+ * This wrapper enables the /demovideo command style usage.
+ * Can be symlinked or called from OpenClaw's command system.
+ * 
+ * Usage:
+ *   ./demovideo https://example.com
+ *   ./demovideo https://example.com --output my-demo.mp4
+ */
+
+const path = require('path');
+const { DemoRecorder } = require('./record-demo');
+
+// Parse arguments
+const args = process.argv.slice(2);
+const url = args[0];
+
+if (!url || url.startsWith('--')) {
+  console.log('OpenClaw Demo Video Generator');
+  console.log('');
+  console.log('Usage:');
+  console.log('  ./demovideo <url> [options]');
+  console.log('');
+  console.log('Options:');
+  console.log('  --output <file>    Specify output filename');
+  console.log('  --no-voice         Skip voiceover generation');
+  console.log('  --no-music         Skip background music');
+  console.log('  --headless         Run browser in headless mode (default)');
+  console.log('  --headed           Show browser window during recording');
+  console.log('');
+  console.log('Examples:');
+  console.log('  ./demovideo https://myapp.com');
+  console.log('  ./demovideo https://myapp.com --output launch-demo.mp4');
+  console.log('  ./demovideo https://myapp.com --no-music');
+  console.log('');
+  console.log('Environment:');
+  console.log('  Set ELEVENLABS_API_KEY in .env for voiceover');
+  console.log('  Place background music in ./assets/ for audio');
+  process.exit(1);
+}
+
+// Build options from arguments
+const options = {
+  headless: !args.includes('--headed'),
+};
+
+const outputIndex = args.indexOf('--output');
+if (outputIndex !== -1 && args[outputIndex + 1]) {
+  options.outputName = args[outputIndex + 1];
+}
+
+if (args.includes('--no-voice')) {
+  options.withVoiceover = false;
+}
+
+if (args.includes('--no-music')) {
+  options.withMusic = false;
+}
+
+// Run the recorder
+async function main() {
+  const recorder = new DemoRecorder(url, options);
+  
+  try {
+    const outputPath = await recorder.run();
+    
+    // Output result in a format that can be parsed by OpenClaw
+    console.log('');
+    console.log('::set-output::' + JSON.stringify({
+      success: true,
+      outputPath: outputPath,
+      url: url,
+    }));
+    
+  } catch (error) {
+    console.error('');
+    console.log('::set-output::' + JSON.stringify({
+      success: false,
+      error: error.message,
+      url: url,
+    }));
+    process.exit(1);
+  }
+}
+
+main();
