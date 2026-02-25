@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Video Composer
+ * Video Composer - FIXED VERSION
  * 
  * Combines video, voiceover, and background music using ffmpeg
  * Adds transitions, volume mixing, and final rendering
@@ -26,15 +26,20 @@ const CONFIG = {
 };
 
 /**
+ * Check if video has audio stream
+ */
+async function videoHasAudio(videoPath) {
+  try {
+    const cmd = `ffprobe -v error -select_streams a -show_entries stream=codec_type -of default=noprint_wrappers=1:nokey=1 "${videoPath}" | head -1`;
+    const result = execSync(cmd, { encoding: 'utf8' }).trim();
+    return result === 'audio';
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
  * Main composition function
- * 
- * @param {Object} options
- * @param {string} options.videoPath - Path to screen recording
- * @param {string} options.audioPath - Path to voiceover audio (optional)
- * @param {boolean} options.withMusic - Whether to add background music
- * @param {string} options.outputPath - Final output path
- * @param {number} options.targetDuration - Target video duration in seconds
- * @param {string} options.timestamp - Timestamp for temp files
  */
 async function compose(options) {
   const {
@@ -72,7 +77,8 @@ async function compose(options) {
       console.log('   🎵 Adding background music...');
       const musicPath = await getMusicPath(targetDuration);
       if (musicPath) {
-        currentVideo = await addBackgroundMusic(currentVideo, musicPath, timestamp, !!audioPath);
+        const hasAudio = await videoHasAudio(currentVideo);
+        currentVideo = await addBackgroundMusic(currentVideo, musicPath, timestamp, hasAudio);
         steps.push(currentVideo);
       }
     }
@@ -141,29 +147,48 @@ async function addVoiceover(videoPath, audioPath, timestamp) {
   const durationCmd = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${audioPath}"`;
   const audioDuration = parseFloat(execSync(durationCmd, { encoding: 'utf8' }).trim());
   
-  // Mix voiceover with video (reducing original audio)
-  const cmd = `ffmpeg -y \
-    -i "${videoPath}" \
-    -i "${audioPath}" \
-    -filter_complex "
-      [0:a]volume=${CONFIG.VIDEO_VOLUME}[video_audio];
-      [1:a]volume=${CONFIG.VOICE_VOLUME},afade=t=in:ss=0:d=${CONFIG.FADE_IN_DURATION},afade=t=out:st=${audioDuration - CONFIG.FADE_OUT_DURATION}:d=${CONFIG.FADE_OUT_DURATION}[voiceover];
-      [video_audio][voiceover]amix=inputs=2:duration=first:dropout_transition=2[audio_out]
-    " \
-    -map 0:v -map "[audio_out]" \
-    -c:v copy \
-    -c:a aac -b:a 192k \
-    -shortest \
-    "${outputPath}"`;
+  // Check if video has audio
+  const hasAudio = await videoHasAudio(videoPath);
+  
+  let cmd;
+  if (hasAudio) {
+    // Mix voiceover with existing video audio
+    cmd = `ffmpeg -y \
+      -i "${videoPath}" \
+      -i "${audioPath}" \
+      -filter_complex "
+        [0:a]volume=${CONFIG.VIDEO_VOLUME}[video_audio];
+        [1:a]volume=${CONFIG.VOICE_VOLUME},afade=t=in:ss=0:d=${CONFIG.FADE_IN_DURATION},afade=t=out:st=${audioDuration - CONFIG.FADE_OUT_DURATION}:d=${CONFIG.FADE_OUT_DURATION}[voiceover];
+        [video_audio][voiceover]amix=inputs=2:duration=first:dropout_transition=2[audio_out]
+      " \
+      -map 0:v -map "[audio_out]" \
+      -c:v copy \
+      -c:a aac -b:a 192k \
+      -shortest \
+      "${outputPath}"`;
+  } else {
+    // No video audio, just use voiceover
+    cmd = `ffmpeg -y \
+      -i "${videoPath}" \
+      -i "${audioPath}" \
+      -filter_complex "
+        [1:a]volume=${CONFIG.VOICE_VOLUME},afade=t=in:ss=0:d=${CONFIG.FADE_IN_DURATION},afade=t=out:st=${audioDuration - CONFIG.FADE_OUT_DURATION}:d=${CONFIG.FADE_OUT_DURATION}[audio_out]
+      " \
+      -map 0:v -map "[audio_out]" \
+      -c:v copy \
+      -c:a aac -b:a 192k \
+      -shortest \
+      "${outputPath}"`;
+  }
   
   execSync(cmd, { stdio: 'ignore' });
   return outputPath;
 }
 
 /**
- * Add background music to video
+ * Add background music to video - FIXED
  */
-async function addBackgroundMusic(videoPath, musicPath, timestamp, hasVoiceover) {
+async function addBackgroundMusic(videoPath, musicPath, timestamp, hasExistingAudio) {
   const outputPath = path.join(CONFIG.TEMP_DIR, `music-${timestamp}.mp4`);
   
   // Get video duration
@@ -172,8 +197,8 @@ async function addBackgroundMusic(videoPath, musicPath, timestamp, hasVoiceover)
   
   let cmd;
   
-  if (hasVoiceover) {
-    // Mix music with existing audio (ducked under voice)
+  if (hasExistingAudio) {
+    // Mix music with existing audio
     cmd = `ffmpeg -y \
       -i "${videoPath}" \
       -i "${musicPath}" \
@@ -190,17 +215,15 @@ async function addBackgroundMusic(videoPath, musicPath, timestamp, hasVoiceover)
       -shortest \
       "${outputPath}"`;
   } else {
-    // Add music as primary background
+    // No existing audio, just add music
     cmd = `ffmpeg -y \
       -i "${videoPath}" \
       -i "${musicPath}" \
       -filter_complex "
-        [0:a]volume=${CONFIG.VIDEO_VOLUME}[video_audio];
         [1:a]aloop=loop=-1:size=2e+09,atrim=0:${videoDuration},
         afade=t=in:ss=0:d=${CONFIG.MUSIC_FADE_IN},
         afade=t=out:st=${videoDuration - CONFIG.MUSIC_FADE_OUT}:d=${CONFIG.MUSIC_FADE_OUT},
-        volume=${CONFIG.MUSIC_VOLUME}[music];
-        [video_audio][music]amix=inputs=2:duration=first:dropout_transition=3[audio_out]
+        volume=0.3[audio_out]
       " \
       -map 0:v -map "[audio_out]" \
       -c:v copy \
@@ -254,49 +277,36 @@ async function getMusicPath(targetDuration) {
     }
   }
   
-  // Create silent audio as fallback
+  // Create silent audio track
   console.log('   ⚠️  No background music found, creating silent track...');
   const silentPath = path.join(CONFIG.TEMP_DIR, 'silent.mp3');
-  
-  const cmd = `ffmpeg -y -f lavfi -i anullsrc=r=44100:cl=stereo -t ${targetDuration} -acodec libmp3lame -q:a 4 "${silentPath}"`;
-  try {
-    execSync(cmd, { stdio: 'ignore' });
-    return silentPath;
-  } catch (e) {
-    return null;
-  }
+  const cmd = `ffmpeg -y -f lavfi -i anullsrc=r=44100:cl=mono -t ${targetDuration} -acodec libmp3lame -q:a 4 "${silentPath}"`;
+  execSync(cmd, { stdio: 'ignore' });
+  return silentPath;
 }
 
-/**
- * Check if ffmpeg is available
- */
-function checkFfmpeg() {
-  try {
-    const version = execSync('ffmpeg -version', { encoding: 'utf8' });
-    const match = version.match(/version\s+(\S+)/i);
-    if (match) {
-      console.log(`   ✓ ffmpeg ${match[1]} detected`);
-      return true;
-    }
-  } catch (e) {
-    return false;
-  }
-  return false;
-}
-
-// Export functions
-module.exports = {
-  compose,
-  checkFfmpeg,
-};
+module.exports = { compose, videoHasAudio };
 
 // CLI usage
 if (require.main === module) {
-  if (!checkFfmpeg()) {
-    console.error('Error: ffmpeg is required but not found');
-    console.error('Install with: brew install ffmpeg (macOS) or apt-get install ffmpeg (Linux)');
+  const args = process.argv.slice(2);
+  if (args.length < 2) {
+    console.log('Usage: node compose-video.js <video-path> <output-path> [audio-path]');
     process.exit(1);
   }
   
-  console.log('Video composer ready');
+  const [videoPath, outputPath, audioPath] = args;
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  
+  compose({
+    videoPath,
+    outputPath,
+    audioPath,
+    timestamp,
+  }).then(() => {
+    console.log('✓ Video composed successfully:', outputPath);
+  }).catch(err => {
+    console.error('✗ Error:', err.message);
+    process.exit(1);
+  });
 }
