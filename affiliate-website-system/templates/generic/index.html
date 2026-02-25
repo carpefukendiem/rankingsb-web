@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{business_name}} - {{niche_name}} in {{city}}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 0; text-align: center; }
+        header h1 { font-size: 3rem; margin-bottom: 20px; }
+        header p { font-size: 1.3rem; opacity: 0.9; }
+        .cta-button { display: inline-block; background: #fbbf24; color: #1f2937; padding: 18px 50px; text-decoration: none; border-radius: 50px; font-size: 1.3rem; font-weight: bold; margin-top: 30px; transition: transform 0.3s; }
+        .cta-button:hover { transform: scale(1.05); }
+        
+        /* CTA Section */
+        .cta-section { background: #f8f9fa; padding: 60px 0; text-align: center; }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 15px; }
+        .cta-section p { font-size: 1.2rem; color: #64748b; margin-bottom: 25px; }
+        .phone-cta { display: inline-block; background: #10b981; color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-size: 1.2rem; font-weight: bold; }
+        
+        /* Features */
+        .features { padding: 80px 0; }
+        .features h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #1f2937; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .feature { text-align: center; padding: 30px; }
+        .feature-icon { font-size: 3rem; margin-bottom: 20px; }
+        .feature h3 { color: #667eea; margin-bottom: 15px; font-size: 1.5rem; }
+        .feature p { color: #64748b; }
+        
+        /* About */
+        .about { background: #1f2937; color: white; padding: 80px 0; text-align: center; }
+        .about h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .about p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+        
+        /* Contact */
+        .contact { padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h2 { margin-bottom: 30px; color: #1f2937; }
+        .contact-info p { margin-bottom: 15px; font-size: 1.1rem; }
+        .contact-info a { color: #667eea; text-decoration: none; }
+        .contact-form { background: #f8f9fa; padding: 40px; border-radius: 10px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; color: #374151; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 5px; font-size: 1rem; }
+        .form-group input:focus, .form-group textarea:focus { border-color: #667eea; outline: none; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .submit-btn { background: #667eea; color: white; padding: 15px 40px; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer; width: 100%; font-weight: bold; }
+        .submit-btn:hover { background: #5a67d8; }
+        
+        /* Footer */
+        footer { background: #111827; color: #9ca3af; text-align: center; padding: 30px 0; }
+        
+        @media (max-width: 768px) { 
+            header h1 { font-size: 2rem; } 
+            .contact-grid { grid-template-columns: 1fr; }
+            .cta-button { padding: 15px 30px; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{business_name}}</h1>
+            <p>Professional {{niche_name}} Services in {{city}}</p>
+            <a href="tel:{{phone_link}}" class="cta-button">Call {{phone}}</a>
+        </div>
+    </header>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need {{niche_name}} Services in {{city}}?</h2>
+            <p>Fast, reliable service at competitive prices. Free estimates available.</p>
+            <a href="tel:{{phone_link}}" class="phone-cta">📞 {{phone}}</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✓</div>
+                    <h3>Professional Service</h3>
+                    <p>Years of experience serving {{city}} and surrounding areas with top-quality service.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>Quick turnaround times and flexible scheduling to meet your needs.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Fair Pricing</h3>
+                    <p>Competitive rates with no hidden fees. Free quotes on all projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About {{business_name}}</h2>
+            <p>We are a locally owned and operated {{niche_name}} business serving {{city}} and the surrounding communities. Our commitment to quality workmanship and customer satisfaction has made us a trusted name in the area.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>{{business_name}}</strong></p>
+                    <p>📍 {{address}}</p>
+                    <p>📞 <a href="tel:{{phone_link}}">{{phone}}</a></p>
+                    <p>⭐ {{rating}} Stars on Google Maps</p>
+                    <p style="margin-top: 30px; color: #6b7280;">We look forward to serving you!</p>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 25px; color: #1f2937;">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>How Can We Help?</label>
+                            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 {{business_name}}. All rights reserved.</p>
+            <p>{{niche_name}} services in {{city}}</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

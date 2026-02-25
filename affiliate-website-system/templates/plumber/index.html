@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{business_name}} - Professional Plumbing in {{city}}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Emergency Banner */
+        .emergency-banner { background: #dc2626; color: white; text-align: center; padding: 12px; font-weight: bold; }
+        .emergency-banner a { color: white; text-decoration: underline; }
+        
+        /* Header */
+        header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 60px 0; text-align: center; }
+        header h1 { font-size: 3rem; margin-bottom: 15px; }
+        header p { font-size: 1.3rem; opacity: 0.9; margin-bottom: 30px; }
+        .header-cta { display: inline-flex; align-items: center; gap: 15px; }
+        .phone-btn { background: #dc2626; color: white; padding: 18px 40px; text-decoration: none; border-radius: 50px; font-size: 1.3rem; font-weight: bold; transition: transform 0.3s; }
+        .phone-btn:hover { transform: scale(1.05); background: #b91c1c; }
+        
+        /* Services */
+        .services { padding: 80px 0; background: #f8fafc; }
+        .services h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: #1e40af; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+        .service-card h3 { color: #1e40af; margin-bottom: 15px; font-size: 1.4rem; }
+        .service-icon { font-size: 3rem; margin-bottom: 20px; }
+        
+        /* Why Choose Us */
+        .why-us { padding: 80px 0; }
+        .why-us h2 { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .feature { text-align: center; }
+        .feature h3 { color: #dc2626; margin-bottom: 10px; }
+        .feature p { color: #64748b; }
+        
+        /* CTA Section */
+        .cta-section { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 80px 0; text-align: center; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-section p { font-size: 1.3rem; margin-bottom: 30px; }
+        .cta-button { display: inline-block; background: #dc2626; color: white; padding: 18px 50px; text-decoration: none; border-radius: 50px; font-size: 1.3rem; font-weight: bold; transition: transform 0.3s; }
+        .cta-button:hover { transform: scale(1.05); }
+        
+        /* Contact */
+        .contact { background: #1e293b; color: white; padding: 80px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .contact-info h2 { margin-bottom: 30px; font-size: 2rem; }
+        .contact-info p { margin-bottom: 15px; font-size: 1.1rem; }
+        .contact-info a { color: #60a5fa; text-decoration: none; }
+        .service-areas { margin-top: 30px; }
+        .service-areas h3 { margin-bottom: 15px; color: #94a3b8; }
+        .service-areas p { color: #cbd5e1; }
+        .contact-form { background: white; padding: 40px; border-radius: 10px; color: #333; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 2px solid #e2e8f0; border-radius: 5px; font-size: 1rem; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #3b82f6; outline: none; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .submit-btn { background: #dc2626; color: white; padding: 15px 40px; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer; width: 100%; font-weight: bold; }
+        .submit-btn:hover { background: #b91c1c; }
+        
+        /* Footer */
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 30px 0; }
+        
+        @media (max-width: 768px) { 
+            header h1 { font-size: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="emergency-banner">
+        🚨 24/7 Emergency Plumbing Available — <a href="tel:{{phone_link}}">Call {{phone}}</a> Now!
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>{{business_name}}</h1>
+            <p>Professional Plumbing Services in {{city}} — Licensed, Bonded & Insured</p>
+            <div class="header-cta">
+                <a href="tel:{{phone_link}}" class="phone-btn">📞 {{phone}}</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Plumbing Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚿</div>
+                    <h3>Emergency Repairs</h3>
+                    <p>24/7 emergency plumbing services for burst pipes, leaks, and water damage. Fast response times guaranteed.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚽</div>
+                    <h3>Drain Cleaning</h3>
+                    <p>Professional drain cleaning and unclogging services. We clear blockages fast and prevent future problems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔥</div>
+                    <h3>Water Heaters</h3>
+                    <p>Installation, repair, and maintenance of all water heater types. Tankless specialists available.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Leak Detection</h3>
+                    <p>Advanced leak detection technology to find hidden leaks before they cause major damage.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Repiping</h3>
+                    <p>Complete home repiping services. Upgrade your old pipes to modern, reliable materials.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛁</div>
+                    <h3>Fixture Installation</h3>
+                    <p>Professional installation of faucets, toilets, sinks, showers, and all plumbing fixtures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <h2>Why {{city}} Chooses Us</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>⚡ Same-Day Service</h3>
+                    <p>Most jobs completed same day. Emergency calls get priority scheduling.</p>
+                </div>
+                <div class="feature">
+                    <h3>💰 Upfront Pricing</h3>
+                    <p>No hidden fees. We give you the full price before starting any work.</p>
+                </div>
+                <div class="feature">
+                    <h3>⭐ 5-Star Rated</h3>
+                    <p>Trusted by hundreds of homeowners in {{city}}. Check our reviews!</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Licensed & Insured</h3>
+                    <p>Full licensing and insurance for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need a Plumber Right Now?</h2>
+            <p>Don't wait for small problems to become big emergencies. Call us today!</p>
+            <a href="tel:{{phone_link}}" class="cta-button">Call {{phone}}</a>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Contact {{business_name}}</h2>
+                    <p><strong>{{business_name}}</strong></p>
+                    <p>📍 {{address}}</p>
+                    <p>📞 <a href="tel:{{phone_link}}">{{phone}}</a></p>
+                    <p>🕐 Open 24/7 for Emergencies</p>
+                    <p>⭐ {{rating}} Stars on Google Maps</p>
+                    
+                    <div class="service-areas">
+                        <h3>Service Areas</h3>
+                        <p>We proudly serve {{city}} and surrounding communities with fast, reliable plumbing services.</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 25px; color: #1e40af;">Request a Free Quote</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Your Name *</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Service Needed</label>
+                            <select name="service">
+                                <option>Emergency Repair</option>
+                                <option>Drain Cleaning</option>
+                                <option>Water Heater</option>
+                                <option>Leak Detection</option>
+                                <option>Fixture Installation</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>How Can We Help?</label>
+                            <textarea name="message" placeholder="Describe your plumbing issue..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Get Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 {{business_name}}. All rights reserved.</p>
+            <p>Licensed Plumber in {{city}} | Emergency Plumbing Services</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! We will call you within 30 minutes to discuss your plumbing needs.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
