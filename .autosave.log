@@ -9918,3 +9918,9 @@
  create mode 100755 website-sales-system/run-prospector.sh
  create mode 100755 website-sales-system/scripts/scrapling-prospector.py
 [2026-02-24 21:28:31] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 2ff29da] Autosave: 2026-02-24 21:30:32 - Workspace sync
+ 4 files changed, 732 insertions(+)
+ create mode 100644 website-sales-system/EXAMPLES.md
+ create mode 100644 website-sales-system/INSTALL.md
+ create mode 100755 website-sales-system/test-setup.py
+[2026-02-24 21:30:32] ✅ Autosave successful
