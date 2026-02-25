@@ -44,6 +44,24 @@
 - [x] Insurance/commercial property manager angles
 - [x] Emergency service hooks
 
+### Week 5 Deliverables (COMPLETE)
+- [x] Week 5 packet created (Solar focus)
+- [x] 20 solar leads researched
+- [x] Incentive expiration urgency angles
+
+### Week 6 Deliverables (COMPLETE)
+- [x] Week 6 packet created (Landscaping focus)
+- [x] 20 landscaping leads researched
+- [x] Spring rush season angles
+
+### Week 7 Deliverables (COMPLETE - Feb 25)
+- [x] Week 7 packet created (Pest Control focus)
+- [x] 20 pest control leads researched
+- [x] 12 pest control audit snippets created
+- [x] Spring season urgency angles
+- [x] Termite swarm season hooks
+- [x] Commercial/property manager scripts
+
 ---
 
 ## Deliverables Log
@@ -74,9 +92,10 @@
 | 1 | Electricians | 20 | ✅ Complete |
 | 2 | HVAC | 20 | ✅ Complete |
 | 3 | Plumbing | 20 | ✅ Complete |
-| 4 | Roofing | 20 | ✅ Ready (Feb 24) |
-| 5 | Solar | 20 | ⏳ Pending |
-| 6 | Appliance Repair | 20 | ⏳ Pending |
+| 4 | Roofing | 20 | ✅ Complete |
+| 5 | Solar | 20 | ✅ Complete |
+| 6 | Landscaping | 20 | ✅ Complete |
+| 7 | Pest Control | 20 | ✅ Complete (Feb 25) |
 
 ---
 
@@ -88,10 +107,11 @@
 - [x] Voicemail Script
 - [x] Email Follow-Up Templates
 - [x] Objection Handling Guide
-- [x] 15 Audit Snippets (industry-specific angles)
+- [x] 27 Audit Snippets (industry-specific angles)
 - [x] Emergency service scripts
 - [x] Commercial/property manager scripts
 - [x] Spanish market scripts
+- [x] Pest Control seasonal scripts (12 new)
 
 ### Tools
 - [x] Audit Generator (GHL integrated)
@@ -135,7 +155,21 @@
 - None currently
 - Awaiting Sal's feedback from Week 1
 
+## Deliverables Log (Updated)
+
+| Date | Deliverable | Status | File |
+|------|-------------|--------|------|
+| Feb 17 | Week 1 packet (Electricians) | ✅ Delivered | Week 1 packet |
+| Feb 18 | Week 2 packet (HVAC) | ✅ Delivered | `SAL-WEEK-2-PACKET.md` |
+| Feb 19 | Week 3 packet (Plumbing) | ✅ Delivered | `SAL-WEEK-3-PACKET.md` |
+| Feb 20 | Week 4 packet (Roofing) | ✅ Delivered | `SAL-WEEK-4-PACKET.md` |
+| Feb 21 | Week 5 packet (Solar) | ✅ Delivered | `SAL-WEEK-5-PACKET.md` |
+| Feb 22 | Week 6 packet (Landscaping) | ✅ Delivered | `week6-landscaping-packet.md` |
+| Feb 23 | Week 1 NEW (Carpet Cleaning) | ✅ Delivered | `week1-carpet-cleaning.md` |
+| Feb 25 | Week 7 (Pest Control) | ✅ Created | `week7-pest-control-packet.md` |
+| Feb 25 | Pest Control Snippets | ✅ Created | `PEST-CONTROL-AUDIT-SNIPPETS.md` |
+
 ---
 
-*Last updated: Feb 19, 2026 2:45 PM*
-*Next review: Feb 20, 2026 9 AM*
+*Last updated: Feb 25, 2026 2:30 PM*
+*Next review: Feb 26, 2026 9 AM*
