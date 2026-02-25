@@ -162,7 +162,7 @@ class GoogleScraper:
         leads = []
         try:
             # Use StealthyFetcher to get the page
-            page = self.fetcher.get(search_url, stealthy=True)
+            page = self.fetcher.fetch(search_url)
             
             # Try multiple selectors for business listings
             # Google Local Pack / Business listings
