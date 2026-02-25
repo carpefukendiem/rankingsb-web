@@ -47,6 +47,12 @@
 - ⏳ Awaiting: GHL data at 6 PM (Sal's calls)
 - ⏳ Awaiting: CushionFoamz blogId for publishing
 
+## Progress Notes (Feb 25, 8:10 AM)
+- 🚨 CRITICAL: Still awaiting Sal's call data from 120 leads delivered
+- 🟡 Upwork: 0/5 applications (jobs curated, templates ready)
+- 🔴 CushionFoamz: Guerilla marketing not started (Reddit built but inactive)
+- Next: Apply to Upwork jobs, get Sal's results, activate CushionFoamz
+
 ---
 
-*Last updated: Feb 24, 2026 8:10 AM*
+*Last updated: Feb 25, 2026 8:10 AM*

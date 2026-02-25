@@ -70,6 +70,12 @@
   - 6 automation workflows defined
   - 3 email sequences mapped
 
+## Progress Notes (Feb 25, 8:10 AM)
+- 🚨 Sal's activity monitoring broken (API returning 0 locations)
+- 🟡 Website: 16 pages built, needs Vercel deployment
+- ✅ Pipeline infrastructure operational
+- Next: Fix GHL API connection, check 6 PM data, deploy website
+
 ---
 
-*Last updated: Feb 24, 2026 8:10 AM*
+*Last updated: Feb 25, 2026 8:10 AM*
