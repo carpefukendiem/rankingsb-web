@@ -1,0 +1,16 @@
+# Scrapling dependencies
+scrapling>=0.2.0
+
+# HTTP client for async website checking
+aiohttp>=3.8.0
+aiohttp-socks>=0.8.0
+
+# Data processing
+pandas>=2.0.0
+
+# Optional: For enhanced stealth
+fake-useragent>=1.4.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
