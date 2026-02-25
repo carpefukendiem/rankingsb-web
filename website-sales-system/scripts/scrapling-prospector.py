@@ -304,7 +304,7 @@ class YelpScraper:
         
         leads = []
         try:
-            page = self.fetcher.get(search_url, stealthy=True)
+            page = self.fetcher.fetch(search_url)
             
             # Yelp business containers
             selectors = [
