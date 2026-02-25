@@ -10037,3 +10037,14 @@
  create mode 100644 skills/demo-video/install.sh
  create mode 100644 skills/demo-video/record-demo.js
 [2026-02-24 22:34:46] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os ed8a443] Autosave: 2026-02-24 22:36:46 - Workspace sync
+ 9 files changed, 760 insertions(+)
+ create mode 100644 affiliate-website-system/scripts/closer.py
+ create mode 100644 skills/demo-video/README.md
+ mode change 100644 => 100755 skills/demo-video/compose-video.js
+ create mode 100755 skills/demo-video/demovideo
+ mode change 100644 => 100755 skills/demo-video/generate-voiceover.js
+ mode change 100644 => 100755 skills/demo-video/install.sh
+ create mode 100644 skills/demo-video/openclaw-integration.js
+ mode change 100644 => 100755 skills/demo-video/record-demo.js
+[2026-02-24 22:36:47] ✅ Autosave successful
