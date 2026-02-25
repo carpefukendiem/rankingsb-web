@@ -25,8 +25,7 @@ from typing import List, Dict, Optional, Set
 from dataclasses import dataclass, asdict
 
 # Scrapling imports
-from scrapling import StealthyFetcher
-from scrapling.fetchers.async_fetcher import AsyncFetcher
+from scrapling import StealthyFetcher, Fetcher
 
 # Configuration
 CITIES = [
