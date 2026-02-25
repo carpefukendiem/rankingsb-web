@@ -1,0 +1,101 @@
+# Affiliate Website System Configuration
+
+# Target Markets
+targets:
+  cities:
+    - name: "Miami, FL"
+      state: "FL"
+      timezone: "America/New_York"
+    - name: "Phoenix, AZ"
+      state: "AZ"
+      timezone: "America/Phoenix"
+    - name: "Las Vegas, NV"
+      state: "NV"
+      timezone: "America/Los_Angeles"
+    - name: "Austin, TX"
+      state: "TX"
+      timezone: "America/Chicago"
+    - name: "Denver, CO"
+      state: "CO"
+      timezone: "America/Denver"
+      
+  niches:
+    - id: "plumber"
+      name: "Plumber"
+      template: "plumber"
+      keywords: ["plumbing", "plumber", "drain cleaning", "water heater"]
+    - id: "electrician"
+      name: "Electrician"
+      template: "electrician"
+      keywords: ["electrical", "electrician", "wiring", "electrical repair"]
+    - id: "landscaping"
+      name: "Landscaping"
+      template: "landscaping"
+      keywords: ["landscaping", "lawn care", "garden design", "tree service"]
+    - id: "salon"
+      name: "Hair Salon"
+      template: "salon"
+      keywords: ["hair salon", "barber", "hair stylist", "beauty salon"]
+    - id: "autorepair"
+      name: "Auto Repair"
+      template: "autorepair"
+      keywords: ["auto repair", "mechanic", "car service", "brake repair"]
+    - id: "hvac"
+      name: "HVAC"
+      template: "hvac"
+      keywords: ["hvac", "air conditioning", "heating", "ac repair"]
+    - id: "cleaning"
+      name: "Cleaning Service"
+      template: "cleaning"
+      keywords: ["cleaning service", "house cleaning", "maid service", "janitorial"]
+    - id: "dentist"
+      name: "Dentist"
+      template: "dentist"
+      keywords: ["dentist", "dental", "orthodontist", "dental clinic"]
+
+# Daily Targets
+daily_leads: 100
+max_sms_per_day: 50
+
+# PageSpeed Scoring
+pagespeed:
+  threshold: 50  # Flag sites below this score
+  api_endpoint: "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
+  strategy: "mobile"  # mobile or desktop
+
+# Scraping Settings
+scraping:
+  delay_min: 2
+  delay_max: 5
+  retry_attempts: 3
+  timeout: 30
+  
+# Outreach Settings
+outreach:
+  sms_template: "Hi {name}, built your business a free website — {link}. $50/month if you want to keep it."
+  max_chars: 160
+  business_hours_only: true
+  business_hours:
+    start: 9
+    end: 18
+  
+# Affiliate Links
+affiliate_links:
+  base44: "https://base44.com/?ref={affiliate_id}"
+  wix: "https://www.wix.com/?ref={affiliate_id}"
+  squarespace: "https://www.squarespace.com/?ref={affiliate_id}"
+  godaddy: "https://www.godaddy.com/?ref={affiliate_id}"
+
+# File Paths
+paths:
+  leads: "data/leads"
+  crm: "data/crm"
+  logs: "logs"
+  templates: "templates"
+  
+# Notification Settings
+notifications:
+  discord_on_sale: true
+  discord_on_reply: true
+  sms_on_sale: true
+  daily_summary: true

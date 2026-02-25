@@ -1,0 +1,31 @@
+{
+  "name": "openclaw-demo-video",
+  "version": "1.0.0",
+  "description": "AI-powered demo video generation for OpenClaw builds",
+  "main": "record-demo.js",
+  "scripts": {
+    "demo": "node record-demo.js",
+    "install-deps": "npm install && npx playwright install chromium",
+    "test": "node record-demo.js https://example.com"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "openclaw",
+    "demo",
+    "video",
+    "screen-recording",
+    "playwright",
+    "elevenlabs"
+  ],
+  "author": "OpenClaw",
+  "license": "MIT"
+}
