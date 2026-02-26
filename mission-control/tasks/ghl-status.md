@@ -70,12 +70,14 @@
   - 6 automation workflows defined
   - 3 email sequences mapped
 
-## Progress Notes (Feb 25, 8:10 AM)
-- 🚨 Sal's activity monitoring broken (API returning 0 locations)
-- 🟡 Website: 16 pages built, needs Vercel deployment
-- ✅ Pipeline infrastructure operational
-- Next: Fix GHL API connection, check 6 PM data, deploy website
+## Progress Notes (Feb 26, 8:10 AM)
+- 🚨 Website: Still needs Vercel deployment (15 pages + logo ready — RUBEN ACTION NEEDED)
+- 🚨 Sal's activity: Awaiting pipeline data (text Sal for Week 1-6 results)
+- ✅ Stripe webhook handler built for $500 website sales
+- ✅ GHL onboarding pipeline documented (8-stage workflow)
+- ✅ Supabase memory system operational
+- Next: Deploy website, get Sal's data, test Stripe integration
 
 ---
 
-*Last updated: Feb 25, 2026 8:10 AM*
+*Last updated: Feb 26, 2026 8:10 AM*
