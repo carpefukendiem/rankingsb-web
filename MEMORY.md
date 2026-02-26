@@ -273,6 +273,25 @@ open ~/.openclaw/workspace/dashboard.html
 
 ---
 
+## 📅 CRITICAL DATES & REMINDERS
+
+### Loan Repayment
+- **March 11, 2026** — Tappy loan due (jpg.store) — 13 days from Feb 26
+  - Collateral: Tappy NFTs
+  - Action: Repay loan to reclaim NFTs
+  - Reminder file: `mission-control/tasks/LOAN-REMINDER-TAPPY-MARCH-11.md`
+
+---
+
+## 🔧 PENDING SETUP
+
+### Google Calendar Integration
+- Need to configure `gog auth` for calendar access
+- Command: `gog auth add [email] --services calendar`
+- Then: Set calendar reminders automatically
+
+---
+
 *Memory compiled: February 16, 2026*
 *System version: 2026.2.14*
 *Status: Pre-launch, fully documented*
