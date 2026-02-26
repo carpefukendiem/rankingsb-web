@@ -1,0 +1,3 @@
+[2026-02-26T16:00:01.818Z] 📍 STEP 1: Generating 100 new prospects...
+[2026-02-26T16:00:01.840Z] 
+❌ ERROR: this.scraper.runBatch is not a function
