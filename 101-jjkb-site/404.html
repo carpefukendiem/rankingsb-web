@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | 101 Jiu Jitsu & Kickboxing</title>
+    <meta name="description" content="Page not found. Explore our martial arts programs in Goleta, CA.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E42416;
+            --primary-dark: #C41E1A;
+            --secondary: #0a1628;
+            --white: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--white); min-height: 100vh; display: flex; flex-direction: column; background: var(--secondary); }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+        .error-section { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem; text-align: center; background: linear-gradient(135deg, var(--secondary), #1a2a42), url('gym-1.jpg'); background-size: cover; background-position: center; position: relative; }
+        .error-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10, 22, 40, 0.9); }
+        .error-container { max-width: 700px; position: relative; z-index: 1; }
+        .error-code { font-family: 'Oswald', sans-serif; font-size: 8rem; font-weight: 700; color: var(--primary); line-height: 1; text-shadow: 4px 4px 0 rgba(0,0,0,0.3); margin-bottom: 0.5rem; }
+        .error-section h1 { font-size: 2.5rem; color: var(--white); margin-bottom: 1rem; }
+        .error-section p { font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; margin: 0.5rem; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-secondary:hover { background: var(--white); color: var(--secondary); }
+        .quick-links { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .quick-links h3 { font-size: 1.25rem; margin-bottom: 1.5rem; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+        .links-grid a { color: rgba(255,255,255,0.7); text-decoration: none; padding: 0.75rem; background: rgba(255,255,255,0.05); border-radius: 8px; transition: all 0.3s ease; }
+        .links-grid a:hover { background: var(--primary); color: var(--white); }
+        footer { background: var(--secondary); color: var(--white); padding: 2rem; text-align: center; }
+        footer p { opacity: 0.5; font-size: 0.875rem; }
+        @media (max-width: 768px) { .error-code { font-size: 5rem; } .error-section h1 { font-size: 1.75rem; } }
+    </style>
+</head>
+<body>
+    <section class="error-section">
+        <div class="error-container">
+            <div class="error-code">404</div>
+            <h1>Page Not Found</h1>
+            <p>Looks like this page tapped out. But don't worry — we've got plenty of other great content to help you on your martial arts journey.</p>
+            
+            <div>
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+
+            <div class="quick-links">
+                <h3>Popular Pages</h3>
+                <div class="links-grid">
+                    <a href="class-schedule.html">Class Schedule</a>
+                    <a href="jiu-jitsu.html">Jiu-Jitsu</a>
+                    <a href="kickboxing.html">Kickboxing</a>
+                    <a href="kids-teens.html">Kids/Teens</a>
+                    <a href="about.html">About Us</a>
+                    <a href="instructors.html">Instructors</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 101 Jiu Jitsu & Kickboxing. All rights reserved. | Made by <a href="https://www.rankingsb.com" style="color: inherit;">Ranking SB</a></p>
+    </footer>
+</body>
+</html>

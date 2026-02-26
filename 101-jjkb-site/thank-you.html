@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | 101 Jiu Jitsu & Kickboxing | Goleta</title>
+    <meta name="description" content="Thank you for contacting 101 Jiu Jitsu & Kickboxing. We'll be in touch within 24 hours to schedule your free trial.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E42416;
+            --primary-dark: #C41E1A;
+            --secondary: #0a1628;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-600: #6c757d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--gray-600); min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+        .thank-you-section { flex: 1; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--secondary), #1a2a42); padding: 2rem; text-align: center; }
+        .thank-you-container { max-width: 600px; }
+        .success-icon { width: 100px; height: 100px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; center; justify-content: center; font-size: 3rem; margin: 0 auto 2rem; color: var(--white); }
+        .thank-you-section h1 { font-size: 3rem; color: var(--white); margin-bottom: 1rem; }
+        .thank-you-section h1 span { color: var(--primary); }
+        .thank-you-section p { font-size: 1.1rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+        .next-steps { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 2rem; margin: 2rem 0; text-align: left; }
+        .next-steps h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 1rem; }
+        .next-steps ul { list-style: none; }
+        .next-steps li { color: rgba(255,255,255,0.8); margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+        .next-steps li::before { content: '✓'; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; margin: 0.5rem; }
+        .btn-primary { background: var(--primary); color: var(--white); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-secondary:hover { background: var(--white); color: var(--secondary); }
+        .social-links { margin-top: 2rem; }
+        .social-links p { color: rgba(255,255,255,0.6); margin-bottom: 1rem; }
+        .social-icons { display: flex; justify-content: center; gap: 1rem; }
+        .social-icons a { width: 48px; height: 48px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; font-size: 1.25rem; transition: all 0.3s ease; }
+        .social-icons a:hover { background: var(--primary); transform: translateY(-3px); }
+        footer { background: var(--secondary); color: var(--white); padding: 2rem; text-align: center; }
+        footer p { opacity: 0.5; font-size: 0.875rem; }
+        @media (max-width: 768px) { .thank-you-section h1 { font-size: 2rem; } .success-icon { width: 80px; height: 80px; font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+    <section class="thank-you-section">
+        <div class="thank-you-container">
+            <div class="success-icon">✓</div>
+            <h1>Thank <span>You</span>!</h1>
+            <p>We've received your information and we'll be in touch within 24 hours to schedule your free 7-day trial.</p>
+            
+            <div class="next-steps">
+                <h3>What Happens Next?</h3>
+                <ul>
+                    <li>Our team will call you to discuss your goals</li>
+                    <li>We'll schedule your first class at a convenient time</li>
+                    <li>Show up with comfortable workout clothes</li>
+                    <li>We'll provide everything else you need</li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="class-schedule.html" class="btn btn-primary">View Class Schedule</a>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+
+            <div class="social-links">
+                <p>Follow us for training tips and updates</p>
+                <div class="social-icons">
+                    <a href="#">f</a>
+                    <a href="#">ig</a>
+                    <a href="#">yt</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 101 Jiu Jitsu & Kickboxing. All rights reserved. | Made by <a href="https://www.rankingsb.com" style="color: inherit;">Ranking SB</a></p>
+    </footer>
+</body>
+</html>
