@@ -1,186 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>101 Jiu Jitsu & Kickboxing | Goleta & Santa Barbara</title>
-    <meta name="description" content="Goleta's premier martial arts academy. 25+ years experience, 5000+ students trained. Brazilian Jiu-Jitsu, Kickboxing, Boxing, Wrestling. 7-day free trial.">
-    <link rel="icon" type="image/png" href="logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { --primary: #E42416; --primary-dark: #C41E1A; --secondary: #0a1628; --accent: #1e3a8a; --white: #ffffff; --gray-100: #f8f9fa; --gray-600: #6c757d; --gray-800: #343a40; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--gray-800); overflow-x: hidden; }
-        h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
-        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 22, 40, 0.98); backdrop-filter: blur(10px); padding: 0.5rem 0; }
-        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 75px; width: auto; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 0.9rem; text-transform: uppercase; }
-        .nav-links a:hover { color: var(--primary); }
-        .nav-cta { background: var(--primary); color: var(--white) !important; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; }
-        .hero { min-height: 90vh; background: linear-gradient(135deg, rgba(10,22,40,0.85), rgba(10,22,40,0.75)), url('gym-1.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; padding-top: 120px; }
-        .hero-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .hero h1 { font-size: 4rem; color: var(--white); margin-bottom: 1.5rem; }
-        .hero h1 span { color: var(--primary); display: block; }
-        .hero-subtitle { font-size: 1.25rem; color: rgba(255,255,255,0.85); margin-bottom: 2rem; }
-        .hero-features { display: flex; gap: 2rem; margin-bottom: 2.5rem; }
-        .hero-feature { display: flex; align-items: center; gap: 0.75rem; color: var(--white); font-weight: 500; }
-        .hero-feature-icon { width: 32px; height: 32px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #FFD700; font-weight: bold; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; }
-        .btn-primary { background: var(--primary); color: var(--white); }
-        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); }
-        .btn-secondary { background: transparent; color: var(--white); border: 2px solid var(--white); }
-        .btn-secondary:hover { background: var(--white); color: var(--secondary); }
-        .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-        .hero-stat { text-align: center; }
-        .hero-stat-number { font-family: 'Oswald', sans-serif; font-size: 2.5rem; font-weight: 700; color: var(--white); }
-        .hero-stat-label { color: rgba(255,255,255,0.7); font-size: 0.875rem; text-transform: uppercase; }
-        .programs { padding: 6rem 0; background: var(--white); }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-header h2 { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; }
-        .programs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .program-card { background: var(--gray-100); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent; }
-        .program-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: var(--primary); }
-        .program-image { height: 200px; background: linear-gradient(135deg, var(--secondary), #333); display: flex; align-items: center; justify-content: center; }
-        .program-icon { font-size: 4rem; }
-        .program-content { padding: 1.5rem; }
-        .program-tag { display: inline-block; background: var(--primary); color: var(--white); padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem; }
-        .why-us { padding: 6rem 0; background: linear-gradient(135deg, var(--secondary), #0a0a0a); }
-        .why-us .section-header h2 { color: var(--white); }
-        .why-us .section-header p { color: rgba(255,255,255,0.7); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .feature-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; text-align: center; }
-        .feature-icon { width: 64px; height: 64px; background: var(--accent); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem; color: var(--white); }
-        .feature-box h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 0.75rem; }
-        .feature-box p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
-        .testimonials { padding: 6rem 0; background: var(--gray-100); }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .testimonial-card { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .testimonial-stars { color: var(--primary); font-size: 1.25rem; margin-bottom: 1rem; }
-        .testimonial-text { font-size: 1.1rem; color: var(--gray-800); margin-bottom: 1.5rem; font-style: italic; }
-        .testimonial-name { font-weight: 700; color: var(--secondary); }
-        .cta-section { padding: 6rem 0; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); text-align: center; }
-        .cta-section h2 { font-size: 3rem; color: var(--white); margin-bottom: 1rem; }
-        footer { background: var(--secondary); color: var(--white); padding: 4rem 0 2rem; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; }
-        @media (max-width: 1024px) { .hero-container { grid-template-columns: 1fr; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>101 Jiu Jitsu & Kickboxing | Goleta & Santa Barbara Martial Arts</title>
+  <meta name="description" content="Goleta's premier martial arts academy with 25+ years experience. Brazilian Jiu-Jitsu, Kickboxing, Boxing, Wrestling. 7-day free trial for kids, teens & adults.">
+  <link rel="canonical" href="https://101jjkb.com/">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="101 Jiu Jitsu & Kickboxing | Goleta Martial Arts Academy">
+  <meta property="og:description" content="Train with Goleta's best martial arts instructors. 25+ years experience. Free 7-day trial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://101jjkb.com/">
+  <meta property="og:image" content="https://101jjkb.com/logo.png">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo"><img src="logo.webp" alt="101 Jiu Jitsu & Kickboxing" style="height:75px;"></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="class-schedule.html">Schedule</a></li>
-                <li><a href="contact.html" class="nav-cta">Start Free Trial</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.webp" alt="101 Jiu Jitsu & Kickboxing" width="150" height="75">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Programs ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="jiu-jitsu.html">Brazilian Jiu-Jitsu</a></li>
+            <li><a href="kickboxing.html">Kickboxing</a></li>
+            <li><a href="boxing.html">Boxing</a></li>
+            <li><a href="wrestling.html">Wrestling</a></li>
+            <li><a href="kids-teens.html">Kids & Teens</a></li>
+            <li><a href="mma-gym.html">MMA Training</a></li>
+            <li><a href="trx-training.html">TRX Training</a></li>
+            <li><a href="rocksteady.html">Rocksteady Boxing</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="class-schedule.html">Schedule</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="free-trial.html" class="nav-cta">Start Free Trial</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Open Menu">☰</button>
+    </div>
+  </nav>
 
-    <section class="hero">
-        <div class="hero-container">
-            <div>
-                <h1>Transform Your Body. <span>Master Your Mind.</span></h1>
-                <p class="hero-subtitle">Goleta's premier martial arts academy for Jiu Jitsu, Kickboxing, and Boxing. Train with world-class instructors.</p>
-                <div class="hero-features">
-                    <div class="hero-feature"><div class="hero-feature-icon">✓</div><span>7-Day Free Trial</span></div>
-                    <div class="hero-feature"><div class="hero-feature-icon">✓</div><span>All Levels Welcome</span></div>
-                    <div class="hero-feature"><div class="hero-feature-icon">✓</div><span>Kids & Adults</span></div>
-                </div>
-                <a href="contact.html" class="btn btn-primary">Claim Your Free Week →</a>
-                <div class="hero-stats">
-                    <div class="hero-stat"><div class="hero-stat-number">25+</div><div class="hero-stat-label">Years Experience</div></div>
-                    <div class="hero-stat"><div class="hero-stat-number">5000+</div><div class="hero-stat-label">Students Trained</div></div>
-                    <div class="hero-stat"><div class="hero-stat-number">4.9★</div><div class="hero-stat-label">Google Rating</div></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <button class="mobile-menu-close" aria-label="Close Menu">✕</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="instructors.html">Instructors</a></li>
+      <li><a href="class-schedule.html">Schedule</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="free-trial.html" class="nav-cta">Start Free Trial</a></li>
+    </ul>
+  </div>
 
-    <section class="programs">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Programs</h2>
-            </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-image"><div class="program-icon">🥋</div></div>
-                    <div class="program-content">
-                        <span class="program-tag">Most Popular</span>
-                        <h3><a href="kids-teens.html">Kids Martial Arts</a></h3>
-                        <p>Build confidence, discipline, and respect. Ages 5-12.</p>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-image"><div class="program-icon">🥊</div></div>
-                    <div class="program-content">
-                        <span class="program-tag">Fitness Focus</span>
-                        <h3><a href="kickboxing.html">Adult Kickboxing</a></h3>
-                        <p>Burn up to 800 calories per class. All levels welcome.</p>
-                    </div>
-                </div>
-                <div class="program-card">
-                    <div class="program-image"><div class="program-icon">🤼</div></div>
-                    <div class="program-content">
-                        <span class="program-tag">Self-Defense</span>
-                        <h3><a href="jiu-jitsu.html">Brazilian Jiu-Jitsu</a></h3>
-                        <p>Learn leverage and technique. All levels.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('gym-1.jpg');">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">🔥 Goleta's Premier Martial Arts Academy</span>
+        <h1>Master Brazilian Jiu-Jitsu, Kickboxing & Boxing in Goleta, CA</h1>
+        <p class="hero-subtitle">Transform your body and mind with world-class martial arts training. Whether you want fitness, self-defense, or competition, our 25+ years of experience will get you there.</p>
+        
+        <div class="hero-features">
+          <div class="hero-feature">
+            <div class="hero-feature-icon">✓</div>
+            <span>7-Day Free Trial</span>
+          </div>
+          <div class="hero-feature">
+            <div class="hero-feature-icon">✓</div>
+            <span>All Ages & Levels</span>
+          </div>
+          <div class="hero-feature">
+            <div class="hero-feature-icon">✓</div>
+            <span>Expert Black Belt Instructors</span>
+          </div>
         </div>
-    </section>
 
-    <section class="why-us">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Train With Us?</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">🏅</div>
-                    <h3>Expert Instructors</h3>
-                    <p>25+ years of combined experience.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">🤝</div>
-                    <h3>Ego-Free Environment</h3>
-                    <p>Supportive culture for everyone.</p>
-                </div>
-                <div class="feature-box">
-                    <div class="feature-icon">📍</div>
-                    <h3>Prime Location</h3>
-                    <p>5940 Calle Real, Goleta.</p>
-                </div>
-            </div>
+        <div class="hero-cta-group">
+          <a href="free-trial.html" class="btn btn-primary">Start Your Free Week →</a>
+          <a href="class-schedule.html" class="btn btn-secondary">View Class Schedule</a>
         </div>
-    </section>
 
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Start?</h2>
-            <a href="contact.html" class="btn btn-primary" style="background:#fff;color:#0a1628;">Get Your Free Week →</a>
+        <div class="hero-stats" style="margin-top: var(--space-2xl); padding-top: var(--space-xl);">
+          <div class="hero-stat">
+            <div class="hero-stat-number">25+</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">5000+</div>
+            <div class="hero-stat-label">Students Trained</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">4.9★</div>
+            <div class="hero-stat-label">Google Rating</div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="index.html"><img src="logo.webp" alt="101 Jiu Jitsu" style="height:60px;"></a>
-                    <p>Goleta's premier martial arts academy.</p>
-                </div>
+  <!-- Programs Section -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Martial Arts Programs for Everyone</h2>
+        <p>From kids to adults, beginners to competitors — we have a program that fits your goals.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="card-image">
+            <img src="jiu-jitsu.jpg" alt="Brazilian Jiu-Jitsu training in Goleta" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Most Popular</span>
+            <h3><a href="jiu-jitsu.html">Brazilian Jiu-Jitsu</a></h3>
+            <p>Master the art of leverage and submission. Perfect for self-defense, fitness, and competition. Gi and No-Gi classes available.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>🎯 All Levels</span>
+              <span>📅 Daily</span>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 101 Jiu Jitsu & Kickboxing</p>
-                <p>Made by <a href="https://www.rankingsb.com" style="color:#E42416;">Ranking SB</a></p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <img src="hero-kickboxing.jpg" alt="Adult kickboxing classes in Goleta" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Fitness Focus</span>
+            <h3><a href="kickboxing.html">Adult Kickboxing</a></h3>
+            <p>Burn up to 800 calories per class while learning real striking techniques. Get fit, relieve stress, and learn practical self-defense.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>🔥 High Intensity</span>
+              <span>📅 6 Days/Week</span>
             </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <div class="card-icon">👊</div>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Striking Arts</span>
+            <h3><a href="boxing.html">Boxing Fundamentals</a></h3>
+            <p>Master the sweet science with perfect footwork, head movement, and punch combinations. Great for fitness or competitive goals.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>🥊 All Levels</span>
+              <span>📅 Mon-Thu</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <div class="card-icon">🤼</div>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Competition</span>
+            <h3><a href="wrestling.html">Wrestling</a></h3>
+            <p>Build explosive power and takedown skills. Our wrestling program complements BJJ perfectly for MMA and grappling competition.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>💪 Advanced</span>
+              <span>📅 Tue/Thu</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <img src="kids-bjj.jpg" alt="Kids martial arts classes in Goleta" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Ages 4-17</span>
+            <h3><a href="kids-teens.html">Kids & Teens Martial Arts</a></h3>
+            <p>Build confidence, discipline, and respect. Our youth programs combine Jiu-Jitsu and Kickboxing in a fun, safe environment.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>👶 Ages 4-17</span>
+              <span>📅 Mon-Sat</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <div class="card-icon">⚡</div>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Complete Training</span>
+            <h3><a href="mma-gym.html">MMA Training</a></h3>
+            <p>Train complete mixed martial arts combining striking, wrestling, and Brazilian Jiu-Jitsu. Become a well-rounded fighter.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>👊 All Levels</span>
+              <span>📅 Multiple Classes</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <img src="gym-2.jpg" alt="TRX suspension training in Goleta" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Strength</span>
+            <h3><a href="trx-training.html">TRX Training</a></h3>
+            <p>Suspension training that builds functional strength, core stability, and total body fitness using your own body weight.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>💪 All Levels</span>
+              <span>📅 Tue/Thu/Sat</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-image">
+            <div class="card-icon">🧠</div>
+          </div>
+          <div class="card-content">
+            <span class="card-tag">Specialized</span>
+            <h3><a href="rocksteady.html">Rocksteady Boxing</a></h3>
+            <p>Non-contact boxing program for Parkinson's disease and movement disorders. Improve balance, coordination, and quality of life.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+              <span>🎯 Specialized</span>
+              <span>📅 Tue/Thu</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Why Train at 101 Jiu Jitsu?</h2>
+        <p>We're not just another gym. We're a community dedicated to helping you become your best self.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-box reveal">
+          <div class="feature-icon">🏅</div>
+          <h3>Expert Instructors</h3>
+          <p>Learn from black belt professors and competitive fighters with 25+ years of combined experience.</p>
         </div>
-    </footer>
+
+        <div class="feature-box reveal">
+          <div class="feature-icon">🤝</div>
+          <h3>Ego-Free Environment</h3>
+          <p>Leave your ego at the door. We foster a supportive culture where everyone helps each other improve.</p>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-icon">📍</div>
+          <h3>Prime Goleta Location</h3>
+          <p>Conveniently located at 5940 Calle Real with ample parking. Easy access from Santa Barbara and Isla Vista.</p>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-icon">⏰</div>
+          <h3>Flexible Schedule</h3>
+          <p>Classes morning, noon, and night. We have options that fit your busy lifestyle.</p>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-icon">🎯</div>
+          <h3>Goal-Based Training</h3>
+          <p>Whether you want fitness, self-defense, or competition, we customize your path to success.</p>
+        </div>
+
+        <div class="feature-box reveal">
+          <div class="feature-icon">💯</div>
+          <h3>Results Guaranteed</h3>
+          <p>See improvement in 30 days or your money back. We're that confident in our training.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Our Students Say</h2>
+        <p>Real reviews from our Google Business page.</p>
+      </div>
+
+      <div class="testimonial-grid">
+        <article class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Has truly been a game-changer for me and my family. Whether you're a complete beginner or a seasoned athlete, there's something here for everyone. It's not just a gym—it's a family."</p>
+          <div class="testimonial-author">— Tracie Eymann, Parent & Student</div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"I always make a point to roll every time I travel through Goleta. The school is a gem, where it seems that anyone willing to put in the work is welcome. John is fantastic, and so are his students."</p>
+          <div class="testimonial-author">— Eric Ziemba, Visiting Practitioner</div>
+        </article>
+
+        <article class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"This is hands down the best kickboxing & MMA gym in the area. The owner John is such a kind person and really cares about his students and his community. The coaches push you but are respectful."</p>
+          <div class="testimonial-author">— Jaclyn Sukich, Kickboxing & MMA</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="reveal">Ready to Start Your Transformation?</h2>
+      <p class="reveal">Join hundreds of Goleta residents who have already discovered the power of martial arts. Your first week is completely FREE.</p>
+      <a href="free-trial.html" class="btn btn-white reveal">Get Your Free Week Now →</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="logo.webp" alt="101 Jiu Jitsu & Kickboxing" style="height: 60px;">
+          </a>
+          <p>Goleta's premier martial arts academy. Transform your body, master your mind, join our community.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="YouTube">yt</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="jiu-jitsu.html">Brazilian Jiu-Jitsu</a></li>
+            <li><a href="kickboxing.html">Kickboxing</a></li>
+            <li><a href="boxing.html">Boxing</a></li>
+            <li><a href="wrestling.html">Wrestling</a></li>
+            <li><a href="kids-teens.html">Kids & Teens</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+            <li><a href="class-schedule.html">Class Schedule</a></li>
+            <li><a href="mma-gym.html">MMA Gym</a></li>
+            <li><a href="rocksteady.html">Rocksteady</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li>📍 5940 Calle Real, Goleta 93117</li>
+            <li>📞 <a href="tel:+18059775981">(805) 977-5981</a></li>
+            <li>✉️ <a href="mailto:john@101jiujitsugoleta.com">john@101jiujitsugoleta.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 101 Jiu Jitsu & Kickboxing. All rights reserved.</p>
+        <p>Made by <a href="https://www.rankingsb.com" target="_blank" rel="noopener">Ranking SB</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
