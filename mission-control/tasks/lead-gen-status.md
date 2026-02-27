@@ -47,14 +47,15 @@
 - ⏳ Awaiting: GHL data at 6 PM (Sal's calls)
 - ⏳ Awaiting: CushionFoamz blogId for publishing
 
-## Progress Notes (Feb 26, 8:10 AM)
+## Progress Notes (Feb 27, 10:30 AM)
 - 🚨 CRITICAL: Still awaiting Sal's call data from 120 leads delivered (6 days overdue)
 - 🟡 Upwork: 0/5 applications (jobs curated, templates ready — RUBEN ACTION NEEDED)
-- 🔴 CushionFoamz: Guerilla marketing not started (Reddit built but inactive — RUBEN ACTION NEEDED)
+- ✅ CushionFoamz: Guerilla marketing templates created (6 copy-paste responses ready)
+- 🔴 CushionFoamz ACTION NEEDED: Join 5 subreddits + 5 FB groups, start posting
 - ✅ Week 7 Pest Control packet ready (20 leads + 12 snippets)
 - ✅ Website sales outreach scripts created ($500 offer)
 - ✅ GHL onboarding pipeline documented (8 stages)
-- Next: Apply to Upwork jobs TODAY, get Sal's results, activate CushionFoamz
+- Next: Apply to Upwork jobs, get Sal's results, start CushionFoamz posting
 
 ---
 
