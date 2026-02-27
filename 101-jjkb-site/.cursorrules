@@ -1,0 +1,125 @@
+# Cursor Rules for 101 Jiu Jitsu Website
+
+## Project Context
+- Martial arts gym website for 101 Jiu Jitsu & Kickboxing in Goleta, CA
+- Static HTML/CSS/JS site deployed to Vercel
+- Mobile-first, responsive design
+
+## Brand Guidelines
+- Primary Red: #E42416
+- Primary Dark: #C41E1A  
+- Secondary (Dark): #0a1628
+- Accent Blue: #1e3a8a
+- White: #ffffff
+- Font: Oswald (headings), Inter (body)
+
+## Component Patterns
+
+### Navigation
+```html
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="logo.webp" alt="101 Jiu Jitsu & Kickboxing">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Programs ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+          <li><a href="kickboxing.html">Kickboxing</a></li>
+          <li><a href="boxing.html">Boxing</a></li>
+          <li><a href="wrestling.html">Wrestling</a></li>
+          <li><a href="kids-teens.html">Kids/Teens</a></li>
+          <li><a href="mma-gym.html">MMA</a></li>
+          <li><a href="trx-training.html">TRX</a></li>
+          <li><a href="rocksteady.html">Rocksteady</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="instructors.html">Instructors</a></li>
+      <li><a href="class-schedule.html">Schedule</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="free-trial.html" class="nav-cta">Free Trial</a></li>
+    </ul>
+  </div>
+</nav>
+```
+
+### Hero Section
+```html
+<section class="hero">
+  <div class="hero-container">
+    <h1>SEO-RICH H1 TITLE</h1>
+    <p class="hero-subtitle">Compelling description with keywords</p>
+    <a href="free-trial.html" class="btn btn-primary">CTA Button</a>
+  </div>
+</section>
+```
+
+### Buttons
+- `.btn-primary` - Red background, white text
+- `.btn-secondary` - Transparent, white border
+- `.btn-white` - White background, dark text (for dark sections)
+
+## SEO Requirements
+- Every page needs unique H1 with keywords
+- Meta title: 50-60 characters with location
+- Meta description: 150-160 characters
+- Schema markup for LocalBusiness on contact page
+
+## File Structure
+```
+101-jjkb-site/
+├── index.html (homepage)
+├── about.html
+├── free-trial.html (dedicated page)
+├── contact.html (with maps + schema)
+├── class-schedule.html
+├── instructors.html
+├── Program pages:
+│   ├── jiu-jitsu.html
+│   ├── kickboxing.html
+│   ├── boxing.html
+│   ├── wrestling.html
+│   ├── kids-teens.html
+│   ├── mma-gym.html
+│   ├── rocksteady.html
+│   └── trx-training.html
+├── System pages:
+│   ├── thank-you.html
+│   ├── 404.html
+│   ├── privacy.html
+│   └── terms.html
+├── css/
+│   └── styles.css (shared styles)
+├── js/
+│   └── main.js (shared scripts)
+└── images/
+```
+
+## Interactive Features Needed
+1. Mobile menu toggle
+2. Dropdown navigation on hover/click
+3. Smooth scroll for anchor links
+4. Scroll animations (fade-in, slide-up)
+5. Form validation
+6. Image lazy loading
+
+## Contact Info (For Schema)
+- Name: 101 Jiu Jitsu & Kickboxing
+- Address: 5940 Calle Real, Goleta, CA 93117
+- Phone: +1 805-977-5981
+- Email: john@101jiujitsugoleta.com
+- Hours: Mon-Fri 6AM-9PM, Sat 9AM-12PM
+
+## Quality Checks
+- [ ] Consistent navigation on ALL pages
+- [ ] Proper spacing and margins
+- [ ] Mobile responsive
+- [ ] All links work
+- [ ] Images optimized and unique per page
+- [ ] SEO meta tags present
+- [ ] Schema markup on contact
+- [ ] Fast loading (< 3s)
