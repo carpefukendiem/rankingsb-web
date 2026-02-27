@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | 101 Jiu Jitsu & Kickboxing | Goleta</title>
+    <meta name="description" content="Contact 101 Jiu Jitsu & Kickboxing in Goleta, CA. Get a free 7-day trial. Call 805-977-5981 or visit us at 5940 Calle Real.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --primary: #E42416;
+            --primary-dark: #C41E1A;
+            --secondary: #0a1628;
+            --accent: #1e3a8a;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--gray-800); overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 22, 40, 0.98); backdrop-filter: blur(10px); padding: 0.5rem 0; }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 75px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: var(--white) !important; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+        .hero { min-height: 40vh; background: linear-gradient(135deg, var(--secondary), #1a2a42); display: flex; align-items: center; padding-top: 120px; }
+        .hero-container { max-width: 1280px; margin: 0 auto; padding: 4rem 2rem; color: var(--white); text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.25rem; opacity: 0.9; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 5rem 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .contact-info h2 { font-size: 2rem; color: var(--secondary); margin-bottom: 1.5rem; }
+        .contact-info p { color: var(--gray-600); margin-bottom: 2rem; font-size: 1.05rem; }
+        .contact-method { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+        .contact-icon { width: 48px; height: 48px; background: var(--primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .contact-method h4 { font-size: 1.1rem; color: var(--secondary); margin-bottom: 0.25rem; }
+        .contact-method p { color: var(--gray-600); margin: 0; }
+        .contact-method a { color: var(--primary); text-decoration: none; }
+        .contact-method a:hover { text-decoration: underline; }
+        .form-container { background: var(--gray-100); border-radius: 16px; padding: 2.5rem; }
+        .form-container h3 { font-size: 1.5rem; color: var(--secondary); margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; color: var(--secondary); font-weight: 500; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 1px solid var(--gray-200); border-radius: 8px; background: var(--white); color: var(--gray-800); font-size: 1rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(228, 36, 22, 0.1); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-submit { width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: var(--white); border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; transition: all 0.3s ease; }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(228, 36, 22, 0.4); }
+        .form-note { text-align: center; color: var(--gray-600); font-size: 0.85rem; margin-top: 1rem; }
+        .map-section { background: var(--secondary); }
+        .map-container { height: 400px; background: linear-gradient(135deg, #1a2a42, var(--secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; color: var(--white); }
+        .map-placeholder { text-align: center; }
+        .map-placeholder h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .map-placeholder p { opacity: 0.8; }
+        footer { background: var(--secondary); color: var(--white); padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand p { opacity: 0.7; margin: 1rem 0; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; transition: all 0.3s ease; }
+        .footer-social a:hover { background: var(--primary); }
+        .footer-column h4 { color: var(--primary); font-size: 1rem; margin-bottom: 1.5rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--primary); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p { opacity: 0.5; font-size: 0.875rem; }
+        .footer-bottom a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--primary); }
+        @media (max-width: 1024px) { .contact-grid { grid-template-columns: 1fr; gap: 3rem; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } .hero h1 { font-size: 2.5rem; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-social { justify-content: center; } .footer-bottom { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img loading="lazy" src="logo.webp" alt="101 Jiu Jitsu & Kickboxing"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+                <li><a href="kickboxing.html">Kickboxing</a></li>
+                <li><a href="boxing.html">Boxing</a></li>
+                <li><a href="kids-teens.html">Kids/Teens</a></li>
+                <li><a href="class-schedule.html">Schedule</a></li>
+                <li><a href="contact.html" class="nav-cta">Start Free Trial</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Contact <span>Us</span></h1>
+            <p>Ready to start your martial arts journey? Get in touch today for your free 7-day trial.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We'd love to hear from you. Whether you have questions about our programs, want to schedule a tour, or are ready to start your free trial, our team is here to help.</p>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>5940 Calle Real<br>Goleta, CA 93117</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+18059775981">+1 (805) 977-5981</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:john@101jiujitsugoleta.com">john@101jiujitsugoleta.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon-Fri: 6:00 AM - 9:00 PM<br>Sat: 9:00 AM - 12:00 PM<br>Sun: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <h3>Start Your Free Trial</h3>
+                    <form action="https://services.leadconnectorhq.com/hooks/ifVst8kd3WrSmJLqdJlQ/formCapture/website" method="POST">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" name="email" placeholder="you@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" name="phone" placeholder="(805) 555-0123" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Program Interest *</label>
+                            <select name="program" required>
+                                <option value="">Select a program...</option>
+                                <option value="Kids Martial Arts">Kids Martial Arts (Ages 5-12)</option>
+                                <option value="Teen Kickboxing">Teen Kickboxing (Ages 13-17)</option>
+                                <option value="Adult Jiu-Jitsu">Adult Brazilian Jiu-Jitsu</option>
+                                <option value="Adult Kickboxing">Adult Kickboxing</option>
+                                <option value="Boxing">Boxing Fundamentals</option>
+                                <option value="Wrestling">Wrestling</option>
+                                <option value="Rocksteady">Rocksteady Boxing</option>
+                                <option value="TRX">TRX Training</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message (Optional)</label>
+                            <textarea name="message" placeholder="Tell us about your goals or any questions you have..."></textarea>
+                        </div>
+                        <input type="hidden" name="source" value="Website Contact Form">
+                        <button type="submit" class="form-submit">Claim My Free Week</button>
+                        <p class="form-note">🔒 No credit card required. Cancel anytime.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section map-section">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <h3>Find Us</h3>
+                    <p>5940 Calle Real, Goleta, CA 93117</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><img loading="lazy" src="logo.webp" alt="101 Jiu Jitsu & Kickboxing" style="height: 60px;"></a>
+                    <p>Goleta's premier martial arts academy. Transform your body, master your mind, join our community.</p>
+                    <div class="footer-social"><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+                        <li><a href="kickboxing.html">Kickboxing</a></li>
+                        <li><a href="boxing.html">Boxing</a></li>
+                        <li><a href="wrestling.html">Wrestling</a></li>
+                        <li><a href="kids-teens.html">Kids/Teens</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="class-schedule.html">Class Schedule</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="mma-gym.html">MMA Gym</a></li>
+                        <li><a href="rocksteady.html">Rocksteady</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 5940 Calle Real, Goleta 93117</li>
+                        <li>📞 +1 805-977-5981</li>
+                        <li>✉️ john@101jiujitsugoleta.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 101 Jiu Jitsu & Kickboxing. All rights reserved.</p>
+                <p>Made by <a href="https://www.rankingsb.com" target="_blank">Ranking SB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)'; }
+            else { navbar.style.boxShadow = 'none'; }
+        });
+    </script>
+</body>
+</html>

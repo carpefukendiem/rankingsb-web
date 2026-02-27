@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule | 101 Jiu Jitsu & Kickboxing | Goleta</title>
+  <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="View the complete class schedule for 101 Jiu Jitsu & Kickboxing in Goleta. Gi & No-Gi Jiu-Jitsu, Kickboxing, Boxing, Kids classes, and more.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E42416;
+            --primary-dark: #C41E1A;
+            --secondary: #0a1628;
+            --accent: #1e3a8a;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--gray-800); overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 22, 40, 0.98); backdrop-filter: blur(10px); padding: 0.5rem 0; }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 75px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: var(--white) !important; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+        .hero { min-height: 40vh; background: linear-gradient(135deg, var(--secondary), #1a2a42); display: flex; align-items: center; padding-top: 120px; }
+        .hero-container { max-width: 1280px; margin: 0 auto; padding: 4rem 2rem; color: var(--white); text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.25rem; opacity: 0.9; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 4rem 0; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem; }
+        .day-tabs { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .day-tab { padding: 0.75rem 1.5rem; background: var(--gray-100); border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+        .day-tab:hover { background: var(--gray-200); }
+        .day-tab.active { background: var(--primary); color: var(--white); }
+        .schedule-day { display: none; }
+        .schedule-day.active { display: block; }
+        .day-header { background: var(--secondary); color: var(--white); padding: 1.5rem; border-radius: 12px 12px 0 0; text-align: center; }
+        .day-header h3 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .class-list { background: var(--gray-100); border-radius: 0 0 12px 12px; overflow: hidden; }
+        .class-item { display: grid; grid-template-columns: 120px 1fr 150px; gap: 1.5rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--gray-200); align-items: center; transition: all 0.3s ease; }
+        .class-item:last-child { border-bottom: none; }
+        .class-item:hover { background: var(--white); }
+        .class-time { font-family: 'Oswald', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--primary); }
+        .class-info h4 { font-size: 1.1rem; color: var(--secondary); margin-bottom: 0.25rem; }
+        .class-info p { color: var(--gray-600); font-size: 0.9rem; }
+        .class-level { text-align: right; }
+        .level-badge { display: inline-block; padding: 0.35rem 0.75rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+        .level-all { background: #dbeafe; color: #1e40af; }
+        .level-beginner { background: #dcfce7; color: #166534; }
+        .level-intermediate { background: #fef3c7; color: #92400e; }
+        .level-advanced { background: #fee2e2; color: #991b1b; }
+        .level-kids { background: #f3e8ff; color: #7c3aed; }
+        .no-classes { text-align: center; padding: 3rem; color: var(--gray-600); }
+        .no-classes-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .legend { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+        .cta-section { padding: 4rem 0; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); text-align: center; color: var(--white); }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { margin-bottom: 1.5rem; opacity: 0.95; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; }
+        .btn-white { background: var(--white); color: var(--secondary); }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        footer { background: var(--secondary); color: var(--white); padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand p { opacity: 0.7; margin: 1rem 0; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; transition: all 0.3s ease; }
+        .footer-social a:hover { background: var(--primary); }
+        .footer-column h4 { color: var(--primary); font-size: 1rem; margin-bottom: 1.5rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--primary); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p { opacity: 0.5; font-size: 0.875rem; }
+        .footer-bottom a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--primary); }
+        @media (max-width: 1024px) { .class-item { grid-template-columns: 100px 1fr; } .class-level { display: none; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } .hero h1 { font-size: 2.5rem; } .day-tabs { gap: 0.25rem; } .day-tab { padding: 0.5rem 1rem; font-size: 0.9rem; } .class-item { grid-template-columns: 1fr; gap: 0.5rem; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-social { justify-content: center; } .footer-bottom { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img loading="lazy" src="logo.webp" alt="101 Jiu Jitsu & Kickboxing"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+                <li><a href="kickboxing.html">Kickboxing</a></li>
+                <li><a href="boxing.html">Boxing</a></li>
+                <li><a href="kids-teens.html">Kids/Teens</a></li>
+                <li><a href="class-schedule.html">Schedule</a></li>
+                <li><a href="contact.html" class="nav-cta">Start Free Trial</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Class <span>Schedule</span></h1>
+            <p>Find the perfect class time that fits your schedule. We offer classes 6 days a week.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>February 2026 Schedule</h2>
+                <p>Click on a day to view all available classes.</p>
+            </div>
+
+            <div class="day-tabs">
+                <button class="day-tab" data-day="sun">Sunday</button>
+                <button class="day-tab active" data-day="mon">Monday</button>
+                <button class="day-tab" data-day="tue">Tuesday</button>
+                <button class="day-tab" data-day="wed">Wednesday</button>
+                <button class="day-tab" data-day="thu">Thursday</button>
+                <button class="day-tab" data-day="fri">Friday</button>
+                <button class="day-tab" data-day="sat">Saturday</button>
+            </div>
+
+            <div class="schedule-day" id="sun">
+                <div class="day-header"><h3>Sunday, February 22</h3><p>Rest & Recovery Day</p></div>
+                <div class="class-list">
+                    <div class="no-classes"><div class="no-classes-icon">😴</div><h4>No Classes Today</h4><p>Take this time to rest and recover. See you tomorrow!</p></div>
+                </div>
+            </div>
+
+            <div class="schedule-day active" id="mon">
+                <div class="day-header"><h3>Monday, February 23</h3><p>6 Classes Available</p></div>
+                <div class="class-list">
+                    <div class="class-item"><div class="class-time">6:30 AM</div><div class="class-info"><h4>Jiu Jitsu</h4><p>Morning Gi training - fundamental techniques</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">12:00 PM</div><div class="class-info"><h4>No-Gi Jiu Jitsu</h4><p>Fast-paced grappling without the gi</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">4:00 PM</div><div class="class-info"><h4>Kids Boxing</h4><p>Fun fitness and coordination for kids</p></div><div class="class-level"><span class="level-badge level-kids">Kids</span></div></div>
+                    <div class="class-item"><div class="class-time">5:00 PM</div><div class="class-info"><h4>Kids No-Gi Grappling</h4><p>Wrestling and submission fundamentals</p></div><div class="class-level"><span class="level-badge level-kids">Kids</span></div></div>
+                    <div class="class-item"><div class="class-time">6:00 PM</div><div class="class-info"><h4>Kickboxing</h4><p>High-energy striking class</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">7:00 PM</div><div class="class-info"><h4>No-Gi Jiu Jitsu</h4><p>Advanced techniques and rolling</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                </div>
+            </div>
+
+            <div class="schedule-day" id="tue">
+                <div class="day-header"><h3>Tuesday, February 24</h3><p>10 Classes Available</p></div>
+                <div class="class-list">
+                    <div class="class-item"><div class="class-time">6:00 AM</div><div class="class-info"><h4>Kickboxing</h4><p>Early morning cardio blast</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">6:30 AM</div><div class="class-info"><h4>Jiu Jitsu</h4><p>Morning Gi fundamentals</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">10:00 AM</div><div class="class-info"><h4>Golden Years Boxing</h4><p>Low-impact boxing for 50+</p></div><div class="class-level"><span class="level-badge level-all">50+</span></div></div>
+                    <div class="class-item"><div class="class-time">12:00 PM</div><div class="class-info"><h4>Kickboxing</h4><p>Lunchtime cardio session</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">4:00 PM</div><div class="class-info"><h4>Teens Jiu Jitsu</h4><p>Technical training for teens</p></div><div class="class-level"><span class="level-badge level-kids">Teens</span></div></div>
+                    <div class="class-item"><div class="class-time">4:00 PM</div><div class="class-info"><h4>Kids Jiu Jitsu (Ages 4-7)</h4><p>Fun fundamentals for youngest students</p></div><div class="class-level"><span class="level-badge level-kids">Ages 4-7</span></div></div>
+                    <div class="class-item"><div class="class-time">5:00 PM</div><div class="class-info"><h4>Kids Jiu Jitsu (Ages 8-12)</h4><p>Building skills and confidence</p></div><div class="class-level"><span class="level-badge level-kids">Ages 8-12</span></div></div>
+                    <div class="class-item"><div class="class-time">5:00 PM</div><div class="class-info"><h4>TRX Training</h4><p>Suspension training for strength</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">6:00 PM</div><div class="class-info"><h4>Kickboxing</h4><p>Evening striking class</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">7:00 PM</div><div class="class-info"><h4>Jiu Jitsu Fundamentals</h4><p>Perfect for beginners</p></div><div class="class-level"><span class="level-badge level-beginner">Beginner</span></div></div>
+                </div>
+            </div>
+
+            <div class="schedule-day" id="wed">
+                <div class="day-header"><h3>Wednesday, February 25</h3><p>7 Classes Available</p></div>
+                <div class="class-list">
+                    <div class="class-item"><div class="class-time">6:00 AM</div><div class="class-info"><h4>Kickboxing</h4><p>Start your day with energy</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">6:30 AM</div><div class="class-info"><h4>Jiu Jitsu</h4><p>Morning Gi training</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">12:00 PM</div><div class="class-info"><h4>No-Gi Jiu Jitsu</h4><p>Midday grappling</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">4:00 PM</div><div class="class-info"><h4>Kids Boxing</h4><p>Coordination and fitness</p></div><div class="class-level"><span class="level-badge level-kids">Kids</span></div></div>
+                    <div class="class-item"><div class="class-time">5:00 PM</div><div class="class-info"><h4>Kids No-Gi Grappling</h4><p>Wrestling fundamentals</p></div><div class="class-level"><span class="level-badge level-kids">Kids</span></div></div>
+                    <div class="class-item"><div class="class-time">6:00 PM</div><div class="class-info"><h4>Kickboxing</h4><p>High-intensity striking</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">7:00 PM</div><div class="class-info"><h4>No-Gi Jiu Jitsu</h4><p>Advanced techniques</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                </div>
+            </div>
+
+            <div class="schedule-day" id="thu">
+                <div class="day-header"><h3>Thursday, February 26</h3><p>10 Classes Available</p></div>
+                <div class="class-list">
+                    <div class="class-item"><div class="class-time">6:00 AM</div><div class="class-info"><h4>Kickboxing</h4><p>Morning cardio kickboxing</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">6:30 AM</div><div class="class-info"><h4>Jiu Jitsu</h4><p>Gi fundamentals</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">10:00 AM</div><div class="class-info"><h4>Golden Years Boxing</h4><p>Gentle boxing for seniors</p></div><div class="class-level"><span class="level-badge level-all">50+</span></div></div>
+                    <div class="class-item"><div class="class-time">12:00 PM</div><div class="class-info"><h4>Kickboxing</h4><p>Lunch break workout</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">4:00 PM</div><div class="class-info"><h4>Teens Jiu Jitsu</h4><p>Technical skill building</p></div><div class="class-level"><span class="level-badge level-kids">Teens</span></div></div>
+                    <div class="class-item"><div class="class-time">4:00 PM</div><div class="class-info"><h4>Kids Jiu Jitsu (Ages 4-7)</h4><p>Foundation skills</p></div><div class="class-level"><span class="level-badge level-kids">Ages 4-7</span></div></div>
+                    <div class="class-item"><div class="class-time">5:00 PM</div><div class="class-info"><h4>Kids Jiu Jitsu (Ages 8-12)</h4><p>Intermediate techniques</p></div><div class="class-level"><span class="level-badge level-kids">Ages 8-12</span></div></div>
+                    <div class="class-item"><div class="class-time">5:00 PM</div><div class="class-info"><h4>TRX Training</h4><p>Functional strength training</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">6:00 PM</div><div class="class-info"><h4>Kickboxing</h4><p>Evening cardio blast</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">7:00 PM</div><div class="class-info"><h4>Jiu Jitsu Fundamentals</h4><p>Beginner-friendly class</p></div><div class="class-level"><span class="level-badge level-beginner">Beginner</span></div></div>
+                </div>
+            </div>
+
+            <div class="schedule-day" id="fri">
+                <div class="day-header"><h3>Friday, February 27</h3><p>3 Classes Available</p></div>
+                <div class="class-list">
+                    <div class="class-item"><div class="class-time">6:00 AM</div><div class="class-info"><h4>Sparring</h4><p>Controlled sparring session</p></div><div class="class-level"><span class="level-badge level-intermediate">Intermediate+</span></div></div>
+                    <div class="class-item"><div class="class-time">12:00 PM</div><div class="class-info"><h4>No-Gi Jiu Jitsu</h4><p>Midday grappling</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">5:30 PM</div><div class="class-info"><h4>Sparring</h4><p>Evening sparring session</p></div><div class="class-level"><span class="level-badge level-intermediate">Intermediate+</span></div></div>
+                </div>
+            </div>
+
+            <div class="schedule-day" id="sat">
+                <div class="day-header"><h3>Saturday, February 28</h3><p>3 Classes Available</p></div>
+                <div class="class-list">
+                    <div class="class-item"><div class="class-time">9:00 AM</div><div class="class-info"><h4>Kids No-Gi Grappling</h4><p>Weekend wrestling fun</p></div><div class="class-level"><span class="level-badge level-kids">Kids</span></div></div>
+                    <div class="class-item"><div class="class-time">9:00 AM</div><div class="class-info"><h4>TRX Training</h4><p>Weekend strength session</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                    <div class="class-item"><div class="class-time">10:00 AM</div><div class="class-info"><h4>Kickboxing</h4><p>Saturday morning cardio</p></div><div class="class-level"><span class="level-badge level-all">All Levels</span></div></div>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item"><span class="level-badge level-all">All Levels</span> Open to everyone</div>
+                <div class="legend-item"><span class="level-badge level-beginner">Beginner</span> New students</div>
+                <div class="legend-item"><span class="level-badge level-intermediate">Intermediate+</span> Some experience</div>
+                <div class="legend-item"><span class="level-badge level-kids">Kids/Teens</span> Age-specific</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Your first week is completely free. No experience necessary.</p>
+            <a href="contact.html" class="btn btn-white">Claim Your Free Week →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><img loading="lazy" src="logo.webp" alt="101 Jiu Jitsu & Kickboxing" style="height: 60px;"></a>
+                    <p>Goleta's premier martial arts academy. Transform your body, master your mind, join our community.</p>
+                    <div class="footer-social"><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+                        <li><a href="kickboxing.html">Kickboxing</a></li>
+                        <li><a href="boxing.html">Boxing</a></li>
+                        <li><a href="wrestling.html">Wrestling</a></li>
+                        <li><a href="kids-teens.html">Kids/Teens</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="class-schedule.html">Class Schedule</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="mma-gym.html">MMA Gym</a></li>
+                        <li><a href="rocksteady.html">Rocksteady</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 5940 Calle Real, Goleta 93117</li>
+                        <li>📞 +1 805-977-5981</li>
+                        <li>✉️ john@101jiujitsugoleta.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 101 Jiu Jitsu & Kickboxing. All rights reserved.</p>
+                <p>Made by <a href="https://www.rankingsb.com" target="_blank">Ranking SB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.day-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.schedule-day').forEach(d => d.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.day).classList.add('active');
+            });
+        });
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)'; }
+            else { navbar.style.boxShadow = 'none'; }
+        });
+    </script>
+</body>
+</html>

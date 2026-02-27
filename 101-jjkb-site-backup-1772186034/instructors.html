@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Instructors | 101 Jiu Jitsu & Kickboxing | Goleta</title>
+  <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Meet the expert instructors at 101 Jiu Jitsu & Kickboxing in Goleta. World-class coaches with decades of combined experience in martial arts.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E42416;
+            --primary-dark: #C41E1A;
+            --secondary: #0a1628;
+            --accent: #1e3a8a;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-600: #6c757d;
+            --gray-800: #343a40;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--gray-800); overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(10, 22, 40, 0.98); backdrop-filter: blur(10px); padding: 0.5rem 0; }
+        .nav-container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 75px; width: auto; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: color 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-cta { background: var(--primary); color: var(--white) !important; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+        .hero { min-height: 50vh; background: linear-gradient(135deg, rgba(10, 22, 40, 0.9), rgba(10, 22, 40, 0.8)), url('gym-1.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; padding-top: 120px; }
+        .hero-container { max-width: 1280px; margin: 0 auto; padding: 4rem 2rem; text-align: center; color: var(--white); }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+        .section { padding: 5rem 0; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 { font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem; }
+        .section-header p { color: var(--gray-600); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .instructors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+        .instructor-card { background: var(--gray-100); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; border: 2px solid transparent; }
+        .instructor-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); border-color: var(--primary); }
+        .instructor-image { height: 300px; background: linear-gradient(135deg, var(--secondary), #333); display: flex; align-items: center; justify-content: center; position: relative; }
+        .instructor-image img { width: 100%; height: 100%; object-fit: cover; }
+        .instructor-placeholder { font-size: 5rem; opacity: 0.3; }
+        .instructor-content { padding: 2rem; }
+        .instructor-role { display: inline-block; background: var(--primary); color: var(--white); padding: 0.35rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; }
+        .instructor-card h3 { font-size: 1.5rem; color: var(--secondary); margin-bottom: 0.5rem; }
+        .instructor-belt { color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; }
+        .instructor-card p { color: var(--gray-600); font-size: 0.95rem; }
+        .instructor-specialties { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+        .specialty-tag { background: var(--white); padding: 0.35rem 0.75rem; border-radius: 50px; font-size: 0.8rem; color: var(--gray-600); }
+        .cta-section { padding: 5rem 0; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); text-align: center; color: var(--white); }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .cta-section p { margin-bottom: 2rem; opacity: 0.95; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.3s ease; }
+        .btn-white { background: var(--white); color: var(--secondary); }
+        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        footer { background: var(--secondary); color: var(--white); padding: 4rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand p { opacity: 0.7; margin: 1rem 0; }
+        .footer-social { display: flex; gap: 1rem; }
+        .footer-social a { width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; transition: all 0.3s ease; }
+        .footer-social a:hover { background: var(--primary); }
+        .footer-column h4 { color: var(--primary); font-size: 1rem; margin-bottom: 1.5rem; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.75rem; }
+        .footer-column a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.3s ease; }
+        .footer-column a:hover { color: var(--primary); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .footer-bottom p { opacity: 0.5; font-size: 0.875rem; }
+        .footer-bottom a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .footer-bottom a:hover { color: var(--primary); }
+        @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } .hero h1 { font-size: 2.5rem; } .footer-grid { grid-template-columns: 1fr; text-align: center; } .footer-social { justify-content: center; } .footer-bottom { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img loading="lazy" src="logo.webp" alt="101 Jiu Jitsu & Kickboxing"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+                <li><a href="kickboxing.html">Kickboxing</a></li>
+                <li><a href="boxing.html">Boxing</a></li>
+                <li><a href="kids-teens.html">Kids/Teens</a></li>
+                <li><a href="class-schedule.html">Schedule</a></li>
+                <li><a href="contact.html" class="nav-cta">Start Free Trial</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Our <span>Instructors</span></h1>
+            <p>Learn from world-class coaches with decades of combined experience in martial arts.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet the Team</h2>
+                <p>Our instructors are dedicated to helping you reach your full potential in a supportive, ego-free environment.</p>
+            </div>
+
+            <div class="instructors-grid">
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img loading="lazy" src="instructors/john.jpg" alt="Professor John" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'instructor-placeholder\\'>👤</div>';">
+                    </div>
+                    <div class="instructor-content">
+                        <span class="instructor-role">Head Instructor</span>
+                        <h3>Professor John</h3>
+                        <div class="instructor-belt">Black Belt - Brazilian Jiu-Jitsu</div>
+                        <p>Founder of 101 Jiu Jitsu & Kickboxing with over 25 years of martial arts experience. John has dedicated his life to teaching and has trained thousands of students from beginners to professional competitors.</p>
+                        <div class="instructor-specialties">
+                            <span class="specialty-tag">BJJ</span>
+                            <span class="specialty-tag">MMA</span>
+                            <span class="specialty-tag">Self-Defense</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img loading="lazy" src="instructors/joe.jpg" alt="Coach Joe" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'instructor-placeholder\\'>👤</div>';">
+                    </div>
+                    <div class="instructor-content">
+                        <span class="instructor-role">Kickboxing Coach</span>
+                        <h3>Coach Joe</h3>
+                        <div class="instructor-belt">Professional Kickboxer</div>
+                        <p>Passionate about helping students improve through constructive feedback. Joe's energetic teaching style makes every class both challenging and fun. Specializes in striking technique and cardio conditioning.</p>
+                        <div class="instructor-specialties">
+                            <span class="specialty-tag">Kickboxing</span>
+                            <span class="specialty-tag">Boxing</span>
+                            <span class="specialty-tag">Conditioning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img loading="lazy" src="instructors/dan.jpg" alt="Coach Dan" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'instructor-placeholder\\'>👤</div>';">
+                    </div>
+                    <div class="instructor-content">
+                        <span class="instructor-role">Wrestling Coach</span>
+                        <h3>Coach Dan</h3>
+                        <div class="instructor-belt">NCAA Wrestler / BJJ Brown Belt</div>
+                        <p>Brings years of competitive wrestling experience to the mats. Dan excels at breaking down complex techniques into simple, actionable steps that students of all levels can understand and execute.</p>
+                        <div class="instructor-specialties">
+                            <span class="specialty-tag">Wrestling</span>
+                            <span class="specialty-tag">No-Gi</span>
+                            <span class="specialty-tag">Takedowns</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img loading="lazy" src="instructors/wyatt.jpg" alt="Coach Wyatt" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'instructor-placeholder\\'>👤</div>';">
+                    </div>
+                    <div class="instructor-content">
+                        <span class="instructor-role">Kids Coach</span>
+                        <h3>Coach Wyatt</h3>
+                        <div class="instructor-belt">BJJ Purple Belt</div>
+                        <p>Amazing with children, patient yet firm. Wyatt has a gift for connecting with young students and helping them build confidence, discipline, and respect through martial arts training.</p>
+                        <div class="instructor-specialties">
+                            <span class="specialty-tag">Kids BJJ</span>
+                            <span class="specialty-tag">Youth Wrestling</span>
+                            <span class="specialty-tag">Character Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="instructor-card">
+                    <div class="instructor-image">
+                        <img loading="lazy" src="instructors/jose.jpg" alt="Coach Jose" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\\'instructor-placeholder\\'>👤</div>';">
+                    </div>
+                    <div class="instructor-content">
+                        <span class="instructor-role">Kids Coach</span>
+                        <h3>Coach Jose</h3>
+                        <div class="instructor-belt">BJJ Brown Belt</div>
+                        <p>Patient, helpful, and dedicated to youth development. Jose creates a fun, safe environment where kids learn valuable life skills while developing their martial arts abilities.</p>
+                        <div class="instructor-specialties">
+                            <span class="specialty-tag">Kids Programs</span>
+                            <span class="specialty-tag">Fundamentals</span>
+                            <span class="specialty-tag">Youth Competition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Train With the Best</h2>
+            <p>Experience the difference expert instruction makes. Your first week is free.</p>
+            <a href="contact.html" class="btn btn-white">Start Your Free Trial →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><img loading="lazy" src="logo.webp" alt="101 Jiu Jitsu & Kickboxing" style="height: 60px;"></a>
+                    <p>Goleta's premier martial arts academy. Transform your body, master your mind, join our community.</p>
+                    <div class="footer-social"><a href="#">f</a><a href="#">ig</a><a href="#">yt</a></div>
+                </div>
+                <div class="footer-column">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="jiu-jitsu.html">Jiu-Jitsu</a></li>
+                        <li><a href="kickboxing.html">Kickboxing</a></li>
+                        <li><a href="boxing.html">Boxing</a></li>
+                        <li><a href="wrestling.html">Wrestling</a></li>
+                        <li><a href="kids-teens.html">Kids/Teens</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="class-schedule.html">Class Schedule</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="mma-gym.html">MMA Gym</a></li>
+                        <li><a href="rocksteady.html">Rocksteady</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 5940 Calle Real, Goleta 93117</li>
+                        <li>📞 +1 805-977-5981</li>
+                        <li>✉️ john@101jiujitsugoleta.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 101 Jiu Jitsu & Kickboxing. All rights reserved.</p>
+                <p>Made by <a href="https://www.rankingsb.com" target="_blank">Ranking SB</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { navbar.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)'; }
+            else { navbar.style.boxShadow = 'none'; }
+        });
+    </script>
+</body>
+</html>
