@@ -263,6 +263,38 @@ a {
   font-weight: bold;
 }
 
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.2);
+  max-width: 600px;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xs);
+}
+
 /* ========================================
    BUTTONS
    ======================================== */
