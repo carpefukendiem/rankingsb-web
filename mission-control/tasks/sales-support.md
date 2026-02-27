@@ -129,10 +129,19 @@
 
 ## Next Actions
 
-### Immediate (Today)
-- [ ] Get Sal's Week 1-2 results
-- [ ] Deliver Week 3 packet to Sal
-- [ ] Schedule Week 3 kickoff call
+### Immediate (TODAY — CRITICAL)
+- [ ] **RUBEN ACTION:** Send Sal check-in text (scripts ready in `SAL-CHECKIN-SCRIPTS.md`)
+- [ ] Get Sal's Week 1-7 results (6 days overdue)
+- [ ] Update tracking with actual numbers
+
+### This Weekend
+- [ ] Deliver Week 8 packet (Auto Repair) — READY
+- [ ] Schedule Week 8 kickoff call
+
+### Next Week (March 2-6)
+- [ ] Check in with Sal daily (5 min)
+- [ ] Review audit quality
+- [ ] Celebrate first close (when it happens)
 
 ### This Week
 - [x] Check in with Sal daily (5 min)
