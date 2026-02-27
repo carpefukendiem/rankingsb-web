@@ -17,6 +17,8 @@
   --font-heading: 'Oswald', sans-serif;
   --font-body: 'Inter', sans-serif;
   
+  font-display: swap;
+  
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
@@ -196,6 +198,7 @@ a {
   align-items: center;
   padding-top: 120px;
   position: relative;
+  background-color: var(--secondary);
   background-size: cover;
   background-position: center;
 }
