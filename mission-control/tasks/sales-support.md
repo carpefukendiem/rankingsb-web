@@ -177,8 +177,27 @@
 | Feb 23 | Week 1 NEW (Carpet Cleaning) | ✅ Delivered | `week1-carpet-cleaning.md` |
 | Feb 25 | Week 7 (Pest Control) | ✅ Created | `week7-pest-control-packet.md` |
 | Feb 25 | Pest Control Snippets | ✅ Created | `PEST-CONTROL-AUDIT-SNIPPETS.md` |
+| Feb 27 | Week 8 (Auto Repair) | ✅ Created | `week8-auto-repair-packet.md` |
+| Feb 28 | Sal Quick Reference | ✅ Created | `SAL-QUICK-REFERENCE.md` |
+| Feb 28 | Week 9 (Home Services) | ✅ Created | `week9-home-services-packet.md` |
 
 ---
 
-*Last updated: Feb 25, 2026 2:30 PM*
-*Next review: Feb 26, 2026 9 AM*
+## Updated Weekly Schedule
+
+| Week | Focus Industry | Lead Count | Status |
+|------|---------------|------------|--------|
+| 1 | Electricians | 20 | ✅ Complete |
+| 2 | HVAC | 20 | ✅ Complete |
+| 3 | Plumbing | 20 | ✅ Complete |
+| 4 | Roofing | 20 | ✅ Complete |
+| 5 | Solar | 20 | ✅ Complete |
+| 6 | Landscaping | 20 | ✅ Complete |
+| 7 | Pest Control | 20 | ✅ Complete |
+| 8 | Auto Repair | 20 | ✅ Ready |
+| 9 | Home Services | 20 | ✅ Ready |
+
+---
+
+*Last updated: Feb 28, 2026 2:45 PM*
+*Next review: March 2, 2026 9 AM*
