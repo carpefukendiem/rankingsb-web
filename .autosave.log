@@ -16149,3 +16149,7 @@
  create mode 100644 projects/openclaw-setup-service/.env.local.example
  create mode 100644 projects/openclaw-setup-service/api/submit-form.js
 [2026-02-27 17:23:45] ✅ Autosave successful
+[nightly-2026-02-01-client-support-os 2581145] Autosave: 2026-02-27 17:25:45 - Workspace sync
+ 2 files changed, 235 insertions(+)
+ create mode 100644 projects/openclaw-setup-service/GHL-DIRECT-INTEGRATION.md
+[2026-02-27 17:25:45] ✅ Autosave successful
