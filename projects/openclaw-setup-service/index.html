@@ -626,6 +626,30 @@
     
     <section class="hero">
         <div class="hero-content">
+            <!-- Animated OpenClaw Logo -->
+            <div class="claw-animation">
+                <svg class="claw-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer ring -->
+                    <circle cx="60" cy="60" r="55" fill="none" stroke="#00ff41" stroke-width="2" opacity="0.3"/>
+                    <circle cx="60" cy="60" r="45" fill="none" stroke="#00ff41" stroke-width="1" opacity="0.5">
+                        <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="20s" repeatCount="indefinite"/>
+                    </circle>
+                    <!-- Inner hexagon -->
+                    <path d="M60 20 L86 35 L86 65 L60 80 L34 65 L34 35 Z" fill="none" stroke="#00ff41" stroke-width="2"/>
+                    <!-- Lightning bolt -->
+                    <path d="M55 35 L45 55 L58 55 L52 75 L68 50 L55 50 L62 35 Z" fill="#00ff41" opacity="0.9">
+                        <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                    <!-- Orbiting dots -->
+                    <circle r="3" fill="#00ff41" opacity="0.8">
+                        <animateMotion dur="8s" repeatCount="indefinite" path="M60 60 m-40 0 a40 40 0 1 1 80 0 a40 40 0 1 1 -80 0"/>
+                    </circle>
+                    <circle r="2" fill="#00ccff" opacity="0.6">
+                        <animateMotion dur="12s" repeatCount="indefinite" path="M60 60 m-30 0 a30 30 0 1 0 -60 0 a30 30 0 1 0 60 0"/>
+                    </circle>
+                </svg>
+            </div>
+
             <div class="hero-badge">Now Serving Santa Barbara & Ventura Counties • Remote Worldwide</div>
             <h1>AI Automation <span>Without</span> the Tech Headache</h1>
             <p>Professional OpenClaw installation and setup for businesses that want AI agents working for them—not another project on their plate.</p>
