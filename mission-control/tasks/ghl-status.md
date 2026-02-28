@@ -70,14 +70,16 @@
   - 6 automation workflows defined
   - 3 email sequences mapped
 
-## Progress Notes (Feb 26, 8:10 AM)
-- 🚨 Website: Still needs Vercel deployment (15 pages + logo ready — RUBEN ACTION NEEDED)
+## Progress Notes (Feb 28, 8:10 AM)
+- 🚨 getclawedup.com: Form connected to GHL location vBV7QMEdTmUhhmC1puFl, awaiting GHL_API_KEY env var
+- 🚨 101 JJKB site: Awaiting client feedback (logo + mobile preview fixes deployed)
 - 🚨 Sal's activity: Awaiting pipeline data (text Sal for Week 1-6 results)
 - ✅ Stripe webhook handler built for $500 website sales
 - ✅ GHL onboarding pipeline documented (8-stage workflow)
 - ✅ Supabase memory system operational
-- Next: Deploy website, get Sal's data, test Stripe integration
+- ✅ getclawedup.com visual upgrades deployed (animated logo, glowing orbs)
+- Next: Add GHL_API_KEY env var, get Sal's data, get 101 JJKB approval
 
 ---
 
-*Last updated: Feb 27, 2026 8:10 AM*
+*Last updated: Feb 28, 2026 8:10 AM*
