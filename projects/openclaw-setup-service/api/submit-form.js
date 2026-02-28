@@ -23,9 +23,9 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Name and email are required' });
     }
 
-    // GHL API Configuration - UPDATE THESE WITH YOUR ACTUAL VALUES
-    const GHL_API_KEY = process.env.GHL_API_KEY || 'YOUR_GHL_API_KEY';
-    const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID || 'YOUR_LOCATION_ID';
+    // GHL API Configuration
+    const GHL_API_KEY = process.env.GHL_API_KEY;
+    const GHL_LOCATION_ID = 'vBV7QMEdTmUhhmC1puFl'; // OpenClaw subdomain location
     
     // Split name into first and last
     const nameParts = name.trim().split(' ');
@@ -38,6 +38,7 @@ export default async function handler(req, res) {
       lastName: lastName,
       email: email,
       companyName: company || '',
+      locationId: GHL_LOCATION_ID,
       source: 'getclawedup.com',
       tags: ['Website Lead', 'OpenClaw Setup', 'Contact Form'],
       customFields: [
