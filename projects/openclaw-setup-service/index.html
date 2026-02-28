@@ -663,17 +663,66 @@
     <section class="cta" id="contact">
         <h2>Ready to Automate?</h2>
         <p>Let's discuss how OpenClaw can work for your business. No obligation—just a conversation about what's possible.</p>
-        <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <input type="text" name="company" placeholder="Company Name">
-            <textarea name="message" placeholder="Tell me about your business and what you'd like to automate..."></textarea>
+            <input type="hidden" name="source" value="getclawedup.com">
+            <textarea name="message" placeholder="Tell me about your business and what you'd like to automate..." required></textarea>
             <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
         </form>
+        <div id="formSuccess" style="display: none; margin-top: 20px; padding: 20px; background: rgba(0, 255, 65, 0.1); border: 1px solid var(--primary); border-radius: 8px;">
+            <p style="color: var(--primary); margin: 0;">✓ Message sent! I'll get back to you within 24 hours.</p>
+        </div>
     </section>
     
     <footer>
         <p>⚡ OpenClaw Setup For Your Business | Santa Barbara & Ventura Counties & Remote Worldwide</p>
     </footer>
+    
+    <script>
+        // Handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Disable button and show loading
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Show success message
+                    form.style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                    
+                    // Track conversion (for analytics)
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'contact_form_submit', {
+                            'event_category': 'engagement',
+                            'event_label': 'contact_form'
+                        });
+                    }
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error and re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+                alert('Sorry, there was an error sending your message. Please try again or email me directly at john@rankingsb.com');
+            }
+        });
+    </script>
 </body>
 </html>
