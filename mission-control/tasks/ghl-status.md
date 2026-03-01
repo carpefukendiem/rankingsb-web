@@ -82,4 +82,12 @@
 
 ---
 
-*Last updated: Feb 28, 2026 8:10 AM*
+*Last updated: Mar 1, 2026 8:10 AM*
+
+## Progress Notes (Mar 1)
+- 🚨 CRITICAL: Still awaiting Sal's pipeline data from 120 leads delivered
+- 🚨 getclawedup.com: Still awaiting GHL_API_KEY env var for form connection
+- 🟡 101 JJKB site: Awaiting client feedback (logo + mobile preview fixes deployed)
+- ✅ PM standup delivered to Discord
+- ✅ All systems operational, awaiting human input
+- Next: Add GHL_API_KEY, get 101 JJKB approval, get Sal's data
