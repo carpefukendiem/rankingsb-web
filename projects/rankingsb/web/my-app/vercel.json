@@ -18,6 +18,20 @@
     "autoAlias": true,
     "silent": false
   },
+  "redirects": [
+    { "source": "/local-marketing-services", "destination": "/services", "permanent": true },
+    { "source": "/markeing-services",         "destination": "/services", "permanent": true },
+    { "source": "/local-business-websites",   "destination": "/services/website-design", "permanent": true },
+    { "source": "/local-lead-machine",        "destination": "/services/local-seo", "permanent": true },
+    { "source": "/contactus",                 "destination": "/contact", "permanent": true },
+    { "source": "/book-your-call",            "destination": "/free-audit", "permanent": true },
+    { "source": "/booking-appointment",       "destination": "/free-audit", "permanent": true },
+    { "source": "/pricing",                   "destination": "/pricing", "permanent": false },
+    { "source": "/tos",                       "destination": "/", "permanent": true },
+    { "source": "/privacy-policy-7297",       "destination": "/", "permanent": true },
+    { "source": "/home-4380",                 "destination": "/", "permanent": true },
+    { "source": "/undefined",                 "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/landing/:path*",

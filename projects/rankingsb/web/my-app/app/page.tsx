@@ -30,8 +30,8 @@ export default function HomePage() {
           {/* Background image */}
           <div className="absolute inset-0">
             <img 
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop" 
-              alt="Santa Barbara business district - local SEO services"
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=1080&fit=crop"
+              alt="Santa Barbara coastline - local SEO services for California businesses"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-blue-900/95" />
