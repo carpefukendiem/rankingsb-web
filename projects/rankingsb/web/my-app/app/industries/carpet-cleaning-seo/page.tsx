@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Phone, ArrowRight, Sparkles, Home, Shield, TrendingUp } from "lucide-react"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Carpet Cleaning SEO Santa Barbara | Rankingsb",
@@ -13,11 +14,13 @@ export default function CarpetCleaningSEOPage() {
   return (
     <main className="min-h-screen">
       <section className="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-slate-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop&q=70"
+          alt="carpet cleaning professionals"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-slate-900/60" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
@@ -35,10 +38,12 @@ export default function CarpetCleaningSEOPage() {
               business they find first. Be that business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/25">
+              <Link href="/free-audit">
+                <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/25">
                 <Phone className="w-5 h-5" />
                 Get Free SEO Audit
               </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -144,10 +149,12 @@ export default function CarpetCleaningSEOPage() {
             <p className="text-xl text-slate-300 mb-8">
               Get a free SEO audit and see how you can rank higher than your competition.
             </p>
-            <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-emerald-500 hover:bg-emerald-600 text-white">
+            <Link href="/free-audit">
+              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-emerald-500 hover:bg-emerald-600 text-white">
               <Phone className="w-5 h-5" />
               Get Your Free Audit
             </Button>
+            </Link>
           </div>
         </div>
       </section>

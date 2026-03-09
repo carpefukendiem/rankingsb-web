@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { CheckCircle, Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react"
+import { CheckCircle, Phone, Mail, MapPin, Clock } from "lucide-react"
+import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = {
   title: "Contact Us | Rankingsb SEO Agency Santa Barbara",
@@ -111,46 +111,7 @@ export default function ContactPage() {
                   <CardContent className="p-8">
                     <h2 className="text-2xl font-bold mb-2 text-slate-900">Send a Message</h2>
                     <p className="text-slate-500 mb-6 text-sm">Or get your free SEO audit — same form, same result.</p>
-                    <form className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="text-sm font-medium text-slate-700 mb-1 block">First Name</label>
-                          <Input placeholder="John" className="h-11" />
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-slate-700 mb-1 block">Last Name</label>
-                          <Input placeholder="Smith" className="h-11" />
-                        </div>
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-slate-700 mb-1 block">Business Name</label>
-                        <Input placeholder="Your Business LLC" className="h-11" />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-slate-700 mb-1 block">Email</label>
-                        <Input type="email" placeholder="john@yourbusiness.com" className="h-11" />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-slate-700 mb-1 block">Phone</label>
-                        <Input type="tel" placeholder="(805) 555-0123" className="h-11" />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-slate-700 mb-1 block">City / Area</label>
-                        <Input placeholder="Santa Barbara, Ventura, etc." className="h-11" />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-slate-700 mb-1 block">How can we help?</label>
-                        <textarea
-                          className="w-full h-24 px-3 py-2 border rounded-md text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                          placeholder="Tell us about your business and what you're looking for..."
-                        />
-                      </div>
-                      <Button className="w-full h-12 text-lg bg-blue-600 hover:bg-blue-700">
-                        Send Message
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                      </Button>
-                    </form>
-                    <p className="text-xs text-slate-400 text-center mt-4">No spam. We'll only contact you about your inquiry.</p>
+                    <LeadForm source="contact-page" showMessage={true} buttonText="Send Message" />
                   </CardContent>
                 </Card>
               </div>

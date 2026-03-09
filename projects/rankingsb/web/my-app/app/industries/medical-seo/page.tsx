@@ -16,6 +16,13 @@ export default function MedicalSEOPage() {
   return (
     <main className="min-h-screen">
       <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-teal-900/40 to-slate-900">
+        <img
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&auto=format&fit=crop&q=70"
+          alt="medical professionals"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-slate-900/60" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">

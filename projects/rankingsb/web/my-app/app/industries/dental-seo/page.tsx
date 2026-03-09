@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Stethoscope, Smile, Calendar, TrendingUp, Users } from "lucide-react"
+import Link from "next/link"
+import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = {
   title: "Dental SEO Santa Barbara | Rankingsb",
@@ -41,10 +43,12 @@ export default function DentalSEOPage() {
               be the practice they find first.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-teal-500 hover:bg-teal-600 text-white shadow-lg shadow-teal-500/25">
+              <Link href="/free-audit">
+                <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-teal-500 hover:bg-teal-600 text-white shadow-lg shadow-teal-500/25">
                 <Phone className="w-5 h-5" />
                 Get Free SEO Audit
               </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -137,16 +141,7 @@ export default function DentalSEOPage() {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2 text-slate-900">Request Your Audit</h3>
                   <p className="text-slate-500 mb-6">We'll send it within 24 hours</p>
-                  <form className="space-y-4">
-                    <Input placeholder="Your Name" className="h-12" />
-                    <Input placeholder="Dental Practice Name" className="h-12" />
-                    <Input type="email" placeholder="Email Address" className="h-12" />
-                    <Input type="tel" placeholder="Phone Number" className="h-12" />
-                    <Button className="w-full h-12 text-lg bg-teal-600 hover:bg-teal-700">
-                      Get My Free Audit
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
+                  <LeadForm source="dental-seo" showWebsite={false} buttonText="Get My Free Audit" />
                 </CardContent>
               </Card>
             </div>

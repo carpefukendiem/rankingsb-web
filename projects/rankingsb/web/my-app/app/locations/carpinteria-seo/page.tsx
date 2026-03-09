@@ -200,10 +200,12 @@ export default function CarpinteriaSEOPage() {
                     <Input placeholder="Business Name" className="h-12" />
                     <Input type="email" placeholder="Email Address" className="h-12" />
                     <Input type="tel" placeholder="Phone Number" className="h-12" />
-                    <Button className="w-full h-12 text-lg bg-emerald-600 hover:bg-emerald-700">
+                    <Link href="/free-audit">
+                      <Button className="w-full h-12 text-lg bg-emerald-600 hover:bg-emerald-700">
                       Get My Free Audit
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
+                    </Link>
                   </form>
                 </CardContent>
               </Card>

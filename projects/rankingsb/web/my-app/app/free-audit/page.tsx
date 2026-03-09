@@ -2,9 +2,9 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Search, BarChart3, Shield, Clock, Star } from "lucide-react"
 import Link from "next/link"
+import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = {
   title: "Free SEO Audit Santa Barbara | Rankingsb",
@@ -24,7 +24,6 @@ export default function FreeAuditPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
         </div>
-
         <div className="container relative mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -36,12 +35,12 @@ export default function FreeAuditPage() {
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
                   Free SEO Audit:<br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                    See Why You're Not Ranking
+                    See Why You&apos;re Not Ranking
                   </span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-8">
                   Get a complete analysis of your website, competitors, and Google rankings.
-                  We'll show you exactly what's wrong and how to fix it — in 24 hours.
+                  We&apos;ll show you exactly what&apos;s wrong and how to fix it — in 24 hours.
                 </p>
                 <ul className="space-y-4 mb-8">
                   {[
@@ -67,76 +66,13 @@ export default function FreeAuditPage() {
                   ))}
                 </div>
               </div>
-
               <Card className="border-0 shadow-2xl">
                 <CardContent className="p-8">
                   <div className="text-center mb-6">
                     <h2 className="text-2xl font-bold text-slate-900">Request Your Free Audit</h2>
-                    <p className="text-slate-500">We'll deliver it within 24 hours</p>
+                    <p className="text-slate-500">We&apos;ll deliver it within 24 hours</p>
                   </div>
-
-                  {/*
-                    =====================================================
-                    GHL FORM EMBED: Replace this HTML form with your
-                    GoHighLevel form embed code.
-
-                    To get your GHL embed code:
-                    1. Log into app.rankingsb.com (or your GHL sub-account)
-                    2. Go to: Sites → Forms → [Your Form] → Integrate
-                    3. Copy the iframe embed code
-                    4. Replace the <form> below with:
-                    <iframe src="YOUR_GHL_FORM_URL" ... />
-                    =====================================================
-                  */}
-                  <form className="space-y-4" action="https://api.rankingsb.com/lead" method="post">
-                    <input type="hidden" name="source" value="free-audit-page" />
-                    <div>
-                      <label className="text-sm font-medium text-slate-700 mb-1 block">Your Name *</label>
-                      <Input name="name" placeholder="John Smith" className="h-12" required />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-slate-700 mb-1 block">Business Name *</label>
-                      <Input name="business" placeholder="Your Business LLC" className="h-12" required />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-slate-700 mb-1 block">Email Address *</label>
-                      <Input type="email" name="email" placeholder="john@yourbusiness.com" className="h-12" required />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-slate-700 mb-1 block">Phone Number *</label>
-                      <Input type="tel" name="phone" placeholder="(805) 555-0123" className="h-12" required />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-slate-700 mb-1 block">Website URL</label>
-                      <Input name="website" placeholder="https://yourbusiness.com" className="h-12" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-slate-700 mb-1 block">Industry</label>
-                      <select name="industry" className="w-full h-12 px-3 border rounded-md bg-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option value="">Select your industry</option>
-                        <option value="electrician">Electrician</option>
-                        <option value="hvac">HVAC / Heating & Cooling</option>
-                        <option value="plumber">Plumber</option>
-                        <option value="roofer">Roofing</option>
-                        <option value="solar">Solar</option>
-                        <option value="attorney">Attorney / Law Firm</option>
-                        <option value="dental">Dental</option>
-                        <option value="medical">Medical Practice</option>
-                        <option value="real-estate">Real Estate</option>
-                        <option value="restaurant">Restaurant</option>
-                        <option value="contractor">General Contractor</option>
-                        <option value="winery">Winery / Wine Bar</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                    <Button type="submit" className="w-full h-12 text-lg bg-blue-600 hover:bg-blue-700 mt-2">
-                      Get My Free SEO Audit
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
-                  <p className="text-xs text-slate-400 text-center mt-4">
-                    No spam, ever. We respect your privacy.
-                  </p>
+                  <LeadForm source="free-audit-page" />
                 </CardContent>
               </Card>
             </div>
@@ -148,37 +84,18 @@ export default function FreeAuditPage() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <Badge variant="secondary" className="mb-4">What's In Your Audit</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-              Your Complete SEO Analysis
-            </h2>
+            <Badge variant="secondary" className="mb-4">What&apos;s In Your Audit</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Your Complete SEO Analysis</h2>
             <p className="text-xl text-slate-600">
-              Everything you need to understand your Google ranking and how to improve it —
-              delivered within 24 hours.
+              Everything you need to understand your Google ranking and how to improve it — delivered within 24 hours.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              {
-                title: "Technical Audit",
-                desc: "Site speed, mobile issues, broken links, schema markup, and indexation problems",
-                image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop"
-              },
-              {
-                title: "Competitor Analysis",
-                desc: "What your top 3 local competitors do differently — and how to beat them",
-                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop"
-              },
-              {
-                title: "Keyword Report",
-                desc: "Best keywords for your industry and city with monthly search volume",
-                image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400&h=300&fit=crop"
-              },
-              {
-                title: "Action Plan",
-                desc: "Step-by-step roadmap to page 1 rankings — prioritized by impact",
-                image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
-              },
+              { title: "Technical Audit", desc: "Site speed, mobile issues, broken links, schema markup, and indexation problems", image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop" },
+              { title: "Competitor Analysis", desc: "What your top 3 local competitors do differently — and how to beat them", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" },
+              { title: "Keyword Report", desc: "Best keywords for your industry and city with monthly search volume", image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400&h=300&fit=crop" },
+              { title: "Action Plan", desc: "Step-by-step roadmap to page 1 rankings — prioritized by impact", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" },
             ].map((item, i) => (
               <Card key={i} className="border-0 shadow-md overflow-hidden">
                 <div className="h-32 overflow-hidden">
@@ -201,13 +118,10 @@ export default function FreeAuditPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4">100% Free, No Obligation</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-              Why Do We Offer This Free?
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Why Do We Offer This Free?</h2>
             <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-              We do this to demonstrate our expertise. Even if you don't hire us,
-              you'll walk away with a valuable analysis of your online presence.
-              We're confident that once you see what we find — and what's possible — you'll want to work together.
+              We do this to demonstrate our expertise. Even if you don&apos;t hire us,
+              you&apos;ll walk away with a valuable analysis of your online presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:8053077600">
@@ -218,8 +132,7 @@ export default function FreeAuditPage() {
               </a>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6">
-                  Send a Message
-                  <ArrowRight className="w-5 h-5" />
+                  Send a Message <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
             </div>

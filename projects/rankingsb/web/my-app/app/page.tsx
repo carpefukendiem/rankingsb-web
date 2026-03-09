@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { 
-  CheckCircle, 
-  Phone, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  MapPin, 
+import { LeadForm } from "@/components/shared/LeadForm"
+import {
+  CheckCircle,
+  Phone,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  MapPin,
   Award,
   BarChart3,
   Globe,
@@ -17,7 +17,6 @@ import {
   Shield,
   Clock,
   ArrowUpRight,
-  Play,
   Quote
 } from "lucide-react"
 import Link from "next/link"
@@ -59,18 +58,14 @@ export default function HomePage() {
                 We'll get you there in 90 days—or work for free until you rank.
               </p>
               
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              {/* CTA Button */}
+              <div className="flex justify-center mb-12">
                 <Link href="/free-audit">
-                  <Button size="lg" className="gap-2 text-lg px-8 py-6 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
+                  <Button size="lg" className="gap-2 text-lg px-10 py-6 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
                     <Phone className="w-5 h-5" />
                     Get Free SEO Audit
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="gap-2 text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10">
-                  <Play className="w-5 h-5" />
-                  See How It Works
-                </Button>
               </div>
               
               {/* Trust signals */}
@@ -372,16 +367,7 @@ export default function HomePage() {
                     <h3 className="text-2xl font-bold mb-2 text-slate-900">Request Your Free Audit</h3>
                     <p className="text-slate-500 mb-6">We'll send your audit within 24 hours</p>
                     
-                    <form className="space-y-4">
-                      <Input placeholder="Your Name" className="h-12" />
-                      <Input placeholder="Business Name" className="h-12" />
-                      <Input type="email" placeholder="Email Address" className="h-12" />
-                      <Input type="tel" placeholder="Phone Number" className="h-12" />
-                      <Button className="w-full h-12 text-lg bg-blue-600 hover:bg-blue-700">
-                        Get My Free Audit
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                      </Button>
-                    </form>
+                    <LeadForm source="homepage" showWebsite={false} buttonText="Get My Free Audit" />
                     
                     <p className="text-xs text-slate-400 text-center mt-4">
                       We respect your privacy. No spam, ever.

@@ -63,7 +63,7 @@ export function Header() {
               src="/logo-new.webp"
               alt="Rankingsb Local SEO Agency Santa Barbara"
               className="object-contain"
-              style={{ height: '64px', width: 'auto', maxWidth: '180px' }}
+              style={{ height: '80px', width: 'auto', maxWidth: '240px' }}
             />
           </Link>
 

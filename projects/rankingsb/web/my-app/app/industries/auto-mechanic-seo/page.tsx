@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Star, Car, Shield, MapPin, TrendingUp, Wrench, Clock, DollarSign } from "lucide-react"
 import Link from "next/link"
+import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = {
   title: "Auto Mechanic SEO Santa Barbara | Rankingsb",
@@ -16,11 +17,13 @@ export default function AutoMechanicSEOPage() {
     <main className="min-h-screen">
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
-        </div>
+        <img
+          src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1600&auto=format&fit=crop&q=70"
+          alt="auto mechanic professionals"
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-slate-900/60" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
@@ -169,16 +172,7 @@ export default function AutoMechanicSEOPage() {
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-2 text-slate-900">Request Your Audit</h3>
                   <p className="text-slate-500 mb-6">We'll send it within 24 hours</p>
-                  <form className="space-y-4">
-                    <Input placeholder="Your Name" className="h-12" />
-                    <Input placeholder="Shop Name" className="h-12" />
-                    <Input type="email" placeholder="Email Address" className="h-12" />
-                    <Input type="tel" placeholder="Phone Number" className="h-12" />
-                    <Button className="w-full h-12 text-lg bg-blue-600 hover:bg-blue-700">
-                      Get My Free Audit
-                      <ArrowRight className="w-5 h-5 ml-2" />
-                    </Button>
-                  </form>
+                  <LeadForm source="auto-mechanic-seo" showWebsite={false} buttonText="Get My Free Audit" />
                 </CardContent>
               </Card>
             </div>
