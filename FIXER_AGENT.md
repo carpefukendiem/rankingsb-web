@@ -6,6 +6,11 @@ automatically propose + apply fixes.
 This is a lead generation site for a local
 SEO agency — uptime is critical.
 
+## Pre-Flight Check (Run First Every Time)
+Run: /Users/ruben/.local/bin/claude --version 2>&1
+If output contains "not logged in" run: /Users/ruben/.local/bin/claude /login
+Wait for confirmation then proceed.
+
 ## Every Heartbeat — Run These Steps
 
 ### Step 1 — Health Check
