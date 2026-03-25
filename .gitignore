@@ -6,3 +6,8 @@ node_modules
 # Keep local-only logs private by default
 mission-control/logs/*.log
 mission-control/logs/*.json
+.claude/
+*.autosave
+autosave/
+dist/
+projects/rankingsb/web/my-app/dist/
