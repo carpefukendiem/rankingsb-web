@@ -13,19 +13,26 @@ export const metadata: Metadata = {
 
 const sbCounty = [
   { href: "/locations/santa-barbara-seo", city: "Santa Barbara", desc: "The 805's premier city — State Street, Funk Zone, and beyond" },
+  { href: "/locations/santa-maria-seo", city: "Santa Maria", desc: "Largest city in Santa Barbara County — retail, ag, and healthcare hub" },
   { href: "/locations/goleta-seo", city: "Goleta", desc: "UCSB campus city with tech, retail, and service businesses" },
   { href: "/locations/montecito-seo", city: "Montecito", desc: "Luxury community — celebrity clientele, high-end services" },
   { href: "/locations/carpinteria-seo", city: "Carpinteria", desc: "Beach community with agriculture and tourism economy" },
   { href: "/locations/solvang-seo", city: "Solvang", desc: "Danish village and wine country tourism destination" },
   { href: "/locations/santa-ynez-seo", city: "Santa Ynez", desc: "Wine country hub with 100+ nearby wineries" },
-  { href: "/locations/lompoc-seo", city: "Lompoc", desc: "Flower field city and aerospace community" },
+  { href: "/locations/buellton-santa-ynez-valley-seo", city: "Buellton & Santa Ynez Valley", desc: "Wine country digital marketing along Highway 246 & 101" },
+  { href: "/locations/lompoc-seo", city: "Lompoc", desc: "Flower fields, aerospace, and Lompoc Wine Ghetto tasting rooms" },
   { href: "/locations/summerland-seo", city: "Summerland", desc: "Small affluent beach community with antiques and boutiques" },
   { href: "/locations/isla-vista-seo", city: "Isla Vista", desc: "UC Santa Barbara university community" },
+]
+
+const sloCounty = [
+  { href: "/locations/san-luis-obispo-seo", city: "San Luis Obispo", desc: "SLO County hub — Cal Poly, downtown, and coastal gateway" },
 ]
 
 const venturaCounty = [
   { href: "/locations/ventura-county-seo", city: "Ventura County", desc: "Overview page for all of Ventura County" },
   { href: "/locations/ventura-seo", city: "Ventura", desc: "Coastal city with tourism, dining, and professional services" },
+  { href: "/locations/port-hueneme-seo", city: "Port Hueneme & Oxnard Harbor", desc: "Harbor economy, naval base, and Ventura coast searches" },
   { href: "/locations/oxnard-seo", city: "Oxnard", desc: "Ventura's largest city — harbor, agriculture, diverse market" },
   { href: "/locations/thousand-oaks-seo", city: "Thousand Oaks", desc: "Affluent Conejo Valley — professional services, home services" },
   { href: "/locations/camarillo-seo", city: "Camarillo", desc: "Tech and aerospace hub with growing healthcare market" },
@@ -56,7 +63,7 @@ export default function LocationsPage() {
             of the 805 dominate Google search and get more customers.
           </p>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-400">
-            {["Santa Barbara County", "Ventura County", "19+ Cities", "90-Day Guarantee"].map(t => (
+            {["Santa Barbara County", "Ventura County", "San Luis Obispo County", "24+ Cities", "90-Day Guarantee"].map(t => (
               <div key={t} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <span>{t}</span>
@@ -101,8 +108,43 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      {/* Ventura County */}
+      {/* San Luis Obispo County */}
       <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center gap-4 mb-12">
+              <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-amber-700" />
+              </div>
+              <div>
+                <Badge variant="secondary" className="mb-1">San Luis Obispo County</Badge>
+                <h2 className="text-3xl font-bold text-slate-900">San Luis Obispo County SEO</h2>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {sloCounty.map((loc, i) => (
+                <Link key={i} href={loc.href}>
+                  <Card className="border border-slate-200 hover:border-amber-300 hover:shadow-lg transition-all group">
+                    <CardContent className="p-5 flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-amber-50 group-hover:bg-amber-100 flex items-center justify-center shrink-0 transition-colors">
+                        <MapPin className="w-5 h-5 text-amber-700" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">{loc.city}</p>
+                        <p className="text-xs text-slate-500 truncate">{loc.desc}</p>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-amber-600 shrink-0 transition-colors" />
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ventura County */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-4 mb-12">

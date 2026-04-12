@@ -1,233 +1,305 @@
 import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Calendar, Clock, Phone, ArrowRight } from "lucide-react"
+import { ArrowLeft, Calendar, User, Phone, Clock } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { getPostBySlug, getRelatedPosts, getAllPosts } from "@/lib/blog"
+import { legacyBlogPosts } from "./legacy-blog-posts"
+import { getSeoBlogSlugs, loadSeoBlogPost } from "@/lib/load-seo-markdown"
+import { getJsonLdForPath } from "@/lib/seo-graph"
+import { ArticleMarkdown } from "@/components/seo/ArticleMarkdown"
+import { JsonLdGraph } from "@/components/seo/JsonLdGraph"
+import { blogSeoTags, pickRelatedSeoSlugs } from "@/lib/blog-seo-tags"
+
+const BASE = "https://rankingsb.com"
 
 export async function generateStaticParams() {
-  const posts = getAllPosts()
-  return posts.map((post) => ({ slug: post.slug }))
+  const seo = getSeoBlogSlugs().map((slug) => ({ slug }))
+  const legacy = Object.keys(legacyBlogPosts).map((slug) => ({ slug }))
+  return [...legacy, ...seo]
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
   const { slug } = await params
-  const post = getPostBySlug(slug)
-  if (!post) return {}
+  const legacy = legacyBlogPosts[slug]
+  if (legacy) {
+    const canonical = `${BASE}/blog/${slug}`
+    return {
+      title: `${legacy.title} | Rankingsb Blog`,
+      description: legacy.excerpt,
+      alternates: { canonical },
+      robots: { index: true, follow: true },
+      openGraph: {
+        title: legacy.title,
+        description: legacy.excerpt,
+        images: [{ url: legacy.image }],
+        type: "article",
+        url: canonical,
+      },
+    }
+  }
+  const md = loadSeoBlogPost(slug)
+  if (!md) return { title: "Blog Post Not Found | Rankingsb" }
+  const { frontmatter } = md
+  const canonical = `${BASE}/blog/${slug}`
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: { absolute: frontmatter.titleTag },
+    description: frontmatter.metaDescription,
+    alternates: { canonical },
+    robots: { index: true, follow: true },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      images: [post.image],
+      title: frontmatter.titleTag,
+      description: frontmatter.metaDescription,
+      images: [{ url: frontmatter.image }],
       type: "article",
+      url: canonical,
     },
+  }
+}
+
+function resolveRelatedCard(slug: string) {
+  const leg = legacyBlogPosts[slug]
+  if (leg) {
+    return {
+      slug,
+      title: leg.title,
+      category: leg.category,
+      image: leg.image,
+    }
+  }
+  const md = loadSeoBlogPost(slug)
+  if (!md) return null
+  return {
+    slug,
+    title: md.frontmatter.h1,
+    category: md.frontmatter.category,
+    image: md.frontmatter.image,
   }
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = getPostBySlug(slug)
-  if (!post) notFound()
 
-  const related = getRelatedPosts(slug, 3)
-  const allPosts = getAllPosts()
-  const currentIndex = allPosts.findIndex(p => p.slug === slug)
-  const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
-  const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
+  if (legacyBlogPosts[slug]) {
+    const post = legacyBlogPosts[slug]
+    const relatedData = post.relatedPosts
+      .map((s) => {
+        const leg = legacyBlogPosts[s]
+        return leg ? { slug: s, ...leg } : null
+      })
+      .filter(Boolean) as Array<{ slug: string } & (typeof legacyBlogPosts)[string]>
 
-  return (
-    <main className="min-h-screen bg-white">
-
-      {/* ── Hero ──────────────────────────────────────────────── */}
-      <section className="relative h-[420px] md:h-[520px] overflow-hidden">
-        <img
-          src={post.image}
-          alt={post.title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-slate-900/20" />
-        <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-12">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm mb-6 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Blog
-            </Link>
-            <div className="max-w-3xl">
-              <Badge className="mb-4 bg-blue-600 text-white hover:bg-blue-600 border-0">
-                {post.category}
-              </Badge>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
+    return (
+      <main className="min-h-screen">
+        <section className="relative py-20 lg:py-28 overflow-hidden">
+          <div className="absolute inset-0">
+            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
+          </div>
+          <div className="container relative mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Link href="/blog" className="inline-flex items-center text-white/80 hover:text-white mb-6 text-sm">
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Blog
+              </Link>
+              <Badge className="mb-4 bg-white/20 text-white border-white/30">{post.category}</Badge>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                 {post.title}
               </h1>
-              <div className="flex flex-wrap items-center gap-5 text-slate-300 text-sm">
+              <div className="flex flex-wrap items-center gap-6 text-white/80 text-sm">
                 <span className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white">
-                    {post.author[0]}
-                  </div>
-                  <span>{post.author}</span>
-                  {post.authorTitle && <span className="text-slate-400">· {post.authorTitle}</span>}
+                  <Calendar className="w-4 h-4" />
+                  {post.date}
                 </span>
-                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" />{post.date}</span>
-                <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" />{post.readTime}</span>
+                <span className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  {post.author}
+                </span>
+                <span className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  {post.readTime}
+                </span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ── Content ────────────────────────────────────────────── */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-[1fr_340px] gap-12 max-w-6xl mx-auto">
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">{post.content}</div>
+          </div>
+        </section>
 
-          {/* Article body */}
-          <article>
-            {/* Lead excerpt */}
-            <p className="text-xl text-slate-600 border-l-4 border-blue-500 pl-5 mb-8 leading-relaxed italic">
-              {post.excerpt}
-            </p>
-
-            {/* Main content */}
-            <div
-              className="
-                prose prose-slate prose-lg max-w-none
-                prose-headings:font-bold prose-headings:text-slate-900
-                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-2
-                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-blue-800
-                prose-p:text-slate-700 prose-p:leading-relaxed
-                prose-li:text-slate-700
-                prose-strong:text-slate-900
-                prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
-                prose-ul:space-y-1 prose-ol:space-y-1
-              "
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
-
-            {/* Tags */}
-            {post.tags && (
-              <div className="mt-10 pt-6 border-t border-slate-100">
-                <p className="text-sm font-semibold text-slate-500 mb-3">Tagged:</p>
-                <div className="flex flex-wrap gap-2">
-                  {post.tags.map(tag => (
-                    <span key={tag} className="text-sm bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
-                      {tag}
-                    </span>
+        {relatedData.length > 0 && (
+          <section className="py-16 bg-slate-50">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl font-bold mb-8">Related Articles</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {relatedData.map((related) => (
+                    <Link key={related.slug} href={`/blog/${related.slug}`}>
+                      <Card className="border-0 shadow-md hover:shadow-xl transition-shadow h-full">
+                        <div className="h-40 overflow-hidden rounded-t-lg">
+                          <img
+                            src={related.image}
+                            alt={related.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <CardContent className="p-4">
+                          <Badge variant="secondary" className="mb-2 text-xs">
+                            {related.category}
+                          </Badge>
+                          <h3 className="font-bold text-sm leading-snug">{related.title}</h3>
+                        </CardContent>
+                      </Card>
+                    </Link>
                   ))}
                 </div>
               </div>
-            )}
-
-            {/* Prev/Next navigation */}
-            <div className="mt-10 grid sm:grid-cols-2 gap-4 border-t border-slate-100 pt-8">
-              {prevPost && (
-                <Link href={`/blog/${prevPost.slug}`} className="group p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
-                  <p className="text-xs text-slate-400 mb-1 flex items-center gap-1"><ArrowLeft className="w-3 h-3" /> Previous</p>
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {prevPost.title}
-                  </p>
-                </Link>
-              )}
-              {nextPost && (
-                <Link href={`/blog/${nextPost.slug}`} className="group p-4 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all sm:text-right ml-auto w-full">
-                  <p className="text-xs text-slate-400 mb-1 flex items-center gap-1 sm:justify-end">Next <ArrowRight className="w-3 h-3" /></p>
-                  <p className="text-sm font-semibold text-slate-800 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {nextPost.title}
-                  </p>
-                </Link>
-              )}
             </div>
-          </article>
+          </section>
+        )}
 
-          {/* ── Sidebar ──────────────────────────────────────────── */}
-          <aside className="space-y-6">
-            <div className="sticky top-24 space-y-6">
-
-              {/* CTA */}
-              <div className="bg-gradient-to-br from-slate-900 to-blue-900 rounded-2xl p-6 text-white shadow-xl">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <Phone className="w-6 h-6 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-bold mb-2">Ready to Rank Higher?</h3>
-                <p className="text-slate-300 text-sm mb-5">
-                  Get a free SEO audit for your Santa Barbara or Ventura County business — no commitment, just clarity.
-                </p>
-                <Link href="/free-audit">
-                  <Button className="w-full bg-blue-500 hover:bg-blue-400 text-white mb-3">
-                    Get Free SEO Audit
-                  </Button>
-                </Link>
-                <a href="tel:8053077600">
-                  <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10">
-                    Call (805) 307-7600
-                  </Button>
-                </a>
-              </div>
-
-              {/* Author card */}
-              <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-lg font-bold text-white shrink-0">
-                    {post.author[0]}
-                  </div>
-                  <div>
-                    <p className="font-bold text-slate-900 text-sm">{post.author}</p>
-                    {post.authorTitle && <p className="text-xs text-slate-500">{post.authorTitle}</p>}
-                  </div>
-                </div>
-                <p className="text-xs text-slate-600">
-                  Local SEO specialist serving Santa Barbara and Ventura County businesses. Helping local companies rank higher and grow faster since 2019.
-                </p>
-              </div>
-
-              {/* Related posts */}
-              {related.length > 0 && (
-                <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5">
-                  <h3 className="font-bold text-slate-900 text-sm mb-4">Related Articles</h3>
-                  <div className="space-y-4">
-                    {related.map(rp => (
-                      <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group flex gap-3">
-                        <img src={rp.image} alt={rp.title} className="w-14 h-14 object-cover rounded-lg shrink-0" />
-                        <div>
-                          <p className="text-xs text-blue-600 mb-0.5">{rp.category}</p>
-                          <p className="text-sm font-medium text-slate-800 group-hover:text-blue-600 transition-colors line-clamp-2 leading-snug">
-                            {rp.title}
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </aside>
-        </div>
-      </div>
-
-      {/* ── Bottom CTA ─────────────────────────────────────────── */}
-      <section className="bg-slate-900 py-16 mt-8">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Want Results Like This for Your Business?
-          </h2>
-          <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-            Let&apos;s build your local search presence the right way. Free audit, no pressure.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <section className="py-16 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold mb-4">Ready to Dominate Local Search?</h2>
+            <p className="text-blue-100 mb-6 max-w-xl mx-auto">
+              Get a free SEO audit and personalized strategy for your Santa Barbara or Ventura County
+              business.
+            </p>
             <Link href="/free-audit">
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-400 text-white px-8">
-                Get Your Free SEO Audit
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+                <Phone className="w-5 h-5 mr-2" />
+                Get Free Audit
               </Button>
             </Link>
-            <Link href="/blog">
-              <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 px-8">
-                Read More Articles
-              </Button>
+          </div>
+        </section>
+      </main>
+    )
+  }
+
+  const md = loadSeoBlogPost(slug)
+  if (!md) notFound()
+
+  const { frontmatter, body } = md
+  const schema = getJsonLdForPath(`/blog/${slug}`)
+  const tags = blogSeoTags[slug] ?? []
+  const relatedSlugs = pickRelatedSeoSlugs(slug)
+  const relatedData = relatedSlugs.map(resolveRelatedCard).filter(Boolean) as Array<{
+    slug: string
+    title: string
+    category: string
+    image: string
+  }>
+
+  return (
+    <main className="min-h-screen">
+      {schema ? <JsonLdGraph data={schema} /> : null}
+      <section className="relative py-20 lg:py-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={frontmatter.image}
+            alt={frontmatter.h1}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
+        </div>
+        <div className="container relative mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Link href="/blog" className="inline-flex items-center text-white/80 hover:text-white mb-6 text-sm">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
             </Link>
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge className="bg-white/20 text-white border-white/30">{frontmatter.category}</Badge>
+              {tags.map((t) => (
+                <Badge key={t} variant="outline" className="border-white/40 text-white/90 text-xs">
+                  {t}
+                </Badge>
+              ))}
+            </div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              {frontmatter.h1}
+            </h1>
+            <div className="flex flex-wrap items-center gap-6 text-white/80 text-sm">
+              <span className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                {frontmatter.date}
+              </span>
+              <span className="flex items-center gap-2">
+                <User className="w-4 h-4" />
+                Rankingsb Team
+              </span>
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                {frontmatter.readTime}
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <ArticleMarkdown markdown={body} />
+          </div>
+        </div>
+      </section>
+
+      {relatedData.length > 0 && (
+        <section className="py-16 bg-slate-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold mb-8">Related Articles</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {relatedData.map((related) => (
+                  <Link key={related.slug} href={`/blog/${related.slug}`}>
+                    <Card className="border-0 shadow-md hover:shadow-xl transition-shadow h-full">
+                      <div className="h-40 overflow-hidden rounded-t-lg">
+                        <img
+                          src={related.image}
+                          alt={related.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <CardContent className="p-4">
+                        <Badge variant="secondary" className="mb-2 text-xs">
+                          {related.category}
+                        </Badge>
+                        <h3 className="font-bold text-sm leading-snug">{related.title}</h3>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold mb-4">Ready to Dominate Local Search?</h2>
+          <p className="text-blue-100 mb-6 max-w-xl mx-auto">
+            Get a free SEO audit and personalized strategy for your Santa Barbara or Ventura County
+            business.
+          </p>
+          <Link href="/free-audit">
+            <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50">
+              <Phone className="w-5 h-5 mr-2" />
+              Get Free Audit
+            </Button>
+          </Link>
+        </div>
+      </section>
     </main>
   )
 }
