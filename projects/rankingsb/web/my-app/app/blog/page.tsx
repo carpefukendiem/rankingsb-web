@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Calendar, User, Phone, Clock } from "lucide-react"
 import Link from "next/link"
+import { getSeoBlogSlugs, loadSeoBlogPost } from "@/lib/load-seo-markdown"
 
 export const metadata: Metadata = {
   title: "Local SEO Blog | Santa Barbara & Ventura County Marketing Tips | Rankingsb",
@@ -11,7 +12,40 @@ export const metadata: Metadata = {
   keywords: ["local SEO blog", "Santa Barbara SEO tips", "Ventura County marketing", "Google ranking tips"],
 }
 
-const blogPosts = [
+function seoBlogCards() {
+  return getSeoBlogSlugs()
+    .map((slug) => {
+      const p = loadSeoBlogPost(slug)
+      if (!p) return null
+      const read = p.frontmatter.readTime.replace(/\s*read\s*$/i, "").trim()
+      return {
+        title: p.frontmatter.h1,
+        excerpt: p.frontmatter.metaDescription,
+        category: p.frontmatter.category,
+        date: p.frontmatter.date,
+        readTime: read || "6 min",
+        author: "Rankingsb Team",
+        href: `/blog/${slug}`,
+        image: p.frontmatter.image,
+        featured: false as const,
+        sortKey: p.frontmatter.dateIso ?? p.frontmatter.date,
+      }
+    })
+    .filter(Boolean) as Array<{
+      title: string
+      excerpt: string
+      category: string
+      date: string
+      readTime: string
+      author: string
+      href: string
+      image: string
+      featured: boolean
+      sortKey: string
+    }>
+}
+
+const legacyBlogPosts = [
   {
     title: "The Complete Local SEO Guide for Santa Barbara Businesses in 2026",
     excerpt: "Everything Santa Barbara businesses need to know about local SEO — from Google Business Profile to link building in the 805.",
@@ -109,8 +143,10 @@ const blogPosts = [
 const categories = ["All", "Local SEO", "Reputation", "Industry", "Strategy"]
 
 export default function BlogPage() {
-  const featured = blogPosts.filter(p => p.featured)
-  const regular = blogPosts.filter(p => !p.featured)
+  const seoCards = seoBlogCards().sort((a, b) => b.sortKey.localeCompare(a.sortKey))
+  const blogPosts = [...seoCards, ...legacyBlogPosts]
+  const featured = blogPosts.filter((p) => "featured" in p && p.featured)
+  const regular = blogPosts.filter((p) => !("featured" in p && p.featured))
 
   return (
     <main className="min-h-screen">

@@ -2,15 +2,15 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { 
-  Zap, 
-  Thermometer, 
-  Droplets, 
-  Home, 
-  Sun, 
-  Scale, 
-  Stethoscope, 
-  ShoppingBag, 
+import {
+  Zap,
+  Thermometer,
+  Droplets,
+  Home,
+  Sun,
+  Scale,
+  Stethoscope,
+  ShoppingBag,
   UtensilsCrossed,
   Car,
   Dumbbell,
@@ -19,7 +19,14 @@ import {
   Phone,
   TrendingUp,
   MapPin,
-  CheckCircle
+  CheckCircle,
+  Hammer,
+  Leaf,
+  PawPrint,
+  Sparkles,
+  CircleDollarSign,
+  BrushCleaning,
+  Store,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -149,6 +156,83 @@ const industries = [
     textColor: "text-lime-700",
     image: "/images/2026-02-24-gym-fitness-santa-barbara.png",
     stats: "60+ new members/month"
+  },
+  {
+    title: "Contractor SEO",
+    description: "More bids and signed jobs from Google. Local Pack SEO for general contractors and remodelers in the 805.",
+    icon: Hammer,
+    href: "/industries/contractor-seo",
+    color: "bg-orange-600",
+    lightColor: "bg-orange-100",
+    textColor: "text-orange-700",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&h=400&fit=crop",
+    stats: "High-value project leads"
+  },
+  {
+    title: "Landscaping SEO",
+    description: "Lawn care, design, and irrigation searches — rank when homeowners hire landscapers in Santa Barbara and Ventura County.",
+    icon: Leaf,
+    href: "/industries/landscaping-seo",
+    color: "bg-emerald-600",
+    lightColor: "bg-emerald-100",
+    textColor: "text-emerald-700",
+    image: "https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&h=400&fit=crop",
+    stats: "Seasonal demand captured"
+  },
+  {
+    title: "Pet Services SEO",
+    description: "Groomers, vets, boarding, and daycare — show up when pet owners search on Google and Maps.",
+    icon: PawPrint,
+    href: "/industries/pet-services-seo",
+    color: "bg-amber-500",
+    lightColor: "bg-amber-100",
+    textColor: "text-amber-800",
+    image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop",
+    stats: "More booked appointments"
+  },
+  {
+    title: "Spa & Salon SEO",
+    description: "Fill books for hair, nails, facials, and med-spa services with local search optimized for the Central Coast.",
+    icon: Sparkles,
+    href: "/industries/spa-salon-seo",
+    color: "bg-pink-500",
+    lightColor: "bg-pink-100",
+    textColor: "text-pink-700",
+    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop",
+    stats: "Strong local visibility"
+  },
+  {
+    title: "Financial & Accounting SEO",
+    description: "Advisors, wealth managers, and CPAs — rank for high-intent searches with trust-focused SEO.",
+    icon: CircleDollarSign,
+    href: "/industries/financial-advisor-seo",
+    color: "bg-indigo-600",
+    lightColor: "bg-indigo-100",
+    textColor: "text-indigo-700",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    stats: "Qualified consultations"
+  },
+  {
+    title: "Home Services SEO",
+    description: "Cleaning, organizing, handyman — capture homeowners searching for reliable pros in Santa Barbara and Ventura.",
+    icon: BrushCleaning,
+    href: "/industries/home-services-seo",
+    color: "bg-cyan-600",
+    lightColor: "bg-cyan-100",
+    textColor: "text-cyan-700",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop",
+    stats: "Recurring service leads"
+  },
+  {
+    title: "Central Coast Ecommerce SEO",
+    description: "Product and category SEO for brands selling locally and online from the 805.",
+    icon: Store,
+    href: "/industries/ecommerce-seo-central-coast",
+    color: "bg-violet-600",
+    lightColor: "bg-violet-100",
+    textColor: "text-violet-700",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    stats: "Organic revenue growth"
   },
   {
     title: "Other Businesses",
