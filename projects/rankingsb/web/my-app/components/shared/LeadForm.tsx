@@ -20,7 +20,7 @@ export function LeadForm({
   showIndustry = true,
   showWebsite = true,
   showMessage = false,
-  buttonText = "Get My Free SEO Audit",
+  buttonText = "Claim Your Free Growth Audit",
   className = "",
 }: LeadFormProps) {
   const router = useRouter()

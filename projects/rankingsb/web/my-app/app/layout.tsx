@@ -15,9 +15,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: {
     default: "Rankingsb | Local SEO Agency Santa Barbara & Ventura County",
-    template: "%s | Rankingsb",
+    template: "%s | Rankingsb — The 805 Growth Engine",
   },
-  description: "Santa Barbara and Ventura County's premier local SEO agency. We help local businesses rank higher on Google and get more customers. 90-day ranking guarantee.",
+  description:
+    "The 805 Growth Engine: custom websites, local SEO, and The Ranking App for Santa Barbara & Ventura County businesses. 90-day delivery and leads guarantees.",
   keywords: ["SEO Santa Barbara", "local SEO", "digital marketing Santa Barbara", "SEO agency Ventura County", "Google ranking Santa Barbara"],
   authors: [{ name: "Rankingsb" }],
   metadataBase: new URL("https://rankingsb.com"),
@@ -26,13 +27,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://rankingsb.com",
     siteName: "Rankingsb",
-    title: "Rankingsb | Local SEO Agency Santa Barbara & Ventura County",
-    description: "Santa Barbara and Ventura County's premier local SEO agency. 90-day ranking guarantee.",
+    title: "Rankingsb | The 805 Growth Engine | Santa Barbara & Ventura County",
+    description:
+      "Custom websites, local SEO, and The Ranking App — built and running in 90 days for 805 businesses.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rankingsb | Local SEO Agency Santa Barbara & Ventura County",
-    description: "Get your local business to page 1 in 90 days. Free SEO audit.",
+    title: "Rankingsb | The 805 Growth Engine",
+    description:
+      "Website, SEO, and automation for 805 businesses. Claim your free Growth Audit.",
   },
   robots: {
     index: true,

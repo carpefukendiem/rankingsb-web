@@ -15,9 +15,15 @@ export function Footer() {
                 className="h-14 w-auto object-contain mb-4"
               />
             </Link>
+            <p className="text-slate-300 text-sm font-medium mb-1">
+              The 805 Growth Engine — Built. Ranked. Running.
+            </p>
+            <p className="text-slate-400 text-sm mb-4">
+              Setup from $3,000 · $250/month to maintain · No contracts
+            </p>
             <p className="text-slate-400 mb-6 text-sm leading-relaxed">
-              Santa Barbara and Ventura County's premier local SEO agency.
-              We help local businesses rank higher on Google and get more customers.
+              Santa Barbara and Ventura County&apos;s growth partner — custom sites,
+              local SEO, and The Ranking App in one system.
             </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-3 text-slate-400">
@@ -40,6 +46,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-white">Services</h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li><Link href="/services" className="hover:text-white transition-colors font-medium">All Services →</Link></li>
+              <li><Link href="/ranking-app" className="hover:text-white transition-colors">The Ranking App</Link></li>
               <li><Link href="/services/local-seo" className="hover:text-white transition-colors">Local SEO</Link></li>
               <li><Link href="/services/google-business-profile" className="hover:text-white transition-colors">Google Business Profile</Link></li>
               <li><Link href="/services/review-management" className="hover:text-white transition-colors">Review Management</Link></li>

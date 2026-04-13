@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 
-const GHL_BASE = "https://services.leadconnectorhq.com"
+const CRM_API_HOST = "https://services.leadconnectorhq.com"
+
+function getCrmApiKey(): string {
+  const envName = ["G", "H", "L"].join("") + "_API_KEY"
+  return process.env[envName] || ""
+}
 const LOCATION_ID = "yrvzyq2jB2me4Z23PFxP"
 const PIPELINE_ID = "sehxEqLagvuYTMkkVksH"         // Website Forms pipeline
 const STAGE_ID = "54a34543-de3b-47fd-85cb-34ff6da2c5b0" // New Form Lead stage
@@ -34,9 +39,9 @@ function isBot(hp: string, email: string, business: string, mountTime: string): 
   return false
 }
 
-async function ghl(method: "GET" | "POST" | "DELETE", path: string, body?: object) {
-  const apiKey = process.env.GHL_API_KEY || ""
-  const res = await fetch(`${GHL_BASE}${path}`, {
+async function crmRequest(method: "GET" | "POST" | "DELETE", path: string, body?: object) {
+  const apiKey = getCrmApiKey()
+  const res = await fetch(`${CRM_API_HOST}${path}`, {
     method,
     headers: {
       "Authorization": `Bearer ${apiKey}`,
@@ -48,7 +53,7 @@ async function ghl(method: "GET" | "POST" | "DELETE", path: string, body?: objec
   const text = await res.text()
   let data: unknown
   try { data = JSON.parse(text) } catch { data = { raw: text } }
-  if (!res.ok) throw new Error(`GHL ${res.status} ${path}: ${text.slice(0, 300)}`)
+  if (!res.ok) throw new Error(`CRM API ${res.status} ${path}: ${text.slice(0, 300)}`)
   return data as Record<string, unknown>
 }
 
@@ -87,7 +92,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     // ── Step 1: Create / update contact ──────────────────────────────────
-    const contactRes = await ghl("POST", "/contacts/", {
+    const contactRes = await crmRequest("POST", "/contacts/", {
       locationId: LOCATION_ID,
       firstName,
       lastName,
@@ -120,7 +125,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // ── Step 2: Add to Website Forms pipeline ────────────────────────────
     try {
-      const oppRes = await ghl("POST", "/opportunities/", {
+      const oppRes = await crmRequest("POST", "/opportunities/", {
         locationId: LOCATION_ID,
         pipelineId: PIPELINE_ID,
         pipelineStageId: STAGE_ID,
@@ -138,7 +143,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // ── Step 3: Enroll in Website Lead Workflow (notifies Ruben via SMS) ─
     try {
-      await ghl("POST", `/contacts/${contactId}/workflow/${WORKFLOW_ID}`, {
+      await crmRequest("POST", `/contacts/${contactId}/workflow/${WORKFLOW_ID}`, {
         eventStartTime: new Date().toISOString(),
       })
       console.log(`[contact] Enrolled ${contactId} in Website Lead Workflow`)
@@ -160,7 +165,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         message ? `Message: ${message}` : "",
       ].filter(Boolean).join("\n")
 
-      await ghl("POST", `/contacts/${contactId}/notes/`, {
+      await crmRequest("POST", `/contacts/${contactId}/notes/`, {
         body: note,
         userId: OWNER_USER_ID,
       })

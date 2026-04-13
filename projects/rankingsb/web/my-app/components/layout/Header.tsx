@@ -6,6 +6,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 const services = [
+  { href: "/ranking-app", label: "The Ranking App" },
   { href: "/services/local-seo", label: "Local SEO" },
   { href: "/services/google-business-profile", label: "Google Business Profile" },
   { href: "/services/review-management", label: "Review Management" },
@@ -184,7 +185,7 @@ export function Header() {
             <Link href="/free-audit">
               <Button size="sm" className="bg-blue-500 hover:bg-blue-400 text-white font-semibold px-4 shadow-lg shadow-blue-500/30">
                 <Phone className="w-3.5 h-3.5 mr-1.5" />
-                Free Audit
+                Get Your Free Audit
               </Button>
             </Link>
           </div>
@@ -221,7 +222,7 @@ export function Header() {
                 <Link href="/free-audit" onClick={() => setMobileMenuOpen(false)}>
                   <Button className="w-full bg-blue-500 hover:bg-blue-400 text-white">
                     <Phone className="w-4 h-4 mr-2" />
-                    Get Free SEO Audit
+                    Get Your Free Audit
                   </Button>
                 </Link>
               </div>

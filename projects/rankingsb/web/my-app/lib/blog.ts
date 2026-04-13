@@ -299,7 +299,7 @@ const posts: Record<string, BlogPost> = {
 <p>Most people will say yes in person, then forget. The solution: text them the link right away. "Hi [Name], it was great working with you! Here's that Google review link I mentioned: [link]" Texted review requests convert at 3-5x higher than emailed ones.</p>
 
 <h3>Step 4: Automate with Your CRM</h3>
-<p>If you use GoHighLevel, set up an automated review request sequence triggered when a job is marked complete. The system sends a text 2 hours after completion, then a follow-up 24 hours later if no review was left. This alone can generate 10-20 new reviews per month on autopilot.</p>
+<p>If you use The Ranking App (or similar automation), set up an automated review request sequence triggered when a job is marked complete. The system sends a text 2 hours after completion, then a follow-up 24 hours later if no review was left. This alone can generate 10-20 new reviews per month on autopilot.</p>
 
 <h3>Step 5: Respond to Every Review</h3>
 <p>Responding to reviews is a ranking signal AND a conversion signal for future customers. Respond to 5-star reviews with genuine gratitude and a mention of what you did. Respond to negative reviews professionally and offer to make it right. Never argue.</p>
