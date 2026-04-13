@@ -11,3 +11,4 @@ mission-control/logs/*.json
 autosave/
 dist/
 projects/rankingsb/web/my-app/dist/
+.env*.local
