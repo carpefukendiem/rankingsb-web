@@ -211,7 +211,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
         <h2>Cost Comparison for Santa Barbara</h2>
         <p>For a Santa Barbara plumber targeting "plumber Santa Barbara":</p>
         <ul>
-          <li><strong>Google Ads CPC:</strong> $15-35 per click (highly competitive)</li>
+          <li><strong>Google Ads CPC:</strong> $15-35 per click (very competitive)</li>
           <li><strong>Estimated 50 clicks/month:</strong> $750-1,750/month in ad spend</li>
           <li><strong>SEO investment:</strong> $1,500-3,000/month</li>
           <li><strong>SEO traffic after 12 months:</strong> 200-500 organic visitors/month at no additional cost</li>

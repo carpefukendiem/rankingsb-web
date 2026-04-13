@@ -137,7 +137,7 @@ const posts: Record<string, BlogPost> = {
 <p>Ventura County's largest city. High Hispanic population — bilingual content is a major differentiator here. Strong blue-collar market: home services, auto repair, and food businesses thrive. Target "cerca de mí" searches for a huge untapped audience.</p>
 
 <h3>Thousand Oaks (130,000 residents)</h3>
-<p>One of the wealthiest cities in California. Residents are highly educated, research extensively before buying, and spend more. Premium services dominate here — medical, legal, wealth management, luxury retail. Competitive but high-value.</p>
+<p>One of the wealthiest cities in California. Residents are well educated, research extensively before buying, and spend more. Premium services dominate here — medical, legal, wealth management, luxury retail. Competitive but high-value.</p>
 
 <h3>Simi Valley (125,000 residents)</h3>
 <p>Family-oriented, suburban. Home services, schools, family restaurants, and children's activities perform extremely well. Often overlooked by competitors focusing on Thousand Oaks — less competition, solid search volume.</p>

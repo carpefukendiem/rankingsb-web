@@ -256,7 +256,7 @@ export default function CaseStudiesPage() {
                   <blockquote className="text-xl text-slate-700 mb-6 italic">
                     &quot;It&apos;s hard to find good people in digital marketing.
                     It&apos;s extremely hard to find people who are good at multiple
-                    highly-specialized fields of digital marketing. And Ruben at
+                    specialized fields of digital marketing. And Ruben at
                     Ranking SB is absolutely one of those extremely rare finds.&quot;
                   </blockquote>
                   <div>

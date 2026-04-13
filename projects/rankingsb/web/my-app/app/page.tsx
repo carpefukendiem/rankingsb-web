@@ -444,7 +444,7 @@ export default function HomePage() {
                     <blockquote className="text-xl md:text-2xl text-slate-700 mb-6 italic leading-relaxed">
                       &quot;It&apos;s hard to find good people in digital marketing.
                       It&apos;s extremely hard to find people who are good at multiple
-                      highly-specialized fields of digital marketing. And Ruben at
+                      specialized fields of digital marketing. And Ruben at
                       Ranking SB is absolutely one of those extremely rare finds.
                       Whether it&apos;s SEO, Paid Social, SEM, Direct, or Web Strategy,
                       Ranking SB has the skillset of a world-class agency, with the
