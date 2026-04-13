@@ -151,13 +151,34 @@ export default function SantaBarbaraSEOPage() {
             <p className="text-slate-600">Helping businesses rank across the entire Santa Barbara area</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {["Downtown Santa Barbara", "The Funk Zone", "State Street", "Upper State", "Lower State", "Westside", "Eastside", "Riviera", "San Roque", "Upper East", "Samarkand", "Hope Ranch"].map((area) => (
-              <Link key={area} href={`/locations/${area.toLowerCase().replace(/\s+/g, '-')}-seo`}>
-                <Badge variant="outline" className="px-4 py-2 text-sm hover:bg-blue-50 cursor-pointer">
-                  {area}
+            {(
+              [
+                { label: "Downtown Santa Barbara", href: "/locations/santa-barbara-seo" },
+                { label: "The Funk Zone", href: "/locations/santa-barbara-seo" },
+                { label: "State Street", href: "/locations/santa-barbara-seo" },
+                { label: "Upper East", href: "/locations/santa-barbara-seo" },
+                { label: "Samarkand", href: "/locations/santa-barbara-seo" },
+                { label: "Hope Ranch", href: "/locations/santa-barbara-seo" },
+                { label: "Upper State" },
+                { label: "Lower State" },
+                { label: "Westside" },
+                { label: "Eastside" },
+                { label: "Riviera" },
+                { label: "San Roque" },
+              ] as const
+            ).map((area) =>
+              "href" in area ? (
+                <Link key={area.label} href={area.href}>
+                  <Badge variant="outline" className="px-4 py-2 text-sm hover:bg-blue-50 cursor-pointer">
+                    {area.label}
+                  </Badge>
+                </Link>
+              ) : (
+                <Badge key={area.label} variant="outline" className="px-4 py-2 text-sm text-slate-600">
+                  {area.label}
                 </Badge>
-              </Link>
-            ))}
+              )
+            )}
           </div>
           <div className="mt-12 text-center">
             <p className="text-slate-500 mb-4">Also serving nearby areas:</p>

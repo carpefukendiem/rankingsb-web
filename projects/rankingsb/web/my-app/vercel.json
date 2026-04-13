@@ -22,7 +22,9 @@
     { "source": "/tos",                       "destination": "/", "permanent": true },
     { "source": "/privacy-policy-7297",       "destination": "/", "permanent": true },
     { "source": "/home-4380",                 "destination": "/", "permanent": true },
-    { "source": "/undefined",                 "destination": "/", "permanent": true }
+    { "source": "/undefined",                 "destination": "/", "permanent": true },
+    { "source": "/locations/the-funk-zone-seo", "destination": "/locations/santa-barbara-seo", "permanent": true },
+    { "source": "/locations/hope-ranch-seo", "destination": "/locations/santa-barbara-seo", "permanent": true }
   ],
   "headers": [
     {
