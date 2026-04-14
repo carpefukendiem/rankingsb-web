@@ -11,6 +11,12 @@ import { getJsonLdForPath } from "@/lib/seo-graph"
 import { ArticleMarkdown } from "@/components/seo/ArticleMarkdown"
 import { JsonLdGraph } from "@/components/seo/JsonLdGraph"
 import { blogSeoTags, pickRelatedSeoSlugs } from "@/lib/blog-seo-tags"
+import BlogCTA from "@/components/BlogCTA"
+import {
+  blogPostBrowserTitle,
+  blogPostMetaDescription,
+  truncateMetaTitle,
+} from "@/lib/meta-helpers"
 
 const BASE = "https://rankingsb.com"
 
@@ -30,13 +36,13 @@ export async function generateMetadata({
   if (legacy) {
     const canonical = `${BASE}/blog/${slug}`
     return {
-      title: `${legacy.title} | Rankingsb Blog`,
-      description: legacy.excerpt,
+      title: { absolute: blogPostBrowserTitle(legacy.title) },
+      description: blogPostMetaDescription(legacy.excerpt),
       alternates: { canonical },
       robots: { index: true, follow: true },
       openGraph: {
-        title: legacy.title,
-        description: legacy.excerpt,
+        title: blogPostBrowserTitle(legacy.title),
+        description: blogPostMetaDescription(legacy.excerpt),
         images: [{ url: legacy.image }],
         type: "article",
         url: canonical,
@@ -44,17 +50,19 @@ export async function generateMetadata({
     }
   }
   const md = loadSeoBlogPost(slug)
-  if (!md) return { title: "Blog Post Not Found | Rankingsb" }
+  if (!md) return { title: "Blog Post Not Found | Ranking SB" }
   const { frontmatter } = md
   const canonical = `${BASE}/blog/${slug}`
+  const titleAbs = truncateMetaTitle(frontmatter.titleTag, 70)
+  const desc = blogPostMetaDescription(frontmatter.metaDescription)
   return {
-    title: { absolute: frontmatter.titleTag },
-    description: frontmatter.metaDescription,
+    title: { absolute: titleAbs },
+    description: desc,
     alternates: { canonical },
     robots: { index: true, follow: true },
     openGraph: {
-      title: frontmatter.titleTag,
-      description: frontmatter.metaDescription,
+      title: titleAbs,
+      description: desc,
       images: [{ url: frontmatter.image }],
       type: "article",
       url: canonical,
@@ -131,7 +139,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">{post.content}</div>
+            <div className="max-w-3xl mx-auto">
+              <BlogCTA variant="top" />
+              {post.content}
+              <BlogCTA variant="bottom" />
+            </div>
           </div>
         </section>
 
@@ -235,7 +247,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </span>
               <span className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Rankingsb Team
+                Ranking SB Team
               </span>
               <span className="flex items-center gap-2">
                 <Clock className="w-4 h-4" />
@@ -249,7 +261,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
+            <BlogCTA variant="top" />
             <ArticleMarkdown markdown={body} />
+            <BlogCTA variant="bottom" />
           </div>
         </div>
       </section>

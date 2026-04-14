@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services San Luis Obispo | Expand Your Reach to SLO County | Rankingsb"
+titleTag: "SEO Services San Luis Obispo | Expand Your Reach to SLO County | Ranking SB"
 metaDescription: "Local SEO for San Luis Obispo and SLO County businesses. Rank higher on Google in the Central Coast's most competitive market north of Santa Barbara. Free audit available."
 h1: "SEO Services San Luis Obispo — Rank #1 in SLO County"
 heroBadge: "Local SEO"
@@ -9,7 +9,7 @@ San Luis Obispo is one of California's most desirable cities — and its local b
 
 For businesses in San Luis Obispo and throughout SLO County — from Paso Robles to Pismo Beach, from Arroyo Grande to Atascadero — Google rankings are increasingly the decisive factor in new customer acquisition.
 
-Rankingsb extends its proven Central Coast local SEO systems to the SLO County market. If your SLO business needs stronger Google presence, we can build it — and back it with our 90-day guarantee.
+Ranking SB extends its proven Central Coast local SEO systems to the SLO County market. If your SLO business needs stronger Google presence, we can build it — and back it with our 90-day guarantee.
 
 ### The SLO County Business Environment
 
@@ -52,6 +52,6 @@ Our complete local SEO stack — [Google Business Profile optimization](/service
 
 ### Our Central Coast Reach
 
-Rankingsb serves businesses across the entire Central Coast — from Ventura County north through Santa Barbara County and into SLO County. Our [locations page](/locations) outlines our full service area. For SLO County clients, we apply the same systems and the same 90-day guarantee that have produced results throughout the 805.
+Ranking SB serves businesses across the entire Central Coast — from Ventura County north through Santa Barbara County and into SLO County. Our [locations page](/locations) outlines our full service area. For SLO County clients, we apply the same systems and the same 90-day guarantee that have produced results throughout the 805.
 
 [Request your free SLO SEO audit](/free-audit) and let's see what it would take to dominate your category in San Luis Obispo County.

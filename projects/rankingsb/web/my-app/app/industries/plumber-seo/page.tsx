@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Droplets, Clock, Shield, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Plumber SEO Santa Barbara | Rankingsb",
-  description: "Get more plumbing service calls with local SEO. Santa Barbara plumbers rank #1 on Google for emergency repairs.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Plumber",
+  outcome: "Calls",
+  descIndustryPhrase: "plumbing companies",
+})
 
 export default function PlumberSEOPage() {
   return (

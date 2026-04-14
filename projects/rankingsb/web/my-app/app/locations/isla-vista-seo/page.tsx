@@ -5,17 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, MapPin, GraduationCap, Home, TrendingUp, Star, Users, Store } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "SEO Isla Vista | Rankingsb Digital Marketing",
-  description: "Get more customers with local SEO in Isla Vista. 90-day ranking guarantee. Free audit shows exactly how to rank higher on Google.",
-  keywords: ["SEO Isla Vista", "digital marketing Isla Vista", "local SEO Isla Vista", "Isla Vista SEO agency", "UCSB area SEO"],
-  openGraph: {
-    title: "SEO Isla Vista | Rankingsb",
-    description: "Get more customers with local SEO in Isla Vista. 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Isla Vista")
 
 export default function IslaVistaSEOPage() {
   return (

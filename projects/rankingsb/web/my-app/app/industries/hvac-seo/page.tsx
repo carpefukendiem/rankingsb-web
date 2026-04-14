@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Thermometer, Snowflake, Flame, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "HVAC SEO Santa Barbara | Rankingsb",
-  description: "Get more HVAC service calls with local SEO. Santa Barbara heating & cooling companies rank #1 on Google.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "HVAC",
+  outcome: "Calls",
+  descIndustryPhrase: "HVAC companies",
+})
 
 export default function HVACSEOPage() {
   return (

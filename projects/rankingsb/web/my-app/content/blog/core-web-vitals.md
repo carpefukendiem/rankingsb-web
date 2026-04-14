@@ -1,5 +1,5 @@
 ---
-titleTag: "Website Speed & Core Web Vitals: How Page Load Kills Your Local Rankings | Rankingsb"
+titleTag: "Website Speed & Core Web Vitals: How Page Load Kills Your Local Rankings | Ranking SB"
 metaDescription: "A slow website hurts your Google rankings and loses customers before they even see your content. Here's what Core Web Vitals mean for Santa Barbara local businesses."
 h1: "Website Speed and Core Web Vitals: How Page Load Time Kills Your Rankings"
 category: "Local SEO"

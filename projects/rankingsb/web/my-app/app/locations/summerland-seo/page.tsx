@@ -4,18 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, MapPin, Star, TrendingUp, Building2, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO Services Summerland CA | Local SEO Summerland | Rankingsb",
-  description: "Expert local SEO for Summerland, CA. Get your Summerland business to page 1 of Google in 90 days. Free SEO audit for Santa Barbara County businesses.",
-  keywords: ["SEO Summerland", "local SEO Summerland CA", "SEO company Summerland", "digital marketing Summerland", "Google ranking Summerland California"],
-  openGraph: {
-    title: "SEO Services Summerland CA | Rankingsb",
-    description: "Get your Summerland business to page 1. Expert local SEO with a 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Summerland")
 
 export default function SummerlandSEOPage() {
   return (
@@ -34,7 +26,7 @@ export default function SummerlandSEOPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Summerland businesses trust Rankingsb to dominate local search. We know  — and we use that
+              Summerland businesses trust Ranking SB to dominate local search. We know  — and we use that
               local knowledge to get you ranked where customers can find you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

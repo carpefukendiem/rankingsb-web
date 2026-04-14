@@ -1,5 +1,5 @@
 ---
-titleTag: "Instagram vs. SEO: Where Should a Santa Barbara Business Focus First? | Rankingsb"
+titleTag: "Instagram vs. SEO: Where Should a Santa Barbara Business Focus First? | Ranking SB"
 metaDescription: "Should you spend your marketing time on Instagram or local SEO? For most Santa Barbara businesses, the answer is clear. Here's why — and when social media does matter."
 h1: "Instagram vs. SEO: Where Should a Santa Barbara Business Focus First?"
 category: "Local SEO"

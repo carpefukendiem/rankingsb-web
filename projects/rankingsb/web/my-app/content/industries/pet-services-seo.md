@@ -1,5 +1,5 @@
 ---
-titleTag: "Pet Services SEO Santa Barbara (Groomers, Vets, Boarding) | Rankingsb"
+titleTag: "Pet Services SEO Santa Barbara (Groomers, Vets, Boarding) | Ranking SB"
 metaDescription: "More pet owner clients from Google. Local SEO for pet groomers, veterinarians, pet boarding, and dog trainers in Santa Barbara and Ventura County."
 h1: "Pet Services SEO Santa Barbara: Get Found by Pet Owners Searching for You"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -9,7 +9,7 @@ Santa Barbara is one of the most pet-friendly communities in California — and 
 
 The question is how those pet owners find you in the first place. Increasingly, the answer is Google. "Dog groomer near me." "Emergency vet Santa Barbara." "Dog boarding Ventura County." "Cat boarding while traveling Santa Barbara." These searches happen thousands of times per month across the Central Coast.
 
-Rankingsb helps pet service businesses build the local SEO presence that captures these searches and converts them into the loyal, long-term clients that make pet services businesses thrive.
+Ranking SB helps pet service businesses build the local SEO presence that captures these searches and converts them into the loyal, long-term clients that make pet services businesses thrive.
 
 ### Why Pet Services SEO Has Unique Characteristics
 

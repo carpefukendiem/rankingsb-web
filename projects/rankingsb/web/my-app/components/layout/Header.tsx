@@ -57,12 +57,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-slate-900 shadow-lg shadow-slate-900/20">
       <div className="container mx-auto px-4">
-        <div className="flex h-18 items-center justify-between">
+        <div className="flex items-center justify-between gap-4 py-3">
           {/* Logo */}
-          <Link href="/" className="flex items-center py-2">
+          <Link
+            href="/"
+            className="flex shrink-0 items-center pt-2 pb-1"
+          >
             <img
               src="/logo-new.webp"
-              alt="Rankingsb Local SEO Agency Santa Barbara"
+              alt="Ranking SB Local SEO Agency Santa Barbara"
               className="object-contain"
               style={{ height: '80px', width: 'auto', maxWidth: '240px' }}
             />

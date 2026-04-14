@@ -1,5 +1,5 @@
 ---
-titleTag: "The Complete Guide to Mobile SEO for Santa Barbara Local Businesses | Rankingsb"
+titleTag: "The Complete Guide to Mobile SEO for Santa Barbara Local Businesses | Ranking SB"
 metaDescription: "Over 60% of local searches happen on mobile. If your website isn't optimized for mobile, you're losing rankings and customers. Here's what to fix."
 h1: "The Complete Guide to Mobile SEO for Santa Barbara Local Businesses"
 category: "Local SEO"

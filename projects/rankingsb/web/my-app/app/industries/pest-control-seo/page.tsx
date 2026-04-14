@@ -4,13 +4,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, TrendingUp, Users, Search, MapPin, Shield, Star } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO for Pest Control Companies Santa Barbara | Rankingsb",
-  description: "Get more pest control leads in Santa Barbara and Ventura County. Dominate local search for termites, rodents, ants, bed bugs & more. 90-day ranking guarantee.",
-  keywords: ["pest control SEO Santa Barbara", "exterminator SEO Ventura County", "pest control marketing Santa Barbara", "termite company SEO", "pest control leads California"],
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Pest Control",
+  outcome: "Jobs",
+  descIndustryPhrase: "pest control companies",
+})
 
 export default function PestControlSEOPage() {
   return (

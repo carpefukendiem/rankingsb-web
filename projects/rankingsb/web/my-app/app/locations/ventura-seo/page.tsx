@@ -4,18 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, MapPin, Star, TrendingUp, Building2, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO Company Ventura CA | Local SEO Services Ventura | Rankingsb",
-  description: "Expert local SEO services in Ventura, CA. Get your Ventura business to page 1 of Google in 90 days. Free SEO audit for Ventura County businesses.",
-  keywords: ["SEO Ventura", "local SEO Ventura CA", "SEO company Ventura", "digital marketing Ventura", "Google ranking Ventura California"],
-  openGraph: {
-    title: "SEO Services Ventura CA | Rankingsb",
-    description: "Get your Ventura business to page 1 on Google. Expert local SEO services with a 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Ventura")
 
 export default function VenturaSEOPage() {
   return (
@@ -37,7 +29,7 @@ export default function VenturaSEOPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Ventura businesses trust Rankingsb to dominate local search. From downtown Main Street to the harbor,
+              Ventura businesses trust Ranking SB to dominate local search. From downtown Main Street to the harbor,
               we help Ventura companies get found by customers who are ready to buy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

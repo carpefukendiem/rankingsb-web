@@ -4,13 +4,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, Heart, Shield, Star, TrendingUp, Users, Search } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "Medical Practice SEO Santa Barbara & Ventura County | Rankingsb",
-  description: "Healthcare SEO for doctors, dentists, chiropractors, and specialists in Santa Barbara and Ventura County. Attract more new patients through Google.",
-  keywords: ["medical SEO Santa Barbara", "doctor SEO", "healthcare marketing Santa Barbara", "medical practice marketing Ventura County", "dentist SEO Santa Barbara"],
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Medical Practice",
+  outcome: "Patients",
+  descIndustryPhrase: "medical practices",
+})
 
 export default function MedicalSEOPage() {
   return (

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,8 +7,12 @@ import { MapPin, Phone, ArrowRight, CheckCircle } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "SEO Services Santa Barbara & Ventura County | All Locations | Rankingsb",
-  description: "Local SEO services for every city in Santa Barbara and Ventura Counties. From Santa Barbara to Oxnard to Thousand Oaks — we help local businesses rank.",
+  title: {
+    absolute: "SEO Locations: Santa Barbara & Ventura County | Ranking SB",
+  },
+  description: clampMetaDescription(
+    "Local SEO for every city in the 805 — Santa Barbara to Ventura and Oxnard. Pick your market, get a free growth audit, and see the path to page 1 in 90 days."
+  ),
   keywords: ["SEO services Santa Barbara County", "SEO Ventura County", "local SEO 805", "digital marketing Santa Barbara Ventura"],
 }
 

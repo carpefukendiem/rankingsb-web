@@ -1,5 +1,5 @@
 ---
-titleTag: "Spa & Beauty Salon SEO Santa Barbara | Rankingsb"
+titleTag: "Spa & Beauty Salon SEO Santa Barbara | Ranking SB"
 metaDescription: "More bookings from Google. Local SEO for day spas, med spas, hair salons, nail salons, and beauty businesses in Santa Barbara and Ventura County."
 h1: "Spa & Salon SEO Santa Barbara: Fill Your Books With Google Traffic"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -7,7 +7,7 @@ heroBadge: "Industry SEO · Santa Barbara & Ventura County"
 
 Santa Barbara's beauty and wellness industry is competitive. Between the high-end day spas of Montecito, the boutique salons of the Mesa and Funk Zone, and the medical spas serving the Ventura corridor — the market is crowded and the clients are discerning.
 
-When a Santa Barbara resident searches "best day spa near me" or "hair salon Santa Barbara," you need to be there. Rankingsb helps spas and salons build the local SEO presence that generates consistent booking traffic from Google — filling appointment calendars without total dependence on Instagram or referrals.
+When a Santa Barbara resident searches "best day spa near me" or "hair salon Santa Barbara," you need to be there. Ranking SB helps spas and salons build the local SEO presence that generates consistent booking traffic from Google — filling appointment calendars without total dependence on Instagram or referrals.
 
 ### The Spa and Salon Search Landscape
 

@@ -1,5 +1,5 @@
 ---
-titleTag: "How to Track Your Local SEO Results Without an Agency | Rankingsb"
+titleTag: "How to Track Your Local SEO Results Without an Agency | Ranking SB"
 metaDescription: "You don't need a $500/month reporting tool to track your local SEO results. Here's how Santa Barbara businesses can measure what's actually working with free tools."
 h1: "How to Track Your Local SEO Results Without an Agency"
 category: "Local SEO"

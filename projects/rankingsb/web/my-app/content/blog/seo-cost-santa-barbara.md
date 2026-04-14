@@ -1,5 +1,5 @@
 ---
-titleTag: "How Much Does SEO Cost in Santa Barbara? A Transparent Breakdown | Rankingsb"
+titleTag: "How Much Does SEO Cost in Santa Barbara? A Transparent Breakdown | Ranking SB"
 metaDescription: "What does local SEO actually cost in Santa Barbara and Ventura County? We break down real pricing, what you get at each level, and how to avoid getting ripped off."
 h1: "How Much Does SEO Cost in Santa Barbara? A Transparent Breakdown"
 category: "Local SEO"

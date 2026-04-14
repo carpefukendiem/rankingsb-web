@@ -1,5 +1,5 @@
 ---
-titleTag: "Local Link Building for Santa Barbara Businesses: Where to Start | Rankingsb"
+titleTag: "Local Link Building for Santa Barbara Businesses: Where to Start | Ranking SB"
 metaDescription: "Backlinks from local Santa Barbara and Ventura County websites boost your SEO authority. Here's exactly where to build them and how to earn them naturally."
 h1: "Local Link Building for Santa Barbara Businesses: Where to Start"
 category: "Local SEO"

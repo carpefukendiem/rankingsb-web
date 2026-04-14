@@ -1,13 +1,17 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "FAQ | The 805 Growth Engine | Rankingsb Santa Barbara",
-  description:
-    "Answers to every question about Rankingsb, the 805 Growth Engine, local SEO, website builds, The Ranking App, pricing, and guarantees.",
+  title: {
+    absolute: "Your Questions Answered | Ranking SB 805 Growth Engine",
+  },
+  description: clampMetaDescription(
+    "What does it cost? How fast do rankings move? What is The Ranking App? Everything you want to know about the 805 Growth Engine, answered honestly."
+  ),
   keywords: [
     "local SEO FAQ",
     "SEO questions Santa Barbara",
@@ -22,27 +26,19 @@ const faqGroups = [
     faqs: [
       {
         q: "What is the 805 Growth Engine?",
-        a: "It's our complete local growth system for 805 businesses — a custom-coded website, full local SEO implementation, and The Ranking App all built together and maintained for $250/month. It's the infrastructure that lets a local business compete like it has a 10-person marketing department.",
+        a: "It's our complete local growth system for 805 businesses — a custom-coded website, full local SEO implementation, and The Ranking App (our automated CRM) all built together and maintained for $250/month. It's the infrastructure that lets a local business compete like it has a 10-person marketing department.",
       },
       {
         q: "What is The Ranking App?",
-        a: "The Ranking App is your own branded business command center — a single platform that handles everything that happens after a lead first finds you. It captures leads from every channel into one inbox, follows up automatically by text and email within minutes, answers your phone with an AI voice agent 24/7, books appointments, sends review requests after every job, tracks every call back to its source, and gives you a live dashboard showing your entire pipeline. It replaces tools like a separate CRM, email marketing software, online booking, review request services, and call tracking — all in one login.",
+        a: "The Ranking App is your own branded CRM and automation platform. It automatically follows up with every lead by text and email the moment they contact you, sends a text to any missed caller within 60 seconds, books appointments, manages your pipeline, and sends review requests after every job — all without you touching it.",
       },
       {
         q: "How is this different from just hiring an SEO agency?",
-        a: "A typical SEO agency handles rankings — that's it. We build the full system: the website that ranks, the SEO that drives traffic, and The Ranking App that converts that traffic into booked appointments. Most businesses lose 30–50% of their leads to slow follow-up. We close that gap at the same time we open the top of the funnel.",
-      },
-      {
-        q: "What does the AI voice agent actually do?",
-        a: "It answers your phone like a real person — greets the caller by your business name, answers their questions, qualifies their needs, and books them into your calendar directly. Available 24/7. No hold music. No voicemail. Callers can complete the entire booking process without ever waiting for a human to call them back.",
-      },
-      {
-        q: "How does the review automation work?",
-        a: "After you mark a job as complete (or after a configurable time delay), The Ranking App sends the customer a text message with a direct link to your Google review page. The timing is automatic, the message is personalized, and you set it up once and never think about it again.",
+        a: "A typical SEO agency handles rankings — that's it. We build the full system: the website that ranks, the SEO that drives traffic, and the automation that converts that traffic into booked appointments. Most businesses lose 30–50% of their leads to slow follow-up. We close that gap at the same time we open the top of the funnel.",
       },
       {
         q: "Do I own the website and the system?",
-        a: "You own the website outright. The Ranking App is a managed platform included in your $250/month — fully set up for your business, hosted, and maintained by us. If you ever leave, we help you transition everything.",
+        a: "You own the website outright. The Ranking App is a managed platform included in your $250/month — it's fully set up for your business, hosted, and maintained by us. If you ever leave, we help you transition.",
       },
     ],
   },

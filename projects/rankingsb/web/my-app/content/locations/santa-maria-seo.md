@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services Santa Maria CA | Local SEO for Santa Barbara County's Largest City | Rankingsb"
+titleTag: "SEO Services Santa Maria CA | Local SEO for Santa Barbara County's Largest City | Ranking SB"
 metaDescription: "Local SEO for Santa Maria businesses. Get found on Google in Santa Barbara County's largest city. Free SEO audit for Santa Maria and the Santa Maria Valley."
 h1: "SEO Services Santa Maria CA — Rank #1 on Google in Santa Barbara County's Largest City"
 heroBadge: "Local SEO"
@@ -9,7 +9,7 @@ With a population of over 100,000, Santa Maria is the largest city in Santa Barb
 
 While Santa Barbara proper and Ventura County cities have seen growing competition for local search rankings, Santa Maria's market remains wide open for businesses willing to invest in a serious local SEO strategy. The businesses that move first will dominate their categories for years.
 
-Rankingsb serves Santa Maria businesses with proven local SEO systems — and we back the work with a 90-day ranking guarantee.
+Ranking SB serves Santa Maria businesses with proven local SEO systems — and we back the work with a 90-day ranking guarantee.
 
 ### The Santa Maria Business Landscape
 

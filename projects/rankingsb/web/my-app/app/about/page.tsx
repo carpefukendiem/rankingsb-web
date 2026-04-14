@@ -1,14 +1,17 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Phone, Award, Users, Target, Link2 } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title:
-    "About Rankingsb | The 805 Growth Engine | Santa Barbara SEO & Web Agency",
-  description:
-    "Rankingsb builds complete local growth systems — custom websites, Google rankings, and automated lead follow-up — for 805 businesses. Local team. Real guarantees.",
+  title: {
+    absolute: "Local 805 Agency That Builds Systems, Not Just Websites",
+  },
+  description: clampMetaDescription(
+    "We're the 805 team that builds the system your competitors don't have yet. Ranked websites + automated follow-up. Local, accountable, guaranteed."
+  ),
 }
 
 export default function AboutPage() {
@@ -49,7 +52,7 @@ export default function AboutPage() {
                 Most marketing agencies sell you services. We built a system.
               </p>
               <p className="text-slate-600 mb-4 leading-relaxed">
-                Rankingsb started with a simple observation: local businesses in Santa
+                Ranking SB started with a simple observation: local businesses in Santa
                 Barbara and Ventura County were losing customers not because of the
                 quality of their work, but because of their infrastructure. The
                 competitor who ranks #1 on Google and follows up with every lead
@@ -63,7 +66,7 @@ export default function AboutPage() {
               <p className="text-slate-600 mb-4 leading-relaxed">
                 The 805 Growth Engine combines a custom-coded website built to rank,
                 local SEO that produces calls not reports, and The Ranking App — our
-                automated platform that follows up with every lead before the
+                automated CRM platform that follows up with every lead before the
                 competition has even seen the notification.
               </p>
               <p className="text-slate-600 leading-relaxed">
@@ -138,7 +141,7 @@ export default function AboutPage() {
                 icon: Link2,
                 title: "Full Ownership",
                 description:
-                  "We build the full system. One team owns the website, the SEO, The Ranking App, and the reporting. No finger-pointing between vendors. No gaps. The whole picture is ours to manage — and yours to own.",
+                  "We build the full system. One team owns the website, the SEO, the CRM, and the reporting. No finger-pointing between vendors. No gaps. The whole picture is ours to manage — and yours to own.",
                 image:
                   "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=300&fit=crop",
               },
@@ -173,12 +176,7 @@ export default function AboutPage() {
             <Badge variant="secondary" className="mb-4">
               Our Team
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet the Experts</h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A tight team of developers, SEO specialists, content writers, and
-              automation engineers — all dedicated to 805 businesses. Small enough
-              to move fast. Experienced enough to do it right.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12">The Team</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
@@ -202,15 +200,15 @@ export default function AboutPage() {
             <div className="text-center flex flex-col justify-center">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=300&fit=crop"
-                alt="Rankingsb team"
+                alt="Ranking SB team"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-100"
               />
-              <h3 className="text-xl font-bold mb-1">The Rankingsb Team</h3>
+              <h3 className="text-xl font-bold mb-1">The Ranking SB Team</h3>
               <p className="text-blue-600 text-sm mb-3">Developers & specialists</p>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Developers, SEO specialists, writers, and automation engineers
-                working as one unit — so your website, rankings, and lead follow-up
-                never drift out of sync.
+                A tight team of developers, SEO specialists, content writers, and
+                automation engineers — all dedicated to 805 businesses. Small enough
+                to move fast. Experienced enough to do it right.
               </p>
             </div>
           </div>
@@ -277,7 +275,7 @@ export default function AboutPage() {
           <Link href="/free-audit">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-slate-100">
               <Phone className="w-5 h-5 mr-2" />
-              Claim Your Free Growth Audit
+              Get Your Free Growth Audit
             </Button>
           </Link>
         </div>

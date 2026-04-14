@@ -4,18 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, MapPin, Star, TrendingUp, Building2, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO Services Newbury Park CA | Local SEO Newbury Park | Rankingsb",
-  description: "Expert local SEO for Newbury Park, CA. Get your Newbury Park business to page 1 of Google in 90 days. Free SEO audit for Ventura County businesses.",
-  keywords: ["SEO Newbury Park", "local SEO Newbury Park CA", "SEO company Newbury Park", "digital marketing Newbury Park", "Google ranking Newbury Park California"],
-  openGraph: {
-    title: "SEO Services Newbury Park CA | Rankingsb",
-    description: "Get your Newbury Park business to page 1. Expert local SEO with a 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Newbury Park")
 
 export default function NewburyParkSEOPage() {
   return (
@@ -34,7 +26,7 @@ export default function NewburyParkSEOPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Newbury Park businesses trust Rankingsb to dominate local search. We know  — and we use that
+              Newbury Park businesses trust Ranking SB to dominate local search. We know  — and we use that
               local knowledge to get you ranked where customers can find you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,14 +7,17 @@ import { CheckCircle, Phone, ArrowRight, Shield } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Pricing | The 805 Growth Engine | Rankingsb Santa Barbara",
-  description:
-    "Simple, transparent pricing for the 805 Growth Engine. $3,000–$5,000 setup, $250/month to maintain everything. No contracts. No hidden fees.",
+  title: {
+    absolute: "$3k Setup. $250/mo. No Contracts. | Ranking SB Pricing",
+  },
+  description: clampMetaDescription(
+    "$3,000–$5,000 builds everything. $250/month maintains it. One new client covers 6 months. See exactly what's included — no packages, no surprises."
+  ),
   keywords: [
     "805 Growth Engine pricing",
     "SEO pricing Santa Barbara",
     "local SEO cost Ventura County",
-    "Rankingsb pricing",
+    "Ranking SB pricing",
   ],
 }
 
@@ -78,7 +82,7 @@ const pricingSchema = {
       "@type": "WebPage",
       "@id": "https://www.rankingsb.com/pricing#webpage",
       url: "https://www.rankingsb.com/pricing",
-      name: "Pricing | The 805 Growth Engine | Rankingsb Santa Barbara",
+      name: "Pricing | The 805 Growth Engine | Ranking SB Santa Barbara",
       description:
         "Simple, transparent pricing for the 805 Growth Engine. $3,000–$5,000 setup, $250/month to maintain everything. No contracts. No hidden fees.",
       isPartOf: { "@id": "https://www.rankingsb.com/#website" },
@@ -135,7 +139,7 @@ const pricingSchema = {
     {
       "@type": "LocalBusiness",
       "@id": "https://www.rankingsb.com/#organization",
-      name: "Rankingsb",
+      name: "Ranking SB",
       url: "https://www.rankingsb.com",
       telephone: "+18053077600",
       logo: {

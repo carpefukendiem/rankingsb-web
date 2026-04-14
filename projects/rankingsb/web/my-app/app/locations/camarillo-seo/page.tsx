@@ -4,18 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, MapPin, Star, TrendingUp, Building2, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO Services Camarillo CA | Local SEO Camarillo | Rankingsb",
-  description: "Expert local SEO for Camarillo, CA. Get your Camarillo business to page 1 of Google in 90 days. Free SEO audit for Ventura County businesses.",
-  keywords: ["SEO Camarillo", "local SEO Camarillo CA", "SEO company Camarillo", "digital marketing Camarillo", "Google ranking Camarillo California"],
-  openGraph: {
-    title: "SEO Services Camarillo CA | Rankingsb",
-    description: "Get your Camarillo business to page 1. Expert local SEO with a 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Camarillo")
 
 export default function CamarilloSEOPage() {
   return (
@@ -34,7 +26,7 @@ export default function CamarilloSEOPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Camarillo businesses trust Rankingsb to dominate local search. We know Camarillo — and we use that
+              Camarillo businesses trust Ranking SB to dominate local search. We know Camarillo — and we use that
               local knowledge to get you ranked where customers can find you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

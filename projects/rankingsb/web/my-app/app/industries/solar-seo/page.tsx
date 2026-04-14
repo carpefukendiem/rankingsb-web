@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Sun, DollarSign, Calendar, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Solar SEO Santa Barbara | Rankingsb",
-  description: "Get more solar installation leads with local SEO. Santa Barbara solar companies rank #1 on Google.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Solar",
+  outcome: "Leads",
+  descIndustryPhrase: "solar installers",
+})
 
 export default function SolarSEOPage() {
   return (

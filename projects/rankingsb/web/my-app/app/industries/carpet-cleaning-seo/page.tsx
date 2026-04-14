@@ -4,11 +4,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Phone, ArrowRight, Sparkles, Home, Shield, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "Carpet Cleaning SEO Santa Barbara | Rankingsb",
-  description: "Get more carpet cleaning bookings with local SEO. Santa Barbara carpet cleaners rank #1 on Google.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Carpet Cleaning",
+  outcome: "Jobs",
+  descIndustryPhrase: "carpet cleaning businesses",
+})
 
 export default function CarpetCleaningSEOPage() {
   return (

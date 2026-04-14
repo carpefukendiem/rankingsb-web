@@ -4,13 +4,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, Home, TrendingUp, MapPin, DollarSign, Users, Star } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "Real Estate SEO Santa Barbara & Ventura County | Rankingsb",
-  description: "SEO for real estate agents and brokerages in Santa Barbara, Montecito, and Ventura County. Rank for luxury property searches and attract qualified buyers.",
-  keywords: ["real estate SEO Santa Barbara", "realtor SEO", "real estate marketing Santa Barbara", "luxury real estate SEO Montecito"],
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Real Estate",
+  outcome: "Leads",
+  descIndustryPhrase: "real estate professionals",
+})
 
 export default function RealEstateSEOPage() {
   return (

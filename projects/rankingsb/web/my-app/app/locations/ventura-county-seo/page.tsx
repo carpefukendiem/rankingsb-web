@@ -5,12 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, MapPin, Waves, Building2, Star, Search, Expand } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "SEO Ventura County | Rankingsb Digital Marketing",
-  description: "Expand your reach with SEO across Ventura County. Oxnard, Ventura, Camarillo and beyond. Free SEO audit for Ventura County businesses.",
-  keywords: ["SEO Ventura", "Ventura County marketing", "SEO Oxnard", "SEO Camarillo", "Ventura digital marketing"],
-}
+export const metadata: Metadata = locationSeoMetadata("Ventura County")
 
 export default function VenturaCountySEOPage() {
   return (

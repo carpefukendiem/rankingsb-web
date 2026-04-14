@@ -4,13 +4,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, Star, MapPin, TrendingUp, Users, Globe, Camera } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "Winery & Wine Bar SEO Santa Barbara Wine Country | Rankingsb",
-  description: "SEO for wineries, tasting rooms, and wine bars in Santa Ynez Valley and Santa Barbara County. Attract more visitors and wine club members online.",
-  keywords: ["winery SEO Santa Barbara", "wine country marketing", "Santa Ynez Valley winery marketing", "tasting room SEO", "wine bar marketing Santa Barbara"],
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Winery & Wine Bar",
+  outcome: "Bookings",
+  descIndustryPhrase: "wineries and wine bars",
+})
 
 export default function WinerySEOPage() {
   return (

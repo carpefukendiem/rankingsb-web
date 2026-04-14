@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services Lompoc CA — Rank #1 on Google | Rankingsb"
+titleTag: "SEO Services Lompoc CA — Rank #1 on Google | Ranking SB"
 metaDescription: "Local SEO for Lompoc businesses. Get your Lompoc business to page 1 of Google in 90 days. Free SEO audit for Santa Barbara County businesses. (805) 307-7600."
 h1: "SEO Services Lompoc CA — Rank #1 on Google"
 heroBadge: "Local SEO"
@@ -7,7 +7,7 @@ heroBadge: "Local SEO"
 
 Lompoc is a growing market with a distinctive business community — from the wine corridor along Highway 246 to the federal installation economy, from downtown retail to the local service businesses that keep the community running. And for most of these businesses, Google is the primary way new customers find them.
 
-Rankingsb serves Lompoc businesses with the same local SEO systems that have produced first-page rankings for businesses across Santa Barbara and Ventura Counties. If your Lompoc business isn't ranking on Google, we can fix that — and back it with a 90-day guarantee.
+Ranking SB serves Lompoc businesses with the same local SEO systems that have produced first-page rankings for businesses across Santa Barbara and Ventura Counties. If your Lompoc business isn't ranking on Google, we can fix that — and back it with a 90-day guarantee.
 
 ### Why Lompoc Businesses Have a Local SEO Advantage
 

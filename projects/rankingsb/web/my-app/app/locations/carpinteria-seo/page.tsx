@@ -5,12 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, MapPin, Palmtree, Store, Star, Search, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "SEO Carpinteria | Rankingsb Digital Marketing",
-  description: "Local SEO services for Carpinteria businesses. Small town charm meets digital excellence. Free SEO audit for Carpinteria business owners.",
-  keywords: ["SEO Carpinteria", "Carpinteria digital marketing", "small business SEO Carpinteria", "Carpinteria marketing"],
-}
+export const metadata: Metadata = locationSeoMetadata("Carpinteria")
 
 export default function CarpinteriaSEOPage() {
   return (

@@ -1,5 +1,5 @@
 ---
-titleTag: "Why Your Santa Barbara Business Isn't Ranking on Google — 10 Real Reasons | Rankingsb"
+titleTag: "Why Your Santa Barbara Business Isn't Ranking on Google — 10 Real Reasons | Ranking SB"
 metaDescription: "If your Santa Barbara or Ventura County business isn't showing up on Google, one of these 10 issues is almost certainly why. Here's how to fix each one."
 h1: "Why Your Santa Barbara Business Isn't Ranking on Google — 10 Real Reasons"
 category: "Local SEO"

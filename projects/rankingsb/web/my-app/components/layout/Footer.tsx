@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/">
               <img
                 src="/logo-new.webp"
-                alt="Rankingsb Local SEO Agency Santa Barbara"
+                alt="Ranking SB Local SEO Agency Santa Barbara"
                 className="h-14 w-auto object-contain mb-4"
               />
             </Link>
@@ -104,7 +104,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <p>© {new Date().getFullYear()} Rankingsb. All rights reserved. Serving Santa Barbara & Ventura Counties.</p>
+          <p>© {new Date().getFullYear()} Ranking SB. All rights reserved. Serving Santa Barbara & Ventura Counties.</p>
           <div className="flex gap-6">
             <Link href="/privacy-policy" className="hover:text-slate-300 transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-slate-300 transition-colors">Terms</Link>

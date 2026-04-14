@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Scale, Shield, Users, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Attorney SEO Santa Barbara | Rankingsb",
-  description: "Get more legal clients with local SEO. Santa Barbara law firms rank #1 on Google for case-specific searches.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Attorney",
+  outcome: "Clients",
+  descIndustryPhrase: "law firms",
+})
 
 export default function AttorneySEOPage() {
   return (

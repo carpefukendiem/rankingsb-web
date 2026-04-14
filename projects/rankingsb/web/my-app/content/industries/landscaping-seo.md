@@ -1,5 +1,5 @@
 ---
-titleTag: "Landscaping & Lawn Care SEO Santa Barbara | Rankingsb"
+titleTag: "Landscaping & Lawn Care SEO Santa Barbara | Ranking SB"
 metaDescription: "More landscaping jobs from Google. Local SEO for landscapers and lawn care companies in Santa Barbara and Ventura County. Get found when homeowners search for you."
 h1: "Landscaping SEO Santa Barbara: Get More Jobs From Google"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -9,7 +9,7 @@ When a Santa Barbara or Ventura County homeowner decides they need a landscaper,
 
 "Landscaper Santa Barbara." "Lawn care service Ventura CA." "Drought-tolerant landscaping Goleta." "Weekly lawn maintenance Camarillo." If your landscaping business isn't appearing in those searches, you're missing a steady stream of homeowners who are ready to hire.
 
-Rankingsb works with landscaping and lawn care companies across the Central Coast to build the Local Pack presence and organic rankings that generate consistent, high-quality leads — without the unpredictability of relying on referrals alone.
+Ranking SB works with landscaping and lawn care companies across the Central Coast to build the Local Pack presence and organic rankings that generate consistent, high-quality leads — without the unpredictability of relying on referrals alone.
 
 ### The Santa Barbara Landscaping Market
 

@@ -1,5 +1,5 @@
 ---
-titleTag: "Long-Tail SEO: Why \"Best Plumber Santa Barbara\" Beats \"Plumber\" | Rankingsb"
+titleTag: "Long-Tail SEO: Why \"Best Plumber Santa Barbara\" Beats \"Plumber\" | Ranking SB"
 metaDescription: "Short keywords are crowded. Long-tail keywords convert better and rank faster. Here's how Central Coast businesses can use long-tail SEO to win more customers."
 h1: "Long-Tail SEO: Why \"Best Plumber Santa Barbara\" Beats \"Plumber\""
 category: "Local SEO"
@@ -17,7 +17,7 @@ They'd be wrong.
 
 "Best plumber Santa Barbara" is searched a few hundred times per month. It's searched by someone in Santa Barbara who needs a plumber *right now* and has already decided they want the best one. That person is worth a thousand anonymous national searchers.
 
-This is the entire logic behind long-tail keyword strategy — and it's the reason it sits at the core of everything we do at [Rankingsb](/about).
+This is the entire logic behind long-tail keyword strategy — and it's the reason it sits at the core of everything we do at [Ranking SB](/about).
 
 ### What Are Long-Tail Keywords?
 

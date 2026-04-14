@@ -1,5 +1,5 @@
 ---
-titleTag: "How Google's Local Pack Works (And How to Get Into It) | Rankingsb"
+titleTag: "How Google's Local Pack Works (And How to Get Into It) | Ranking SB"
 metaDescription: "The Google Local Pack shows only 3 businesses for any local search. Learn exactly how it works and what it takes for your Santa Barbara business to get in."
 h1: "How Google's Local Pack Works (And How to Get Into It)"
 category: "Local SEO"

@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, UtensilsCrossed, Calendar, Star, TrendingUp, Users } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Restaurant SEO Santa Barbara | Rankingsb",
-  description: "Fill more tables with local SEO. Rank for 'restaurants near me' and cuisine-specific searches in Santa Barbara.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Restaurant",
+  outcome: "Reservations",
+  descIndustryPhrase: "restaurants",
+})
 
 export default function RestaurantSEOPage() {
   return (

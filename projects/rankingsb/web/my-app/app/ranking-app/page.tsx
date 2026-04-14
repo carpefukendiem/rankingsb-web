@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,9 +7,12 @@ import { Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "The Ranking App | Your Business Command Center | Rankingsb 805",
-  description:
-    "One platform that captures every lead, follows up in minutes, books appointments automatically, and tracks every dollar of revenue. Built for 805 businesses. Included in the 805 Growth Engine.",
+  title: {
+    absolute: "The Ranking App — Follow Up Every Lead in Under 3 Minutes",
+  },
+  description: clampMetaDescription(
+    "9 tools in one dashboard. AI answers calls, texts every lead in 60 sec, books appointments, sends reviews automatically. Included in the 805 Growth Engine."
+  ),
 }
 
 const comparisonRows: [string, string][] = [
@@ -150,9 +154,9 @@ const rankingAppSchema = {
       "@type": "WebPage",
       "@id": "https://www.rankingsb.com/ranking-app#webpage",
       url: "https://www.rankingsb.com/ranking-app",
-      name: "The Ranking App | Your Business Command Center | Rankingsb 805",
+      name: "The Ranking App — Follow Up Every Lead in Under 3 Minutes",
       description:
-        "One platform that captures every lead, follows up in minutes, books appointments automatically, and tracks every dollar of revenue. Built for 805 businesses.",
+        "9 tools in one dashboard. AI answers calls, texts every lead in 60 sec, books appointments, sends reviews automatically. Included in the 805 Growth Engine.",
       isPartOf: { "@id": "https://www.rankingsb.com/#website" },
     },
     {
@@ -234,7 +238,7 @@ const rankingAppSchema = {
     {
       "@type": "LocalBusiness",
       "@id": "https://www.rankingsb.com/#organization",
-      name: "Rankingsb",
+      name: "Ranking SB",
       url: "https://www.rankingsb.com",
       telephone: "+18053077600",
       address: {

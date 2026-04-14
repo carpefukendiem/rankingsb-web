@@ -1,5 +1,5 @@
 ---
-titleTag: "Schema Markup for Local Businesses: A Beginner's Guide | Rankingsb"
+titleTag: "Schema Markup for Local Businesses: A Beginner's Guide | Ranking SB"
 metaDescription: "Schema markup helps Google understand your business and can boost your local search visibility. Here's what local Santa Barbara businesses need to know and implement."
 h1: "Schema Markup for Local Businesses: A Beginner's Guide"
 category: "Local SEO"

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,10 +7,12 @@ import { CheckCircle, Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title:
-    "The 805 Growth Engine — Services & Pricing | Rankingsb Santa Barbara",
-  description:
-    "Full-stack website, SEO, and automation for 805 businesses. $3,000–$5,000 setup, $250/month maintenance. See exactly what's included — no hidden fees.",
+  title: {
+    absolute: "Website, SEO & Automation for 805 Businesses | Ranking SB",
+  },
+  description: clampMetaDescription(
+    "Custom website built to rank + AI automation that follows up every lead in minutes. $3,000–$5,000 setup. $250/month. No contracts. No hidden fees."
+  ),
 }
 
 const pillar1Bullets = [
@@ -27,22 +30,16 @@ const pillar2Bullets = [
   "Review generation system — automated, compliant, running within 30 days",
   "On-page SEO for every page of your site",
   "Schema markup validated for rich results eligibility",
-  "Monthly reports showing calls, direction requests, and rankings — not impressions",
+  "Monthly reports showing calls, direction requests, and rankings — not just impressions",
 ]
 
 const pillar3Bullets = [
-  "Unified conversation inbox — SMS, email, Google chat, Facebook, Instagram, WhatsApp, live chat",
+  "Automated lead follow-up by text and email the moment a form is submitted",
   "Missed call text-back within 60 seconds",
-  "AI Voice Agent — answers calls, qualifies leads, books appointments 24/7",
-  "AI Conversation Agent — holds two-way text conversations with leads automatically",
-  "Visual sales pipeline with drag-and-drop deal tracking",
-  "Online booking with automated confirmations and reminders",
-  "Automated follow-up sequences triggered on every inquiry",
-  "Automated review requests after every completed job",
-  "Invoicing and payment collection",
-  "Call tracking — know which marketing drove each call",
-  "Reactivation campaigns for past customers",
-  "Live dashboard with pipeline, leads, and attribution reporting",
+  "Appointment booking integrated into your website and calendar",
+  "Pipeline tracking — know where every lead stands at every moment",
+  "Review request automation — sent after every completed job",
+  "AI voice agent option — answers calls, qualifies leads, books appointments 24/7",
 ]
 
 export default function ServicesPage() {
@@ -101,11 +98,14 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 Custom Website
               </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-slate-600 mb-4 leading-relaxed">
                 A custom Next.js website built from scratch for your business. Not a
                 template. Not a drag-and-drop builder. Code that Google loves, that
                 loads fast on every device, and that&apos;s designed to convert
                 visitors into calls.
+              </p>
+              <p className="text-sm font-semibold text-slate-900 mb-3">
+                What&apos;s built in:
               </p>
               <ul className="space-y-2 mb-6">
                 {pillar1Bullets.map((b) => (
@@ -125,10 +125,13 @@ export default function ServicesPage() {
           <Card className="mb-10 border-slate-200 shadow-sm">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Local SEO</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-slate-600 mb-4 leading-relaxed">
                 Everything Google needs to rank your business in the Local Pack and
                 organic results for the searches your customers are making right
                 now.
+              </p>
+              <p className="text-sm font-semibold text-slate-900 mb-3">
+                What&apos;s included:
               </p>
               <ul className="space-y-2 mb-6">
                 {pillar2Bullets.map((b) => (
@@ -150,10 +153,13 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 The Ranking App
               </h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
+              <p className="text-slate-600 mb-4 leading-relaxed">
                 Your own branded CRM and automation platform. Every lead gets
                 followed up within minutes — automatically, without you lifting a
                 finger.
+              </p>
+              <p className="text-sm font-semibold text-slate-900 mb-3">
+                What&apos;s wired in:
               </p>
               <ul className="space-y-2 mb-6">
                 {pillar3Bullets.map((b) => (
@@ -163,10 +169,6 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              <p className="text-blue-700 font-semibold text-sm italic">
-                The average business responds to leads in 47 hours. Our clients
-                respond in under 3 minutes.
-              </p>
             </CardContent>
           </Card>
 
@@ -201,9 +203,9 @@ export default function ServicesPage() {
               {
                 name: "SyncLocal — $65/month (3-month minimum)",
                 tagline: "One update. 200+ directories. Zero inconsistencies.",
-                body: "Every time your name, address, phone number, or hours change anywhere on the internet — on Google, Yelp, Apple Maps, Bing, Alexa, Siri, Facebook, and 190+ other platforms — SyncLocal updates all of them automatically in real time. One source of truth, pushed everywhere at once. Without it, outdated listings quietly cost you customers. Wrong hours mean missed calls. Wrong addresses mean lost walk-ins. Inconsistent data confuses Google and suppresses your rankings.",
+                body: "Your business information synced and protected across 200+ directories, data aggregators, maps platforms, and voice search assistants — automatically. One update, everywhere at once.",
                 bestFor:
-                  "Any business that has ever moved, changed phone numbers, or wants voice search coverage.",
+                  "Any business that has moved, changed phone numbers, or wants voice search coverage (Siri, Alexa, Google Assistant).",
               },
               {
                 name: "Social Content Management — $250/month",
@@ -219,7 +221,7 @@ export default function ServicesPage() {
               },
               {
                 name: "AI Voice Agent — $100/month unlimited (or Pay-As-You-Go)",
-                body: "Answers your phone, qualifies leads, books appointments, and handles common questions — 24/7. Two options: Unlimited ($100/month, all calls covered) or Pay-As-You-Go (no monthly fee, pay per call handled).",
+                body: "Answers your phone, qualifies leads, books appointments, and handles common questions — 24/7. Integrated with your Ranking App calendar. Sounds human. Two options: Unlimited: $100/month — all calls covered. Pay-As-You-Go: no monthly fee, pay per call handled.",
                 bestFor:
                   "Any business that misses calls after hours or handles a high volume of repetitive inquiries.",
               },

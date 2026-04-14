@@ -1,5 +1,5 @@
 ---
-titleTag: "Ecommerce SEO for Central Coast Brands Selling Locally & Online | Rankingsb"
+titleTag: "Ecommerce SEO for Central Coast Brands Selling Locally & Online | Ranking SB"
 metaDescription: "Rank higher and sell more. Ecommerce SEO for Santa Barbara and Ventura County brands selling online, locally, or both. Shopify, WooCommerce, and custom stores."
 h1: "Ecommerce SEO for Central Coast Brands: Rank Higher and Sell More"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -9,7 +9,7 @@ Santa Barbara and Ventura County have a thriving community of product-based busi
 
 Ecommerce SEO for a Central Coast brand is a unique challenge: you're often trying to rank locally (for customers who can visit or pick up), regionally (to build the California market), and nationally (to grow beyond the 805). Those three objectives require three distinct but interlinked SEO strategies.
 
-Rankingsb works with Central Coast ecommerce businesses to build the search visibility that drives both foot traffic and online sales.
+Ranking SB works with Central Coast ecommerce businesses to build the search visibility that drives both foot traffic and online sales.
 
 ### The Central Coast Ecommerce SEO Challenge
 

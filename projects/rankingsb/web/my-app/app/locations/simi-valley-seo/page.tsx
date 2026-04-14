@@ -4,18 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, MapPin, Star, TrendingUp, Building2, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO Services Simi Valley CA | Local SEO Simi Valley | Rankingsb",
-  description: "Expert local SEO for Simi Valley, CA. Get your Simi Valley business to page 1 of Google in 90 days. Free SEO audit for Ventura County businesses.",
-  keywords: ["SEO Simi Valley", "local SEO Simi Valley CA", "SEO company Simi Valley", "digital marketing Simi Valley", "Google ranking Simi Valley California"],
-  openGraph: {
-    title: "SEO Services Simi Valley CA | Rankingsb",
-    description: "Get your Simi Valley business to page 1. Expert local SEO with a 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Simi Valley")
 
 export default function SimiValleySEOPage() {
   return (
@@ -34,7 +26,7 @@ export default function SimiValleySEOPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Simi Valley businesses trust Rankingsb to dominate local search. We know  — and we use that
+              Simi Valley businesses trust Ranking SB to dominate local search. We know  — and we use that
               local knowledge to get you ranked where customers can find you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

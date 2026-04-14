@@ -1,5 +1,5 @@
 ---
-titleTag: "How to Dominate \"Near Me\" Searches on the Central Coast | Rankingsb"
+titleTag: "How to Dominate \"Near Me\" Searches on the Central Coast | Ranking SB"
 metaDescription: "\"Near me\" searches are some of the highest-converting local queries. Here's how Santa Barbara and Ventura County businesses can rank for them consistently."
 h1: "How to Dominate \"Near Me\" Searches on the Central Coast"
 category: "Local SEO"

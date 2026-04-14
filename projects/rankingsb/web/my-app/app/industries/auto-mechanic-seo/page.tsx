@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Star, Car, Shield, MapPin, TrendingUp, Wrench, Clock, DollarSign } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Auto Mechanic SEO Santa Barbara | Rankingsb",
-  description: "Get more auto repair customers with local SEO. We help Santa Barbara auto shops rank #1 on Google for 'mechanic near me'.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Auto Repair",
+  outcome: "Jobs",
+  descIndustryPhrase: "auto repair shops",
+})
 
 export default function AutoMechanicSEOPage() {
   return (

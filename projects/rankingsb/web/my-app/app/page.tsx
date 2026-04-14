@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -24,11 +25,11 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "The 805 Growth Engine | Website, SEO & Automation for 805 Businesses | Rankingsb",
+    absolute: "Stop Losing Calls to Competitors | Ranking SB 805",
   },
-  description:
-    "Santa Barbara and Ventura County's complete local growth system. Custom website, page-1 Google rankings, and AI-powered lead automation — built and running in 90 days. From $3,000.",
+  description: clampMetaDescription(
+    "Your competitor is getting calls that should be yours. We fix it — ranked website, automated follow-up, 90-day guarantee. From $3,000. Free audit in 24 hrs. Santa Barbara & Ventura County."
+  ),
 }
 
 export default function HomePage() {
@@ -47,23 +48,15 @@ export default function HomePage() {
 
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <span className="text-sm text-white/90">
-                Trusted by 100+ local businesses in the 805
-              </span>
-            </div>
-
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
-              The Last Website You&apos;ll Ever Need to Buy — And the System That
-              Fills It With Customers
+              Your Competitor Is Getting Calls That Should Be Yours.
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Most 805 businesses have a website. Almost none have a system. We
-              build you one — a custom-coded site that ranks on Google, wired to
-              an AI-powered CRM that follows up with every lead automatically.
-              Done in 90 days. Maintained forever for $250/month.
+              Not because they&apos;re better. Because they showed up on Google
+              first and followed up faster. That&apos;s the whole game. We fix
+              both — a custom website that ranks, and an automated system that
+              responds before your competitor even sees the notification.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -93,7 +86,7 @@ export default function HomePage() {
                 "No contracts",
                 "Results in 90 days",
                 "Local Santa Barbara team",
-                "100+ businesses helped",
+                "One team, full stack",
               ].map((t) => (
                 <div key={t} className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
@@ -110,7 +103,7 @@ export default function HomePage() {
       <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4">
           <p className="text-center text-sm text-slate-500 mb-8 uppercase tracking-wider">
-            Trusted by local businesses across Santa Barbara
+            Trusted by local businesses across the 805
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
             {[
@@ -188,7 +181,7 @@ export default function HomePage() {
                 },
                 {
                   h: "An SEO agency sending reports nobody understands.",
-                  b: "Monthly PDFs full of impressions and domain authority. Meanwhile your phone isn't ringing any more than it was before. Real SEO has one metric: new customers. Everything else is noise.",
+                  b: 'Monthly PDFs full of "impressions" and "domain authority." Meanwhile your phone isn\'t ringing any more than it was before. Real SEO has one metric: new customers. Everything else is noise.',
                 },
                 {
                   h: "Leads falling through the cracks because nobody followed up.",
@@ -251,7 +244,7 @@ export default function HomePage() {
                 label: "03 — Automation",
                 title:
                   "The Ranking App — leads followed up before you set down your coffee",
-                body: "Every lead that comes in gets automatically followed up by text, email, and AI conversation within minutes — not hours. Your phone is answered 24/7 by an AI that qualifies leads and books appointments. Every missed call gets a text back in under 60 seconds. Reviews go out automatically after every job. Your entire pipeline visible on one screen.",
+                body: "Every lead that comes in gets automatically followed up by text, email, or AI voice within minutes. Missed call? They get a text in under 60 seconds. Appointment booking, pipeline tracking, review requests — all automated, all inside your own branded Ranking App dashboard.",
                 icon: Zap,
               },
             ].map((item, i) => (
@@ -282,7 +275,7 @@ export default function HomePage() {
               What We Do
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-              Everything Your Business Needs to Grow Online
+              Everything You Need to Dominate Local Search and Never Miss a Lead
             </h2>
           </div>
 
@@ -304,15 +297,15 @@ export default function HomePage() {
               },
               {
                 icon: Smartphone,
-                title: "The Ranking App",
-                desc: "Your leads captured, followed up, and booked automatically. Unified inbox, AI voice, smart pipeline, review automation — one dashboard replacing 9 separate tools.",
+                title: "The Ranking App (CRM Automation)",
+                desc: "Automated follow-up, booking, pipeline, AI voice.",
                 image:
                   "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop",
               },
               {
                 icon: Target,
                 title: "Google Ads Management",
-                desc: "Immediate leads while your SEO builds. $200/month management fee.",
+                desc: "Immediate leads while your SEO builds.",
                 image:
                   "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
               },
@@ -415,11 +408,10 @@ export default function HomePage() {
               Real Results
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Our Clients Say
+              Real Results. Real 805 Businesses.
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Don&apos;t just take our word for it. Here&apos;s what real business
-              owners say about working with Rankingsb.
+              Don&apos;t take our word for it.
             </p>
           </div>
 
@@ -444,12 +436,11 @@ export default function HomePage() {
                     <blockquote className="text-xl md:text-2xl text-slate-700 mb-6 italic leading-relaxed">
                       &quot;It&apos;s hard to find good people in digital marketing.
                       It&apos;s extremely hard to find people who are good at multiple
-                      specialized fields of digital marketing. And Ruben at
+                      highly-specialized fields of digital marketing. And Ruben at
                       Ranking SB is absolutely one of those extremely rare finds.
-                      Whether it&apos;s SEO, Paid Social, SEM, Direct, or Web Strategy,
-                      Ranking SB has the skillset of a world-class agency, with the
-                      determination and care for their clients that a boutique agency
-                      brings.&quot;
+                      Whether it&apos;s SEO, Paid Social, SEM, or Web Strategy —
+                      Ranking SB has the skillset of a world-class agency with the care
+                      of a boutique one.&quot;
                     </blockquote>
                     <div className="border-t pt-4">
                       <p className="font-bold text-slate-900 text-lg">
@@ -466,29 +457,26 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
+                headline: "+340% organic traffic",
+                who: "Mike Johnson, Santa Barbara Plumbing",
                 quote:
                   "We went from page 3 to position 1 in 3 months. Phone rings off the hook now.",
-                author: "Mike Johnson",
-                business: "Santa Barbara Plumbing",
-                result: "+340% organic traffic",
                 image:
                   "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face",
               },
               {
+                headline: "15 new customers/month",
+                who: "Sarah Chen, Coastal HVAC",
                 quote:
                   "Best investment we ever made. ROI was positive by month 2.",
-                author: "Sarah Chen",
-                business: "Coastal HVAC",
-                result: "15 new customers/month",
                 image:
                   "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
               },
               {
+                headline: "#1 for 'auto repair Goleta'",
+                who: "David Rodriguez, Goleta Auto Repair",
                 quote:
                   "They actually answer the phone and explain what they're doing. Rare these days.",
-                author: "David Rodriguez",
-                business: "Goleta Auto Repair",
-                result: "#1 for 'auto repair Goleta'",
                 image:
                   "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
               },
@@ -501,7 +489,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-4 mb-4">
                     <img
                       src={testimonial.image}
-                      alt={`${testimonial.author} from ${testimonial.business}`}
+                      alt={testimonial.who}
                       className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
                     />
                     <div className="flex gap-1">
@@ -513,20 +501,13 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-slate-700 mb-6 italic">
+                  <p className="font-bold text-slate-900 text-lg mb-1">
+                    {testimonial.headline}
+                  </p>
+                  <p className="text-sm text-slate-500 mb-4">{testimonial.who}</p>
+                  <p className="text-slate-700 mb-6 italic text-sm">
                     &quot;{testimonial.quote}&quot;
                   </p>
-                  <div className="border-t pt-4">
-                    <p className="font-semibold text-slate-900">
-                      {testimonial.author}
-                    </p>
-                    <p className="text-sm text-slate-500">
-                      {testimonial.business}
-                    </p>
-                    <Badge className="mt-2 bg-green-100 text-green-700 hover:bg-green-100">
-                      {testimonial.result}
-                    </Badge>
-                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -640,10 +621,9 @@ export default function HomePage() {
             Ready to Stop Losing Customers to Competitors Who Just Showed Up First?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join 100+ Santa Barbara and Ventura County businesses who stopped
-            guessing and built a system. Your free Growth Audit shows you exactly
-            where you stand, what your competitors are doing differently, and what
-            it would take to fix it — in 24 hours.
+            When you&apos;re ready to stop guessing and build a system, your free
+            Growth Audit shows you exactly where you stand, what your competitors
+            are doing differently, and what it would take to fix it — in 24 hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/free-audit">

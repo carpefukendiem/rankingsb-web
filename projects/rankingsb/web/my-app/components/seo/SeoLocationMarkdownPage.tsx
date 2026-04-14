@@ -46,7 +46,7 @@ export function SeoLocationMarkdownPage({
                 {h1}
               </h1>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Rankingsb helps local businesses rank on Google with a 90-day guarantee — no long-term
+                Ranking SB helps local businesses rank on Google with a 90-day guarantee — no long-term
                 contracts.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

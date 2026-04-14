@@ -1,5 +1,5 @@
 ---
-titleTag: "What Is NAP Consistency and Why It Destroys Your Local Rankings | Rankingsb"
+titleTag: "What Is NAP Consistency and Why It Destroys Your Local Rankings | Ranking SB"
 metaDescription: "NAP (Name, Address, Phone) inconsistencies across the web confuse Google and hurt your local rankings. Here's what NAP consistency means and how to fix it."
 h1: "What Is NAP Consistency and Why It Destroys Your Local Rankings"
 category: "Local SEO"

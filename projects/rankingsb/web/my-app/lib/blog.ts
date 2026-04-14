@@ -50,7 +50,7 @@ const posts: Record<string, BlogPost> = {
     date: "Feb 20, 2026",
     readTime: "12 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=600&fit=crop",
     tags: ["Santa Barbara", "Local SEO", "Google Maps", "Small Business"],
     relatedSlugs: ["google-business-profile-guide", "google-maps-ranking", "get-more-reviews"],
@@ -120,7 +120,7 @@ const posts: Record<string, BlogPost> = {
     date: "Feb 18, 2026",
     readTime: "10 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop",
     tags: ["Ventura County", "Local SEO", "Thousand Oaks", "Oxnard", "Camarillo"],
     relatedSlugs: ["santa-barbara-seo-guide", "google-maps-ranking", "local-citation-sites"],
@@ -178,7 +178,7 @@ const posts: Record<string, BlogPost> = {
     date: "Feb 15, 2026",
     readTime: "8 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=600&fit=crop",
     tags: ["Google Business Profile", "Local SEO", "Google Maps", "GBP"],
     relatedSlugs: ["google-maps-ranking", "get-more-reviews", "local-citation-sites"],
@@ -224,7 +224,7 @@ const posts: Record<string, BlogPost> = {
     date: "Feb 10, 2026",
     readTime: "7 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&h=600&fit=crop",
     tags: ["Google Maps", "Local Pack", "Local SEO", "Rankings"],
     relatedSlugs: ["google-business-profile-guide", "get-more-reviews", "local-citation-sites"],
@@ -277,7 +277,7 @@ const posts: Record<string, BlogPost> = {
     date: "Feb 5, 2026",
     readTime: "6 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=600&fit=crop",
     tags: ["Reviews", "Reputation", "Google Business Profile", "Trust"],
     relatedSlugs: ["google-business-profile-guide", "google-maps-ranking"],
@@ -325,7 +325,7 @@ const posts: Record<string, BlogPost> = {
     date: "Jan 28, 2026",
     readTime: "7 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
     tags: ["Google Ads", "PPC", "SEO", "Strategy"],
     relatedSlugs: ["santa-barbara-seo-guide", "google-business-profile-guide"],
@@ -359,7 +359,7 @@ const posts: Record<string, BlogPost> = {
   <li>As SEO rankings improve, shift budget from Ads to organic — maintaining Ads only for keywords where the ROI still makes sense</li>
   <li>Use Ads data (which keywords convert, which landing pages work) to inform your SEO strategy</li>
 </ol>
-<p>At Rankingsb, we typically recommend starting with a combination of local SEO + Google Business Profile optimization for most small businesses in Santa Barbara. Ads work better as an amplifier once your organic foundation is built.</p>
+<p>At Ranking SB, we typically recommend starting with a combination of local SEO + Google Business Profile optimization for most small businesses in Santa Barbara. Ads work better as an amplifier once your organic foundation is built.</p>
     `,
   },
 
@@ -371,7 +371,7 @@ const posts: Record<string, BlogPost> = {
     date: "Jan 20, 2026",
     readTime: "5 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&h=600&fit=crop",
     tags: ["Citations", "Local SEO", "Yelp", "Directories"],
     relatedSlugs: ["google-maps-ranking", "google-business-profile-guide"],
@@ -421,13 +421,13 @@ const posts: Record<string, BlogPost> = {
 <h2>The NAP Consistency Rule</h2>
 <p>Use exactly the same business name, address, and phone number on every listing. Decide on your "official" format before you start and stick to it:</p>
 <ul>
-  <li>Business name: "Rankingsb" (not "Ranking SB" or "RankingSB")</li>
+  <li>Business name: "Ranking SB" — match your Google Business Profile and citations exactly (avoid variations like RankingSB).</li>
   <li>Address: "10 E. Yanonali Street Suite 150, Santa Barbara, CA 93101"</li>
   <li>Phone: "(805) 307-7600" (keep formatting consistent)</li>
 </ul>
 
 <h2>How to Build Citations Efficiently</h2>
-<p>Manual citation building is tedious. At Rankingsb, we use citation management tools to build and monitor citations across 40+ directories simultaneously — ensuring consistency and catching any incorrect listings that pop up. Most clients see ranking improvements within 30-60 days of a full citation audit and build.</p>
+<p>Manual citation building is tedious. At Ranking SB, we use citation management tools to build and monitor citations across 40+ directories simultaneously — ensuring consistency and catching any incorrect listings that pop up. Most clients see ranking improvements within 30-60 days of a full citation audit and build.</p>
     `,
   },
 
@@ -439,7 +439,7 @@ const posts: Record<string, BlogPost> = {
     date: "Jan 15, 2026",
     readTime: "8 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&h=600&fit=crop",
     tags: ["Electrician", "Industry SEO", "Home Services", "Local SEO"],
     relatedSlugs: ["google-business-profile-guide", "get-more-reviews", "local-citation-sites"],
@@ -496,7 +496,7 @@ const posts: Record<string, BlogPost> = {
     date: "Jan 10, 2026",
     readTime: "6 min read",
     author: "Ruben",
-    authorTitle: "Founder, Rankingsb",
+    authorTitle: "Founder, Ranking SB",
     image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=600&fit=crop",
     tags: ["HVAC", "Seasonal SEO", "Industry SEO", "Home Services"],
     relatedSlugs: ["electrician-seo-guide", "google-maps-ranking", "get-more-reviews"],

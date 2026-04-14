@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services Port Hueneme & Oxnard Harbor — Serving Ventura's Coast | Rankingsb"
+titleTag: "SEO Services Port Hueneme & Oxnard Harbor — Serving Ventura's Coast | Ranking SB"
 metaDescription: "Local SEO for Port Hueneme and the Oxnard Harbor area. Get found on Google in coastal Ventura County. Free SEO audit for Port Hueneme businesses."
 h1: "SEO Services Port Hueneme — Rank #1 on the Ventura Coast"
 heroBadge: "Local SEO"
@@ -7,7 +7,7 @@ heroBadge: "Local SEO"
 
 Port Hueneme is a distinctive community on the Ventura County coast — home to Naval Base Ventura County, a working port, a close-knit fishing community, and a growing residential and commercial district. The city serves a specific, loyal customer base with specific needs — and local Google rankings matter enormously for the businesses that serve them.
 
-Rankingsb extends its Ventura County SEO expertise to Port Hueneme and the broader Oxnard Harbor area. Our proven local SEO systems work for the specific competitive environment of this market, and we back every program with our 90-day ranking guarantee.
+Ranking SB extends its Ventura County SEO expertise to Port Hueneme and the broader Oxnard Harbor area. Our proven local SEO systems work for the specific competitive environment of this market, and we back every program with our 90-day ranking guarantee.
 
 ### The Port Hueneme Market
 
@@ -53,7 +53,7 @@ The Port Hueneme beach and Oxnard Harbor area attracts coastal visitors througho
 
 ### Connecting Port Hueneme to the Broader Ventura County Market
 
-Port Hueneme businesses that want to expand their reach have a strong network of adjacent Ventura County markets to target. Our [Oxnard SEO page](/locations/oxnard-seo), [Ventura SEO page](/locations/ventura-seo), [Camarillo SEO page](/locations/camarillo-seo), and our full [locations hub](/locations) outline the complete geographic coverage available through Rankingsb.
+Port Hueneme businesses that want to expand their reach have a strong network of adjacent Ventura County markets to target. Our [Oxnard SEO page](/locations/oxnard-seo), [Ventura SEO page](/locations/ventura-seo), [Camarillo SEO page](/locations/camarillo-seo), and our full [locations hub](/locations) outline the complete geographic coverage available through Ranking SB.
 
 [Request your free Port Hueneme SEO audit](/free-audit) — we'll analyze your current local search visibility and build a clear roadmap to page one rankings in your market.
 

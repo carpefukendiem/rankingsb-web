@@ -1,5 +1,5 @@
 ---
-titleTag: "The 2026 Local SEO Checklist for Central Coast Businesses | Rankingsb"
+titleTag: "The 2026 Local SEO Checklist for Central Coast Businesses | Ranking SB"
 metaDescription: "A complete, actionable local SEO checklist for Santa Barbara and Ventura County businesses. Cover every ranking factor in the right order of priority."
 h1: "The 2026 Local SEO Checklist for Central Coast Businesses"
 category: "Local SEO"

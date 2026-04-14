@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Star, Zap, Shield, MapPin, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Electrician SEO Santa Barbara | Rankingsb",
-  description: "Get more electrical service calls with local SEO. We help Santa Barbara electricians rank #1 on Google.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Electrician",
+  outcome: "Calls",
+  descIndustryPhrase: "electrical contractors",
+})
 
 export default function ElectricianSEOPage() {
   return (

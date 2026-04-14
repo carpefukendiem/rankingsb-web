@@ -5,17 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, MapPin, Building2, TrendingUp, Star, Search, Globe, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "SEO Santa Barbara | Rankingsb Digital Marketing",
-  description: "Get more customers with local SEO in Santa Barbara. 90-day ranking guarantee. Free audit shows exactly how to rank higher on Google.",
-  keywords: ["SEO Santa Barbara", "digital marketing Santa Barbara", "local SEO Santa Barbara", "Santa Barbara SEO agency"],
-  openGraph: {
-    title: "SEO Santa Barbara | Rankingsb",
-    description: "Get more customers with local SEO in Santa Barbara. 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Santa Barbara")
 
 export default function SantaBarbaraSEOPage() {
   return (

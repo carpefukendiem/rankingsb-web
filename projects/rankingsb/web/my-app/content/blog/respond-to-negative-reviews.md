@@ -1,5 +1,5 @@
 ---
-titleTag: "How to Respond to Negative Reviews and Protect Your Reputation | Rankingsb"
+titleTag: "How to Respond to Negative Reviews and Protect Your Reputation | Ranking SB"
 metaDescription: "A negative review doesn't have to hurt your business — if you respond well. Here's exactly how Santa Barbara businesses should handle negative reviews on Google and Yelp."
 h1: "How to Respond to Negative Reviews and Protect Your Reputation"
 category: "Local SEO"

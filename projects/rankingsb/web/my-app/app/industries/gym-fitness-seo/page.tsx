@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Star, Dumbbell, Shield, MapPin, TrendingUp, Users, Heart, Calendar } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Gym & Fitness SEO Santa Barbara | Rankingsb",
-  description: "Attract new gym members with local SEO. We help Santa Barbara fitness centers rank #1 for 'gym near me' and personal training searches.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Gym & Fitness",
+  outcome: "Members",
+  descIndustryPhrase: "gyms and fitness studios",
+})
 
 export default function GymFitnessSEOPage() {
   return (

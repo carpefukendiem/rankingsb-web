@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,9 +19,12 @@ import Link from "next/link"
 import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = {
-  title: "Free Growth Audit | See Why You're Not Ranking | Rankingsb 805",
-  description:
-    "Get a free analysis of your Google rankings, website health, and competitor gap. Delivered in 24 hours. We'll show you exactly what's holding you back and what it takes to fix it.",
+  title: {
+    absolute: "Free SEO Audit for 805 Businesses — Results in 24 Hours",
+  },
+  description: clampMetaDescription(
+    "Find out exactly why competitors are outranking you. Free in 24 hours — technical audit, competitor gap, keyword report, and 90-day Growth Engine roadmap."
+  ),
   keywords: [
     "free Growth Audit Santa Barbara",
     "SEO audit Ventura County",
@@ -45,10 +49,15 @@ export default function FreeAuditPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                  <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                  <span className="text-sm text-white/90">
-                    $500 Value — Yours Free
+                <div className="inline-flex flex-col items-start gap-1 px-4 py-3 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-400 fill-yellow-400 shrink-0" />
+                    <span className="text-sm text-white/90 font-medium">
+                      $500 Value — Yours Free
+                    </span>
+                  </div>
+                  <span className="text-sm text-white pl-6">
+                    Your Free Growth Audit
                   </span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">
@@ -153,7 +162,7 @@ export default function FreeAuditPage() {
             {[
               {
                 title: "Technical Audit",
-                desc: "Site speed, mobile issues, broken links, schema markup, and indexation problems",
+                desc: "Site speed, mobile issues, broken links, schema markup, and indexation problems — with a severity score for each.",
                 image:
                   "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
               },
@@ -165,7 +174,7 @@ export default function FreeAuditPage() {
               },
               {
                 title: "Keyword Report",
-                desc: "Best keywords for your industry and city with monthly search volume",
+                desc: "The 10–15 highest-opportunity searches for your industry and city, with monthly search volume and current competition level.",
                 image:
                   "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400&h=300&fit=crop",
               },

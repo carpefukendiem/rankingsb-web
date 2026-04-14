@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Star, Briefcase, Shield, MapPin, TrendingUp, Building2, Users, Sparkles } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "SEO for Any Business | Rankingsb Santa Barbara",
-  description: "Custom SEO solutions for any industry. We help Santa Barbara businesses of all types rank higher on Google and get more customers.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Local Business",
+  outcome: "Customers",
+  descIndustryPhrase: "local businesses",
+})
 
 export default function OtherSEOPage() {
   return (

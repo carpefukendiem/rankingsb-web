@@ -1,5 +1,5 @@
 ---
-titleTag: "Financial Advisor & Accounting SEO Santa Barbara | Rankingsb"
+titleTag: "Financial Advisor & Accounting SEO Santa Barbara | Ranking SB"
 metaDescription: "More high-net-worth clients from Google. Local SEO for financial advisors, CPAs, and accounting firms in Santa Barbara and Ventura County."
 h1: "Financial Advisor & CPA SEO Santa Barbara: Attract the Clients You Want From Google"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -9,7 +9,7 @@ Santa Barbara and Montecito represent one of the highest concentrations of wealt
 
 The question is whether they're finding you or your competitors.
 
-Rankingsb helps financial advisors and accounting firms build the authoritative online presence that attracts high-quality clients through Google — without the ethical complications of aggressive advertising and with the trust-building visibility that this client base requires.
+Ranking SB helps financial advisors and accounting firms build the authoritative online presence that attracts high-quality clients through Google — without the ethical complications of aggressive advertising and with the trust-building visibility that this client base requires.
 
 ### The Financial Services Search Environment
 

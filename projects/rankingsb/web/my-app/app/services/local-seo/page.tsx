@@ -7,7 +7,7 @@ import Link from "next/link"
 import { CTASection } from "@/components/shared/CTASection"
 
 export const metadata: Metadata = {
-  title: "Local SEO Services Santa Barbara & Ventura County | Rankingsb",
+  title: "Local SEO Services Santa Barbara & Ventura County | Ranking SB",
   description: "Dominate local Google search results in Santa Barbara and Ventura County. Our local SEO services get your business to page 1 in 90 days. Free audit included.",
   keywords: ["local SEO Santa Barbara", "local SEO services", "local search optimization", "Google Maps SEO Santa Barbara", "local SEO agency"],
 }

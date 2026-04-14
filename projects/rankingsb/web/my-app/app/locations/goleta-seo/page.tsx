@@ -5,12 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, MapPin, GraduationCap, Building2, TrendingUp, Star, Search, Zap, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "SEO Goleta | Rankingsb Digital Marketing",
-  description: "Get more customers with local SEO in Goleta. Serving UCSB area, tech corridor, and Old Town businesses. Free SEO audit available.",
-  keywords: ["SEO Goleta", "Goleta marketing agency", "digital marketing Goleta", "UCSB SEO", "Goleta SEO services"],
-}
+export const metadata: Metadata = locationSeoMetadata("Goleta")
 
 export default function GoletaSEOPage() {
   return (

@@ -1,4 +1,4 @@
-# Rankingsb — Master Prompt: New Client Website + GHL Integration
+# Ranking SB — Master Prompt: New Client Website + GHL Integration
 
 Use this prompt verbatim when starting a new client website build. Fill in every `[PLACEHOLDER]` before pasting.
 
@@ -6,7 +6,7 @@ Use this prompt verbatim when starting a new client website build. Fill in every
 
 ## CONTEXT
 
-You are building a production-ready local SEO / marketing agency client website for **Rankingsb** (agency: Ruben Ruiz, ruben@rankingsb.com, Santa Barbara CA).
+You are building a production-ready local SEO / marketing agency client website for **Ranking SB** (agency: Ruben Ruiz, ruben@rankingsb.com, Santa Barbara CA).
 
 This is a **Next.js 16+ App Router** site deployed to **Vercel** via **GitHub auto-deploy**, integrated with a **GoHighLevel (GHL) sub-account** that I will provide. Follow every instruction below exactly — this is a proven, tested, repeatable system.
 
@@ -519,7 +519,7 @@ Vercel watches the GitHub repo and auto-deploys on every push to `main`. Check p
 ```bash
 npx vercel --prod --token {VERCEL_TOKEN} --scope {VERCEL_SCOPE} --yes
 ```
-Vercel scope for Rankingsb projects: `carpefukendiems-projects`
+Vercel scope for Ranking SB projects: `carpefukendiems-projects`
 
 ### Temporary diagnostic endpoint (needed to call GHL API from Vercel's servers)
 Create `pages/api/ghl-setup.ts` temporarily to proxy GHL calls (Cloudflare blocks local machine calls):
@@ -690,7 +690,7 @@ curl "https://{CLIENT_DOMAIN}/api/ghl-setup?delete={CONTACT_ID}" \
 
 ---
 
-## KEY REFERENCE IDs (Rankingsb master sub-account)
+## KEY REFERENCE IDs (Ranking SB master sub-account)
 
 > These are for Ruben's own `rankingsb.com` website. New client sub-accounts will have different IDs — run Phase 1 to discover them.
 

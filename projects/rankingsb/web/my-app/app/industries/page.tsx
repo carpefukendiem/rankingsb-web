@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -31,8 +32,12 @@ import {
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | Rankingsb Santa Barbara",
-  description: "Specialized SEO services for local businesses in Santa Barbara. Electricians, HVAC, plumbers, attorneys, auto repair, gyms, and more.",
+  title: {
+    absolute: "Industries We Serve | Local SEO | Ranking SB",
+  },
+  description: clampMetaDescription(
+    "Specialized local SEO for contractors, pros, and storefronts across Santa Barbara and Ventura County — HVAC, legal, dental, restaurants, and more. Free audit in 24 hrs."
+  ),
 }
 
 const industries = [

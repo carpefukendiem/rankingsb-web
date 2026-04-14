@@ -1,5 +1,5 @@
 ---
-titleTag: "Home Services SEO Santa Barbara (Cleaning, Organizing, Handyman) | Rankingsb"
+titleTag: "Home Services SEO Santa Barbara (Cleaning, Organizing, Handyman) | Ranking SB"
 metaDescription: "More home service jobs from Google. Local SEO for house cleaning, home organizing, handyman services, and home care businesses in Santa Barbara and Ventura County."
 h1: "Home Services SEO Santa Barbara: Get More Jobs From Google"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -9,7 +9,7 @@ Santa Barbara homeowners hire home service providers constantly — house cleane
 
 "House cleaning service Santa Barbara." "Home organizer Ventura County." "Handyman near me Camarillo." "Pool cleaning service Thousand Oaks." These searches happen thousands of times per month, and the businesses that rank for them fill their schedules with consistent, recurring work.
 
-Rankingsb helps home service businesses of all types build the local SEO presence that generates steady job flow — without relying entirely on word-of-mouth, which grows slowly and unpredictably.
+Ranking SB helps home service businesses of all types build the local SEO presence that generates steady job flow — without relying entirely on word-of-mouth, which grows slowly and unpredictably.
 
 ### Why Home Services SEO Produces Recurring Revenue
 

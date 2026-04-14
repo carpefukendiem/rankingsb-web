@@ -1,5 +1,5 @@
 ---
-titleTag: "How Long Does SEO Take? Realistic Timelines for Central Coast Businesses | Rankingsb"
+titleTag: "How Long Does SEO Take? Realistic Timelines for Central Coast Businesses | Ranking SB"
 metaDescription: "\"When will I see results?\" is the most common SEO question. Here's an honest answer for Santa Barbara and Ventura County businesses, with real factors that affect timelines."
 h1: "How Long Does SEO Take? Realistic Timelines for Central Coast Businesses"
 category: "Local SEO"
@@ -67,7 +67,7 @@ Businesses that publish new content regularly, generate reviews consistently, mo
 
 This is why we structure our programs as ongoing monthly engagements rather than one-time audits. The [90-day ranking system](/services/local-seo) establishes momentum, and ongoing monthly work maintains and builds on it.
 
-### What to Expect in the First 90 Days With Rankingsb
+### What to Expect in the First 90 Days With Ranking SB
 
 For a new client starting with our full local SEO program, here's a realistic month-by-month breakdown:
 

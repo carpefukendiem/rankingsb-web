@@ -1,5 +1,5 @@
 ---
-titleTag: "Contractor SEO Santa Barbara — Get More Bids & Leads | Rankingsb"
+titleTag: "Contractor SEO Santa Barbara — Get More Bids & Leads | Ranking SB"
 metaDescription: "More bids, more signed contracts. Local SEO for general contractors and specialty contractors in Santa Barbara and Ventura County. 90-day ranking guarantee."
 h1: "Contractor SEO Santa Barbara: Get More Bids and Win More Jobs"
 heroBadge: "Industry SEO · Santa Barbara & Ventura County"
@@ -9,7 +9,7 @@ Your next job is already being searched for on Google.
 
 "Licensed general contractor Santa Barbara." "Kitchen remodel contractor Ventura County." "Home addition contractor near me." These searches are happening hundreds of times per month across the Central Coast — and right now, they're going to contractors who have built a stronger online presence than yours.
 
-Rankingsb works specifically with contractors in Santa Barbara and Ventura County to capture these searches, rank in the Google Local Pack, and build the kind of online reputation that turns searches into signed contracts.
+Ranking SB works specifically with contractors in Santa Barbara and Ventura County to capture these searches, rank in the Google Local Pack, and build the kind of online reputation that turns searches into signed contracts.
 
 ### Why Contractor SEO Is Different
 
@@ -57,7 +57,7 @@ A slow, mobile-unfriendly website loses clients before they even see your portfo
 
 ### Industries We Serve
 
-Rankingsb works with general contractors, kitchen and bath remodelers, ADU builders, custom home builders, roofing contractors ([roofing SEO](/industries/roofing-seo)), electricians ([electrician SEO](/industries/electrician-seo)), plumbers ([plumber SEO](/industries/plumber-seo)), HVAC companies ([HVAC SEO](/industries/hvac-seo)), and specialty subcontractors throughout Santa Barbara and Ventura County.
+Ranking SB works with general contractors, kitchen and bath remodelers, ADU builders, custom home builders, roofing contractors ([roofing SEO](/industries/roofing-seo)), electricians ([electrician SEO](/industries/electrician-seo)), plumbers ([plumber SEO](/industries/plumber-seo)), HVAC companies ([HVAC SEO](/industries/hvac-seo)), and specialty subcontractors throughout Santa Barbara and Ventura County.
 
 ### What Our 90-Day System Produces
 

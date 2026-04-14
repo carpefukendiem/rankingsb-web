@@ -1,5 +1,5 @@
 ---
-titleTag: "Google Reviews vs. Yelp vs. Bing: Which Matters Most for Local Rankings | Rankingsb"
+titleTag: "Google Reviews vs. Yelp vs. Bing: Which Matters Most for Local Rankings | Ranking SB"
 metaDescription: "Should you focus on Google reviews, Yelp, or somewhere else? Here's exactly which review platforms matter for local SEO in Santa Barbara and Ventura County."
 h1: "Google Reviews vs. Yelp vs. Bing: Which Matters Most for Local Rankings"
 category: "Local SEO"

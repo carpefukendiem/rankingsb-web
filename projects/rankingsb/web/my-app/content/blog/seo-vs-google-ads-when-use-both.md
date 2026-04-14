@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO vs. Google Ads: The Difference and When to Use Both | Rankingsb"
+titleTag: "SEO vs. Google Ads: The Difference and When to Use Both | Ranking SB"
 metaDescription: "SEO builds long-term rankings. Google Ads gets immediate leads. Here's how Santa Barbara businesses should think about each — and when to run both at once."
 h1: "SEO vs. Google Ads: The Difference and When to Use Both"
 category: "Local SEO"

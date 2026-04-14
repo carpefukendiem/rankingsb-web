@@ -4,18 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, MapPin, Star, TrendingUp, Building2, Users } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO Services Solvang CA | Local SEO Solvang | Rankingsb",
-  description: "Expert local SEO for Solvang, CA. Get your Solvang business to page 1 of Google in 90 days. Free SEO audit for Santa Barbara County businesses.",
-  keywords: ["SEO Solvang", "local SEO Solvang CA", "SEO company Solvang", "digital marketing Solvang", "Google ranking Solvang California"],
-  openGraph: {
-    title: "SEO Services Solvang CA | Rankingsb",
-    description: "Get your Solvang business to page 1. Expert local SEO with a 90-day ranking guarantee.",
-    type: "website",
-  },
-}
+export const metadata: Metadata = locationSeoMetadata("Solvang")
 
 export default function SolvangSEOPage() {
   return (
@@ -34,7 +26,7 @@ export default function SolvangSEOPage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Solvang businesses trust Rankingsb to dominate local search. We know  — and we use that
+              Solvang businesses trust Ranking SB to dominate local search. We know  — and we use that
               local knowledge to get you ranked where customers can find you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

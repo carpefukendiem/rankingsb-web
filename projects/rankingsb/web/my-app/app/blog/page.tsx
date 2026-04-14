@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -7,8 +8,12 @@ import Link from "next/link"
 import { getSeoBlogSlugs, loadSeoBlogPost } from "@/lib/load-seo-markdown"
 
 export const metadata: Metadata = {
-  title: "Local SEO Blog | Santa Barbara & Ventura County Marketing Tips | Rankingsb",
-  description: "Expert local SEO tips, strategies, and insights for Santa Barbara and Ventura County businesses. Learn how to rank higher on Google and get more customers.",
+  title: {
+    absolute: "Local SEO Tips for 805 Businesses | Ranking SB",
+  },
+  description: clampMetaDescription(
+    "Free local SEO guides for Santa Barbara and Ventura County businesses. Learn how to rank on Google and get more calls — from the 805 Growth Engine team."
+  ),
   keywords: ["local SEO blog", "Santa Barbara SEO tips", "Ventura County marketing", "Google ranking tips"],
 }
 
@@ -24,7 +29,7 @@ function seoBlogCards() {
         category: p.frontmatter.category,
         date: p.frontmatter.date,
         readTime: read || "6 min",
-        author: "Rankingsb Team",
+        author: "Ranking SB Team",
         href: `/blog/${slug}`,
         image: p.frontmatter.image,
         featured: false as const,
@@ -52,7 +57,7 @@ const legacyBlogPosts = [
     category: "Local SEO",
     date: "Mar 1, 2026",
     readTime: "12 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/santa-barbara-seo-guide",
     image: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?w=600&h=400&fit=crop",
     featured: true,
@@ -63,7 +68,7 @@ const legacyBlogPosts = [
     category: "Local SEO",
     date: "Feb 28, 2026",
     readTime: "10 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/ventura-county-seo-guide",
     image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
     featured: true,
@@ -74,7 +79,7 @@ const legacyBlogPosts = [
     category: "Local SEO",
     date: "Feb 15, 2026",
     readTime: "8 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/google-business-profile-guide",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
   },
@@ -84,7 +89,7 @@ const legacyBlogPosts = [
     category: "Local SEO",
     date: "Feb 12, 2026",
     readTime: "6 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/google-maps-ranking",
     image: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=600&h=400&fit=crop"
   },
@@ -94,7 +99,7 @@ const legacyBlogPosts = [
     category: "Reputation",
     date: "Feb 8, 2026",
     readTime: "7 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/get-more-reviews",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?w=600&h=400&fit=crop"
   },
@@ -104,7 +109,7 @@ const legacyBlogPosts = [
     category: "Industry",
     date: "Feb 5, 2026",
     readTime: "8 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/electrician-seo-guide",
     image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop"
   },
@@ -114,7 +119,7 @@ const legacyBlogPosts = [
     category: "Strategy",
     date: "Feb 1, 2026",
     readTime: "9 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/seo-vs-google-ads",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
   },
@@ -124,7 +129,7 @@ const legacyBlogPosts = [
     category: "Industry",
     date: "Jan 28, 2026",
     readTime: "7 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/hvac-seasonal-seo",
     image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop"
   },
@@ -134,7 +139,7 @@ const legacyBlogPosts = [
     category: "Local SEO",
     date: "Jan 25, 2026",
     readTime: "5 min",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     href: "/blog/local-citation-sites",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
   },

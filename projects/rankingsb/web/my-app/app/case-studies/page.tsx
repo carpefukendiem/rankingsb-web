@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,9 +7,12 @@ import { TrendingUp, MapPin, Phone, Star } from "lucide-react"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Case Studies | Real 805 Business Results | Rankingsb",
-  description:
-    "See real results from real Santa Barbara and Ventura County businesses. Rankings, traffic, leads, and revenue — documented and verified.",
+  title: {
+    absolute: "Real Results: 805 Businesses That Went to Page 1 | Ranking SB",
+  },
+  description: clampMetaDescription(
+    "+340% traffic. Page 1 in 90 days. $150K in storm damage jobs. Real numbers from real 805 businesses. See exactly what the 805 Growth Engine produces."
+  ),
 }
 
 const caseStudies = [
@@ -45,7 +49,7 @@ const caseStudies = [
       "Phone rings 'off the hook'",
     ],
     quote:
-      "Rankingsb got us to #1 faster than I thought possible. The ROI was obvious by month 2.",
+      "Ranking SB got us to #1 faster than I thought possible. The ROI was obvious by month 2.",
     author: "Jennifer L., Owner",
     image:
       "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&h=400&fit=crop",
@@ -98,7 +102,7 @@ const caseStudies = [
     results: [
       "#2 for 'med spa Santa Barbara' in 90 days",
       "85 new clients in first 6 months",
-      "4.9 star average rating",
+      "4.9 star average",
     ],
     quote:
       "We opened with no customers. Within 3 months we were booked solid. Local SEO was the key.",
@@ -120,7 +124,7 @@ const caseStudies = [
       "$2.4M in closed sales",
     ],
     quote:
-      "We beat the national companies because we focused on local. Rankingsb made us the obvious choice for Ventura homeowners.",
+      "We beat the national companies because we focused on local. Ranking SB made us the obvious choice for Ventura homeowners.",
     author: "Tom K., Sales Director",
     image:
       "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
@@ -256,8 +260,11 @@ export default function CaseStudiesPage() {
                   <blockquote className="text-xl text-slate-700 mb-6 italic">
                     &quot;It&apos;s hard to find good people in digital marketing.
                     It&apos;s extremely hard to find people who are good at multiple
-                    specialized fields of digital marketing. And Ruben at
-                    Ranking SB is absolutely one of those extremely rare finds.&quot;
+                    highly-specialized fields of digital marketing. And Ruben at
+                    Ranking SB is absolutely one of those extremely rare finds.
+                    Whether it&apos;s SEO, Paid Social, SEM, or Web Strategy —
+                    Ranking SB has the skillset of a world-class agency with the care
+                    of a boutique one.&quot;
                   </blockquote>
                   <div>
                     <p className="font-bold text-slate-900">Kenneth Shen</p>

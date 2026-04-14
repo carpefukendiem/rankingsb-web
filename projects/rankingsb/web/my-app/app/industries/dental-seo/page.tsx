@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, Stethoscope, Smile, Calendar, TrendingUp, Users } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "Dental SEO Santa Barbara | Rankingsb",
-  description: "Get more dental patients with local SEO. Santa Barbara dentists rank #1 on Google for cosmetic and emergency dentistry.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Dental",
+  outcome: "Patients",
+  descIndustryPhrase: "dental practices",
+})
 
 export default function DentalSEOPage() {
   return (

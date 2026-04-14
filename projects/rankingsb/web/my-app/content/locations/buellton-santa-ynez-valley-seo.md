@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services Buellton & Santa Ynez Valley — Wine Country Digital Marketing | Rankingsb"
+titleTag: "SEO Services Buellton & Santa Ynez Valley — Wine Country Digital Marketing | Ranking SB"
 metaDescription: "Local SEO for Buellton, Solvang, Los Olivos, and the Santa Ynez Valley. Attract wine tourists, locals, and destination visitors through Google search."
 h1: "SEO Services Buellton & Santa Ynez Valley — Wine Country Digital Marketing"
 heroBadge: "Local SEO"
@@ -9,7 +9,7 @@ The Santa Ynez Valley — encompassing Buellton, Solvang, Los Olivos, Santa Ynez
 
 Businesses in the Santa Ynez Valley have a rare opportunity: a steady stream of Google-driven tourism traffic combined with a loyal local community of full-time residents. Capturing both requires a specific local SEO strategy that addresses both audiences.
 
-Rankingsb serves Santa Ynez Valley businesses with wine country expertise — we understand what visitors search for, when they search, and how to ensure your business captures that traffic.
+Ranking SB serves Santa Ynez Valley businesses with wine country expertise — we understand what visitors search for, when they search, and how to ensure your business captures that traffic.
 
 ### The Dual Market of the Santa Ynez Valley
 

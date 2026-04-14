@@ -1,5 +1,5 @@
 ---
-titleTag: "Seasonal SEO Strategy for Santa Barbara Businesses (Tourism, Events & More) | Rankingsb"
+titleTag: "Seasonal SEO Strategy for Santa Barbara Businesses (Tourism, Events & More) | Ranking SB"
 metaDescription: "Santa Barbara's tourism cycles, local events, and seasonal patterns create unique SEO opportunities. Here's how Central Coast businesses can capitalize on them year-round."
 h1: "Seasonal SEO Strategy for Santa Barbara Businesses"
 category: "Local SEO"

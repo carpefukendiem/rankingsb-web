@@ -5,12 +5,14 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, ShoppingBag, TrendingUp, Package, Search, DollarSign } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
-export const metadata: Metadata = {
-  title: "E-commerce SEO Santa Barbara | Rankingsb",
-  description: "Scale your online store with SEO. Product page optimization and category SEO that drives qualified traffic and sales.",
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "E-commerce",
+  outcome: "Sales",
+  descIndustryPhrase: "ecommerce brands",
+})
 
 export default function EcommerceSEOPage() {
   return (

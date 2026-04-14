@@ -19,7 +19,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Local SEO",
     date: "Feb 15, 2026",
     readTime: "8 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=600&fit=crop",
     relatedPosts: ["google-maps-ranking", "get-more-reviews", "local-citation-sites"],
     content: (
@@ -90,7 +90,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Local SEO",
     date: "Feb 12, 2026",
     readTime: "6 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=1200&h=600&fit=crop",
     relatedPosts: ["google-business-profile-guide", "local-citation-sites", "seo-vs-google-ads"],
     content: (
@@ -131,7 +131,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Reputation",
     date: "Feb 8, 2026",
     readTime: "7 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?w=1200&h=600&fit=crop",
     relatedPosts: ["google-business-profile-guide", "google-maps-ranking"],
     content: (
@@ -197,7 +197,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Strategy",
     date: "Feb 1, 2026",
     readTime: "9 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
     relatedPosts: ["google-maps-ranking", "local-citation-sites"],
     content: (
@@ -256,7 +256,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Local SEO",
     date: "Jan 25, 2026",
     readTime: "5 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop",
     relatedPosts: ["google-business-profile-guide", "google-maps-ranking"],
     content: (
@@ -315,7 +315,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Local SEO",
     date: "Mar 1, 2026",
     readTime: "12 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1619468129361-605ebea04b44?w=1200&h=600&fit=crop",
     relatedPosts: ["google-business-profile-guide", "google-maps-ranking", "local-citation-sites"],
     content: (
@@ -380,7 +380,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Local SEO",
     date: "Feb 28, 2026",
     readTime: "10 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&h=600&fit=crop",
     relatedPosts: ["google-business-profile-guide", "seo-vs-google-ads", "local-citation-sites"],
     content: (
@@ -438,7 +438,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Industry",
     date: "Feb 5, 2026",
     readTime: "8 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&h=600&fit=crop",
     relatedPosts: ["hvac-seasonal-seo", "google-maps-ranking", "local-citation-sites"],
     content: (
@@ -483,7 +483,7 @@ export const legacyBlogPosts: Record<string, LegacyBlogPost> = {
     category: "Industry",
     date: "Jan 28, 2026",
     readTime: "7 min read",
-    author: "Rankingsb Team",
+    author: "Ranking SB Team",
     image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1200&h=600&fit=crop",
     relatedPosts: ["electrician-seo-guide", "google-maps-ranking"],
     content: (

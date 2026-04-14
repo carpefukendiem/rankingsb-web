@@ -5,12 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { CheckCircle, Phone, ArrowRight, MapPin, Gem, Home, Star, Search, Crown } from "lucide-react"
 import Link from "next/link"
+import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = {
-  title: "SEO Montecito | Rankingsb Digital Marketing",
-  description: "Luxury SEO services for Montecito businesses. High-end digital marketing for estate management, luxury services, and premium brands. Free audit available.",
-  keywords: ["SEO Montecito", "Montecito marketing", "luxury SEO Montecito", "high-end digital marketing", "estate management SEO"],
-}
+export const metadata: Metadata = locationSeoMetadata("Montecito")
 
 export default function MontecitoSEOPage() {
   return (

@@ -5,7 +5,7 @@ import { CheckCircle, Phone, Star, ArrowRight, Clock, Shield, TrendingUp } from 
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Thank You! Your Audit Request Was Received | Rankingsb",
+  title: "Thank You! Your Audit Request Was Received | Ranking SB",
   description: "We received your free SEO audit request and will deliver your results within 24 hours.",
   robots: { index: false, follow: false }, // keep thank-you pages out of Google
 }
@@ -29,7 +29,7 @@ const reviews = [
     name: "Sandra R.",
     business: "Ojai Valley Wellness Spa",
     rating: 5,
-    text: "Our bookings are up 40% since we started working with Rankingsb. They handled everything — Google profile, reviews, the website. Best marketing investment we've made.",
+    text: "Our bookings are up 40% since we started working with Ranking SB. They handled everything — Google profile, reviews, the website. Best marketing investment we've made.",
     location: "Ojai, CA",
   },
   {
@@ -50,7 +50,7 @@ const reviews = [
     name: "Carlos M.",
     business: "Ventura Plumbing Pros",
     rating: 5,
-    text: "We compete against much bigger companies now and we win because we rank higher. Rankingsb leveled the playing field for us.",
+    text: "We compete against much bigger companies now and we win because we rank higher. Ranking SB leveled the playing field for us.",
     location: "Ventura, CA",
   },
 ]

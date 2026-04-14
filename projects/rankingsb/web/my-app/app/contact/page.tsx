@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { clampMetaDescription } from "@/lib/meta-helpers"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -6,12 +7,15 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = {
-  title: "Contact Rankingsb | 805 Growth Engine | Santa Barbara & Ventura County",
-  description:
-    "Call, text, or email Rankingsb. Based in Santa Barbara, serving the entire 805. Fast responses, no runaround. (805) 307-7600.",
+  title: {
+    absolute: "Talk to Ranking SB — (805) 307-7600 | Santa Barbara",
+  },
+  description: clampMetaDescription(
+    "Call or text Ruben directly at (805) 307-7600. We respond same day, run your free audit, and tell you exactly what it takes to rank. No pressure."
+  ),
   keywords: [
     "contact SEO agency Santa Barbara",
-    "Rankingsb contact",
+    "Ranking SB contact",
     "SEO consultation Santa Barbara",
   ],
 }
@@ -96,9 +100,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 mb-1">Hours</h3>
-                      <p className="text-slate-700">Monday – Friday: 9am – 6pm PST</p>
-                      <p className="text-slate-500 text-sm">
-                        We check messages on weekends too
+                      <p className="text-slate-700">
+                        Monday–Friday 9am–6pm PST. We check messages on weekends too.
                       </p>
                     </div>
                   </div>

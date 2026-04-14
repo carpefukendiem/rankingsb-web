@@ -4,13 +4,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, Star, TrendingUp, Users, Search, MapPin } from "lucide-react"
 import Link from "next/link"
+import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = {
-  title: "SEO for Spas & Beauty Salons Santa Barbara | Rankingsb",
-  description: "Dominate local search for your spa, salon, or beauty business in Santa Barbara and Ventura County. Get found by clients searching for massage, facials, hair, nails & more.",
-  keywords: ["spa SEO Santa Barbara", "beauty salon SEO Ventura County", "salon marketing Santa Barbara", "massage therapy SEO", "nail salon SEO Santa Barbara"],
-}
+export const metadata: Metadata = industrySeoMetadata({
+  industryLabel: "Spa & Beauty",
+  outcome: "Bookings",
+  descIndustryPhrase: "spas and salons",
+})
 
 export default function SpaBeautySEOPage() {
   return (
