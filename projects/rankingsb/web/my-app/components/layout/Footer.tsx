@@ -12,19 +12,9 @@ export function Footer() {
               <img
                 src="/logo-new.webp"
                 alt="Ranking SB Local SEO Agency Santa Barbara"
-                className="h-14 w-auto object-contain mb-4"
+                className="h-14 w-auto object-contain mb-6"
               />
             </Link>
-            <p className="text-slate-300 text-sm font-medium mb-1">
-              The 805 Growth Engine — Built. Ranked. Running.
-            </p>
-            <p className="text-slate-400 text-sm mb-4">
-              Setup from $3,000 · $250/month to maintain · No contracts
-            </p>
-            <p className="text-slate-400 mb-6 text-sm leading-relaxed">
-              Santa Barbara and Ventura County&apos;s growth partner — custom sites,
-              local SEO, and The Ranking App in one system.
-            </p>
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-3 text-slate-400">
                 <MapPin className="w-4 h-4 text-blue-400 shrink-0" />
@@ -76,29 +66,33 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Locations + Company */}
-          <div>
-            <h4 className="font-semibold mb-4 text-white">Locations</h4>
-            <ul className="space-y-2 text-sm text-slate-400 mb-6">
-              <li><Link href="/locations" className="hover:text-white transition-colors font-medium">All Locations →</Link></li>
-              <li><Link href="/locations/santa-barbara-seo" className="hover:text-white transition-colors">Santa Barbara</Link></li>
-              <li><Link href="/locations/goleta-seo" className="hover:text-white transition-colors">Goleta</Link></li>
-              <li><Link href="/locations/montecito-seo" className="hover:text-white transition-colors">Montecito</Link></li>
-              <li><Link href="/locations/ventura-seo" className="hover:text-white transition-colors">Ventura</Link></li>
-              <li><Link href="/locations/oxnard-seo" className="hover:text-white transition-colors">Oxnard</Link></li>
-              <li><Link href="/locations/thousand-oaks-seo" className="hover:text-white transition-colors">Thousand Oaks</Link></li>
-              <li><Link href="/locations/camarillo-seo" className="hover:text-white transition-colors">Camarillo</Link></li>
-            </ul>
-            <h4 className="font-semibold mb-4 text-white">Company</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-              <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-              <li><Link href="/free-audit" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">Free Audit →</Link></li>
-            </ul>
+          {/* Locations | Company (side by side in this column) */}
+          <div className="grid min-w-0 grid-cols-2 gap-x-6 gap-y-0">
+            <div className="min-w-0">
+              <h4 className="font-semibold mb-4 text-white">Locations</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><Link href="/locations" className="hover:text-white transition-colors font-medium">All Locations →</Link></li>
+                <li><Link href="/locations/santa-barbara-seo" className="hover:text-white transition-colors">Santa Barbara</Link></li>
+                <li><Link href="/locations/goleta-seo" className="hover:text-white transition-colors">Goleta</Link></li>
+                <li><Link href="/locations/montecito-seo" className="hover:text-white transition-colors">Montecito</Link></li>
+                <li><Link href="/locations/ventura-seo" className="hover:text-white transition-colors">Ventura</Link></li>
+                <li><Link href="/locations/oxnard-seo" className="hover:text-white transition-colors">Oxnard</Link></li>
+                <li><Link href="/locations/thousand-oaks-seo" className="hover:text-white transition-colors">Thousand Oaks</Link></li>
+                <li><Link href="/locations/camarillo-seo" className="hover:text-white transition-colors">Camarillo</Link></li>
+              </ul>
+            </div>
+            <div className="min-w-0">
+              <h4 className="font-semibold mb-4 text-white">Company</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
+                <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+                <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/free-audit" className="text-blue-400 hover:text-blue-300 transition-colors font-medium">Free Audit →</Link></li>
+              </ul>
+            </div>
           </div>
         </div>
 

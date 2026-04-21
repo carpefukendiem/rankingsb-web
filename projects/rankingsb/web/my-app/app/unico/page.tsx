@@ -243,26 +243,37 @@ export default function UnicoGraphicRequestsPage() {
       />
 
       <section
-        className="relative overflow-hidden border-b border-slate-200/80 text-white"
-        style={{ background: `linear-gradient(135deg, ${UNICO_PRIMARY} 0%, #003380 55%, #001a4d 100%)` }}
+        className="relative w-full min-h-[min(52vh,540px)] overflow-hidden border-b border-slate-200/80 text-white md:min-h-[min(56vh,600px)]"
+        aria-labelledby="unico-hero-heading"
       >
         <div
-          className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/15 opacity-40"
+          className="pointer-events-none absolute inset-0 bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: "url(/images/unico-bg.jpeg)",
+            backgroundPosition: "center 42%",
+          }}
           aria-hidden
         />
+        {/* Light tint so hero copy stays readable over the club banner art */}
         <div
-          className="pointer-events-none absolute -bottom-16 left-10 h-56 w-56 rotate-12 rounded-3xl border-2 border-white/10"
-          style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0047AB]/58 via-[#003380]/62 to-[#001a4d]/72"
           aria-hidden
         />
-        <div className="container relative mx-auto max-w-5xl px-4 py-14 md:py-20">
+        <div className="container relative z-10 mx-auto flex min-h-[min(52vh,540px)] max-w-5xl flex-col justify-center px-4 py-14 md:min-h-[min(56vh,600px)] md:py-16 lg:py-20">
           <div
-            className="mx-auto max-w-3xl rounded-2xl border border-white/15 bg-white/5 px-6 py-10 backdrop-blur-sm md:px-10"
+            className="mx-auto max-w-3xl rounded-2xl border border-white/20 bg-black/15 px-6 py-9 shadow-lg shadow-black/20 backdrop-blur-[2px] md:px-10 md:py-11"
             style={{ clipPath: "inset(0 round 24px)" }}
           >
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Unico Soccer Club</p>
-            <h1 className="mt-3 text-center text-3xl font-bold tracking-tight md:text-4xl">Unico Soccer Club - Graphic Requests</h1>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/90 md:text-lg">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-white/90 drop-shadow-sm">
+              Unico Soccer Club
+            </p>
+            <h1
+              id="unico-hero-heading"
+              className="mt-3 text-center text-3xl font-bold tracking-tight drop-shadow-md md:text-4xl"
+            >
+              Unico Soccer Club - Graphic Requests
+            </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/95 drop-shadow-sm md:text-lg">
               Submit your graphic requests for team tryouts and promotional materials
             </p>
           </div>
