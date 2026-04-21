@@ -4,7 +4,7 @@ import { clampMetaDescription } from "@/lib/meta-helpers"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Unico Soccer Club — Graphic Requests | Ranking SB",
+    absolute: "Unico Soccer Club - Graphic Requests | Ranking SB",
   },
   description: clampMetaDescription(
     "Submit team tryouts or miscellaneous graphic requests for Unico Soccer Club. Royal blue club styling, fast turnaround from Ranking SB."

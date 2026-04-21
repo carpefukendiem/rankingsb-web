@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useId, useRef, useState } from "react"
+import { useCallback, useEffect, useId, useRef, useState } from "react"
 import { AlertTriangle, CheckCircle2, Loader2, Trash2, Upload } from "lucide-react"
 import {
   isValidEmail,
@@ -42,6 +42,11 @@ export default function UnicoGraphicRequestsPage() {
   const [previewTryouts, setPreviewTryouts] = useState<string | null>(null)
   const [imageMisc, setImageMisc] = useState<File | null>(null)
   const [previewMisc, setPreviewMisc] = useState<string | null>(null)
+  const [mountTime, setMountTime] = useState<number | null>(null)
+
+  useEffect(() => {
+    setMountTime(Date.now())
+  }, [])
 
   const clearTryoutsImage = useCallback(() => {
     if (previewTryouts) URL.revokeObjectURL(previewTryouts)
@@ -166,6 +171,8 @@ export default function UnicoGraphicRequestsPage() {
       body.append("location", String(fd.get("location")))
       body.append("eaStatus", String(fd.get("eaStatus")))
       body.append("additionalDetails", String(fd.get("additionalDetails") || ""))
+      body.append("_hp", String(fd.get("_hp") || ""))
+      body.append("_t", mountTime != null ? String(mountTime) : "")
       if (imageTryouts) body.append("image", imageTryouts)
 
       const res = await fetch("/api/unico-request", { method: "POST", body })
@@ -203,6 +210,8 @@ export default function UnicoGraphicRequestsPage() {
       body.append("requestTitle", String(fd.get("requestTitle")))
       body.append("description", String(fd.get("description")))
       body.append("additionalDetails", String(fd.get("additionalDetails") || ""))
+      body.append("_hp", String(fd.get("_hp") || ""))
+      body.append("_t", mountTime != null ? String(mountTime) : "")
       if (imageMisc) body.append("image", imageMisc)
 
       const res = await fetch("/api/unico-request", { method: "POST", body })
@@ -252,7 +261,7 @@ export default function UnicoGraphicRequestsPage() {
             style={{ clipPath: "inset(0 round 24px)" }}
           >
             <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-white/80">Unico Soccer Club</p>
-            <h1 className="mt-3 text-center text-3xl font-bold tracking-tight md:text-4xl">Unico Soccer Club — Graphic Requests</h1>
+            <h1 className="mt-3 text-center text-3xl font-bold tracking-tight md:text-4xl">Unico Soccer Club - Graphic Requests</h1>
             <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/90 md:text-lg">
               Submit your graphic requests for team tryouts and promotional materials
             </p>
@@ -381,6 +390,7 @@ export default function UnicoGraphicRequestsPage() {
             style={{ clipPath: "inset(0 round 20px)" }}
           >
             <form ref={tryoutsFormRef} onSubmit={submitTryouts} className="space-y-5" noValidate>
+              <input name="_hp" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ display: "none" }} />
               <h2 className="text-xl font-bold" style={{ color: UNICO_PRIMARY }}>
                 Team tryouts details
               </h2>
@@ -563,6 +573,7 @@ export default function UnicoGraphicRequestsPage() {
             style={{ clipPath: "inset(0 round 20px)" }}
           >
             <form ref={miscFormRef} onSubmit={submitMisc} className="space-y-5" noValidate>
+              <input name="_hp" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ display: "none" }} />
               <h2 className="text-xl font-bold" style={{ color: UNICO_PRIMARY }}>
                 Miscellaneous request
               </h2>

@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from "next/server"
 import { put } from "@vercel/blob"
-import { Resend } from "resend"
-import twilio from "twilio"
-import React from "react"
-import { UnicoRequestEmail } from "@/lib/email-templates/unico-request-email"
 import {
-  ALLOWED_IMAGE_TYPES,
-  MAX_IMAGE_BYTES,
-  UNICO_NOTIFY_EMAIL,
-  UNICO_SMS_TO_E164,
-  isValidEmail,
-} from "@/lib/unico-request-validation"
+  crmRequest,
+  getCrmApiKey,
+  LOCATION_ID,
+  OWNER_USER_ID,
+  PIPELINE_ID,
+  STAGE_ID,
+  WORKFLOW_ID,
+} from "@/lib/crm-api"
+import { isBot } from "@/lib/website-form-bot-guard"
+import { ALLOWED_IMAGE_TYPES, MAX_IMAGE_BYTES, isValidEmail } from "@/lib/unico-request-validation"
 
 export const runtime = "nodejs"
 
@@ -19,11 +19,6 @@ const MISC = "misc"
 
 function jsonError(message: string, status = 400) {
   return NextResponse.json({ success: false, error: message }, { status })
-}
-
-function requireEnv(name: string): string | null {
-  const v = process.env[name]
-  return v && v.trim() ? v.trim() : null
 }
 
 function sanitizeFilename(name: string): string {
@@ -57,13 +52,22 @@ export async function POST(req: NextRequest) {
     return jsonError("Invalid form data", 400)
   }
 
+  const _hp = str(formData, "_hp")
+  const _t = str(formData, "_t")
   const formType = str(formData, "formType")
+  const coachName = str(formData, "coachName")
+  const coachEmail = str(formData, "coachEmail")
+  const businessHint = formType === TRYOUTS ? str(formData, "division") : str(formData, "requestTitle")
+
+  if (isBot(_hp, coachEmail, businessHint, _t)) {
+    console.log(`[unico-request] Bot blocked — email=${coachEmail} hp=${!!_hp}`)
+    return NextResponse.json({ success: true })
+  }
+
   if (formType !== TRYOUTS && formType !== MISC) {
     return jsonError("Invalid or missing form type.", 400)
   }
 
-  const coachName = str(formData, "coachName")
-  const coachEmail = str(formData, "coachEmail")
   if (!coachName) return jsonError("Coach name is required.", 400)
   if (!coachEmail) return jsonError("Coach email is required.", 400)
   if (!isValidEmail(coachEmail)) return jsonError("Please enter a valid coach email address.", 400)
@@ -77,19 +81,9 @@ export async function POST(req: NextRequest) {
     if (imgErr) return jsonError(imgErr, 400)
   }
 
-  const sid = requireEnv("TWILIO_ACCOUNT_SID")
-  const token = requireEnv("TWILIO_AUTH_TOKEN")
-  const twilioFrom = requireEnv("TWILIO_PHONE_NUMBER")
-  const resendKey = requireEnv("RESEND_API_KEY")
-  const resendFrom = requireEnv("RESEND_FROM_EMAIL")
-
-  if (!sid || !token || !twilioFrom) {
-    console.error("[unico-request] Missing Twilio configuration")
-    return jsonError("Server is not configured for notifications. Please try again later.", 503)
-  }
-  if (!resendKey || !resendFrom) {
-    console.error("[unico-request] Missing Resend configuration")
-    return jsonError("Server is not configured for email. Please try again later.", 503)
+  if (!getCrmApiKey()) {
+    console.error("[unico-request] Missing CRM API key")
+    return jsonError("Server is not configured for lead notifications. Please try again later.", 503)
   }
 
   const formTypeLabel = formType === TRYOUTS ? "Team Tryouts" : "Miscellaneous"
@@ -139,12 +133,11 @@ export async function POST(req: NextRequest) {
   }
 
   const hasImage = Boolean(imageUrl)
-
   const detailsSnippet = additionalDetails.length > 1200 ? `${additionalDetails.slice(0, 1200)}…` : additionalDetails
 
-  let smsBody: string
+  let smsBlock: string
   if (formType === TRYOUTS) {
-    smsBody = [
+    smsBlock = [
       "NEW UNICO TRYOUTS GRAPHIC REQUEST",
       "",
       `Coach: ${coachName}`,
@@ -161,7 +154,7 @@ export async function POST(req: NextRequest) {
       "Check email for full details.",
     ].join("\n")
   } else {
-    smsBody = [
+    smsBlock = [
       "NEW UNICO MISC GRAPHIC REQUEST",
       "",
       `Coach: ${coachName}`,
@@ -173,51 +166,114 @@ export async function POST(req: NextRequest) {
     ].join("\n")
   }
 
-  const resend = new Resend(resendKey)
-  const twilioClient = twilio(sid, token)
-
   const emailSubject = `New Unico Graphic Request - ${formTypeLabel} - ${coachName}`
 
-  const emailPayload = {
-    formTypeLabel,
-    coachName,
-    coachEmail,
-    division: formType === TRYOUTS ? division : undefined,
-    ageRange: formType === TRYOUTS ? ageRange : undefined,
-    tryoutDates: formType === TRYOUTS ? tryoutDates : undefined,
-    tryoutTimes: formType === TRYOUTS ? tryoutTimes : undefined,
-    location: formType === TRYOUTS ? location : undefined,
-    eaStatus: formType === TRYOUTS ? eaStatus : undefined,
-    requestTitle: formType === MISC ? requestTitle : undefined,
-    description: formType === MISC ? description : undefined,
-    additionalDetails: additionalDetails || undefined,
-    imageUrl,
-    hasImage,
+  const noteLines = [
+    `🎨 ${emailSubject}`,
+    "",
+    "— Notification text (same format as SMS) —",
+    smsBlock,
+    "",
+    "— Full submission —",
+    `Coach name: ${coachName}`,
+    `Coach email: ${coachEmail}`,
+  ]
+
+  if (formType === TRYOUTS) {
+    noteLines.push(
+      `Division: ${division}`,
+      `Age range: ${ageRange}`,
+      `Dates of tryouts: ${tryoutDates}`,
+      `Times of tryouts: ${tryoutTimes}`,
+      `Location: ${location}`,
+      `EA status: ${eaStatus}`
+    )
+  } else {
+    noteLines.push(`Request type / title: ${requestTitle}`, "", "Description:", description)
   }
+
+  if (additionalDetails) {
+    noteLines.push("", "Additional details:", additionalDetails)
+  }
+  if (imageUrl) {
+    noteLines.push("", "Reference image (URL):", imageUrl)
+  }
+
+  const noteBody = noteLines.join("\n")
+
+  const messagePreview = [
+    `[Unico ${formTypeLabel}] ${coachName} · ${coachEmail}`,
+    hasImage ? `Image: ${imageUrl}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n")
+    .slice(0, 4000)
+
+  const [firstName, ...rest] = coachName.trim().split(/\s+/)
+  const lastName = rest.join(" ") || ""
+
+  const source = formType === TRYOUTS ? "unico-team-tryouts" : "unico-misc-graphic"
 
   try {
-    const emailResponse = await resend.emails.send({
-      from: resendFrom,
-      to: UNICO_NOTIFY_EMAIL,
-      replyTo: coachEmail,
-      subject: emailSubject,
-      react: React.createElement(UnicoRequestEmail, emailPayload),
+    const contactRes = await crmRequest("POST", "/contacts/", {
+      locationId: LOCATION_ID,
+      firstName: firstName || coachName,
+      lastName,
+      email: coachEmail,
+      phone: "",
+      companyName: "Unico Soccer Club",
+      website: "",
+      source,
+      tags: ["Website Lead", "Unico Graphic Request", formTypeLabel].filter(Boolean),
+      customFields: [{ key: "message", field_value: messagePreview }].filter((f) => f.field_value),
     })
 
-    if (emailResponse.error) {
-      console.error("[unico-request] Resend error:", emailResponse.error)
-      return jsonError("Email notification failed. Please try again or contact us directly.", 502)
+    const contactObj = (contactRes.contact ?? contactRes) as Record<string, unknown>
+    const contactId = contactObj.id as string | undefined
+
+    if (!contactId) {
+      console.error("[unico-request] No contactId returned:", JSON.stringify(contactRes).slice(0, 300))
+      return jsonError("Could not create lead. Please try again or call (805) 307-7600.", 502)
     }
 
-    await twilioClient.messages.create({
-      body: smsBody,
-      from: twilioFrom,
-      to: UNICO_SMS_TO_E164,
-    })
-  } catch (e) {
-    console.error("[unico-request] Notification error:", e)
-    return jsonError("Could not complete notifications. Please try again.", 502)
-  }
+    console.log(`[unico-request] Created contact ${contactId} for ${coachEmail}`)
 
-  return NextResponse.json({ success: true })
+    try {
+      await crmRequest("POST", "/opportunities/", {
+        locationId: LOCATION_ID,
+        pipelineId: PIPELINE_ID,
+        pipelineStageId: STAGE_ID,
+        contactId,
+        name: `${coachName} — Unico ${formTypeLabel}`,
+        status: "open",
+        assignedTo: OWNER_USER_ID,
+        monetaryValue: 0,
+      })
+    } catch (err) {
+      console.error("[unico-request] Opportunity error:", String(err))
+    }
+
+    try {
+      await crmRequest("POST", `/contacts/${contactId}/workflow/${WORKFLOW_ID}`, {
+        eventStartTime: new Date().toISOString(),
+      })
+      console.log(`[unico-request] Enrolled ${contactId} in workflow`)
+    } catch (err) {
+      console.error("[unico-request] Workflow error:", String(err))
+    }
+
+    try {
+      await crmRequest("POST", `/contacts/${contactId}/notes/`, {
+        body: noteBody,
+        userId: OWNER_USER_ID,
+      })
+    } catch (err) {
+      console.warn("[unico-request] Note error:", String(err))
+    }
+
+    return NextResponse.json({ success: true, contactId })
+  } catch (err) {
+    console.error("[unico-request] CRM error:", String(err))
+    return jsonError("Could not submit your request. Please try again or contact us directly.", 502)
+  }
 }

@@ -1,6 +1,4 @@
 export const UNICO_PRIMARY = "#0047AB"
-export const UNICO_SMS_TO_E164 = "+18052589236"
-export const UNICO_NOTIFY_EMAIL = "ruben@rankingsb.com"
 export const MAX_IMAGE_BYTES = 10 * 1024 * 1024
 export const ALLOWED_IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp"])
 export const ALLOWED_IMAGE_EXTENSIONS = /\.(jpe?g|png|webp)$/i
