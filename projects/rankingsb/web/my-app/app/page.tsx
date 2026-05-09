@@ -108,10 +108,10 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
             {[
               "Fred's Upholstery",
-              "Enzo MMA",
-              "Paragon Goleta",
-              "Coastal HVAC",
-              "Brady Electric",
+              "Enso MMA",
+              "101 Jiu Jitsu & Kickboxing",
+              "Bright Delivery",
+              "SB Pest Control",
             ].map((client) => (
               <div
                 key={client}
@@ -154,8 +154,8 @@ export default function HomePage() {
                   icon: TrendingUp,
                 },
                 {
-                  stat: "$10K+",
-                  desc: "in lost revenue monthly if you're not there",
+                  stat: "24/7",
+                  desc: "leads come in around the clock — onlranked, automated businesses capture them",
                   icon: Zap,
                 },
               ].map((item, i) => (
@@ -457,28 +457,22 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                headline: "+340% organic traffic",
-                who: "Mike Johnson, Santa Barbara Plumbing",
+                headline: "Page 1 for martial arts SB",
+                who: "Enso MMA — Santa Barbara",
                 quote:
-                  "We went from page 3 to position 1 in 3 months. Phone rings off the hook now.",
-                image:
-                  "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop&crop=face",
+                  "Built the site from the ground up — keyword research, full development, SEO foundation. Now ranks page 1 for martial arts searches in Santa Barbara.",
+          },
+              {
+                headline: "Page 1 for jiu jitsu Goleta",
+                who: "101 Jiu Jitsu & Kickboxing — Goleta",
+                quote:
+                  "Two gyms, same county, both on page 1. No paid ads. Built from scratch with full keyword research and local SEO.",
               },
               {
-                headline: "15 new customers/month",
-                who: "Sarah Chen, Coastal HVAC",
+                headline: "0 to page 1 from scratch",
+                who: "Local Pest Control — Downtown Santa Barbara",
                 quote:
-                  "Best investment we ever made. ROI was positive by month 2.",
-                image:
-                  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
-              },
-              {
-                headline: "#1 for 'auto repair Goleta'",
-                who: "David Rodriguez, Goleta Auto Repair",
-                quote:
-                  "They actually answer the phone and explain what they're doing. Rare these days.",
-                image:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face",
+                  "Started with no website and zero Google visibility. Built everything from the ground up. Now on page 1 for pest control searches in our service area.",
               },
             ].map((testimonial, i) => (
               <Card
