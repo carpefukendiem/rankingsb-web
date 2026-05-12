@@ -481,11 +481,12 @@ export default function HomePage() {
               >
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.who}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-blue-100"
-                    />
+                    <div
+                      aria-hidden
+                      className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-blue-100 bg-slate-50 text-xl font-semibold uppercase text-blue-900/70"
+                    >
+                      {testimonial.headline.slice(0, 1)}
+                    </div>
                     <div className="flex gap-1">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <Star
