@@ -10,6 +10,12 @@
     "autoAlias": true,
     "silent": false
   },
+  "crons": [
+    {
+      "path": "/api/synclocal/cron/verify-all",
+      "schedule": "0 17 1 * *"
+    }
+  ],
   "redirects": [
     { "source": "/local-marketing-services", "destination": "/services", "permanent": true },
     { "source": "/markeing-services",         "destination": "/services", "permanent": true },

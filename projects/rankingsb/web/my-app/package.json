@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.105.4",
     "@vercel/blob": "^2.3.3",
     "axios": "^1.13.5",
     "class-variance-authority": "^0.7.1",
