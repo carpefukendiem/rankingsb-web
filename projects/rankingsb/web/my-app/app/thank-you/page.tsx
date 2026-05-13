@@ -4,56 +4,13 @@ import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Phone, Star, ArrowRight, Clock, Shield, TrendingUp } from "lucide-react"
 import Link from "next/link"
 
+import { THANK_YOU_GOOGLE_REVIEWS } from "./testimonials"
+
 export const metadata: Metadata = {
   title: "Thank You! Your Audit Request Was Received | Ranking SB",
   description: "We received your free SEO audit request and will deliver your results within 24 hours.",
   robots: { index: false, follow: false }, // keep thank-you pages out of Google
 }
-
-const reviews = [
-  {
-    name: "Maria T.",
-    business: "Goleta Family Dental",
-    rating: 5,
-    text: "Within 90 days we went from page 3 to the top 3 on Google Maps. Our new patient calls doubled. Ruben and his team really know what they're doing.",
-    location: "Goleta, CA",
-  },
-  {
-    name: "Jason K.",
-    business: "Pacific Coast Electric",
-    rating: 5,
-    text: "I was skeptical about SEO but the results speak for themselves. We're now ranking #1 for 'electrician Thousand Oaks' and the phone doesn't stop ringing.",
-    location: "Thousand Oaks, CA",
-  },
-  {
-    name: "Sandra R.",
-    business: "Ojai Valley Wellness Spa",
-    rating: 5,
-    text: "Our bookings are up 40% since we started working with Ranking SB. They handled everything — Google profile, reviews, the website. Best marketing investment we've made.",
-    location: "Ojai, CA",
-  },
-  {
-    name: "Mike D.",
-    business: "Santa Barbara Roofing Co.",
-    rating: 5,
-    text: "We used to get 2-3 leads a week from Google. Now we're getting 2-3 a day. The ROI on SEO is insane compared to paid ads.",
-    location: "Santa Barbara, CA",
-  },
-  {
-    name: "Lisa C.",
-    business: "Camarillo Pediatrics",
-    rating: 5,
-    text: "Our practice was invisible online. Now we rank in the top 3 for every relevant search in Camarillo. Our new patient waitlist is 3 weeks long.",
-    location: "Camarillo, CA",
-  },
-  {
-    name: "Carlos M.",
-    business: "Ventura Plumbing Pros",
-    rating: 5,
-    text: "We compete against much bigger companies now and we win because we rank higher. Ranking SB leveled the playing field for us.",
-    location: "Ventura, CA",
-  },
-]
 
 const caseStudies = [
   {
@@ -201,18 +158,31 @@ export default function ThankYouPage() {
             <p className="text-slate-600 mt-2">Real reviews from real business owners across the 805</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-            {reviews.map((review, i) => (
+            {THANK_YOU_GOOGLE_REVIEWS.map((review, i) => (
               <div key={i} className="bg-white rounded-xl p-6 shadow-sm border border-slate-100 flex flex-col">
-                <div className="flex gap-0.5 mb-3">
-                  {[...Array(review.rating)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                  ))}
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    aria-hidden
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-blue-100 bg-slate-50 text-lg font-semibold uppercase text-blue-900/70"
+                  >
+                    {review.name.trim().slice(0, 1)}
+                  </div>
+                  <div className="flex gap-0.5">
+                    {[...Array(review.rating)].map((_, j) => (
+                      <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
                 </div>
-                <p className="text-slate-700 text-sm leading-relaxed flex-1 mb-4">&ldquo;{review.text}&rdquo;</p>
+                {review.featuredHeadline ? (
+                  <p className="text-lg md:text-xl font-bold text-slate-900 leading-snug mb-3">{review.featuredHeadline}</p>
+                ) : null}
+                <p className="text-slate-700 text-sm leading-relaxed flex-1 mb-4">&ldquo;{review.quote}&rdquo;</p>
                 <div className="border-t border-slate-100 pt-4">
                   <div className="font-semibold text-slate-900 text-sm">{review.name}</div>
-                  <div className="text-xs text-slate-500">{review.business}</div>
-                  <div className="text-xs text-blue-600 mt-0.5">{review.location}</div>
+                  {review.business ? <div className="text-xs text-slate-500 mt-0.5">{review.business}</div> : null}
+                  <div className="text-xs text-slate-500 mt-0.5">
+                    {review.source} · {review.date}
+                  </div>
                 </div>
               </div>
             ))}
