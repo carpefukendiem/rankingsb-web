@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Phone, Star, ArrowRight, Clock, Shield, TrendingUp } from "lucide-react"
+import { CheckCircle, Phone, Star, ArrowRight, Clock, Shield } from "lucide-react"
 import Link from "next/link"
 
 import { THANK_YOU_GOOGLE_REVIEWS } from "./testimonials"
@@ -11,39 +11,6 @@ export const metadata: Metadata = {
   description: "We received your free SEO audit request and will deliver your results within 24 hours.",
   robots: { index: false, follow: false }, // keep thank-you pages out of Google
 }
-
-const caseStudies = [
-  {
-    industry: "Home Services",
-    company: "Local Plumbing Company",
-    location: "Ventura, CA",
-    result: "+312% organic traffic",
-    detail: "Went from 47 to 193 monthly website visitors in 4 months",
-    color: "blue",
-    stat: "312%",
-    statLabel: "Traffic increase",
-  },
-  {
-    industry: "Medical",
-    company: "Specialty Medical Practice",
-    location: "Santa Barbara, CA",
-    result: "#1 ranking for 14 keywords",
-    detail: "Fully booked schedule within 60 days of campaign launch",
-    color: "green",
-    stat: "60",
-    statLabel: "Days to full book",
-  },
-  {
-    industry: "Hospitality",
-    company: "Boutique Spa & Wellness",
-    location: "Ojai, CA",
-    result: "+40% monthly bookings",
-    detail: "Local 3-Pack placement driving 20+ new bookings per week",
-    color: "purple",
-    stat: "40%",
-    statLabel: "Booking increase",
-  },
-]
 
 export default function ThankYouPage() {
   return (
@@ -115,36 +82,6 @@ export default function ThankYouPage() {
         </div>
       </section>
 
-      {/* ── Case Studies ─────────────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">Real Results</Badge>
-            <h2 className="text-3xl font-bold text-slate-900">What We Do For Businesses Like Yours</h2>
-            <p className="text-slate-600 mt-3 max-w-xl mx-auto">
-              These are real results from businesses in Santa Barbara and Ventura County.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {caseStudies.map((cs, i) => (
-              <div key={i} className="bg-slate-900 rounded-2xl p-6 text-white">
-                <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">{cs.industry}</div>
-                <div className="text-sm text-slate-300 mb-4">{cs.company} · {cs.location}</div>
-                <div className="text-5xl font-black text-blue-400 mb-1">{cs.stat}</div>
-                <div className="text-sm font-semibold text-slate-300 mb-4">{cs.statLabel}</div>
-                <div className="border-t border-white/10 pt-4">
-                  <div className="flex items-center gap-2 mb-1">
-                    <TrendingUp className="w-4 h-4 text-green-400" />
-                    <span className="text-sm font-semibold text-green-400">{cs.result}</span>
-                  </div>
-                  <p className="text-xs text-slate-400">{cs.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Google Reviews ─────────────────────────────────────── */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -173,10 +110,9 @@ export default function ThankYouPage() {
                     ))}
                   </div>
                 </div>
-                {review.featuredHeadline ? (
-                  <p className="text-lg md:text-xl font-bold text-slate-900 leading-snug mb-3">{review.featuredHeadline}</p>
-                ) : null}
-                <p className="text-slate-700 text-sm leading-relaxed flex-1 mb-4">&ldquo;{review.quote}&rdquo;</p>
+                <p className="text-slate-700 text-sm leading-relaxed flex-1 mb-4 italic">
+                  &ldquo;{review.quote}&rdquo;
+                </p>
                 <div className="border-t border-slate-100 pt-4">
                   <div className="font-semibold text-slate-900 text-sm">{review.name}</div>
                   {review.business ? <div className="text-xs text-slate-500 mt-0.5">{review.business}</div> : null}

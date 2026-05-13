@@ -3,8 +3,6 @@ export type ThankYouGoogleReview = {
   /** Shown below the name when present */
   business?: string
   quote: string
-  /** Lead pull-quote; only Billy uses this */
-  featuredHeadline?: string
   source: string
   date: string
   rating: number
@@ -12,9 +10,8 @@ export type ThankYouGoogleReview = {
 
 export const THANK_YOU_GOOGLE_REVIEWS: ThankYouGoogleReview[] = [
   {
-    featuredHeadline: "A 7,750% boost in my Google Business Profile interactions in one month.",
     quote:
-      "Sounds like some kind of spammy come-on but I dug deeper and, yup, that was the stat. I'm smiling and fielding a minor avalanche of client inquiries. Give Ruben a call and you will not be wasting your time.",
+      "A 7,750% boost in my Google Business Profile interactions in one month. Sounds like some kind of spammy come-on but I dug deeper and, yup, that was the stat. I'm smiling and fielding a minor avalanche of client inquiries. Give Ruben a call and you will not be wasting your time.",
     name: "Billy Goodnick",
     business: "Billy Goodnick Design Co., Santa Barbara",
     source: "Google Review",
@@ -52,6 +49,14 @@ export const THANK_YOU_GOOGLE_REVIEWS: ThankYouGoogleReview[] = [
     business: "Santa Barbara",
     source: "Google Review",
     date: "February 2023",
+    rating: 5,
+  },
+  {
+    quote:
+      'Ruben has provided me tons of value in the online and marketing strategy space, all while remaining incredibly patient. As a more "creative" type, Ruben is the type of person you want to work with. He will spend the time to explain concepts to you and is a very honest and genuine guy you can trust.',
+    name: "Kathryn Arthur",
+    source: "Google Review",
+    date: "March 2018",
     rating: 5,
   },
 ]
