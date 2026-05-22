@@ -3,10 +3,19 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { format, parseISO } from "date-fns"
-import { MoreHorizontal } from "lucide-react"
+import { ExternalLink, MoreHorizontal } from "lucide-react"
 import { toast } from "sonner"
 
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,6 +39,8 @@ type SynclocalMatrixRow = {
   directory: DirectoryRow
 }
 
+type ManualDialogMode = "submitted" | "live"
+
 export function SynclocalDashboard(props: Readonly<{
   businesses: BusinessRow[]
   initialRows: SynclocalMatrixRow[]
@@ -44,6 +55,12 @@ export function SynclocalDashboard(props: Readonly<{
   const [detailRuns, setDetailRuns] = React.useState<VerificationRunRow[]>([])
   const [detailLoading, setDetailLoading] = React.useState(false)
   const [notesDraft, setNotesDraft] = React.useState("")
+  const [manualDialog, setManualDialog] = React.useState<{
+    row: SynclocalMatrixRow
+    mode: ManualDialogMode
+  } | null>(null)
+  const [manualListingUrl, setManualListingUrl] = React.useState("")
+  const [manualSubmitting, setManualSubmitting] = React.useState(false)
 
   React.useEffect(() => {
     if (!activeRow) return
@@ -86,11 +103,17 @@ export function SynclocalDashboard(props: Readonly<{
     if (status === "live") {
       return <Badge className="bg-emerald-600 text-white hover:bg-emerald-600/90">Live</Badge>
     }
+    if (status === "submitted") {
+      return <Badge className="bg-amber-400 text-zinc-900 hover:bg-amber-400/90">Submitted</Badge>
+    }
     if (status === "pending" || status === "needs_update") {
       return <Badge className="bg-amber-400 text-zinc-900 hover:bg-amber-400/90">Pending</Badge>
     }
     if (status === "discrepancy" || status === "rejected") {
       return <Badge variant="destructive">Issue</Badge>
+    }
+    if (status === "not_submitted") {
+      return <Badge variant="secondary">Not Submitted</Badge>
     }
     return <Badge variant="secondary">Queued</Badge>
   }
@@ -146,21 +169,58 @@ export function SynclocalDashboard(props: Readonly<{
     router.refresh()
   }
 
-  async function markManual(row: SynclocalMatrixRow) {
-    const urlInput = typeof window !== "undefined" ? window.prompt("Optional live listing URL (leave blank to fill later):") : null
-    const payload: Record<string, string> = { status: "live" }
-    if (urlInput) payload.listing_url = urlInput
-    const res = await fetch(`/api/synclocal/listings/${row.listing.id}`, {
+  function openManualDialog(row: SynclocalMatrixRow, mode: ManualDialogMode) {
+    setManualDialog({ row, mode })
+    setManualListingUrl(row.listing.listing_url ?? "")
+  }
+
+  async function patchManualStatus(
+    listingId: string,
+    payload: { status: ManualDialogMode | "not_submitted"; listing_url?: string | null }
+  ) {
+    const res = await fetch(`/api/synclocal/listings/${listingId}/manual-status`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     })
     const data = await res.json()
-    if (!data.success) {
-      toast.error("Could not mark listing live")
+    if (!res.ok || !data.success) throw new Error(data.error ?? "Manual status update failed")
+    return data.listing as ListingRow
+  }
+
+  async function submitManualDialog() {
+    if (!manualDialog) return
+    setManualSubmitting(true)
+    try {
+      const trimmedUrl = manualListingUrl.trim()
+      await patchManualStatus(manualDialog.row.listing.id, {
+        status: manualDialog.mode,
+        ...(trimmedUrl ? { listing_url: trimmedUrl } : {}),
+      })
+      toast.success(manualDialog.mode === "live" ? "Marked live" : "Marked submitted")
+      setManualDialog(null)
+      setManualListingUrl("")
+      router.refresh()
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : "Manual status update failed")
+    } finally {
+      setManualSubmitting(false)
+    }
+  }
+
+  async function resetManualStatus(row: SynclocalMatrixRow) {
+    const confirmed =
+      typeof window !== "undefined"
+        ? window.confirm("Reset this listing to Not Submitted? Any captured URL and timestamps will be cleared.")
+        : false
+    if (!confirmed) return
+    try {
+      await patchManualStatus(row.listing.id, { status: "not_submitted" })
+      toast.success("Reset to not submitted")
+    } catch (e) {
+      toast.error(e instanceof Error ? e.message : "Could not reset listing")
       return
     }
-    toast.success("Marked as manually submitted")
     router.refresh()
   }
 
@@ -224,6 +284,8 @@ export function SynclocalDashboard(props: Readonly<{
             <TableHead>Directory</TableHead>
             <TableHead>Status</TableHead>
             <TableHead>Tier</TableHead>
+            <TableHead className="w-12 text-center">Submit</TableHead>
+            <TableHead className="w-12 text-center">Login</TableHead>
             <TableHead>Last verified</TableHead>
             <TableHead>Listing URL</TableHead>
             <TableHead className="w-[70px] text-right">Actions</TableHead>
@@ -239,6 +301,18 @@ export function SynclocalDashboard(props: Readonly<{
               <TableCell className="font-medium">{row.directory.name}</TableCell>
               <TableCell>{statusBadge(row.listing.status)}</TableCell>
               <TableCell>{tierLabel(row.directory)}</TableCell>
+              <TableCell className="w-12 text-center" onClick={(e) => e.stopPropagation()}>
+                <DirectoryUrlIconLink
+                  url={row.directory.submission_url}
+                  label={`Open submission URL for ${row.directory.name}`}
+                />
+              </TableCell>
+              <TableCell className="w-12 text-center" onClick={(e) => e.stopPropagation()}>
+                <DirectoryUrlIconLink
+                  url={row.directory.login_url}
+                  label={`Open login URL for ${row.directory.name}`}
+                />
+              </TableCell>
               <TableCell className="text-muted-foreground">
                 {row.listing.last_verified_at
                   ? format(parseISO(row.listing.last_verified_at), "MMM d, yyyy")
@@ -275,7 +349,13 @@ export function SynclocalDashboard(props: Readonly<{
                     >
                       Edit notes…
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => markManual(row)}>Mark manually submitted</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => openManualDialog(row, "submitted")}>Mark Submitted</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => openManualDialog(row, "live")}>Mark Live</DropdownMenuItem>
+                    {row.listing.status !== "not_submitted" ? (
+                      <DropdownMenuItem variant="destructive" onClick={() => resetManualStatus(row)}>
+                        Reset to Not Submitted
+                      </DropdownMenuItem>
+                    ) : null}
                   </DropdownMenuContent>
                 </DropdownMenu>
               </TableCell>
@@ -369,6 +449,22 @@ export function SynclocalDashboard(props: Readonly<{
           ) : null}
         </SheetContent>
       </Sheet>
+
+      <ManualStatusDialog
+        mode={manualDialog?.mode ?? "submitted"}
+        directoryName={manualDialog?.row.directory.name ?? ""}
+        listingUrl={manualListingUrl}
+        submitting={manualSubmitting}
+        open={Boolean(manualDialog)}
+        onOpenChange={(open) => {
+          if (!open && !manualSubmitting) {
+            setManualDialog(null)
+            setManualListingUrl("")
+          }
+        }}
+        onListingUrlChange={setManualListingUrl}
+        onSubmit={submitManualDialog}
+      />
     </div>
   )
 }
@@ -379,6 +475,79 @@ function SummaryCard({ label, value }: Readonly<{ label: string; value: string }
       <div className="text-xs uppercase text-muted-foreground">{label}</div>
       <div className="text-lg font-semibold">{value}</div>
     </div>
+  )
+}
+
+function DirectoryUrlIconLink({ url, label }: Readonly<{ url: string | null; label: string }>) {
+  if (!url) return <span className="text-muted-foreground">—</span>
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className="inline-flex size-8 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+    >
+      <ExternalLink className="size-4" />
+    </a>
+  )
+}
+
+function ManualStatusDialog({
+  mode,
+  directoryName,
+  listingUrl,
+  submitting,
+  open,
+  onOpenChange,
+  onListingUrlChange,
+  onSubmit,
+}: Readonly<{
+  mode: ManualDialogMode
+  directoryName: string
+  listingUrl: string
+  submitting: boolean
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  onListingUrlChange: (url: string) => void
+  onSubmit: () => void
+}>) {
+  const isLive = mode === "live"
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{isLive ? "Mark Live" : "Mark Submitted"}</DialogTitle>
+          <DialogDescription>
+            {directoryName ? `${directoryName} will be marked ${isLive ? "live" : "submitted"}.` : null}
+          </DialogDescription>
+        </DialogHeader>
+        <label className="grid gap-2 text-sm font-medium">
+          Listing URL (optional)
+          <input
+            className="rounded border px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900"
+            placeholder="https://..."
+            value={listingUrl}
+            onChange={(event) => onListingUrlChange(event.target.value)}
+          />
+          <span className="text-xs font-normal text-muted-foreground">
+            {isLive
+              ? "What URL is the live listing at?"
+              : "If the directory showed you a URL after submission, paste it here. You can fill this in later."}
+          </span>
+        </label>
+        <DialogFooter>
+          <Button type="button" variant="outline" disabled={submitting} onClick={() => onOpenChange(false)}>
+            Cancel
+          </Button>
+          <Button type="button" disabled={submitting} onClick={onSubmit}>
+            {submitting ? "Saving..." : isLive ? "Mark Live" : "Mark Submitted"}
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   )
 }
 
