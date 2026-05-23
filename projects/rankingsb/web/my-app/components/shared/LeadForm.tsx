@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -26,10 +26,14 @@ export function LeadForm({
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
-  const [mountTime, setMountTime] = useState<number | null>(null)
+  const [mountTime, setMountTime] = useState("")
 
   useEffect(() => {
-    setMountTime(Date.now())
+    const timer = window.setTimeout(() => {
+      setMountTime(String(Date.now()))
+    }, 0)
+
+    return () => window.clearTimeout(timer)
   }, [])
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -40,7 +44,7 @@ export function LeadForm({
     const form = e.currentTarget
     const data = Object.fromEntries(new FormData(form))
     data.source = source
-    data._t = mountTime ? String(mountTime) : ""
+    data._t = mountTime
 
     try {
       await fetch("/api/contact", {

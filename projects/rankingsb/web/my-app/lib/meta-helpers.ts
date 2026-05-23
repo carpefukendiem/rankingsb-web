@@ -14,7 +14,7 @@ export function truncateMetaTitle(title: string, maxLen = 70): string {
 
 /** Normalize meta description to roughly 150–160 characters. */
 export function clampMetaDescription(raw: string, minLen = 150, maxLen = 160): string {
-  let s = raw.trim().replace(/\s+/g, " ")
+  const s = raw.trim().replace(/\s+/g, " ")
   if (s.length > maxLen) {
     let cut = s.slice(0, maxLen - 3)
     const sp = cut.lastIndexOf(" ")

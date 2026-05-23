@@ -51,8 +51,16 @@ const venturaCounty = [
 export default function LocationsPage() {
   return (
     <main className="min-h-screen">
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative py-20 lg:py-32 overflow-hidden text-white">
+        <div className="absolute inset-0">
+          <img
+            src="/images/local-seo-for-the-whole-805.png"
+            alt="Local SEO services across the entire 805 region — Santa Barbara County, San Luis Obispo County, and Ventura County"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="hero-overlay absolute inset-0" />
+        </div>
+        <div className="container relative mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
             <MapPin className="w-4 h-4 text-blue-400" />
             <span className="text-sm text-white/90">Serving Santa Barbara & Ventura Counties</span>

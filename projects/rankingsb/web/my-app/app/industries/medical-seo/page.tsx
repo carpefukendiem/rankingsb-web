@@ -20,10 +20,10 @@ export default function MedicalSEOPage() {
         <img
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&auto=format&fit=crop&q=70"
           alt="medical professionals"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-slate-900/60" />
+        <div className="hero-overlay absolute inset-0" />
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">

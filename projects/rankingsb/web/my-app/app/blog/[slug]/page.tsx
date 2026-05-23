@@ -106,8 +106,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <main className="min-h-screen">
         <section className="relative py-20 lg:py-28 overflow-hidden">
           <div className="absolute inset-0">
-            <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
+            <img src={post.image} alt={post.title} className="w-full h-full object-cover object-center" />
+            <div className="hero-overlay absolute inset-0" />
           </div>
           <div className="container relative mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -219,9 +219,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <img
             src={frontmatter.image}
             alt={frontmatter.h1}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
+          <div className="hero-overlay absolute inset-0" />
         </div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto">

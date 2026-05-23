@@ -54,7 +54,7 @@ export default async function SynclocalAdminPage({
   const businesses = ((businessRows ?? []) as unknown as BusinessRow[]).slice()
 
   const preferredId = sp.biz
-  let defaultBiz =
+  const defaultBiz =
     (preferredId ? businesses.find((b) => b.id === preferredId) : undefined) ??
     businesses.find((b) => b.id === "b0000000-0000-4000-8000-000000000001") ??
     businesses[0]

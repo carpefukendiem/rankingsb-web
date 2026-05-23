@@ -41,9 +41,9 @@ export default function FreeAuditPage() {
           <img
             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop"
             alt="SEO analytics dashboard"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-blue-900/90 to-slate-900/95" />
+          <div className="hero-overlay absolute inset-0" />
         </div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-5xl mx-auto">

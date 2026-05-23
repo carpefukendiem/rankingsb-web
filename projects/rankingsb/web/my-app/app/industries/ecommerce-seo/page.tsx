@@ -23,10 +23,10 @@ export default function EcommerceSEOPage() {
           <img 
             src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1920&h=1080&fit=crop"
             alt="E-commerce store"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-purple-900/80 to-slate-900/90" />
+        <div className="hero-overlay absolute inset-0" />
         
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

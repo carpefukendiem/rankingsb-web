@@ -23,10 +23,10 @@ export default function RestaurantSEOPage() {
           <img 
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop"
             alt="Restaurant interior"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-rose-900/80 to-slate-900/90" />
+        <div className="hero-overlay absolute inset-0" />
         
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

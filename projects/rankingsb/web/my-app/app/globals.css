@@ -125,3 +125,14 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(15, 26, 46, 0.70) 0%,
+      rgba(15, 26, 46, 0.45) 55%,
+      rgba(15, 26, 46, 0.25) 100%
+    );
+  }
+}

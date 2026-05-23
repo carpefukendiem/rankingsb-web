@@ -51,7 +51,7 @@ const posts: Record<string, BlogPost> = {
     readTime: "12 min read",
     author: "Ruben",
     authorTitle: "Founder, Ranking SB",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=600&fit=crop",
+    image: "/images/local-marketing-experts.png",
     tags: ["Santa Barbara", "Local SEO", "Google Maps", "Small Business"],
     relatedSlugs: ["google-business-profile-guide", "google-maps-ranking", "get-more-reviews"],
     content: `

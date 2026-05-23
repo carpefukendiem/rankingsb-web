@@ -21,9 +21,9 @@ export default function WinerySEOPage() {
           <img
             src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&h=1080&fit=crop"
             alt="Santa Barbara wine country winery"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/85 to-slate-900/95" />
+          <div className="hero-overlay absolute inset-0" />
         </div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

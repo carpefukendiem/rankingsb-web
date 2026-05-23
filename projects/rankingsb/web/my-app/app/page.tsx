@@ -39,11 +39,11 @@ export default function HomePage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&h=1080&fit=crop"
-            alt="Santa Barbara coastline - local SEO services for California businesses"
-            className="w-full h-full object-cover"
+            src="/images/local-marketing-experts.png"
+            alt="Ranking SB local marketing experts serving Santa Barbara and Ventura County small businesses"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-blue-900/95" />
+          <div className="hero-overlay absolute inset-0" />
         </div>
 
         <div className="container relative mx-auto px-4">
@@ -100,12 +100,12 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      <section className="py-12 bg-white border-b">
+      <section className="py-12 bg-slate-950 border-b border-slate-800">
         <div className="container mx-auto px-4">
-          <p className="text-center text-sm text-slate-500 mb-8 uppercase tracking-wider">
+          <p className="text-center text-sm font-semibold text-white mb-8 uppercase tracking-wider">
             Trusted by local businesses across the 805
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
             {[
               "Fred's Upholstery",
               "Enso MMA",
@@ -115,7 +115,7 @@ export default function HomePage() {
             ].map((client) => (
               <div
                 key={client}
-                className="text-lg font-semibold text-slate-400"
+                className="text-lg font-semibold tracking-wide text-white"
               >
                 {client}
               </div>

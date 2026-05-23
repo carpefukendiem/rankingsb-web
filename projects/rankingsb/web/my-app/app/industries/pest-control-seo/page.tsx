@@ -21,9 +21,9 @@ export default function PestControlSEOPage() {
           <img
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
             alt="Pest control SEO Santa Barbara"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-green-900/95 via-slate-900/95 to-emerald-900/90" />
+          <div className="hero-overlay absolute inset-0" />
         </div>
         <div className="container relative mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

@@ -250,13 +250,12 @@ export default function UnicoGraphicRequestsPage() {
           className="pointer-events-none absolute inset-0 bg-cover bg-no-repeat"
           style={{
             backgroundImage: "url(/images/unico-bg.jpeg)",
-            backgroundPosition: "center 42%",
+            backgroundPosition: "center",
           }}
           aria-hidden
         />
-        {/* Light tint so hero copy stays readable over the club banner art */}
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#0047AB]/58 via-[#003380]/62 to-[#001a4d]/72"
+          className="hero-overlay pointer-events-none absolute inset-0"
           aria-hidden
         />
         <div className="container relative z-10 mx-auto flex min-h-[min(52vh,540px)] max-w-5xl flex-col justify-center px-4 py-14 md:min-h-[min(56vh,600px)] md:py-16 lg:py-20">
