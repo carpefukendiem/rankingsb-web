@@ -7,11 +7,14 @@ import Link from "next/link"
 import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = industrySeoMetadata({
-  industryLabel: "Winery & Wine Bar",
-  outcome: "Bookings",
-  descIndustryPhrase: "wineries and wine bars",
-})
+export const metadata: Metadata = {
+  ...industrySeoMetadata({
+    industryLabel: "Winery & Wine Bar",
+    outcome: "Bookings",
+    descIndustryPhrase: "wineries and wine bars",
+  }),
+  title: { absolute: "Winery SEO Santa Barbara | Ranking SB" },
+}
 
 export default function WinerySEOPage() {
   return (

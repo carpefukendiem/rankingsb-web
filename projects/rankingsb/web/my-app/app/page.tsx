@@ -25,7 +25,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Stop Losing Calls to Competitors | Ranking SB 805",
+    absolute: "Santa Barbara SEO & Local Marketing Agency | Ranking SB",
   },
   description: clampMetaDescription(
     "Your competitor is getting calls that should be yours. We fix it — ranked website, automated follow-up, 90-day guarantee. From $3,000. Free audit in 24 hrs. Santa Barbara & Ventura County."

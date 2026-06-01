@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services San Luis Obispo | Expand Your Reach to SLO County | Ranking SB"
+titleTag: "SEO Services San Luis Obispo CA | Ranking SB"
 metaDescription: "Local SEO for San Luis Obispo and SLO County businesses. Rank higher on Google in the Central Coast's most competitive market north of Santa Barbara. Free audit available."
 h1: "SEO Services San Luis Obispo — Rank #1 in SLO County"
 heroBadge: "Local SEO"

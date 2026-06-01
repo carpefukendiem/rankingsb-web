@@ -1,5 +1,5 @@
 ---
-titleTag: "Long-Tail SEO: Why \"Best Plumber Santa Barbara\" Beats \"Plumber\" | Ranking SB"
+titleTag: "Long-Tail SEO for Local Businesses | Ranking SB"
 metaDescription: "Short keywords are crowded. Long-tail keywords convert better and rank faster. Here's how Central Coast businesses can use long-tail SEO to win more customers."
 h1: "Long-Tail SEO: Why \"Best Plumber Santa Barbara\" Beats \"Plumber\""
 category: "Local SEO"

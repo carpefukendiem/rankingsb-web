@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2, Code2, MapPin, Phone, Search, Smartphone, Tar
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Website Design Santa Barbara | SEO-Optimized Websites | Ranking SB",
+  title: { absolute: "Website Design Santa Barbara | Ranking SB" },
   description: "Beautiful, fast, SEO-ready websites for Santa Barbara and Ventura County businesses. Every site built to rank and convert from day one.",
   keywords: ["website design Santa Barbara", "web design Ventura County", "SEO website Santa Barbara", "local business website design"],
 }

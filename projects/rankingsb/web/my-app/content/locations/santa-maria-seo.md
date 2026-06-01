@@ -1,5 +1,5 @@
 ---
-titleTag: "SEO Services Santa Maria CA | Local SEO for Santa Barbara County's Largest City | Ranking SB"
+titleTag: "SEO Services Santa Maria CA | Ranking SB"
 metaDescription: "Local SEO for Santa Maria businesses. Get found on Google in Santa Barbara County's largest city. Free SEO audit for Santa Maria and the Santa Maria Valley."
 h1: "SEO Services Santa Maria CA — Rank #1 on Google in Santa Barbara County's Largest City"
 heroBadge: "Local SEO"
