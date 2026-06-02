@@ -17,6 +17,12 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "rankingsb.com" }],
+      "destination": "https://www.rankingsb.com/:path*",
+      "permanent": true
+    },
     { "source": "/local-marketing-services", "destination": "/services", "permanent": true },
     { "source": "/markeing-services",         "destination": "/services", "permanent": true },
     { "source": "/local-business-websites",   "destination": "/services/website-design", "permanent": true },

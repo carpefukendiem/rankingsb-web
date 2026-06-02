@@ -1,5 +1,4 @@
 import {
-  BUSINESS_AGGREGATE_RATING,
   BUSINESS_AREA_SERVED,
   BUSINESS_EMAIL,
   BUSINESS_GEO,
@@ -27,7 +26,6 @@ export function buildOrganizationSchemaNode() {
     geo: BUSINESS_GEO,
     priceRange: "$$",
     areaServed: BUSINESS_AREA_SERVED,
-    aggregateRating: BUSINESS_AGGREGATE_RATING,
     sameAs: [...BUSINESS_SAME_AS],
     openingHoursSpecification: [
       {

@@ -1,4 +1,4 @@
-import { SITE_URL, siteUrl } from "@/lib/site-url"
+import { SITE_URL } from "@/lib/site-url"
 
 /** Display + schema: must match Google Business Profile exactly. */
 export const BUSINESS_NAME_GBP =
@@ -45,15 +45,6 @@ export const BUSINESS_SAME_AS = [
   "https://www.facebook.com/rankingsb",
   "https://www.linkedin.com/company/ranking-sb",
 ] as const
-
-/** Google aggregate rating — update when GBP totals change. */
-export const BUSINESS_AGGREGATE_RATING = {
-  "@type": "AggregateRating" as const,
-  ratingValue: "5.0",
-  reviewCount: "17",
-  bestRating: "5",
-  worstRating: "1",
-}
 
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`
 export const WEBSITE_ID = `${SITE_URL}/#website`
