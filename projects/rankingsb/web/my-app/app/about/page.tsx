@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { BUSINESS_ADDRESS_FULL } from "@/lib/business-identity"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Phone, Award, Users, Target, Link2 } from "lucide-react"
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
   description: clampMetaDescription(
     "We're the 805 team that builds the system your competitors don't have yet. Ranked websites + automated follow-up. Local, accountable, guaranteed."
   ),
+  ...pageCanonicalMetadata("/about"),
 }
 
 export default function AboutPage() {
@@ -231,11 +234,7 @@ export default function AboutPage() {
                 <MapPin className="w-5 h-5 text-blue-600 mt-1" />
                 <div>
                   <div className="font-medium">Address</div>
-                  <div className="text-slate-600">
-                    10 E. Yanonali Street Suite 150
-                    <br />
-                    Santa Barbara, CA 93101
-                  </div>
+                  <div className="text-slate-600">{BUSINESS_ADDRESS_FULL}</div>
                 </div>
               </div>
               <div className="flex items-start gap-3 mb-4">

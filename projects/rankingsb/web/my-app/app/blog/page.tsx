@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     "Free local SEO guides for Santa Barbara and Ventura County businesses. Learn how to rank on Google and get more calls — from the 805 Growth Engine team."
   ),
   keywords: ["local SEO blog", "Santa Barbara SEO tips", "Ventura County marketing", "Google ranking tips"],
+  ...pageCanonicalMetadata("/blog"),
 }
 
 function seoBlogCards() {

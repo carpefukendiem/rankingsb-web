@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Content Marketing Santa Barbara | Ranking SB" },
   description: "SEO-driven content marketing that ranks and converts. Blog posts, service pages, and local content for Santa Barbara and Ventura County businesses.",
   keywords: ["content marketing Santa Barbara", "SEO content writing", "local content strategy", "blog SEO Santa Barbara"],
+  ...pageCanonicalMetadata("/services/content-marketing"),
 }
 
 export default function ContentMarketingPage() {

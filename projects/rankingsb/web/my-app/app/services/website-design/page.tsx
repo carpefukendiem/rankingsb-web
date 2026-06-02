@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRight, CheckCircle2, Code2, MapPin, Phone, Search, Smartphone, Target, XCircle, Zap } from "lucide-react"
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   title: { absolute: "Website Design Santa Barbara | Ranking SB" },
   description: "Beautiful, fast, SEO-ready websites for Santa Barbara and Ventura County businesses. Every site built to rank and convert from day one.",
   keywords: ["website design Santa Barbara", "web design Ventura County", "SEO website Santa Barbara", "local business website design"],
+  ...pageCanonicalMetadata("/services/website-design"),
 }
 
 export default function WebsiteDesignPage() {

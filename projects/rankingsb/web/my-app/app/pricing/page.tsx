@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { buildOrganizationSchemaNode } from "@/lib/local-business-schema"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
     "local SEO cost Ventura County",
     "Ranking SB pricing",
   ],
+  ...pageCanonicalMetadata("/pricing"),
 }
 
 const addOns = [
@@ -136,31 +139,7 @@ const pricingSchema = {
         },
       ],
     },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://www.rankingsb.com/#organization",
-      name: "Ranking SB",
-      url: "https://www.rankingsb.com",
-      telephone: "+18053077600",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.rankingsb.com/logo.png",
-      },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "10 E. Yanonali Street Suite 150",
-        addressLocality: "Santa Barbara",
-        addressRegion: "CA",
-        postalCode: "93101",
-        addressCountry: "US",
-      },
-      priceRange: "$$",
-      areaServed: [
-        { "@type": "City", name: "Santa Barbara" },
-        { "@type": "City", name: "Ventura" },
-        { "@type": "State", name: "California" },
-      ],
-    },
+    buildOrganizationSchemaNode(),
   ],
 }
 

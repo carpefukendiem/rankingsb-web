@@ -1,5 +1,7 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { buildOrganizationSchemaNode } from "@/lib/local-business-schema"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
   description: clampMetaDescription(
     "9 tools in one dashboard. AI answers calls, texts every lead in 60 sec, books appointments, sends reviews automatically. Included in the 805 Growth Engine."
   ),
+  ...pageCanonicalMetadata("/ranking-app"),
 }
 
 const comparisonRows: [string, string][] = [
@@ -235,21 +238,7 @@ const rankingAppSchema = {
         },
       ],
     },
-    {
-      "@type": "LocalBusiness",
-      "@id": "https://www.rankingsb.com/#organization",
-      name: "Ranking SB",
-      url: "https://www.rankingsb.com",
-      telephone: "+18053077600",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "10 E. Yanonali Street Suite 150",
-        addressLocality: "Santa Barbara",
-        addressRegion: "CA",
-        postalCode: "93101",
-        addressCountry: "US",
-      },
-    },
+    buildOrganizationSchemaNode(),
   ],
 }
 

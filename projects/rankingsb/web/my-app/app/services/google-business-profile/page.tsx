@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Google Business Profile Setup | Ranking SB" },
   description: "Rank higher on Google Maps and the local 3-Pack with expert Google Business Profile optimization. Santa Barbara and Ventura County businesses get more calls.",
   keywords: ["Google Business Profile Santa Barbara", "Google My Business optimization", "Google Maps ranking Santa Barbara", "local 3-pack SEO"],
+  ...pageCanonicalMetadata("/services/google-business-profile"),
 }
 
 const features = [

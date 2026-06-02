@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -23,13 +24,21 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 
+const HOME_TITLE = "Santa Barbara SEO & Local Marketing Agency | Ranking SB"
+const homeCanonical = pageCanonicalMetadata("/")
+
 export const metadata: Metadata = {
   title: {
-    absolute: "Santa Barbara SEO & Local Marketing Agency | Ranking SB",
+    absolute: HOME_TITLE,
   },
   description: clampMetaDescription(
     "Your competitor is getting calls that should be yours. We fix it — ranked website, automated follow-up, 90-day guarantee. From $3,000. Free audit in 24 hrs. Santa Barbara & Ventura County."
   ),
+  ...homeCanonical,
+  openGraph: {
+    ...homeCanonical.openGraph,
+    title: HOME_TITLE,
+  },
 }
 
 export default function HomePage() {

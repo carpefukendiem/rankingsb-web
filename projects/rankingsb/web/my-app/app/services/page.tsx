@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
   description: clampMetaDescription(
     "Custom website built to rank + AI automation that follows up every lead in minutes. $3,000–$5,000 setup. $250/month. No contracts. No hidden fees."
   ),
+  ...pageCanonicalMetadata("/services"),
 }
 
 const pillar1Bullets = [

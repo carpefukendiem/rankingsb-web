@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: "Google Ads & PPC Management Santa Barbara | Ranking SB",
   description: "Get immediate leads with expertly managed Google Ads campaigns. PPC management for Santa Barbara and Ventura County businesses that delivers ROI.",
   keywords: ["Google Ads Santa Barbara", "PPC management Santa Barbara", "pay per click Santa Barbara", "Google advertising Ventura County"],
+  ...pageCanonicalMetadata("/services/ppc-google-ads"),
 }
 
 export default function PPCPage() {

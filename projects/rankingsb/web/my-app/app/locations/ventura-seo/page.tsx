@@ -7,7 +7,7 @@ import Link from "next/link"
 import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = locationSeoMetadata("Ventura")
+export const metadata: Metadata = locationSeoMetadata("Ventura", "/locations/ventura-seo")
 
 export default function VenturaSEOPage() {
   return (

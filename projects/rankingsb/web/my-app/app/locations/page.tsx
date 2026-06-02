@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     "Local SEO for every city in the 805 — Santa Barbara to Ventura and Oxnard. Pick your market, get a free growth audit, and see the path to page 1 in 90 days."
   ),
   keywords: ["SEO services Santa Barbara County", "SEO Ventura County", "local SEO 805", "digital marketing Santa Barbara Ventura"],
+  ...pageCanonicalMetadata("/locations"),
 }
 
 const sbCounty = [

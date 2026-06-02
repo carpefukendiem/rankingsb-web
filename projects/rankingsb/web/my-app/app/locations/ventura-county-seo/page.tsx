@@ -7,7 +7,7 @@ import { CheckCircle, Phone, ArrowRight, MapPin, Waves, Building2, Star, Search,
 import Link from "next/link"
 import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = locationSeoMetadata("Ventura County")
+export const metadata: Metadata = locationSeoMetadata("Ventura County", "/locations/ventura-county-seo")
 
 export default function VenturaCountySEOPage() {
   return (

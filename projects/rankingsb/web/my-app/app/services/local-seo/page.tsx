@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Local SEO Services Santa Barbara | Ranking SB" },
   description: "Dominate local Google search results in Santa Barbara and Ventura County. Our local SEO services get your business to page 1 in 90 days. Free audit included.",
   keywords: ["local SEO Santa Barbara", "local SEO services", "local search optimization", "Google Maps SEO Santa Barbara", "local SEO agency"],
+  ...pageCanonicalMetadata("/services/local-seo"),
 }
 
 const steps = [

@@ -8,6 +8,7 @@ import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
 export const metadata: Metadata = industrySeoMetadata({
+    canonicalPath: "/industries/pest-control-seo",
   industryLabel: "Pest Control",
   outcome: "Jobs",
   descIndustryPhrase: "pest control companies",

@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Technical SEO Services Santa Barbara | Ranking SB" },
   description: "Fix the technical issues holding your website back from ranking. Expert technical SEO for Santa Barbara and Ventura County businesses.",
   keywords: ["technical SEO Santa Barbara", "website speed optimization", "Core Web Vitals", "site audit Santa Barbara"],
+  ...pageCanonicalMetadata("/services/technical-seo"),
 }
 
 export default function TechnicalSEOPage() {

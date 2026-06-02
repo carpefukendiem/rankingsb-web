@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://rankingsb.com/sitemap.xml",
-    host: "https://rankingsb.com",
+    sitemap: "https://www.rankingsb.com/sitemap.xml",
+    host: "https://www.rankingsb.com",
   }
 }

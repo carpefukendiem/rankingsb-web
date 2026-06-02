@@ -1,5 +1,11 @@
 import Link from "next/link"
 import { Phone, Mail, MapPin } from "lucide-react"
+import {
+  BUSINESS_ADDRESS_FULL,
+  BUSINESS_EMAIL,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "@/lib/business-identity"
 
 export function Footer() {
   return (
@@ -18,15 +24,15 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-3 text-slate-400">
                 <MapPin className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>10 E. Yanonali Street Suite 150, Santa Barbara, CA 93101</span>
+                <span>{BUSINESS_ADDRESS_FULL}</span>
               </div>
               <div className="flex items-center gap-3 text-slate-400">
                 <Phone className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="tel:8053077600" className="hover:text-white transition-colors">(805) 307-7600</a>
+                <a href={`tel:${BUSINESS_PHONE_TEL}`} className="hover:text-white transition-colors">{BUSINESS_PHONE_DISPLAY}</a>
               </div>
               <div className="flex items-center gap-3 text-slate-400">
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <a href="mailto:hello@rankingsb.com" className="hover:text-white transition-colors">hello@rankingsb.com</a>
+                <a href={`mailto:${BUSINESS_EMAIL}`} className="hover:text-white transition-colors">{BUSINESS_EMAIL}</a>
               </div>
             </div>
           </div>

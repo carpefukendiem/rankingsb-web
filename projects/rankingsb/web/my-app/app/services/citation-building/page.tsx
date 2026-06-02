@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: { absolute: "Citation Building Services | Ranking SB" },
   description: "Build consistent business citations across 40+ directories to boost local SEO rankings in Santa Barbara and Ventura County. Improve your NAP consistency.",
   keywords: ["citation building Santa Barbara", "local citations", "business directory listings", "NAP consistency", "local SEO citations"],
+  ...pageCanonicalMetadata("/services/citation-building"),
 }
 
 const directories = [

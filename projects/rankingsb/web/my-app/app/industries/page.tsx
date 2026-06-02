@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
   description: clampMetaDescription(
     "Specialized local SEO for contractors, pros, and storefronts across Santa Barbara and Ventura County — HVAC, legal, dental, restaurants, and more. Free audit in 24 hrs."
   ),
+  ...pageCanonicalMetadata("/industries"),
 }
 
 const industries = [

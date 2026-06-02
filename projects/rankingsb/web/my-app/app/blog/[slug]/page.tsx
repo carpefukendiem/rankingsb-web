@@ -18,7 +18,7 @@ import {
   truncateMetaTitle,
 } from "@/lib/meta-helpers"
 
-const BASE = "https://rankingsb.com"
+import { siteUrl } from "@/lib/site-url"
 
 export async function generateStaticParams() {
   const seo = getSeoBlogSlugs().map((slug) => ({ slug }))
@@ -34,7 +34,7 @@ export async function generateMetadata({
   const { slug } = await params
   const legacy = legacyBlogPosts[slug]
   if (legacy) {
-    const canonical = `${BASE}/blog/${slug}`
+    const canonical = siteUrl(`/blog/${slug}`)
     return {
       title: { absolute: blogPostBrowserTitle(legacy.title) },
       description: blogPostMetaDescription(legacy.excerpt),
@@ -52,7 +52,7 @@ export async function generateMetadata({
   const md = loadSeoBlogPost(slug)
   if (!md) return { title: "Blog Post Not Found | Ranking SB" }
   const { frontmatter } = md
-  const canonical = `${BASE}/blog/${slug}`
+  const canonical = siteUrl(`/blog/${slug}`)
   const titleAbs = truncateMetaTitle(frontmatter.titleTag, 70)
   const desc = blogPostMetaDescription(frontmatter.metaDescription)
   return {

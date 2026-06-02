@@ -3,7 +3,7 @@ import { compareCanonicalToScraped } from "./verification"
 import type { BusinessRow } from "./types"
 
 const UA =
-  "Mozilla/5.0 (compatible; SyncLocal/1.0; +https://rankingsb.com) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+  "Mozilla/5.0 (compatible; SyncLocal/1.0; +https://www.rankingsb.com) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
 
 export type VerifyFetchResult =
   | { ok: true; html: string }

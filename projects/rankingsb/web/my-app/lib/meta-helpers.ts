@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 
 const BLOG_TITLE_SUFFIX = " | Ranking SB"
 
@@ -47,7 +48,7 @@ export function blogPostMetaDescription(excerpt: string): string {
   return clampMetaDescription(excerpt)
 }
 
-export function locationSeoMetadata(cityDisplay: string): Metadata {
+export function locationSeoMetadata(cityDisplay: string, canonicalPath: string): Metadata {
   const mid = cityDisplay.includes("County") ? cityDisplay : `${cityDisplay} CA`
   const rawTitle = `SEO Services ${mid} — Rank #1 on Google | Ranking SB`
   const title = truncateMetaTitle(rawTitle, 70)
@@ -55,6 +56,7 @@ export function locationSeoMetadata(cityDisplay: string): Metadata {
   return {
     title: { absolute: title },
     description: clampMetaDescription(rawDesc),
+    ...pageCanonicalMetadata(canonicalPath),
   }
 }
 
@@ -62,6 +64,7 @@ export function industrySeoMetadata(opts: {
   industryLabel: string
   outcome: string
   descIndustryPhrase: string
+  canonicalPath: string
 }): Metadata {
   const rawTitle = `${opts.industryLabel} SEO Santa Barbara — Get More ${opts.outcome} | Ranking SB`
   const title = truncateMetaTitle(rawTitle, 70)
@@ -69,5 +72,6 @@ export function industrySeoMetadata(opts: {
   return {
     title: { absolute: title },
     description: clampMetaDescription(rawDesc),
+    ...pageCanonicalMetadata(opts.canonicalPath),
   }
 }

@@ -9,6 +9,7 @@ import { industrySeoMetadata } from "@/lib/meta-helpers"
 import { LeadForm } from "@/components/shared/LeadForm"
 
 export const metadata: Metadata = industrySeoMetadata({
+    canonicalPath: "/industries/dental-seo",
   industryLabel: "Dental",
   outcome: "Patients",
   descIndustryPhrase: "dental practices",

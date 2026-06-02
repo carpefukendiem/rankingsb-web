@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { buildSiteWideJsonLdGraph } from "@/lib/local-business-schema";
+import { SITE_URL } from "@/lib/site-url";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -20,11 +22,11 @@ export const metadata: Metadata = {
     "The 805 Growth Engine: custom websites, local SEO, and The Ranking App for Santa Barbara & Ventura County businesses. 90-day delivery and leads guarantees.",
   keywords: ["SEO Santa Barbara", "local SEO", "digital marketing Santa Barbara", "SEO agency Ventura County", "Google ranking Santa Barbara"],
   authors: [{ name: "Ranking SB" }],
-  metadataBase: new URL("https://rankingsb.com"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rankingsb.com",
+    url: SITE_URL,
     siteName: "Ranking SB",
     title: "Ranking SB | The 805 Growth Engine | Santa Barbara & Ventura County",
     description:
@@ -44,9 +46,6 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
     },
-  },
-  alternates: {
-    canonical: "https://rankingsb.com",
   },
   icons: {
     icon: [
@@ -81,54 +80,7 @@ export default function RootLayout({
                 <script
                   type="application/ld+json"
                   dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "LocalBusiness",
-                      "@id": "https://rankingsb.com",
-                      "name": "Ranking SB",
-                      "description": "Santa Barbara and Ventura County's premier local SEO and digital marketing agency.",
-                      "url": "https://rankingsb.com",
-                      "telephone": "+18053077600",
-                      "email": "hello@rankingsb.com",
-                      "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "10 E. Yanonali Street Suite 150",
-                        "addressLocality": "Santa Barbara",
-                        "addressRegion": "CA",
-                        "postalCode": "93101",
-                        "addressCountry": "US"
-                      },
-                      "geo": {
-                        "@type": "GeoCoordinates",
-                        "latitude": "34.4208",
-                        "longitude": "-119.6982"
-                      },
-                      "openingHoursSpecification": [
-                        {
-                          "@type": "OpeningHoursSpecification",
-                          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-                          "opens": "09:00",
-                          "closes": "18:00"
-                        }
-                      ],
-                      "areaServed": [
-                        "Santa Barbara, CA",
-                        "Goleta, CA",
-                        "Montecito, CA",
-                        "Carpinteria, CA",
-                        "Ventura, CA",
-                        "Oxnard, CA",
-                        "Thousand Oaks, CA",
-                        "Camarillo, CA",
-                        "Simi Valley, CA"
-                      ],
-                      "serviceType": ["Local SEO", "Google Business Profile Optimization", "Review Management", "PPC Advertising", "Website Design"],
-                      "priceRange": "$$",
-                      "sameAs": [
-                        "https://www.facebook.com/rankingsb",
-                        "https://www.linkedin.com/company/rankingsb"
-                      ]
-                    })
+                    __html: JSON.stringify(buildSiteWideJsonLdGraph()),
                   }}
                 />
               }

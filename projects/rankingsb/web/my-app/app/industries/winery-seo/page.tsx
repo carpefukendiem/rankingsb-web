@@ -9,6 +9,7 @@ import { CTASection } from "@/components/shared/CTASection"
 
 export const metadata: Metadata = {
   ...industrySeoMetadata({
+    canonicalPath: "/industries/winery-seo",
     industryLabel: "Winery & Wine Bar",
     outcome: "Bookings",
     descIndustryPhrase: "wineries and wine bars",

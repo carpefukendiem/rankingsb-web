@@ -7,7 +7,7 @@ import { CheckCircle, Phone, ArrowRight, MapPin, GraduationCap, Building2, Trend
 import Link from "next/link"
 import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = locationSeoMetadata("Goleta")
+export const metadata: Metadata = locationSeoMetadata("Goleta", "/locations/goleta-seo")
 
 export default function GoletaSEOPage() {
   return (

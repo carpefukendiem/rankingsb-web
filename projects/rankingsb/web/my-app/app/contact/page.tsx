@@ -1,5 +1,13 @@
 import { Metadata } from "next"
 import { clampMetaDescription } from "@/lib/meta-helpers"
+import {
+  BUSINESS_ADDRESS_FULL,
+  BUSINESS_EMAIL,
+  BUSINESS_MAP_EMBED_URL,
+  BUSINESS_PHONE_DISPLAY,
+  BUSINESS_PHONE_TEL,
+} from "@/lib/business-identity"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,6 +26,7 @@ export const metadata: Metadata = {
     "Ranking SB contact",
     "SEO consultation Santa Barbara",
   ],
+  ...pageCanonicalMetadata("/contact"),
 }
 
 export default function ContactPage() {
@@ -57,10 +66,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 mb-1">Phone</h3>
                       <a
-                        href="tel:8053077600"
+                        href={`tel:${BUSINESS_PHONE_TEL}`}
                         className="text-blue-600 hover:text-blue-700 text-lg font-medium"
                       >
-                        (805) 307-7600
+                        {BUSINESS_PHONE_DISPLAY}
                       </a>
                       <p className="text-slate-500 text-sm">
                         Call or text. We respond fast — usually same day.
@@ -74,10 +83,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 mb-1">Email</h3>
                       <a
-                        href="mailto:hello@rankingsb.com"
+                        href={`mailto:${BUSINESS_EMAIL}`}
                         className="text-blue-600 hover:text-blue-700 text-lg font-medium"
                       >
-                        hello@rankingsb.com
+                        {BUSINESS_EMAIL}
                       </a>
                       <p className="text-slate-500 text-sm">
                         We respond within a few hours
@@ -90,8 +99,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 mb-1">Office</h3>
-                      <p className="text-slate-700">10 E. Yanonali Street, Suite 150</p>
-                      <p className="text-slate-700">Santa Barbara, CA 93101</p>
+                      <p className="text-slate-700">{BUSINESS_ADDRESS_FULL}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -105,6 +113,17 @@ export default function ContactPage() {
                       </p>
                     </div>
                   </div>
+                </div>
+
+                <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200">
+                  <iframe
+                    title="Ranking SB office location on Google Maps"
+                    src={BUSINESS_MAP_EMBED_URL}
+                    className="h-72 w-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
 
                 <div className="mt-10 p-6 rounded-2xl bg-slate-50 border">

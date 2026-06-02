@@ -7,6 +7,7 @@ import Link from "next/link"
 import { industrySeoMetadata } from "@/lib/meta-helpers"
 
 export const metadata: Metadata = industrySeoMetadata({
+    canonicalPath: "/industries/carpet-cleaning-seo",
   industryLabel: "Carpet Cleaning",
   outcome: "Jobs",
   descIndustryPhrase: "carpet cleaning businesses",

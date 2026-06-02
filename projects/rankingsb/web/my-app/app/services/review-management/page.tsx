@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { pageCanonicalMetadata } from "@/lib/site-metadata"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: "Review Management & Reputation Management Santa Barbara | Ranking SB",
   description: "Build a 5-star reputation that dominates Google search. Professional review management for Santa Barbara and Ventura County businesses.",
   keywords: ["reputation management Santa Barbara", "review management", "online reviews Santa Barbara", "Google reviews", "5-star reviews"],
+  ...pageCanonicalMetadata("/services/review-management"),
 }
 
 export default function ReviewManagementPage() {

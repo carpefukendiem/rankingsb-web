@@ -7,7 +7,7 @@ import Link from "next/link"
 import { locationSeoMetadata } from "@/lib/meta-helpers"
 import { CTASection } from "@/components/shared/CTASection"
 
-export const metadata: Metadata = locationSeoMetadata("Camarillo")
+export const metadata: Metadata = locationSeoMetadata("Camarillo", "/locations/camarillo-seo")
 
 export default function CamarilloSEOPage() {
   return (

@@ -7,7 +7,7 @@ import { CheckCircle, Phone, ArrowRight, MapPin, Building2, TrendingUp, Star, Se
 import Link from "next/link"
 import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = locationSeoMetadata("Santa Barbara")
+export const metadata: Metadata = locationSeoMetadata("Santa Barbara", "/locations/santa-barbara-seo")
 
 export default function SantaBarbaraSEOPage() {
   return (

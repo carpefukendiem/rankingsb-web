@@ -7,7 +7,7 @@ import { CheckCircle, Phone, ArrowRight, MapPin, Palmtree, Store, Star, Search, 
 import Link from "next/link"
 import { locationSeoMetadata } from "@/lib/meta-helpers"
 
-export const metadata: Metadata = locationSeoMetadata("Carpinteria")
+export const metadata: Metadata = locationSeoMetadata("Carpinteria", "/locations/carpinteria-seo")
 
 export default function CarpinteriaSEOPage() {
   return (
