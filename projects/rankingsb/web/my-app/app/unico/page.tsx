@@ -176,8 +176,12 @@ export default function UnicoGraphicRequestsPage() {
       if (imageTryouts) body.append("image", imageTryouts)
 
       const res = await fetch("/api/unico-request", { method: "POST", body })
-      const data = (await res.json().catch(() => ({}))) as { success?: boolean; error?: string }
-      if (!res.ok || !data.success) {
+      const data = (await res.json().catch(() => ({}))) as {
+        success?: boolean
+        contactId?: string
+        error?: string
+      }
+      if (!res.ok || !data.success || !data.contactId) {
         setStatus("error")
         return
       }
@@ -215,8 +219,12 @@ export default function UnicoGraphicRequestsPage() {
       if (imageMisc) body.append("image", imageMisc)
 
       const res = await fetch("/api/unico-request", { method: "POST", body })
-      const data = (await res.json().catch(() => ({}))) as { success?: boolean; error?: string }
-      if (!res.ok || !data.success) {
+      const data = (await res.json().catch(() => ({}))) as {
+        success?: boolean
+        contactId?: string
+        error?: string
+      }
+      if (!res.ok || !data.success || !data.contactId) {
         setStatus("error")
         return
       }

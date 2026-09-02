@@ -14,10 +14,16 @@ export const SPAM_COMPANY_PATTERNS = [
 /** Minimum ms a human takes to fill a form. Bots submit instantly. */
 export const MIN_FILL_MS = 5000
 
-export function isBot(hp: string, email: string, business: string, mountTime: string): boolean {
+/** Honeypot + known spam patterns (no timing heuristic). */
+export function isSpamBot(hp: string, email: string, business: string): boolean {
   if (hp) return true
   if (SPAM_EMAIL_PATTERNS.some((p) => p.test(email))) return true
   if (business && SPAM_COMPANY_PATTERNS.some((p) => p.test(business))) return true
+  return false
+}
+
+export function isBot(hp: string, email: string, business: string, mountTime: string): boolean {
+  if (isSpamBot(hp, email, business)) return true
   if (mountTime) {
     const elapsed = Date.now() - parseInt(mountTime, 10)
     if (!isNaN(elapsed) && elapsed < MIN_FILL_MS) return true

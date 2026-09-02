@@ -9,7 +9,7 @@ import {
   STAGE_ID,
   WORKFLOW_ID,
 } from "@/lib/crm-api"
-import { isBot } from "@/lib/website-form-bot-guard"
+import { isSpamBot } from "@/lib/website-form-bot-guard"
 import { ALLOWED_IMAGE_TYPES, MAX_IMAGE_BYTES, isValidEmail } from "@/lib/unico-request-validation"
 
 export const runtime = "nodejs"
@@ -53,14 +53,15 @@ export async function POST(req: NextRequest) {
   }
 
   const _hp = str(formData, "_hp")
-  const _t = str(formData, "_t")
   const formType = str(formData, "formType")
   const coachName = str(formData, "coachName")
   const coachEmail = str(formData, "coachEmail")
   const businessHint = formType === TRYOUTS ? str(formData, "division") : str(formData, "requestTitle")
 
-  if (isBot(_hp, coachEmail, businessHint, _t)) {
-    console.log(`[unico-request] Bot blocked — email=${coachEmail} hp=${!!_hp}`)
+  // Unico forms have many required fields; skip the 5s page-load timing heuristic (it caused
+  // silent drops with a fake success response). Honeypot + spam patterns still apply.
+  if (isSpamBot(_hp, coachEmail, businessHint)) {
+    console.log(`[unico-request] Spam blocked — email=${coachEmail} hp=${!!_hp}`)
     return NextResponse.json({ success: true })
   }
 
@@ -119,16 +120,20 @@ export async function POST(req: NextRequest) {
 
   let imageUrl: string | null = null
   if (imageFile) {
-    try {
-      const pathname = `unico-requests/${Date.now()}-${sanitizeFilename(imageFile.name)}`
-      const uploaded = await put(pathname, imageFile, {
-        access: "public",
-        token: process.env.BLOB_READ_WRITE_TOKEN,
-      })
-      imageUrl = uploaded.url
-    } catch (e) {
-      console.error("[unico-request] Blob upload failed:", e)
-      return jsonError("Could not upload image. Check file size and type, then try again.", 502)
+    const blobToken = process.env.BLOB_READ_WRITE_TOKEN
+    if (!blobToken) {
+      console.warn("[unico-request] BLOB_READ_WRITE_TOKEN missing — submitting without image attachment")
+    } else {
+      try {
+        const pathname = `unico-requests/${Date.now()}-${sanitizeFilename(imageFile.name)}`
+        const uploaded = await put(pathname, imageFile, {
+          access: "public",
+          token: blobToken,
+        })
+        imageUrl = uploaded.url
+      } catch (e) {
+        console.error("[unico-request] Blob upload failed (continuing without image):", e)
+      }
     }
   }
 
