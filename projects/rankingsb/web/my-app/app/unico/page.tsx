@@ -5,9 +5,11 @@ import { AlertTriangle, CheckCircle2, Loader2, Trash2, Upload } from "lucide-rea
 import {
   isValidEmail,
   validateImageFile,
+  validateOriginalImage,
   MAX_IMAGE_BYTES,
   UNICO_PRIMARY,
 } from "@/lib/unico-request-validation"
+import { compressImageForUpload } from "@/lib/compress-image-client"
 
 type Tab = "tryouts" | "misc"
 type FormStatus = "idle" | "success" | "error"
@@ -35,6 +37,7 @@ export default function UnicoGraphicRequestsPage() {
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [submitting, setSubmitting] = useState(false)
   const [status, setStatus] = useState<FormStatus>("idle")
+  const [submitError, setSubmitError] = useState("")
   const [successCoach, setSuccessCoach] = useState("")
   const [successEmail, setSuccessEmail] = useState("")
 
@@ -62,49 +65,71 @@ export default function UnicoGraphicRequestsPage() {
     if (fileInputMiscRef.current) fileInputMiscRef.current.value = ""
   }, [previewMisc])
 
-  const assignTryoutsFile = (file: File | null) => {
+  const assignTryoutsFile = async (file: File | null) => {
     if (!file || file.size === 0) {
       clearTryoutsImage()
       return
     }
-    const err = validateImageFile(file)
+    const err = validateOriginalImage(file)
     if (err) {
       setErrors((e) => ({ ...e, imageTryouts: err }))
       return
     }
+    let next = file
+    try {
+      next = await compressImageForUpload(file, MAX_IMAGE_BYTES)
+    } catch {
+      // Keep the original file; server still enforces size.
+    }
+    const after = validateImageFile(next)
+    if (after) {
+      setErrors((e) => ({ ...e, imageTryouts: after }))
+      return
+    }
     setErrors((e) => {
-      const next = { ...e }
-      delete next.imageTryouts
-      return next
+      const nextErrs = { ...e }
+      delete nextErrs.imageTryouts
+      return nextErrs
     })
     setPreviewTryouts((prev) => {
       if (prev) URL.revokeObjectURL(prev)
-      return URL.createObjectURL(file)
+      return URL.createObjectURL(next)
     })
-    setImageTryouts(file)
+    setImageTryouts(next)
     if (fileInputTryoutsRef.current) fileInputTryoutsRef.current.value = ""
   }
 
-  const assignMiscFile = (file: File | null) => {
+  const assignMiscFile = async (file: File | null) => {
     if (!file || file.size === 0) {
       clearMiscImage()
       return
     }
-    const err = validateImageFile(file)
+    const err = validateOriginalImage(file)
     if (err) {
       setErrors((e) => ({ ...e, imageMisc: err }))
       return
     }
+    let next = file
+    try {
+      next = await compressImageForUpload(file, MAX_IMAGE_BYTES)
+    } catch {
+      // Keep the original file; server still enforces size.
+    }
+    const after = validateImageFile(next)
+    if (after) {
+      setErrors((e) => ({ ...e, imageMisc: after }))
+      return
+    }
     setErrors((e) => {
-      const next = { ...e }
-      delete next.imageMisc
-      return next
+      const nextErrs = { ...e }
+      delete nextErrs.imageMisc
+      return nextErrs
     })
     setPreviewMisc((prev) => {
       if (prev) URL.revokeObjectURL(prev)
-      return URL.createObjectURL(file)
+      return URL.createObjectURL(next)
     })
-    setImageMisc(file)
+    setImageMisc(next)
     if (fileInputMiscRef.current) fileInputMiscRef.current.value = ""
   }
 
@@ -115,6 +140,7 @@ export default function UnicoGraphicRequestsPage() {
     clearMiscImage()
     setErrors({})
     setStatus("idle")
+    setSubmitError("")
     setSuccessCoach("")
     setSuccessEmail("")
   }
@@ -159,6 +185,7 @@ export default function UnicoGraphicRequestsPage() {
 
     setSubmitting(true)
     setStatus("idle")
+    setSubmitError("")
     try {
       const body = new FormData()
       body.append("formType", "tryouts")
@@ -182,6 +209,7 @@ export default function UnicoGraphicRequestsPage() {
         error?: string
       }
       if (!res.ok || !data.success || !data.contactId) {
+        setSubmitError(data.error || "We couldn't submit your request.")
         setStatus("error")
         return
       }
@@ -189,6 +217,7 @@ export default function UnicoGraphicRequestsPage() {
       setSuccessEmail(String(fd.get("coachEmail")).trim())
       setStatus("success")
     } catch {
+      setSubmitError("We couldn't reach the server. Check your connection and try again.")
       setStatus("error")
     } finally {
       setSubmitting(false)
@@ -206,6 +235,7 @@ export default function UnicoGraphicRequestsPage() {
 
     setSubmitting(true)
     setStatus("idle")
+    setSubmitError("")
     try {
       const body = new FormData()
       body.append("formType", "misc")
@@ -225,6 +255,7 @@ export default function UnicoGraphicRequestsPage() {
         error?: string
       }
       if (!res.ok || !data.success || !data.contactId) {
+        setSubmitError(data.error || "We couldn't submit your request.")
         setStatus("error")
         return
       }
@@ -232,6 +263,7 @@ export default function UnicoGraphicRequestsPage() {
       setSuccessEmail(String(fd.get("coachEmail")).trim())
       setStatus("success")
     } catch {
+      setSubmitError("We couldn't reach the server. Check your connection and try again.")
       setStatus("error")
     } finally {
       setSubmitting(false)
@@ -309,6 +341,7 @@ export default function UnicoGraphicRequestsPage() {
               setTab("tryouts")
               setErrors({})
               setStatus("idle")
+              setSubmitError("")
             }}
           >
             Team Tryouts Graphic Request
@@ -329,6 +362,7 @@ export default function UnicoGraphicRequestsPage() {
               setTab("misc")
               setErrors({})
               setStatus("idle")
+              setSubmitError("")
             }}
           >
             Miscellaneous Graphic Request
@@ -377,7 +411,9 @@ export default function UnicoGraphicRequestsPage() {
               <div className="space-y-3 text-slate-800">
                 <p className="text-lg font-semibold text-amber-900">⚠ Submission Error</p>
                 <p className="whitespace-pre-line text-sm leading-relaxed md:text-base">
-                  {`We couldn't submit your request. Please try again or contact us directly at:\nEmail: ruben@rankingsb.com\nPhone: (805) 307-7600`}
+                  {submitError
+                    ? `${submitError}\n\nIf this keeps happening, contact us directly at:\nEmail: ruben@rankingsb.com\nPhone: (805) 307-7600`
+                    : `We couldn't submit your request. Please try again or contact us directly at:\nEmail: ruben@rankingsb.com\nPhone: (805) 307-7600`}
                 </p>
                 <button
                   type="button"
@@ -389,7 +425,10 @@ export default function UnicoGraphicRequestsPage() {
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = UNICO_PRIMARY
                   }}
-                  onClick={() => setStatus("idle")}
+                  onClick={() => {
+                    setStatus("idle")
+                    setSubmitError("")
+                  }}
                 >
                   Try Again
                 </button>
@@ -501,7 +540,7 @@ export default function UnicoGraphicRequestsPage() {
 
               <div>
                 <p className="mb-2 text-sm font-medium text-slate-800" id={`${baseId}-t-upload-label`}>
-                  Optional picture upload <span className="font-normal text-slate-500">(JPG, PNG, WebP · max 10MB)</span>
+                  Optional picture upload <span className="font-normal text-slate-500">(JPG, PNG, WebP · photos are compressed automatically)</span>
                 </p>
                 <input
                   ref={fileInputTryoutsRef}
@@ -630,7 +669,7 @@ export default function UnicoGraphicRequestsPage() {
 
               <div>
                 <p className="mb-2 text-sm font-medium text-slate-800" id={`${baseId}-m-upload-label`}>
-                  Optional picture upload <span className="font-normal text-slate-500">(JPG, PNG, WebP · max 10MB)</span>
+                  Optional picture upload <span className="font-normal text-slate-500">(JPG, PNG, WebP · photos are compressed automatically)</span>
                 </p>
                 <input
                   ref={fileInputMiscRef}

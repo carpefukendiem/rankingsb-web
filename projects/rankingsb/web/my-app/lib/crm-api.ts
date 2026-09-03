@@ -34,3 +34,52 @@ export async function crmRequest(method: "GET" | "POST" | "DELETE", path: string
   if (!res.ok) throw new Error(`CRM API ${res.status} ${path}: ${text.slice(0, 300)}`)
   return data as Record<string, unknown>
 }
+
+export function extractContactId(res: Record<string, unknown>): string | undefined {
+  const contact = (res.contact ?? res) as Record<string, unknown>
+  return typeof contact.id === "string" ? contact.id : undefined
+}
+
+export type CrmContactInput = {
+  locationId: string
+  firstName: string
+  lastName: string
+  email: string
+  phone?: string
+  companyName?: string
+  website?: string
+  source?: string
+  tags?: string[]
+  customFields?: { key: string; field_value: string }[]
+}
+
+/** Create or update a contact by email. Tags are added separately so upsert does not wipe existing tags. */
+export async function upsertCrmContact(input: CrmContactInput): Promise<string> {
+  const body: Record<string, unknown> = {
+    locationId: input.locationId,
+    firstName: input.firstName,
+    lastName: input.lastName,
+    email: input.email,
+    companyName: input.companyName,
+    source: input.source,
+    customFields: input.customFields?.filter((f) => f.field_value),
+  }
+  if (input.phone) body.phone = input.phone
+  if (input.website) body.website = input.website
+
+  const res = await crmRequest("POST", "/contacts/upsert", body)
+  const contactId = extractContactId(res)
+  if (!contactId) {
+    throw new Error(`CRM upsert returned no contactId: ${JSON.stringify(res).slice(0, 300)}`)
+  }
+
+  if (input.tags?.length) {
+    try {
+      await crmRequest("POST", `/contacts/${contactId}/tags`, { tags: input.tags })
+    } catch (err) {
+      console.warn("[crm] tag error:", String(err))
+    }
+  }
+
+  return contactId
+}

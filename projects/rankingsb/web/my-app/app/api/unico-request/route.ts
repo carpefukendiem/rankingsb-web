@@ -8,11 +8,13 @@ import {
   PIPELINE_ID,
   STAGE_ID,
   WORKFLOW_ID,
+  upsertCrmContact,
 } from "@/lib/crm-api"
 import { isSpamBot } from "@/lib/website-form-bot-guard"
 import { ALLOWED_IMAGE_TYPES, MAX_IMAGE_BYTES, isValidEmail } from "@/lib/unico-request-validation"
 
 export const runtime = "nodejs"
+export const maxDuration = 30
 
 const TRYOUTS = "tryouts"
 const MISC = "misc"
@@ -27,7 +29,7 @@ function sanitizeFilename(name: string): string {
 
 function validateImageServer(file: File): string | null {
   if (file.size === 0) return null
-  if (file.size > MAX_IMAGE_BYTES) return "Image must be 10MB or smaller."
+  if (file.size > MAX_IMAGE_BYTES) return "Image must be 3.5MB or smaller."
   const type = (file.type || "").toLowerCase()
   if (!ALLOWED_IMAGE_TYPES.has(type)) return "Image must be JPG, PNG, or WebP."
   return null
@@ -122,7 +124,9 @@ export async function POST(req: NextRequest) {
   if (imageFile) {
     const blobToken = process.env.BLOB_READ_WRITE_TOKEN
     if (!blobToken) {
-      console.warn("[unico-request] BLOB_READ_WRITE_TOKEN missing — submitting without image attachment")
+      console.warn(
+        `[unico-request] BLOB_READ_WRITE_TOKEN missing — submitting without image (${imageFile.size} bytes)`
+      )
     } else {
       try {
         const pathname = `unico-requests/${Date.now()}-${sanitizeFilename(imageFile.name)}`
@@ -202,6 +206,11 @@ export async function POST(req: NextRequest) {
   }
   if (imageUrl) {
     noteLines.push("", "Reference image (URL):", imageUrl)
+  } else if (imageFile) {
+    noteLines.push(
+      "",
+      "Reference image: coach attached a file, but image storage is not configured. Ask them to email the graphic."
+    )
   }
 
   const noteBody = noteLines.join("\n")
@@ -220,28 +229,21 @@ export async function POST(req: NextRequest) {
   const source = formType === TRYOUTS ? "unico-team-tryouts" : "unico-misc-graphic"
 
   try {
-    const contactRes = await crmRequest("POST", "/contacts/", {
+    console.log(
+      `[unico-request] CRM upsert start email=${coachEmail} type=${formType} imageBytes=${imageFile?.size ?? 0}`
+    )
+    const contactId = await upsertCrmContact({
       locationId: LOCATION_ID,
       firstName: firstName || coachName,
       lastName,
       email: coachEmail,
-      phone: "",
       companyName: "Unico Soccer Club",
-      website: "",
       source,
-      tags: ["Website Lead", "Unico Graphic Request", formTypeLabel].filter(Boolean),
+      tags: ["Website Lead", "Unico Graphic Request", formTypeLabel],
       customFields: [{ key: "message", field_value: messagePreview }].filter((f) => f.field_value),
     })
 
-    const contactObj = (contactRes.contact ?? contactRes) as Record<string, unknown>
-    const contactId = contactObj.id as string | undefined
-
-    if (!contactId) {
-      console.error("[unico-request] No contactId returned:", JSON.stringify(contactRes).slice(0, 300))
-      return jsonError("Could not create lead. Please try again or call (805) 307-7600.", 502)
-    }
-
-    console.log(`[unico-request] Created contact ${contactId} for ${coachEmail}`)
+    console.log(`[unico-request] Upserted contact ${contactId} for ${coachEmail}`)
 
     try {
       await crmRequest("POST", "/opportunities/", {
@@ -278,7 +280,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ success: true, contactId })
   } catch (err) {
-    console.error("[unico-request] CRM error:", String(err))
+    console.error("[unico-request] CRM error:", err)
     return jsonError("Could not submit your request. Please try again or contact us directly.", 502)
   }
 }

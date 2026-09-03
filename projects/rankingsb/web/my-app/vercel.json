@@ -30,7 +30,6 @@
     { "source": "/contactus",                 "destination": "/contact", "permanent": true },
     { "source": "/book-your-call",            "destination": "/free-audit", "permanent": true },
     { "source": "/booking-appointment",       "destination": "/free-audit", "permanent": true },
-    { "source": "/pricing",                   "destination": "/pricing", "permanent": false },
     { "source": "/tos",                       "destination": "/", "permanent": true },
     { "source": "/privacy-policy-7297",       "destination": "/", "permanent": true },
     { "source": "/home-4380",                 "destination": "/", "permanent": true },
