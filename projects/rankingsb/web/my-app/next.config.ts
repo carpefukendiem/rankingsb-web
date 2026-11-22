@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Disable Next's automatic trailing-slash 308 so our exact-path 301s
+  // (including /path/ variants) are single-hop to sbmc.io.
+  skipTrailingSlashRedirect: true,
   turbopack: {
     root: path.resolve(__dirname),
   },
