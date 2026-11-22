@@ -13,30 +13,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Existing internal aliases (kept)
-      {
-        source: "/locations/the-funk-zone-seo",
-        destination: "/locations/santa-barbara-seo",
-        permanent: true,
-      },
-      {
-        source: "/locations/the-funk-zone-seo/",
-        destination: "/locations/santa-barbara-seo",
-        permanent: true,
-      },
-      {
-        source: "/locations/hope-ranch-seo",
-        destination: "/locations/santa-barbara-seo",
-        permanent: true,
-      },
-      {
-        source: "/locations/hope-ranch-seo/",
-        destination: "/locations/santa-barbara-seo",
-        permanent: true,
-      },
       // SEO migration: rankingsb.com → sbmc.io (exact paths, 301).
-      // Trailing-slash variants avoid an intermediate Next 308.
+      // Trailing-slash variants + skipTrailingSlashRedirect = single hop.
       // /sitemap.xml → sbmc sitemap (old generator removed). /robots.txt served via app/robots.ts.
+      // Legacy aliases formerly in vercel.json / internal next redirects are direct 301s here.
       { source: "/sitemap.xml", destination: "https://www.sbmc.io/sitemap.xml", statusCode: 301 },
       { source: "/sitemap.xml/", destination: "https://www.sbmc.io/sitemap.xml", statusCode: 301 },
       { source: "/", destination: "https://www.sbmc.io", statusCode: 301 },
@@ -100,6 +80,10 @@ const nextConfig: NextConfig = {
       { source: "/blog/ventura-county-seo-guide/", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
       { source: "/blog/why-not-ranking-google", destination: "https://www.sbmc.io/resources/local-seo-santa-barbara", statusCode: 301 },
       { source: "/blog/why-not-ranking-google/", destination: "https://www.sbmc.io/resources/local-seo-santa-barbara", statusCode: 301 },
+      { source: "/book-your-call", destination: "https://www.sbmc.io/book-a-call", statusCode: 301 },
+      { source: "/book-your-call/", destination: "https://www.sbmc.io/book-a-call", statusCode: 301 },
+      { source: "/booking-appointment", destination: "https://www.sbmc.io/book-a-call", statusCode: 301 },
+      { source: "/booking-appointment/", destination: "https://www.sbmc.io/book-a-call", statusCode: 301 },
       { source: "/case-studies", destination: "https://www.sbmc.io/work", statusCode: 301 },
       { source: "/case-studies/", destination: "https://www.sbmc.io/work", statusCode: 301 },
       { source: "/coming-soon", destination: "https://www.sbmc.io", statusCode: 301 },
@@ -108,6 +92,8 @@ const nextConfig: NextConfig = {
       { source: "/contact/", destination: "https://www.sbmc.io/contact", statusCode: 301 },
       { source: "/contact/contact-us", destination: "https://www.sbmc.io/contact", statusCode: 301 },
       { source: "/contact/contact-us/", destination: "https://www.sbmc.io/contact", statusCode: 301 },
+      { source: "/contactus", destination: "https://www.sbmc.io/contact", statusCode: 301 },
+      { source: "/contactus/", destination: "https://www.sbmc.io/contact", statusCode: 301 },
       { source: "/digital-marketing-for-plumbers", destination: "https://www.sbmc.io/industries/home-services", statusCode: 301 },
       { source: "/digital-marketing-for-plumbers/", destination: "https://www.sbmc.io/industries/home-services", statusCode: 301 },
       { source: "/electrical-marketing", destination: "https://www.sbmc.io/industries/home-services", statusCode: 301 },
@@ -126,6 +112,8 @@ const nextConfig: NextConfig = {
       { source: "/h-4351/", destination: "https://www.sbmc.io", statusCode: 301 },
       { source: "/hello-world", destination: "https://www.sbmc.io", statusCode: 301 },
       { source: "/hello-world/", destination: "https://www.sbmc.io", statusCode: 301 },
+      { source: "/home-4380", destination: "https://www.sbmc.io", statusCode: 301 },
+      { source: "/home-4380/", destination: "https://www.sbmc.io", statusCode: 301 },
       { source: "/home-services/digital-marketing-for-electricians", destination: "https://www.sbmc.io/industries/home-services", statusCode: 301 },
       { source: "/home-services/digital-marketing-for-electricians/", destination: "https://www.sbmc.io/industries/home-services", statusCode: 301 },
       { source: "/home-services/digital-marketing-for-hvac", destination: "https://www.sbmc.io/industries/home-services", statusCode: 301 },
@@ -190,6 +178,10 @@ const nextConfig: NextConfig = {
       { source: "/industries/winery-seo/", destination: "https://www.sbmc.io/industries/restaurants-hospitality", statusCode: 301 },
       { source: "/leadflow-strategy-session", destination: "https://www.sbmc.io/book-a-call", statusCode: 301 },
       { source: "/leadflow-strategy-session/", destination: "https://www.sbmc.io/book-a-call", statusCode: 301 },
+      { source: "/local-business-websites", destination: "https://www.sbmc.io/services/web-design", statusCode: 301 },
+      { source: "/local-business-websites/", destination: "https://www.sbmc.io/services/web-design", statusCode: 301 },
+      { source: "/local-lead-machine", destination: "https://www.sbmc.io/services/local-seo", statusCode: 301 },
+      { source: "/local-lead-machine/", destination: "https://www.sbmc.io/services/local-seo", statusCode: 301 },
       { source: "/local-marketing-services", destination: "https://www.sbmc.io/services", statusCode: 301 },
       { source: "/local-marketing-services/", destination: "https://www.sbmc.io/services", statusCode: 301 },
       { source: "/local-marketing-services/local-online-advertising", destination: "https://www.sbmc.io/services/google-ads", statusCode: 301 },
@@ -210,6 +202,8 @@ const nextConfig: NextConfig = {
       { source: "/locations/carpinteria-seo/", destination: "https://www.sbmc.io/carpinteria-digital-marketing", statusCode: 301 },
       { source: "/locations/goleta-seo", destination: "https://www.sbmc.io/goleta-digital-marketing", statusCode: 301 },
       { source: "/locations/goleta-seo/", destination: "https://www.sbmc.io/goleta-digital-marketing", statusCode: 301 },
+      { source: "/locations/hope-ranch-seo", destination: "https://www.sbmc.io/santa-barbara-seo", statusCode: 301 },
+      { source: "/locations/hope-ranch-seo/", destination: "https://www.sbmc.io/santa-barbara-seo", statusCode: 301 },
       { source: "/locations/isla-vista-seo", destination: "https://www.sbmc.io/goleta-digital-marketing", statusCode: 301 },
       { source: "/locations/isla-vista-seo/", destination: "https://www.sbmc.io/goleta-digital-marketing", statusCode: 301 },
       { source: "/locations/lompoc-seo", destination: "https://www.sbmc.io/santa-barbara-digital-marketing", statusCode: 301 },
@@ -242,12 +236,16 @@ const nextConfig: NextConfig = {
       { source: "/locations/solvang-seo/", destination: "https://www.sbmc.io/santa-barbara-digital-marketing", statusCode: 301 },
       { source: "/locations/summerland-seo", destination: "https://www.sbmc.io/carpinteria-digital-marketing", statusCode: 301 },
       { source: "/locations/summerland-seo/", destination: "https://www.sbmc.io/carpinteria-digital-marketing", statusCode: 301 },
+      { source: "/locations/the-funk-zone-seo", destination: "https://www.sbmc.io/santa-barbara-seo", statusCode: 301 },
+      { source: "/locations/the-funk-zone-seo/", destination: "https://www.sbmc.io/santa-barbara-seo", statusCode: 301 },
       { source: "/locations/thousand-oaks-seo", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
       { source: "/locations/thousand-oaks-seo/", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
       { source: "/locations/ventura-county-seo", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
       { source: "/locations/ventura-county-seo/", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
       { source: "/locations/ventura-seo", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
       { source: "/locations/ventura-seo/", destination: "https://www.sbmc.io/service-areas", statusCode: 301 },
+      { source: "/markeing-services", destination: "https://www.sbmc.io/services", statusCode: 301 },
+      { source: "/markeing-services/", destination: "https://www.sbmc.io/services", statusCode: 301 },
       { source: "/marketing-technology", destination: "https://www.sbmc.io/services/marketing-automation", statusCode: 301 },
       { source: "/marketing-technology/", destination: "https://www.sbmc.io/services/marketing-automation", statusCode: 301 },
       { source: "/marketing-technology/lead-tracking-software", destination: "https://www.sbmc.io/services/marketing-automation", statusCode: 301 },
@@ -326,6 +324,8 @@ const nextConfig: NextConfig = {
       { source: "/terms-of-service/", destination: "https://www.sbmc.io/terms", statusCode: 301 },
       { source: "/tos", destination: "https://www.sbmc.io/terms", statusCode: 301 },
       { source: "/tos/", destination: "https://www.sbmc.io/terms", statusCode: 301 },
+      { source: "/undefined", destination: "https://www.sbmc.io", statusCode: 301 },
+      { source: "/undefined/", destination: "https://www.sbmc.io", statusCode: 301 },
       { source: "/web-design", destination: "https://www.sbmc.io/services/web-design", statusCode: 301 },
       { source: "/web-design/", destination: "https://www.sbmc.io/services/web-design", statusCode: 301 },
     ];
