@@ -19,31 +19,32 @@
   "redirects": [
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "rankingsb.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "rankingsb.com"
+        }
+      ],
       "destination": "https://www.rankingsb.com/:path*",
       "permanent": true
-    },
-    { "source": "/local-marketing-services", "destination": "/services", "permanent": true },
-    { "source": "/markeing-services",         "destination": "/services", "permanent": true },
-    { "source": "/local-business-websites",   "destination": "/services/website-design", "permanent": true },
-    { "source": "/local-lead-machine",        "destination": "/services/local-seo", "permanent": true },
-    { "source": "/contactus",                 "destination": "/contact", "permanent": true },
-    { "source": "/book-your-call",            "destination": "/free-audit", "permanent": true },
-    { "source": "/booking-appointment",       "destination": "/free-audit", "permanent": true },
-    { "source": "/tos",                       "destination": "/", "permanent": true },
-    { "source": "/privacy-policy-7297",       "destination": "/", "permanent": true },
-    { "source": "/home-4380",                 "destination": "/", "permanent": true },
-    { "source": "/undefined",                 "destination": "/", "permanent": true },
-    { "source": "/locations/the-funk-zone-seo", "destination": "/locations/santa-barbara-seo", "permanent": true },
-    { "source": "/locations/hope-ranch-seo", "destination": "/locations/santa-barbara-seo", "permanent": true }
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
       ]
     }
   ]
